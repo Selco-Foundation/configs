@@ -7,68 +7,58 @@ ServiceMaps:
     indexes:
       - name: im-services
         type: general
-        id: $.incident.incidentId
+        id: $.incidentRequest.incident.incidentId
         jsonPath: $
-        timeStampField: $.incident.auditDetails.createdTime
-        fieldsToBeMasked: ["$.incident.reporter.userName", "$.incident.reporter.name", "$.incident.reporter.mobileNumber", "$.incident.reporter.emailId"]
+        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
         customJsonMapping:
           indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
           fieldMapping:
-          - inJsonPath: $.incident
+          - inJsonPath: $.incidentRequest.incident
             outJsonPath: $.Data.incident
-          - inJsonPath: $.incident.tenantId
+          - inJsonPath: $.incidentRequest.incident.tenantId
             outJsonPath: $.Data.tenantId
-          - inJsonPath: $.incident.district
+          - inJsonPath: $.incidentRequest.incident.district
             outJsonPath: $.Data.district
-          - inJsonPath: $.incident.block
+          - inJsonPath: $.incidentRequest.incident.block
             outJsonPath: $.Data.block
-          - inJsonPath: $.incident.phcType
+          - inJsonPath: $.incidentRequest.incident.phcType
             outJsonPath: $.Data.phcType
           - inJsonPath: $.@timestamp
             outJsonPath: $.Data.@timestamp  
-          - inJsonPath: $.incident.auditDetails
+          - inJsonPath: $.incidentRequest.incident.auditDetails
             outJsonPath: $.Data.auditDetails
-          externalUriMapping:
-            - path: http://egov-workflow-v2.core-dev:8080/egov-workflow-v2/egov-wf/process/_search
-              queryParam: businessIds=$.incident.incidentId,history=true,tenantId=$.incident.tenantId
-              apiRequest: { "RequestInfo": { "apiId": "org.egov.im","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "default","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "default" } ] } } }
-              uriResponseMapping:
-                - inJsonPath: $.ProcessInstances[0]
-                  outJsonPath: $.Data.currentProcessInstance
+          - inJsonPath: $.updatedProcessInstance
+            outJsonPath: $.Data.currentProcessInstance
 
   - topic: update-im-request-indexer
     configKey: INDEX
     indexes:
       - name: im-services
         type: general
-        id: $.incident.incidentId
+        id: $.incidentRequest.incident.incidentId
         jsonPath: $
-        timeStampField: $.incident.auditDetails.createdTime
-        fieldsToBeMasked: ["$.incident.reporter.userName", "$.incident.reporter.name", "$.incident.reporter.mobileNumber", "$.incident.reporter.emailId"]
+        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
         customJsonMapping:
           indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
           fieldMapping:
-            - inJsonPath: $.incident
+            - inJsonPath: $.incidentRequest.incident
               outJsonPath: $.Data.incident
-            - inJsonPath: $.incident.tenantId
+            - inJsonPath: $.incidentRequest.incident.tenantId
               outJsonPath: $.Data.tenantId
-            - inJsonPath: $.incident.district
+            - inJsonPath: $.incidentRequest.incident.district
               outJsonPath: $.Data.district
-            - inJsonPath: $.incident.block
+            - inJsonPath: $.incidentRequest.incident.block
               outJsonPath: $.Data.block
-            - inJsonPath: $.incident.phcType
+            - inJsonPath: $.incidentRequest.incident.phcType
               outJsonPath: $.Data.phcType
             - inJsonPath: $.@timestamp
               outJsonPath: $.Data.@timestamp  
-            - inJsonPath: $.incident.auditDetails
+            - inJsonPath: $.incidentRequest.incident.auditDetails
               outJsonPath: $.Data.auditDetails
-          externalUriMapping:
-            - path: http://egov-workflow-v2.core-dev:8080/egov-workflow-v2/egov-wf/process/_search
-              queryParam: businessIds=$.incident.incidentId,history=true,tenantId=$.incident.tenantId
-              apiRequest: { "RequestInfo": { "apiId": "org.egov.im","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "default","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "default" } ] } } }
-              uriResponseMapping:
-                - inJsonPath: $.ProcessInstances[0]
-                  outJsonPath: $.Data.currentProcessInstance
+            - inJsonPath: $.updatedProcessInstance
+              outJsonPath: $.Data.currentProcessInstance
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
