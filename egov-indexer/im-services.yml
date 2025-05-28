@@ -30,6 +30,8 @@ ServiceMaps:
             outJsonPath: $.Data.auditDetails
           - inJsonPath: $.updatedProcessInstance
             outJsonPath: $.Data.currentProcessInstance
+          - inJsonPath: $.incidentRequest.incident.systemFunctional
+            outJsonPath: $.Data.systemFunctional
 
   - topic: update-im-request-indexer
     configKey: INDEX
@@ -59,6 +61,8 @@ ServiceMaps:
               outJsonPath: $.Data.auditDetails
             - inJsonPath: $.updatedProcessInstance
               outJsonPath: $.Data.currentProcessInstance
+            - inJsonPath: $.incidentRequest.incident.systemFunctional
+              outJsonPath: $.Data.systemFunctional
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
