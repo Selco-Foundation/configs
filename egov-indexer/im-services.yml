@@ -33,6 +33,38 @@ ServiceMaps:
           - inJsonPath: $.incidentRequest.incident.systemFunctional
             outJsonPath: $.Data.systemFunctional
 
+      - name: computed-sla-im-services
+        type: general
+        id: $.incidentRequest.incident.incidentId
+        jsonPath: $
+        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
+        customJsonMapping:
+          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
+          fieldMapping:
+          - inJsonPath: $.incidentRequest.incident
+            outJsonPath: $.Data.incident
+          - inJsonPath: $.incidentRequest.incident.tenantId
+            outJsonPath: $.Data.tenantId
+          - inJsonPath: $.incidentRequest.incident.district
+            outJsonPath: $.Data.district
+          - inJsonPath: $.incidentRequest.incident.block
+            outJsonPath: $.Data.block
+          - inJsonPath: $.incidentRequest.incident.phcType
+            outJsonPath: $.Data.phcType
+          - inJsonPath: $.@timestamp
+            outJsonPath: $.Data.@timestamp  
+          - inJsonPath: $.incidentRequest.incident.auditDetails
+            outJsonPath: $.Data.auditDetails
+          - inJsonPath: $.updatedProcessInstance
+            outJsonPath: $.Data.currentProcessInstance
+          - inJsonPath: $.incidentRequest.incident.systemFunctional
+            outJsonPath: $.Data.systemFunctional
+          - inJsonPath: $.updatedProcessInstance.state.sla
+            outJsonPath: $.Data.slaRemaining
+          - inJsonPath: $.updatedProcessInstance.state.sla
+            outJsonPath: $.Data.stateSLA
+
   - topic: update-im-request-indexer
     configKey: INDEX
     indexes:
@@ -63,6 +95,38 @@ ServiceMaps:
               outJsonPath: $.Data.currentProcessInstance
             - inJsonPath: $.incidentRequest.incident.systemFunctional
               outJsonPath: $.Data.systemFunctional
+
+      - name: computed-sla-im-services
+        type: general
+        id: $.incidentRequest.incident.incidentId
+        jsonPath: $
+        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
+        customJsonMapping:
+          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
+          fieldMapping:
+            - inJsonPath: $.incidentRequest.incident
+              outJsonPath: $.Data.incident
+            - inJsonPath: $.incidentRequest.incident.tenantId
+              outJsonPath: $.Data.tenantId
+            - inJsonPath: $.incidentRequest.incident.district
+              outJsonPath: $.Data.district
+            - inJsonPath: $.incidentRequest.incident.block
+              outJsonPath: $.Data.block
+            - inJsonPath: $.incidentRequest.incident.phcType
+              outJsonPath: $.Data.phcType
+            - inJsonPath: $.@timestamp
+              outJsonPath: $.Data.@timestamp  
+            - inJsonPath: $.incidentRequest.incident.auditDetails
+              outJsonPath: $.Data.auditDetails
+            - inJsonPath: $.updatedProcessInstance
+              outJsonPath: $.Data.currentProcessInstance
+            - inJsonPath: $.incidentRequest.incident.systemFunctional
+              outJsonPath: $.Data.systemFunctional
+            - inJsonPath: $.updatedProcessInstance.state.sla
+              outJsonPath: $.Data.slaRemaining
+            - inJsonPath: $.updatedProcessInstance.state.sla
+              outJsonPath: $.Data.stateSLA
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
