@@ -128,7 +128,9 @@ ServiceMaps:
             - inJsonPath: $.updatedProcessInstance.state.sla
               outJsonPath: $.Data.slaRemaining
             - inJsonPath: $.updatedProcessInstance.state.sla
-              outJsonPath: $.Data.stateSLA
+              outJsonPath: $.Data.stateSla
+            - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
+              outJsonPath: $.Data.totalSlaRemaining
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
