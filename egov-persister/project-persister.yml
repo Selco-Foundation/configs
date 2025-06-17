@@ -347,7 +347,7 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: UPDATE project SET name = ?, projectType = ?, projectTypeId = ?, projectSubType = ?, department = ?, description = ?, referenceId = ?, startDate = ?, endDate = ?, isTaskEnabled = ?, natureOfWork = ?, additionalDetails = ?, isDeleted = ?, rowVersion = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
+        - query: UPDATE project SET name = ?, projectType = ?, projectTypeId = ?, projectSubType = ?, department = ?, description = ?, referenceId = ?, startDate = ?, endDate = ?, isTaskEnabled = ?, natureOfWork = ?, status = ?, additionalDetails = ?, isDeleted = ?, rowVersion = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
           basePath: $.Projects.*
           jsonMaps:
 
@@ -372,7 +372,7 @@ serviceMaps:
             - jsonPath: $.Projects.*.isTaskEnabled
 
             - jsonPath: $.Projects.*.natureOfWork
-
+            - jsonPath: $.Projects.*.additionalDetails.status
             - jsonPath: $.Projects.*.additionalDetails
               type: JSON
               dbType: JSONB
@@ -682,7 +682,7 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.*.id
 
-        
+
     - version: 1.0
       name: Projects
       description: Updates project dates only  in project table
@@ -704,7 +704,7 @@ serviceMaps:
 
             - jsonPath: $.Projects.*.auditDetails.lastModifiedTime
 
-            - jsonPath: $.Projects.*.id       
+            - jsonPath: $.Projects.*.id
 
     - version: 1.0
       name: Projects
