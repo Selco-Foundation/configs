@@ -68,16 +68,18 @@ ServiceMaps:
             outJsonPath: $.Data.totalSlaRemaining
           - inJsonPath: $.indexView.state
             outJsonPath: $.Data.state
-          - inJsonPath: $.indexView.incidentTypeLocalized
+          - inJsonPath: $.indexView.incidentType_localized
             outJsonPath: $.Data.incident.incidentType_localized
-          - inJsonPath: $.indexView.incidentSubTypeLocalized
+          - inJsonPath: $.indexView.incidentSubType_localized
             outJsonPath: $.Data.incident.incidentSubType_localized
-          - inJsonPath: $.indexView.applicationStatusLocalized
+          - inJsonPath: $.indexView.applicationStatus_localized
             outJsonPath: $.Data.incident.applicationStatus_localized
-          - inJsonPath: $.indexView.phcSubTypeLocalized
+          - inJsonPath: $.indexView.phcSubType_localized
             outJsonPath: $.Data.incident.phcSubType_localized
-          - inJsonPath: $.indexView.tenantIdLocalized
+          - inJsonPath: $.indexView.tenantId_localized
             outJsonPath: $.Data.tenantId_localized
+          - inJsonPath: $.indexView.priority
+            outJsonPath: $.Data.priority
 
   - topic: update-im-request-indexer
     configKey: INDEX
@@ -145,16 +147,18 @@ ServiceMaps:
               outJsonPath: $.Data.totalSlaRemaining
             - inJsonPath: $.indexView.state
               outJsonPath: $.Data.state
-            - inJsonPath: $.indexView.incidentTypeLocalized
+            - inJsonPath: $.indexView.incidentType_localized
               outJsonPath: $.Data.incident.incidentType_localized
-            - inJsonPath: $.indexView.incidentSubTypeLocalized
+            - inJsonPath: $.indexView.incidentSubType_localized
               outJsonPath: $.Data.incident.incidentSubType_localized
-            - inJsonPath: $.indexView.applicationStatusLocalized
+            - inJsonPath: $.indexView.applicationStatus_localized
               outJsonPath: $.Data.incident.applicationStatus_localized
-            - inJsonPath: $.indexView.phcSubTypeLocalized
+            - inJsonPath: $.indexView.phcSubType_localized
               outJsonPath: $.Data.incident.phcSubType_localized
-            - inJsonPath: $.indexView.tenantIdLocalized
+            - inJsonPath: $.indexView.tenantId_localized
               outJsonPath: $.Data.tenantId_localized
+            - inJsonPath: $.indexView.priority
+              outJsonPath: $.Data.priority
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
