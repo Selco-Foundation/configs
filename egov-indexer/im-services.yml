@@ -78,8 +78,14 @@ ServiceMaps:
             outJsonPath: $.Data.incident.phcSubType_localized
           - inJsonPath: $.indexView.tenantId_localized
             outJsonPath: $.Data.tenantId_localized
-          - inJsonPath: $.indexView.priority
-            outJsonPath: $.Data.priority
+          - inJsonPath: $.indexView.nin_hfr_id
+            outJsonPath: $.Data.nin_hfr_id
+          - inJsonPath: $.indexView.mappedVendor
+            outJsonPath: $.Data.mappedVendor
+          - inJsonPath: $.indexView.lastActionTakenBy
+            outJsonPath: $.Data.lastActionTakenBy
+          - inJsonPath: $.indexView.overallSla
+            outJsonPath: $.Data.overallSla
 
   - topic: update-im-request-indexer
     configKey: INDEX
@@ -157,8 +163,14 @@ ServiceMaps:
               outJsonPath: $.Data.incident.phcSubType_localized
             - inJsonPath: $.indexView.tenantId_localized
               outJsonPath: $.Data.tenantId_localized
-            - inJsonPath: $.indexView.priority
-              outJsonPath: $.Data.priority
+            - inJsonPath: $.indexView.nin_hfr_id
+              outJsonPath: $.Data.nin_hfr_id
+            - inJsonPath: $.indexView.mappedVendor
+              outJsonPath: $.Data.mappedVendor
+            - inJsonPath: $.indexView.lastActionTakenBy
+              outJsonPath: $.Data.lastActionTakenBy
+            - inJsonPath: $.indexView.overallSla
+              outJsonPath: $.Data.overallSla
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
