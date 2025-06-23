@@ -84,8 +84,6 @@ ServiceMaps:
             outJsonPath: $.Data.mappedVendor
           - inJsonPath: $.indexView.lastActionTakenBy
             outJsonPath: $.Data.lastActionTakenBy
-          - inJsonPath: $.updatedProcessInstance.state.definedTotalSla
-            outJsonPath: $.Data.definedTotalSla
 
   - topic: update-im-request-indexer
     configKey: INDEX
@@ -169,8 +167,6 @@ ServiceMaps:
               outJsonPath: $.Data.mappedVendor
             - inJsonPath: $.indexView.lastActionTakenBy
               outJsonPath: $.Data.lastActionTakenBy
-            - inJsonPath: $.updatedProcessInstance.state.definedTotalSla
-              outJsonPath: $.Data.definedTotalSla
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
