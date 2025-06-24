@@ -224,7 +224,7 @@ ServiceMaps:
         type: general
         id: $.indexView.uuid
         jsonPath: $
-        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        timeStampField: $.incidentRequest.incident.auditDetails.lastModifiedTime
         fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
         customJsonMapping:
           indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
