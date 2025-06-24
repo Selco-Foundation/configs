@@ -216,6 +216,7 @@ ServiceMaps:
         isBulk: true
         jsonPath: $.hits
         timeStampField: $.Data.incident.auditDetails.lastModifiedTime
+
   - topic: save-im-audit-request-indexer
     configKey: INDEX
     indexes:
@@ -286,3 +287,5 @@ ServiceMaps:
               outJsonPath: $.Data.sendBackSubReason
             - inJsonPath: $.indexView.documentUrls
               outJsonPath: $.Data.documentUrls
+            - inJsonPath: $.indexView.uuid
+              outJsonPath: $.Data.uuid
