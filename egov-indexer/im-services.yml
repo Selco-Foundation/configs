@@ -216,3 +216,73 @@ ServiceMaps:
         isBulk: true
         jsonPath: $.hits
         timeStampField: $.Data.incident.auditDetails.lastModifiedTime
+  - topic: save-im-audit-request-indexer
+    configKey: INDEX
+    indexes:
+      - name: audit-computed-sla-im-services
+        type: general
+        id: $.indexView.uuid
+        jsonPath: $
+        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
+        customJsonMapping:
+          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
+          fieldMapping:
+            - inJsonPath: $.incidentRequest.incident
+              outJsonPath: $.Data.incident
+            - inJsonPath: $.incidentRequest.incident.tenantId
+              outJsonPath: $.Data.tenantId
+            - inJsonPath: $.incidentRequest.incident.district
+              outJsonPath: $.Data.district
+            - inJsonPath: $.incidentRequest.incident.block
+              outJsonPath: $.Data.block
+            - inJsonPath: $.incidentRequest.incident.phcType
+              outJsonPath: $.Data.phcType
+            - inJsonPath: $.@timestamp
+              outJsonPath: $.Data.@timestamp
+            - inJsonPath: $.incidentRequest.incident.auditDetails
+              outJsonPath: $.Data.auditDetails
+            - inJsonPath: $.updatedProcessInstance
+              outJsonPath: $.Data.currentProcessInstance
+            - inJsonPath: $.incidentRequest.incident.systemFunctional
+              outJsonPath: $.Data.systemFunctional
+            - inJsonPath: $.updatedProcessInstance.state.sla
+              outJsonPath: $.Data.slaRemaining
+            - inJsonPath: $.updatedProcessInstance.state.sla
+              outJsonPath: $.Data.stateSla
+            - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
+              outJsonPath: $.Data.totalSlaRemaining
+            - inJsonPath: $.indexView.state
+              outJsonPath: $.Data.state
+            - inJsonPath: $.indexView.incidentType_localized
+              outJsonPath: $.Data.incident.incidentType_localized
+            - inJsonPath: $.indexView.incidentSubType_localized
+              outJsonPath: $.Data.incident.incidentSubType_localized
+            - inJsonPath: $.indexView.applicationStatus_localized
+              outJsonPath: $.Data.incident.applicationStatus_localized
+            - inJsonPath: $.indexView.phcSubType_localized
+              outJsonPath: $.Data.incident.phcSubType_localized
+            - inJsonPath: $.indexView.tenantId_localized
+              outJsonPath: $.Data.tenantId_localized
+            - inJsonPath: $.indexView.nin_hfr_id
+              outJsonPath: $.Data.nin_hfr_id
+            - inJsonPath: $.indexView.mappedVendor
+              outJsonPath: $.Data.mappedVendor
+            - inJsonPath: $.indexView.lastActionTakenBy
+              outJsonPath: $.Data.lastActionTakenBy
+            - inJsonPath: $.indexView.startingStatus
+              outJsonPath: $.Data.startingStatus
+            - inJsonPath: $.indexView.endingStatus
+              outJsonPath: $.Data.endingStatus
+            - inJsonPath: $.indexView.startingStatus_localized
+              outJsonPath: $.Data.startingStatus_localized
+            - inJsonPath: $.indexView.endingStatus_localized
+              outJsonPath: $.Data.endingStatus_localized
+            - inJsonPath: $.incidentRequest.workflow.comments
+              outJsonPath: $.Data.comments
+            - inJsonPath: $.incidentRequest.workflow.sendBackReason.reason
+              outJsonPath: $.Data.sendBackReason
+            - inJsonPath: $.incidentRequest.workflow.sendBackReason.subReason
+              outJsonPath: $.Data.sendBackSubReason
+            - inJsonPath: $.indexView.documentUrls
+              outJsonPath: $.Data.documentUrls
