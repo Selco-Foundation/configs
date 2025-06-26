@@ -17,7 +17,7 @@ serviceMaps:
             incidentsubtype, incidentid, additionaldetails, applicationstatus,
             district, block, phctype, phcsubtype, createdby, createdtime,
             lastmodifiedby, lastmodifiedtime, comments,accountid, reportertenant,reportertype,systemfunctional, fileddate, legacyid, migrationid) VALUES (?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?, ?);
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?, ?, ?, ?, ?);
           basePath: $.incident
           jsonMaps:
             - jsonPath: $.incident.id
@@ -45,7 +45,6 @@ serviceMaps:
             - jsonPath: $.incident.filedDate
             - jsonPath: $.incident.legacyId
             - jsonPath: $.incident.migrationId
-
 
     - version: 1
       description: Updates im service request in tables
