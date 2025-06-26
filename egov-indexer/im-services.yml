@@ -32,6 +32,12 @@ ServiceMaps:
             outJsonPath: $.Data.currentProcessInstance
           - inJsonPath: $.incidentRequest.incident.systemFunctional
             outJsonPath: $.Data.systemFunctional
+          - inJsonPath: $.incidentRequest.incident.filedDate
+            outJsonPath: $.Data.filedDate
+          - inJsonPath: $.incidentRequest.incident.legacyId
+            outJsonPath: $.Data.legacyId
+          - inJsonPath: $.incidentRequest.incident.migrationId
+            outJsonPath: $.Data.migrationId
 
       - name: computed-sla-im-services
         type: general
@@ -86,6 +92,12 @@ ServiceMaps:
             outJsonPath: $.Data.lastActionTakenBy
           - inJsonPath: $.indexView.definedTotalSla
             outJsonPath: $.Data.definedTotalSla
+          - inJsonPath: $.incidentRequest.incident.filedDate
+            outJsonPath: $.Data.filedDate
+          - inJsonPath: $.incidentRequest.incident.legacyId
+            outJsonPath: $.Data.legacyId
+          - inJsonPath: $.incidentRequest.incident.migrationId
+            outJsonPath: $.Data.migrationId
 
   - topic: update-im-request-indexer
     configKey: INDEX
@@ -117,6 +129,12 @@ ServiceMaps:
               outJsonPath: $.Data.currentProcessInstance
             - inJsonPath: $.incidentRequest.incident.systemFunctional
               outJsonPath: $.Data.systemFunctional
+            - inJsonPath: $.incidentRequest.incident.filedDate
+              outJsonPath: $.Data.filedDate
+            - inJsonPath: $.incidentRequest.incident.legacyId
+              outJsonPath: $.Data.legacyId
+            - inJsonPath: $.incidentRequest.incident.migrationId
+              outJsonPath: $.Data.migrationId
 
       - name: computed-sla-im-services
         type: general
@@ -171,6 +189,12 @@ ServiceMaps:
               outJsonPath: $.Data.lastActionTakenBy
             - inJsonPath: $.indexView.definedTotalSla
               outJsonPath: $.Data.definedTotalSla
+            - inJsonPath: $.incidentRequest.incident.filedDate
+              outJsonPath: $.Data.filedDate
+            - inJsonPath: $.incidentRequest.incident.legacyId
+              outJsonPath: $.Data.legacyId
+            - inJsonPath: $.incidentRequest.incident.migrationId
+              outJsonPath: $.Data.migrationId
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
