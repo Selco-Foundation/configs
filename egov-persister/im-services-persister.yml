@@ -16,8 +16,8 @@ serviceMaps:
             INSERT INTO eg_incident_v2(id, tenantid, incidenttype,
             incidentsubtype, incidentid, additionaldetails, applicationstatus,
             district, block, phctype, phcsubtype, createdby, createdtime,
-            lastmodifiedby, lastmodifiedtime, comments,accountid, reportertenant,reportertype,systemfunctional) VALUES (?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?, ?);
+            lastmodifiedby, lastmodifiedtime, comments,accountid, reportertenant,reportertype,systemfunctional, fileddate, legacyid, migrationid) VALUES (?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?, ?, ?, ?, ?);
           basePath: $.incident
           jsonMaps:
             - jsonPath: $.incident.id
@@ -42,6 +42,9 @@ serviceMaps:
             - jsonPath: $.incident.reporterTenant
             - jsonPath: $.incident.reporterType
             - jsonPath: $.incident.systemFunctional
+            - jsonPath: $.incident.filedDate
+            - jsonPath: $.incident.legacyId
+            - jsonPath: $.incident.migrationId
 
     - version: 1
       description: Updates im service request in tables
@@ -58,7 +61,7 @@ serviceMaps:
             UPDATE eg_incident_v2 SET incidenttype=?, incidentid=?,
             incidentsubtype=?, additionaldetails=?, applicationstatus=?,
             district=? , block=? , phctype=? , phcsubtype=?, lastmodifiedby=?,
-            lastmodifiedtime=?, comments=?, systemfunctional=? WHERE id=?;
+            lastmodifiedtime=?, comments=?, systemfunctional=?, fileddate=? , legacyid=? , migrationid=? WHERE id=?;
           basePath: $.incident
           jsonMaps:
             - jsonPath: $.incident.incidentType
@@ -77,4 +80,6 @@ serviceMaps:
             - jsonPath: $.incident.comments
             - jsonPath: $.incident.systemFunctional
             - jsonPath: $.incident.id
-   
+            - jsonPath: $.incident.filedDate
+            - jsonPath: $.incident.legacyId
+            - jsonPath: $.incident.migrationId
