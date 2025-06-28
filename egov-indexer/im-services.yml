@@ -303,7 +303,7 @@ ServiceMaps:
               outJsonPath: $.Data.startingStatus_localized
             - inJsonPath: $.indexView.endingStatus_localized
               outJsonPath: $.Data.endingStatus_localized
-            - inJsonPath: $.incidentRequest.workflow.comments
+            - inJsonPath: $.indexView.comments
               outJsonPath: $.Data.comments
             - inJsonPath: $.incidentRequest.workflow.sendBackReason.reason
               outJsonPath: $.Data.sendBackReason
