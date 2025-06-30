@@ -315,9 +315,9 @@ ServiceMaps:
               outJsonPath: $.Data.endingStatus_localized
             - inJsonPath: $.indexView.comments
               outJsonPath: $.Data.comments
-            - inJsonPath: $.incidentRequest.workflow.sendBackReason.reason
+            - inJsonPath: $.indexView.sendBackReason
               outJsonPath: $.Data.sendBackReason
-            - inJsonPath: $.incidentRequest.workflow.sendBackReason.subReason
+            - inJsonPath: $.indexView.sendBackSubReason
               outJsonPath: $.Data.sendBackSubReason
             - inJsonPath: $.indexView.documentUrls
               outJsonPath: $.Data.documentUrls
