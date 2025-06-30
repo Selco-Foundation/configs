@@ -86,8 +86,10 @@ ServiceMaps:
             outJsonPath: $.Data.tenantId_localized
           - inJsonPath: $.indexView.nin_hfr_id
             outJsonPath: $.Data.nin_hfr_id
-          - inJsonPath: $.indexView.mappedVendor
-            outJsonPath: $.Data.mappedVendor
+          - inJsonPath: $.indexView.mappedVendorUserName
+            outJsonPath: $.Data.mappedVendorUserName
+          - inJsonPath: $.indexView.mappedVendorName
+            outJsonPath: $.Data.mappedVendorName
           - inJsonPath: $.indexView.lastActionTakenBy
             outJsonPath: $.Data.lastActionTakenBy
           - inJsonPath: $.indexView.definedTotalSla
@@ -185,8 +187,10 @@ ServiceMaps:
               outJsonPath: $.Data.tenantId_localized
             - inJsonPath: $.indexView.nin_hfr_id
               outJsonPath: $.Data.nin_hfr_id
-            - inJsonPath: $.indexView.mappedVendor
-              outJsonPath: $.Data.mappedVendor
+            - inJsonPath: $.indexView.mappedVendorUserName
+              outJsonPath: $.Data.mappedVendorUserName
+            - inJsonPath: $.indexView.mappedVendorName
+              outJsonPath: $.Data.mappedVendorName
             - inJsonPath: $.indexView.lastActionTakenBy
               outJsonPath: $.Data.lastActionTakenBy
             - inJsonPath: $.indexView.definedTotalSla
@@ -295,8 +299,10 @@ ServiceMaps:
               outJsonPath: $.Data.tenantId_localized
             - inJsonPath: $.indexView.nin_hfr_id
               outJsonPath: $.Data.nin_hfr_id
-            - inJsonPath: $.indexView.mappedVendor
-              outJsonPath: $.Data.mappedVendor
+            - inJsonPath: $.indexView.mappedVendorUserName
+              outJsonPath: $.Data.mappedVendorUserName
+            - inJsonPath: $.indexView.mappedVendorName
+              outJsonPath: $.Data.mappedVendorName
             - inJsonPath: $.indexView.lastActionTakenBy
               outJsonPath: $.Data.lastActionTakenBy
             - inJsonPath: $.indexView.startingStatus
