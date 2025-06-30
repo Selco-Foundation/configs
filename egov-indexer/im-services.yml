@@ -98,6 +98,8 @@ ServiceMaps:
             outJsonPath: $.Data.legacyId
           - inJsonPath: $.incidentRequest.incident.migrationId
             outJsonPath: $.Data.migrationId
+          - inJsonPath: $.indexView.comments
+            outJsonPath: $.Data.comments
 
   - topic: update-im-request-indexer
     configKey: INDEX
@@ -195,6 +197,8 @@ ServiceMaps:
               outJsonPath: $.Data.legacyId
             - inJsonPath: $.incidentRequest.incident.migrationId
               outJsonPath: $.Data.migrationId
+            - inJsonPath: $.indexView.comments
+              outJsonPath: $.Data.comments
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
