@@ -79,7 +79,7 @@ serviceMaps:
             - jsonPath: $.incident.auditDetails.lastModifiedTime
             - jsonPath: $.incident.comments
             - jsonPath: $.incident.systemFunctional
-            - jsonPath: $.incident.id
             - jsonPath: $.incident.filedDate
             - jsonPath: $.incident.legacyId
             - jsonPath: $.incident.migrationId
+            - jsonPath: $.incident.id
