@@ -32,6 +32,12 @@ ServiceMaps:
             outJsonPath: $.Data.currentProcessInstance
           - inJsonPath: $.incidentRequest.incident.systemFunctional
             outJsonPath: $.Data.systemFunctional
+          - inJsonPath: $.incidentRequest.incident.filedDate
+            outJsonPath: $.Data.filedDate
+          - inJsonPath: $.incidentRequest.incident.legacyId
+            outJsonPath: $.Data.legacyId
+          - inJsonPath: $.incidentRequest.incident.migrationId
+            outJsonPath: $.Data.migrationId
 
       - name: computed-sla-im-services
         type: general
@@ -80,12 +86,22 @@ ServiceMaps:
             outJsonPath: $.Data.tenantId_localized
           - inJsonPath: $.indexView.nin_hfr_id
             outJsonPath: $.Data.nin_hfr_id
-          - inJsonPath: $.indexView.mappedVendor
-            outJsonPath: $.Data.mappedVendor
+          - inJsonPath: $.indexView.mappedVendorUserName
+            outJsonPath: $.Data.mappedVendorUserName
+          - inJsonPath: $.indexView.mappedVendorName
+            outJsonPath: $.Data.mappedVendorName
           - inJsonPath: $.indexView.lastActionTakenBy
             outJsonPath: $.Data.lastActionTakenBy
           - inJsonPath: $.indexView.definedTotalSla
             outJsonPath: $.Data.definedTotalSla
+          - inJsonPath: $.incidentRequest.incident.filedDate
+            outJsonPath: $.Data.filedDate
+          - inJsonPath: $.incidentRequest.incident.legacyId
+            outJsonPath: $.Data.legacyId
+          - inJsonPath: $.incidentRequest.incident.migrationId
+            outJsonPath: $.Data.migrationId
+          - inJsonPath: $.indexView.comments
+            outJsonPath: $.Data.comments
 
   - topic: update-im-request-indexer
     configKey: INDEX
@@ -117,6 +133,12 @@ ServiceMaps:
               outJsonPath: $.Data.currentProcessInstance
             - inJsonPath: $.incidentRequest.incident.systemFunctional
               outJsonPath: $.Data.systemFunctional
+            - inJsonPath: $.incidentRequest.incident.filedDate
+              outJsonPath: $.Data.filedDate
+            - inJsonPath: $.incidentRequest.incident.legacyId
+              outJsonPath: $.Data.legacyId
+            - inJsonPath: $.incidentRequest.incident.migrationId
+              outJsonPath: $.Data.migrationId
 
       - name: computed-sla-im-services
         type: general
@@ -165,12 +187,22 @@ ServiceMaps:
               outJsonPath: $.Data.tenantId_localized
             - inJsonPath: $.indexView.nin_hfr_id
               outJsonPath: $.Data.nin_hfr_id
-            - inJsonPath: $.indexView.mappedVendor
-              outJsonPath: $.Data.mappedVendor
+            - inJsonPath: $.indexView.mappedVendorUserName
+              outJsonPath: $.Data.mappedVendorUserName
+            - inJsonPath: $.indexView.mappedVendorName
+              outJsonPath: $.Data.mappedVendorName
             - inJsonPath: $.indexView.lastActionTakenBy
               outJsonPath: $.Data.lastActionTakenBy
             - inJsonPath: $.indexView.definedTotalSla
               outJsonPath: $.Data.definedTotalSla
+            - inJsonPath: $.incidentRequest.incident.filedDate
+              outJsonPath: $.Data.filedDate
+            - inJsonPath: $.incidentRequest.incident.legacyId
+              outJsonPath: $.Data.legacyId
+            - inJsonPath: $.incidentRequest.incident.migrationId
+              outJsonPath: $.Data.migrationId
+            - inJsonPath: $.indexView.comments
+              outJsonPath: $.Data.comments
 
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
@@ -267,8 +299,10 @@ ServiceMaps:
               outJsonPath: $.Data.tenantId_localized
             - inJsonPath: $.indexView.nin_hfr_id
               outJsonPath: $.Data.nin_hfr_id
-            - inJsonPath: $.indexView.mappedVendor
-              outJsonPath: $.Data.mappedVendor
+            - inJsonPath: $.indexView.mappedVendorUserName
+              outJsonPath: $.Data.mappedVendorUserName
+            - inJsonPath: $.indexView.mappedVendorName
+              outJsonPath: $.Data.mappedVendorName
             - inJsonPath: $.indexView.lastActionTakenBy
               outJsonPath: $.Data.lastActionTakenBy
             - inJsonPath: $.indexView.startingStatus
@@ -279,11 +313,11 @@ ServiceMaps:
               outJsonPath: $.Data.startingStatus_localized
             - inJsonPath: $.indexView.endingStatus_localized
               outJsonPath: $.Data.endingStatus_localized
-            - inJsonPath: $.incidentRequest.workflow.comments
+            - inJsonPath: $.indexView.comments
               outJsonPath: $.Data.comments
-            - inJsonPath: $.incidentRequest.workflow.sendBackReason.reason
+            - inJsonPath: $.indexView.sendBackReason
               outJsonPath: $.Data.sendBackReason
-            - inJsonPath: $.incidentRequest.workflow.sendBackReason.subReason
+            - inJsonPath: $.indexView.sendBackSubReason
               outJsonPath: $.Data.sendBackSubReason
             - inJsonPath: $.indexView.documentUrls
               outJsonPath: $.Data.documentUrls
