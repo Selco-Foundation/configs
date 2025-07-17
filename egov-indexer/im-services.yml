@@ -332,7 +332,6 @@ ServiceMaps:
         id: $.userLoginReport.userName
         jsonPath: $
         timeStampField: $.userLoginReport.lastLoginDateTime
-        fieldsToBeMasked: [ "$.userLoginReport.userName" ]
         customJsonMapping:
           indexMapping: { "Data": { "userLoginReport": { } } }
           fieldMapping:
