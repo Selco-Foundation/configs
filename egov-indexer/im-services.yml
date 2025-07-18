@@ -323,3 +323,31 @@ ServiceMaps:
               outJsonPath: $.Data.documentUrls
             - inJsonPath: $.indexView.uuid
               outJsonPath: $.Data.uuid
+
+  - topic: save-user-login-report-indexer
+    configKey: INDEX
+    indexes:
+      - name: login-report
+        type: general
+        id: $.userLoginReport.userName
+        jsonPath: $
+        timeStampField: $.userLoginReport.lastLoginDateTime
+        customJsonMapping:
+          indexMapping: { "Data": { "userLoginReport": { } } }
+          fieldMapping:
+            - inJsonPath: $.userLoginReport.userName
+              outJsonPath: $.Data.userLoginReport.userName
+            - inJsonPath: $.userLoginReport.userRole
+              outJsonPath: $.Data.userLoginReport.userRole
+            - inJsonPath: $.userLoginReport.currentOwnerName
+              outJsonPath: $.Data.userLoginReport.currentOwnerName
+            - inJsonPath: $.userLoginReport.lastLoginDateTime
+              outJsonPath: $.Data.userLoginReport.lastLoginDateTime
+            - inJsonPath: $.userLoginReport.healthFacilityName
+              outJsonPath: $.Data.userLoginReport.healthFacilityName
+            - inJsonPath: $.userLoginReport.block
+              outJsonPath: $.Data.userLoginReport.block
+            - inJsonPath: $.userLoginReport.district
+              outJsonPath: $.Data.userLoginReport.district
+            - inJsonPath: $.userLoginReport.state
+              outJsonPath: $.Data.userLoginReport.state
