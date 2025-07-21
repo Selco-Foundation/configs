@@ -329,12 +329,14 @@ ServiceMaps:
     indexes:
       - name: login-report
         type: general
-        id: $.userName
+        id: $.id
         jsonPath: $
         timeStampField: $.lastLoginDateTime
         customJsonMapping:
           indexMapping: { "Data": { "userLoginReport": { } } }
           fieldMapping:
+            - inJsonPath: $.id
+              outJsonPath: $.Data.userLoginReport.id
             - inJsonPath: $.userName
               outJsonPath: $.Data.userLoginReport.userName
             - inJsonPath: $.userRole
