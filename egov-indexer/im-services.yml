@@ -204,6 +204,37 @@ ServiceMaps:
             - inJsonPath: $.indexView.comments
               outJsonPath: $.Data.comments
 
+  - topic: update-im-request-indexer-no-audit
+    configKey: INDEX
+    indexes:
+      - name: im-services
+        type: general
+        id: $.incidentRequest.incident.incidentId
+        jsonPath: $
+        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        fieldsToBeMasked: [ "$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId" ]
+        customJsonMapping:
+          indexMapping: { "Data": { "incident": { },"tenantId": "","auditDetails": { },"currentProcessInstance": { } } }
+          fieldMapping:
+            - inJsonPath: $.incidentRequest.incident
+              outJsonPath: $.Data.incident
+            - inJsonPath: $.incidentRequest.incident.systemFunctional
+              outJsonPath: $.Data.systemFunctional
+
+      - name: computed-sla-im-services
+        type: general
+        id: $.incidentRequest.incident.incidentId
+        jsonPath: $
+        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+        fieldsToBeMasked: [ "$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId" ]
+        customJsonMapping:
+          indexMapping: { "Data": { "incident": { },"tenantId": "","auditDetails": { },"currentProcessInstance": { } } }
+          fieldMapping:
+            - inJsonPath: $.incidentRequest.incident
+              outJsonPath: $.Data.incident
+            - inJsonPath: $.incidentRequest.incident.systemFunctional
+              outJsonPath: $.Data.systemFunctional
+
   - topic: im-services-inboxIndex
     configKey: LEGACYINDEX
     indexes:
