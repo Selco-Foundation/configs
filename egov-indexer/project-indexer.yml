@@ -8,77 +8,63 @@ ServiceMaps:
         - name: project-services
           type: general
           id: $.Projects.*.id
-          jsonPath: $
+          jsonPath: $.Projects.*
           timeStampField: $.Projects.*.auditDetails.createdTime
           fieldsToBeMasked: []
           customJsonMapping:
             indexMapping:
-              {
-                "Data":
-                  {
-                    "documents": {},
-                    "tenantId": "",
-                    "address": {},
-                    "auditDetails": {},
-                    "targets": {},
-                  },
-              }
+              Data:
+                documents: {}
+                tenantId: ""
+                address: {}
+                auditDetails: {}
+                targets: {}
             fieldMapping:
-              - inJsonPath: $.Projects.*.documents
+              - inJsonPath: $.documents
                 outJsonPath: $.Data.documents
-              - inJsonPath: $.Projects.*.tenantId
+              - inJsonPath: $.tenantId
                 outJsonPath: $.Data.tenantId
-              - inJsonPath: $.Projects.*.projectNumber
+              - inJsonPath: $.projectNumber
                 outJsonPath: $.Data.projectNumber
-              - inJsonPath: $.Projects.*.name
+              - inJsonPath: $.name
                 outJsonPath: $.Data.name
-              - inJsonPath: $.Projects.*.projectType
+              - inJsonPath: $.projectType
                 outJsonPath: $.Data.projectType
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
-              - inJsonPath: $.Projects.*.auditDetails
+              - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
-              - inJsonPath: $.Projects.*.address
+              - inJsonPath: $.address
                 outJsonPath: $.Data.address
-              - inJsonPath: $.Projects.*.projectSubType
+              - inJsonPath: $.projectSubType
                 outJsonPath: $.Data.projectSubType
-              - inJsonPath: $.Projects.*.department
+              - inJsonPath: $.department
                 outJsonPath: $.Data.department
-              - inJsonPath: $.Projects.*.description
+              - inJsonPath: $.description
                 outJsonPath: $.Data.description
-              - inJsonPath: $.Projects.*.referenceID
+              - inJsonPath: $.referenceID
                 outJsonPath: $.Data.referenceID
-              - inJsonPath: $.Projects.*.projectTypeId
+              - inJsonPath: $.projectTypeId
                 outJsonPath: $.Data.projectTypeId
-              - inJsonPath: $.Projects.*.startDate
+              - inJsonPath: $.startDate
                 outJsonPath: $.Data.startDate
-              - inJsonPath: $.Projects.*.endDate
+              - inJsonPath: $.endDate
                 outJsonPath: $.Data.endDate
-              - inJsonPath: $.Projects.*.isTaskEnabled
+              - inJsonPath: $.isTaskEnabled
                 outJsonPath: $.Data.isTaskEnabled
-              - inJsonPath: $.Projects.*.parent
+              - inJsonPath: $.parent
                 outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.projectHierarchy
+              - inJsonPath: $.projectHierarchy
                 outJsonPath: $.Data.projectHierarchy
-              - inJsonPath: $.Projects.*.natureOfWork
+              - inJsonPath: $.natureOfWork
                 outJsonPath: $.Data.natureOfWork
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.targets
+              - inJsonPath: $.targets
                 outJsonPath: $.Data.targets
-              - inJsonPath: $.Projects.*.additionalDetails
+              - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.additionalDetails
-              - inJsonPath: $.Projects.*.isDeleted
+              - inJsonPath: $.isDeleted
                 outJsonPath: $.Data.isDeleted
-              - inJsonPath: $.Projects.*.rowVersion
+              - inJsonPath: $.rowVersion
                 outJsonPath: $.Data.rowVersion
 
     - topic: update-project-request-indexer
@@ -86,76 +72,62 @@ ServiceMaps:
       indexes:
         - name: project-services
           type: general
-          id: $.Projects.*.id
-          jsonPath: $
-          timeStampField: $.Projects.*.auditDetails.createdTime
+          id: $.id
+          jsonPath: $.Projects.*
+          timeStampField: $.auditDetails.createdTime
           fieldsToBeMasked: []
           customJsonMapping:
             indexMapping:
-              {
-                "Data":
-                  {
-                    "documents": {},
-                    "tenantId": "",
-                    "address": {},
-                    "auditDetails": {},
-                    "targets": {},
-                  },
-              }
+              Data:
+                documents: {}
+                tenantId: ""
+                address: {}
+                auditDetails: {}
+                targets: {}
             fieldMapping:
-              - inJsonPath: $.Projects.*.documents
+              - inJsonPath: $.documents
                 outJsonPath: $.Data.documents
-              - inJsonPath: $.Projects.*.tenantId
+              - inJsonPath: $.tenantId
                 outJsonPath: $.Data.tenantId
-              - inJsonPath: $.Projects.*.projectNumber
+              - inJsonPath: $.projectNumber
                 outJsonPath: $.Data.projectNumber
-              - inJsonPath: $.Projects.*.name
+              - inJsonPath: $.name
                 outJsonPath: $.Data.name
-              - inJsonPath: $.Projects.*.projectType
+              - inJsonPath: $.projectType
                 outJsonPath: $.Data.projectType
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
-              - inJsonPath: $.Projects.*.auditDetails
+              - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
-              - inJsonPath: $.Projects.*.address
+              - inJsonPath: $.address
                 outJsonPath: $.Data.address
-              - inJsonPath: $.Projects.*.projectSubType
+              - inJsonPath: $.projectSubType
                 outJsonPath: $.Data.projectSubType
-              - inJsonPath: $.Projects.*.department
+              - inJsonPath: $.department
                 outJsonPath: $.Data.department
-              - inJsonPath: $.Projects.*.description
+              - inJsonPath: $.description
                 outJsonPath: $.Data.description
-              - inJsonPath: $.Projects.*.referenceID
+              - inJsonPath: $.referenceID
                 outJsonPath: $.Data.referenceID
-              - inJsonPath: $.Projects.*.projectTypeId
+              - inJsonPath: $.projectTypeId
                 outJsonPath: $.Data.projectTypeId
-              - inJsonPath: $.Projects.*.startDate
+              - inJsonPath: $.startDate
                 outJsonPath: $.Data.startDate
-              - inJsonPath: $.Projects.*.endDate
+              - inJsonPath: $.endDate
                 outJsonPath: $.Data.endDate
-              - inJsonPath: $.Projects.*.isTaskEnabled
+              - inJsonPath: $.isTaskEnabled
                 outJsonPath: $.Data.isTaskEnabled
-              - inJsonPath: $.Projects.*.parent
+              - inJsonPath: $.parent
                 outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.projectHierarchy
+              - inJsonPath: $.projectHierarchy
                 outJsonPath: $.Data.projectHierarchy
-              - inJsonPath: $.Projects.*.natureOfWork
+              - inJsonPath: $.natureOfWork
                 outJsonPath: $.Data.natureOfWork
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.parent
-                outJsonPath: $.Data.parent
-              - inJsonPath: $.Projects.*.targets
+              - inJsonPath: $.targets
                 outJsonPath: $.Data.targets
-              - inJsonPath: $.Projects.*.additionalDetails
+              - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.additionalDetails
-              - inJsonPath: $.Projects.*.isDeleted
+              - inJsonPath: $.isDeleted
                 outJsonPath: $.Data.isDeleted
-              - inJsonPath: $.Projects.*.rowVersion
+              - inJsonPath: $.rowVersion
                 outJsonPath: $.Data.rowVersion
