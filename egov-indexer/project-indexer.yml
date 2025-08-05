@@ -133,3 +133,7 @@ ServiceMaps:
                 outJsonPath: $.Data.isDeleted
               - inJsonPath: $.rowVersion
                 outJsonPath: $.Data.rowVersion
+              - inJsonPath: $.additionalDetails.status
+                outJsonPath: $.Data.status
+              - inJsonPath: $.additionalDetails.facility
+                outJsonPath: $.Data.status
