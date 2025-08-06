@@ -21,6 +21,8 @@ ServiceMaps:
                 auditDetails: {}
                 targets: {}
             fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.id
               - inJsonPath: $.documents
                 outJsonPath: $.Data.documents
               - inJsonPath: $.tenantId
@@ -87,6 +89,8 @@ ServiceMaps:
                 auditDetails: {}
                 targets: {}
             fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.id
               - inJsonPath: $.documents
                 outJsonPath: $.Data.documents
               - inJsonPath: $.tenantId
@@ -133,3 +137,7 @@ ServiceMaps:
                 outJsonPath: $.Data.isDeleted
               - inJsonPath: $.rowVersion
                 outJsonPath: $.Data.rowVersion
+              - inJsonPath: $.additionalDetails.status
+                outJsonPath: $.Data.status
+              - inJsonPath: $.additionalDetails.facility
+                outJsonPath: $.Data.status
