@@ -21,6 +21,8 @@ ServiceMaps:
                 auditDetails: {}
                 targets: {}
             fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.id
               - inJsonPath: $.documents
                 outJsonPath: $.Data.documents
               - inJsonPath: $.tenantId
@@ -87,6 +89,8 @@ ServiceMaps:
                 auditDetails: {}
                 targets: {}
             fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.id
               - inJsonPath: $.documents
                 outJsonPath: $.Data.documents
               - inJsonPath: $.tenantId
