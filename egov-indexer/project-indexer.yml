@@ -139,5 +139,10 @@ ServiceMaps:
                 outJsonPath: $.Data.rowVersion
               - inJsonPath: $.additionalDetails.status
                 outJsonPath: $.Data.status
+                isJsonPathOptional: true
               - inJsonPath: $.additionalDetails.facility
-                outJsonPath: $.Data.status
+                outJsonPath: $.Data.facility
+                isJsonPathOptional: true
+              - inJsonPath: $.additionalDetails.assignedTo
+                outJsonPath: $.Data.assignedTo
+                isJsonPathOptional: true
