@@ -133,7 +133,7 @@ ServiceMaps:
                 outJsonPath: $.Data.targets
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.additionalDetails
-                filter: "$.additionalDetails.facility"
+                filter: "$.additionalDetails"
               - inJsonPath: $.isDeleted
                 outJsonPath: $.Data.isDeleted
               - inJsonPath: $.rowVersion
