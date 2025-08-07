@@ -133,16 +133,17 @@ ServiceMaps:
                 outJsonPath: $.Data.targets
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.additionalDetails
+                filter: "$.additionalDetails"
               - inJsonPath: $.isDeleted
                 outJsonPath: $.Data.isDeleted
               - inJsonPath: $.rowVersion
                 outJsonPath: $.Data.rowVersion
               - inJsonPath: $.additionalDetails.status
                 outJsonPath: $.Data.status
-                isJsonPathOptional: true
+                filter: "$.additionalDetails.status"
               - inJsonPath: $.additionalDetails.facility
                 outJsonPath: $.Data.facility
-                isJsonPathOptional: true
+                filter: "$.additionalDetails.facility"
               - inJsonPath: $.additionalDetails.assignedTo
                 outJsonPath: $.Data.assignedTo
-                isJsonPathOptional: true
+                filter: "$.additionalDetails.assignedTo"
