@@ -70,7 +70,7 @@ ServiceMaps:
               - inJsonPath: $.rowVersion
                 outJsonPath: $.Data.rowVersion
 
-    - topic: update-project-request-indexer
+    - topic: update-project-request-indexer-facility
       configKey: INDEX
       indexes:
         - name: project-services
