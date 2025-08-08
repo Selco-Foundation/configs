@@ -131,19 +131,16 @@ ServiceMaps:
                 outJsonPath: $.Data.natureOfWork
               - inJsonPath: $.targets
                 outJsonPath: $.Data.targets
-              - inJsonPath: $.additionalDetails
-                outJsonPath: $.Data.additionalDetails
-                filter: "$.additionalDetails"
               - inJsonPath: $.isDeleted
                 outJsonPath: $.Data.isDeleted
               - inJsonPath: $.rowVersion
                 outJsonPath: $.Data.rowVersion
               - inJsonPath: $.additionalDetails.status
                 outJsonPath: $.Data.status
-                filter: "$[?(@ != null)]"
+                filter: "$ != null"
               - inJsonPath: $.additionalDetails.facility
                 outJsonPath: $.Data.facility
-                filter: "$[?(@ != null)]"
+                filter: "$ != null"
               - inJsonPath: $.additionalDetails.assignedTo
                 outJsonPath: $.Data.assignedTo
-                filter: "$[?(@ != null)]"
+                filter: "$ != null"
