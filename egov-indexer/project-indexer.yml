@@ -143,7 +143,7 @@ ServiceMaps:
                 filter: "$[?(@.additionalDetails != null && @.additionalDetails.status != null)]"
               - inJsonPath: $.additionalDetails.facility
                 outJsonPath: $.Data.facility
-                filter: "$.additionalDetails.facility"
+                filter: "$[?(@.additionalDetails != null && @.additionalDetails.facility != null)]"
               - inJsonPath: $.additionalDetails.assignedTo
                 outJsonPath: $.Data.assignedTo
-                filter: "$.additionalDetails.assignedTo"
+                filter: "$[?(@.additionalDetails != null && @.additionalDetails.assignedTo != null)]"
