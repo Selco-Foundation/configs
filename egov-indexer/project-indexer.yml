@@ -140,10 +140,10 @@ ServiceMaps:
                 outJsonPath: $.Data.rowVersion
               - inJsonPath: $.additionalDetails.status
                 outJsonPath: $.Data.status
-                filter: "$[?(@.additionalDetails.status != null)]"
+                filter: "$[?(@ != null)]"
               - inJsonPath: $.additionalDetails.facility
                 outJsonPath: $.Data.facility
-                filter: "$.additionalDetails.facility"
+                filter: "$[?(@ != null)]"
               - inJsonPath: $.additionalDetails.assignedTo
                 outJsonPath: $.Data.assignedTo
-                filter: "$.additionalDetails.assignedTo"
+                filter: "$[?(@ != null)]"
