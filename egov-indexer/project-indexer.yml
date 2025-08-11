@@ -139,10 +139,7 @@ ServiceMaps:
                 outJsonPath: $.Data.rowVersion
               - inJsonPath: $.additionalDetails.facility
                 outJsonPath: $.Data.facility
-                filter: "$.additionalDetails.facility"
               - inJsonPath: $.additionalDetails.status
                 outJsonPath: $.Data.status
-                filter: "$.additionalDetails.status"
               - inJsonPath: $.additionalDetails.assignedTo
                 outJsonPath: $.Data.assignedTo
-                filter: "$.additionalDetails.assignedTo"
