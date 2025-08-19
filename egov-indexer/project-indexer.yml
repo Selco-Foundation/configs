@@ -143,3 +143,5 @@ ServiceMaps:
                 outJsonPath: $.Data.status
               - inJsonPath: $.additionalDetails.assignedTo
                 outJsonPath: $.Data.assignedTo
+              - inJsonPath: $.additionalDetails.isPaused
+                outJsonPath: $.Data.isPaused
