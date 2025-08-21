@@ -323,3 +323,24 @@ ServiceMaps:
               outJsonPath: $.Data.documentUrls
             - inJsonPath: $.indexView.uuid
               outJsonPath: $.Data.uuid
+
+  - topic: save-phc-master-list-indexer
+    configKey: INDEX
+    indexes:
+      - name: phc-master-list-new-2
+        type: general
+        id: $.tenantId
+        jsonPath: $
+        timeStampField: $.lastModifiedTime
+        fieldsToBeMasked: []
+        customJsonMapping:
+          indexMapping: {}
+          fieldMapping:
+            - inJsonPath: $.total_tickets
+              outJsonPath: $.totalTickets
+            - inJsonPath: $.open_tickets
+              outJsonPath: $.openTickets
+            - inJsonPath: $.closed_tickets
+              outJsonPath: $.closedTickets
+            - inJsonPath: $.solar_panel_status
+              outJsonPath: $.solarPanelStatus
