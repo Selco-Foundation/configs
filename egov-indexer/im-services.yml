@@ -366,11 +366,11 @@ ServiceMaps:
         customJsonMapping:
           indexMapping: {}
           fieldMapping:
-            - inJsonPath: $.total_tickets
-              outJsonPath: $.totalTickets
-            - inJsonPath: $.open_tickets
-              outJsonPath: $.openTickets
-            - inJsonPath: $.closed_tickets
-              outJsonPath: $.closedTickets
-            - inJsonPath: $.solar_panel_status
-              outJsonPath: $.solarPanelStatus
+            - inJsonPath: $.totalTickets
+              outJsonPath: $.Data.total_tickets
+            - inJsonPath: $.openTickets
+              outJsonPath: $.Data.open_tickets
+            - inJsonPath: $.closedTickets
+              outJsonPath: $.Data.closed_tickets
+            - inJsonPath: $.solarPanelStatus
+              outJsonPath: $.Data.solar_panel_status
