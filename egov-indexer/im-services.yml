@@ -1,376 +1,505 @@
 ServiceMaps:
- serviceName: Incident Management - rainmaker
- version: 1.0.0
- mappings:
-  - topic: save-im-request-indexer
-    configKey: INDEX
-    indexes:
-      - name: im-services
-        type: general
-        id: $.incidentRequest.incident.incidentId
-        jsonPath: $
-        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
-        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
-        customJsonMapping:
-          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
-          fieldMapping:
-          - inJsonPath: $.incidentRequest.incident
-            outJsonPath: $.Data.incident
-          - inJsonPath: $.incidentRequest.incident.tenantId
-            outJsonPath: $.Data.tenantId
-          - inJsonPath: $.incidentRequest.incident.district
-            outJsonPath: $.Data.district
-          - inJsonPath: $.incidentRequest.incident.block
-            outJsonPath: $.Data.block
-          - inJsonPath: $.incidentRequest.incident.phcType
-            outJsonPath: $.Data.phcType
-          - inJsonPath: $.@timestamp
-            outJsonPath: $.Data.@timestamp  
-          - inJsonPath: $.incidentRequest.incident.auditDetails
-            outJsonPath: $.Data.auditDetails
-          - inJsonPath: $.updatedProcessInstance
-            outJsonPath: $.Data.currentProcessInstance
-          - inJsonPath: $.incidentRequest.incident.systemFunctional
-            outJsonPath: $.Data.systemFunctional
-          - inJsonPath: $.incidentRequest.incident.filedDate
-            outJsonPath: $.Data.filedDate
-          - inJsonPath: $.incidentRequest.incident.legacyId
-            outJsonPath: $.Data.legacyId
-          - inJsonPath: $.incidentRequest.incident.migrationId
-            outJsonPath: $.Data.migrationId
+  serviceName: Incident Management - rainmaker
+  version: 1.0.0
+  mappings:
+    - topic: save-im-request-indexer
+      configKey: INDEX
+      indexes:
+        - name: im-services
+          type: general
+          id: $.incidentRequest.incident.incidentId
+          jsonPath: $
+          timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+          fieldsToBeMasked:
+            [
+              "$.incidentRequest.incident.reporter.userName",
+              "$.incidentRequest.incident.reporter.name",
+              "$.incidentRequest.incident.reporter.mobileNumber",
+              "$.incidentRequest.incident.reporter.emailId",
+            ]
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "incident": {},
+                    "tenantId": "",
+                    "auditDetails": {},
+                    "currentProcessInstance": {},
+                  },
+              }
+            fieldMapping:
+              - inJsonPath: $.incidentRequest.incident
+                outJsonPath: $.Data.incident
+              - inJsonPath: $.incidentRequest.incident.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.incidentRequest.incident.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.incidentRequest.incident.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.incidentRequest.incident.phcType
+                outJsonPath: $.Data.phcType
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
+              - inJsonPath: $.incidentRequest.incident.auditDetails
+                outJsonPath: $.Data.auditDetails
+              - inJsonPath: $.updatedProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
+              - inJsonPath: $.incidentRequest.incident.systemFunctional
+                outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.incidentRequest.incident.filedDate
+                outJsonPath: $.Data.filedDate
+              - inJsonPath: $.incidentRequest.incident.legacyId
+                outJsonPath: $.Data.legacyId
+              - inJsonPath: $.incidentRequest.incident.migrationId
+                outJsonPath: $.Data.migrationId
 
-      - name: computed-sla-im-services
-        type: general
-        id: $.incidentRequest.incident.incidentId
-        jsonPath: $
-        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
-        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
-        customJsonMapping:
-          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
-          fieldMapping:
-          - inJsonPath: $.incidentRequest.incident
-            outJsonPath: $.Data.incident
-          - inJsonPath: $.incidentRequest.incident.tenantId
-            outJsonPath: $.Data.tenantId
-          - inJsonPath: $.incidentRequest.incident.district
-            outJsonPath: $.Data.district
-          - inJsonPath: $.incidentRequest.incident.block
-            outJsonPath: $.Data.block
-          - inJsonPath: $.incidentRequest.incident.phcType
-            outJsonPath: $.Data.phcType
-          - inJsonPath: $.@timestamp
-            outJsonPath: $.Data.@timestamp  
-          - inJsonPath: $.incidentRequest.incident.auditDetails
-            outJsonPath: $.Data.auditDetails
-          - inJsonPath: $.updatedProcessInstance
-            outJsonPath: $.Data.currentProcessInstance
-          - inJsonPath: $.incidentRequest.incident.systemFunctional
-            outJsonPath: $.Data.systemFunctional
-          - inJsonPath: $.updatedProcessInstance.state.sla
-            outJsonPath: $.Data.slaRemaining
-          - inJsonPath: $.updatedProcessInstance.state.sla
-            outJsonPath: $.Data.stateSla
-          - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
-            outJsonPath: $.Data.totalSlaRemaining
-          - inJsonPath: $.indexView.state
-            outJsonPath: $.Data.state
-          - inJsonPath: $.indexView.incidentType_localized
-            outJsonPath: $.Data.incident.incidentType_localized
-          - inJsonPath: $.indexView.incidentSubType_localized
-            outJsonPath: $.Data.incident.incidentSubType_localized
-          - inJsonPath: $.indexView.applicationStatus_localized
-            outJsonPath: $.Data.incident.applicationStatus_localized
-          - inJsonPath: $.indexView.phcSubType_localized
-            outJsonPath: $.Data.incident.phcSubType_localized
-          - inJsonPath: $.indexView.tenantId_localized
-            outJsonPath: $.Data.tenantId_localized
-          - inJsonPath: $.indexView.nin_hfr_id
-            outJsonPath: $.Data.nin_hfr_id
-          - inJsonPath: $.indexView.mappedVendorUserName
-            outJsonPath: $.Data.mappedVendorUserName
-          - inJsonPath: $.indexView.mappedVendorName
-            outJsonPath: $.Data.mappedVendorName
-          - inJsonPath: $.indexView.lastActionTakenBy
-            outJsonPath: $.Data.lastActionTakenBy
-          - inJsonPath: $.indexView.definedTotalSla
-            outJsonPath: $.Data.definedTotalSla
-          - inJsonPath: $.incidentRequest.incident.filedDate
-            outJsonPath: $.Data.filedDate
-          - inJsonPath: $.incidentRequest.incident.legacyId
-            outJsonPath: $.Data.legacyId
-          - inJsonPath: $.incidentRequest.incident.migrationId
-            outJsonPath: $.Data.migrationId
-          - inJsonPath: $.indexView.comments
-            outJsonPath: $.Data.comments
+        - name: computed-sla-im-services
+          type: general
+          id: $.incidentRequest.incident.incidentId
+          jsonPath: $
+          timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+          fieldsToBeMasked:
+            [
+              "$.incidentRequest.incident.reporter.userName",
+              "$.incidentRequest.incident.reporter.name",
+              "$.incidentRequest.incident.reporter.mobileNumber",
+              "$.incidentRequest.incident.reporter.emailId",
+            ]
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "incident": {},
+                    "tenantId": "",
+                    "auditDetails": {},
+                    "currentProcessInstance": {},
+                  },
+              }
+            fieldMapping:
+              - inJsonPath: $.incidentRequest.incident
+                outJsonPath: $.Data.incident
+              - inJsonPath: $.incidentRequest.incident.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.incidentRequest.incident.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.incidentRequest.incident.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.incidentRequest.incident.phcType
+                outJsonPath: $.Data.phcType
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
+              - inJsonPath: $.incidentRequest.incident.auditDetails
+                outJsonPath: $.Data.auditDetails
+              - inJsonPath: $.updatedProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
+              - inJsonPath: $.incidentRequest.incident.systemFunctional
+                outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.updatedProcessInstance.state.sla
+                outJsonPath: $.Data.slaRemaining
+              - inJsonPath: $.updatedProcessInstance.state.sla
+                outJsonPath: $.Data.stateSla
+              - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
+                outJsonPath: $.Data.totalSlaRemaining
+              - inJsonPath: $.indexView.state
+                outJsonPath: $.Data.state
+              - inJsonPath: $.indexView.incidentType_localized
+                outJsonPath: $.Data.incident.incidentType_localized
+              - inJsonPath: $.indexView.incidentSubType_localized
+                outJsonPath: $.Data.incident.incidentSubType_localized
+              - inJsonPath: $.indexView.applicationStatus_localized
+                outJsonPath: $.Data.incident.applicationStatus_localized
+              - inJsonPath: $.indexView.phcSubType_localized
+                outJsonPath: $.Data.incident.phcSubType_localized
+              - inJsonPath: $.indexView.tenantId_localized
+                outJsonPath: $.Data.tenantId_localized
+              - inJsonPath: $.indexView.nin_hfr_id
+                outJsonPath: $.Data.nin_hfr_id
+              - inJsonPath: $.indexView.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
+              - inJsonPath: $.indexView.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
+              - inJsonPath: $.indexView.lastActionTakenBy
+                outJsonPath: $.Data.lastActionTakenBy
+              - inJsonPath: $.indexView.definedTotalSla
+                outJsonPath: $.Data.definedTotalSla
+              - inJsonPath: $.incidentRequest.incident.filedDate
+                outJsonPath: $.Data.filedDate
+              - inJsonPath: $.incidentRequest.incident.legacyId
+                outJsonPath: $.Data.legacyId
+              - inJsonPath: $.incidentRequest.incident.migrationId
+                outJsonPath: $.Data.migrationId
+              - inJsonPath: $.indexView.comments
+                outJsonPath: $.Data.comments
 
-  - topic: update-im-request-indexer
-    configKey: INDEX
-    indexes:
-      - name: im-services
-        type: general
-        id: $.incidentRequest.incident.incidentId
-        jsonPath: $
-        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
-        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
-        customJsonMapping:
-          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
-          fieldMapping:
-            - inJsonPath: $.incidentRequest.incident
-              outJsonPath: $.Data.incident
-            - inJsonPath: $.incidentRequest.incident.tenantId
-              outJsonPath: $.Data.tenantId
-            - inJsonPath: $.incidentRequest.incident.district
-              outJsonPath: $.Data.district
-            - inJsonPath: $.incidentRequest.incident.block
-              outJsonPath: $.Data.block
-            - inJsonPath: $.incidentRequest.incident.phcType
-              outJsonPath: $.Data.phcType
-            - inJsonPath: $.@timestamp
-              outJsonPath: $.Data.@timestamp  
-            - inJsonPath: $.incidentRequest.incident.auditDetails
-              outJsonPath: $.Data.auditDetails
-            - inJsonPath: $.updatedProcessInstance
-              outJsonPath: $.Data.currentProcessInstance
-            - inJsonPath: $.incidentRequest.incident.systemFunctional
-              outJsonPath: $.Data.systemFunctional
-            - inJsonPath: $.incidentRequest.incident.filedDate
-              outJsonPath: $.Data.filedDate
-            - inJsonPath: $.incidentRequest.incident.legacyId
-              outJsonPath: $.Data.legacyId
-            - inJsonPath: $.incidentRequest.incident.migrationId
-              outJsonPath: $.Data.migrationId
+    - topic: update-im-request-indexer
+      configKey: INDEX
+      indexes:
+        - name: im-services
+          type: general
+          id: $.incidentRequest.incident.incidentId
+          jsonPath: $
+          timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+          fieldsToBeMasked:
+            [
+              "$.incidentRequest.incident.reporter.userName",
+              "$.incidentRequest.incident.reporter.name",
+              "$.incidentRequest.incident.reporter.mobileNumber",
+              "$.incidentRequest.incident.reporter.emailId",
+            ]
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "incident": {},
+                    "tenantId": "",
+                    "auditDetails": {},
+                    "currentProcessInstance": {},
+                  },
+              }
+            fieldMapping:
+              - inJsonPath: $.incidentRequest.incident
+                outJsonPath: $.Data.incident
+              - inJsonPath: $.incidentRequest.incident.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.incidentRequest.incident.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.incidentRequest.incident.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.incidentRequest.incident.phcType
+                outJsonPath: $.Data.phcType
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
+              - inJsonPath: $.incidentRequest.incident.auditDetails
+                outJsonPath: $.Data.auditDetails
+              - inJsonPath: $.updatedProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
+              - inJsonPath: $.incidentRequest.incident.systemFunctional
+                outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.incidentRequest.incident.filedDate
+                outJsonPath: $.Data.filedDate
+              - inJsonPath: $.incidentRequest.incident.legacyId
+                outJsonPath: $.Data.legacyId
+              - inJsonPath: $.incidentRequest.incident.migrationId
+                outJsonPath: $.Data.migrationId
 
-      - name: computed-sla-im-services
-        type: general
-        id: $.incidentRequest.incident.incidentId
-        jsonPath: $
-        timeStampField: $.incidentRequest.incident.auditDetails.createdTime
-        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
-        customJsonMapping:
-          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
-          fieldMapping:
-            - inJsonPath: $.incidentRequest.incident
-              outJsonPath: $.Data.incident
-            - inJsonPath: $.incidentRequest.incident.tenantId
-              outJsonPath: $.Data.tenantId
-            - inJsonPath: $.incidentRequest.incident.district
-              outJsonPath: $.Data.district
-            - inJsonPath: $.incidentRequest.incident.block
-              outJsonPath: $.Data.block
-            - inJsonPath: $.incidentRequest.incident.phcType
-              outJsonPath: $.Data.phcType
-            - inJsonPath: $.@timestamp
-              outJsonPath: $.Data.@timestamp  
-            - inJsonPath: $.incidentRequest.incident.auditDetails
-              outJsonPath: $.Data.auditDetails
-            - inJsonPath: $.updatedProcessInstance
-              outJsonPath: $.Data.currentProcessInstance
-            - inJsonPath: $.incidentRequest.incident.systemFunctional
-              outJsonPath: $.Data.systemFunctional
-            - inJsonPath: $.updatedProcessInstance.state.sla
-              outJsonPath: $.Data.slaRemaining
-            - inJsonPath: $.updatedProcessInstance.state.sla
-              outJsonPath: $.Data.stateSla
-            - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
-              outJsonPath: $.Data.totalSlaRemaining
-            - inJsonPath: $.indexView.state
-              outJsonPath: $.Data.state
-            - inJsonPath: $.indexView.incidentType_localized
-              outJsonPath: $.Data.incident.incidentType_localized
-            - inJsonPath: $.indexView.incidentSubType_localized
-              outJsonPath: $.Data.incident.incidentSubType_localized
-            - inJsonPath: $.indexView.applicationStatus_localized
-              outJsonPath: $.Data.incident.applicationStatus_localized
-            - inJsonPath: $.indexView.phcSubType_localized
-              outJsonPath: $.Data.incident.phcSubType_localized
-            - inJsonPath: $.indexView.tenantId_localized
-              outJsonPath: $.Data.tenantId_localized
-            - inJsonPath: $.indexView.nin_hfr_id
-              outJsonPath: $.Data.nin_hfr_id
-            - inJsonPath: $.indexView.mappedVendorUserName
-              outJsonPath: $.Data.mappedVendorUserName
-            - inJsonPath: $.indexView.mappedVendorName
-              outJsonPath: $.Data.mappedVendorName
-            - inJsonPath: $.indexView.lastActionTakenBy
-              outJsonPath: $.Data.lastActionTakenBy
-            - inJsonPath: $.indexView.definedTotalSla
-              outJsonPath: $.Data.definedTotalSla
-            - inJsonPath: $.incidentRequest.incident.filedDate
-              outJsonPath: $.Data.filedDate
-            - inJsonPath: $.incidentRequest.incident.legacyId
-              outJsonPath: $.Data.legacyId
-            - inJsonPath: $.incidentRequest.incident.migrationId
-              outJsonPath: $.Data.migrationId
-            - inJsonPath: $.indexView.comments
-              outJsonPath: $.Data.comments
+        - name: computed-sla-im-services
+          type: general
+          id: $.incidentRequest.incident.incidentId
+          jsonPath: $
+          timeStampField: $.incidentRequest.incident.auditDetails.createdTime
+          fieldsToBeMasked:
+            [
+              "$.incidentRequest.incident.reporter.userName",
+              "$.incidentRequest.incident.reporter.name",
+              "$.incidentRequest.incident.reporter.mobileNumber",
+              "$.incidentRequest.incident.reporter.emailId",
+            ]
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "incident": {},
+                    "tenantId": "",
+                    "auditDetails": {},
+                    "currentProcessInstance": {},
+                  },
+              }
+            fieldMapping:
+              - inJsonPath: $.incidentRequest.incident
+                outJsonPath: $.Data.incident
+              - inJsonPath: $.incidentRequest.incident.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.incidentRequest.incident.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.incidentRequest.incident.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.incidentRequest.incident.phcType
+                outJsonPath: $.Data.phcType
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
+              - inJsonPath: $.incidentRequest.incident.auditDetails
+                outJsonPath: $.Data.auditDetails
+              - inJsonPath: $.updatedProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
+              - inJsonPath: $.incidentRequest.incident.systemFunctional
+                outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.updatedProcessInstance.state.sla
+                outJsonPath: $.Data.slaRemaining
+              - inJsonPath: $.updatedProcessInstance.state.sla
+                outJsonPath: $.Data.stateSla
+              - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
+                outJsonPath: $.Data.totalSlaRemaining
+              - inJsonPath: $.indexView.state
+                outJsonPath: $.Data.state
+              - inJsonPath: $.indexView.incidentType_localized
+                outJsonPath: $.Data.incident.incidentType_localized
+              - inJsonPath: $.indexView.incidentSubType_localized
+                outJsonPath: $.Data.incident.incidentSubType_localized
+              - inJsonPath: $.indexView.applicationStatus_localized
+                outJsonPath: $.Data.incident.applicationStatus_localized
+              - inJsonPath: $.indexView.phcSubType_localized
+                outJsonPath: $.Data.incident.phcSubType_localized
+              - inJsonPath: $.indexView.tenantId_localized
+                outJsonPath: $.Data.tenantId_localized
+              - inJsonPath: $.indexView.nin_hfr_id
+                outJsonPath: $.Data.nin_hfr_id
+              - inJsonPath: $.indexView.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
+              - inJsonPath: $.indexView.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
+              - inJsonPath: $.indexView.lastActionTakenBy
+                outJsonPath: $.Data.lastActionTakenBy
+              - inJsonPath: $.indexView.definedTotalSla
+                outJsonPath: $.Data.definedTotalSla
+              - inJsonPath: $.incidentRequest.incident.filedDate
+                outJsonPath: $.Data.filedDate
+              - inJsonPath: $.incidentRequest.incident.legacyId
+                outJsonPath: $.Data.legacyId
+              - inJsonPath: $.incidentRequest.incident.migrationId
+                outJsonPath: $.Data.migrationId
+              - inJsonPath: $.indexView.comments
+                outJsonPath: $.Data.comments
 
-  - topic: im-services-inboxIndex
-    configKey: LEGACYINDEX
-    indexes:
-      - name: im-services
-        type: general
-        isBulk: true
-        id: $.incident.incidentId
-        jsonPath: $.IncidentWrappers.*
-        timeStampField: $.incident.auditDetails.createdTime
-        fieldsToBeMasked: []
-        customJsonMapping:
-          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
-          fieldMapping:
-            - inJsonPath: $.incident
-              outJsonPath: $.Data.incident
-            - inJsonPath: $.incident.tenantId
-              outJsonPath: $.Data.tenantId
-            - inJsonPath: $.incident.district
-              outJsonPath: $.Data.district
-            - inJsonPath: $.incident.block
-              outJsonPath: $.Data.block
-            - inJsonPath: $.incident.phcType
-              outJsonPath: $.Data.phcType
-            - inJsonPath: $.@timestamp
-              outJsonPath: $.Data.@timestamp  
-            - inJsonPath: $.incident.auditDetails
-              outJsonPath: $.Data.auditDetails
-          externalUriMapping:
-            - path: http://egov-workflow-v2.core-dev:8080/egov-workflow-v2/egov-wf/process/_search
-              queryParam: businessIds=$.service.serviceRequestId,history=true,tenantId=$.service.tenantId
-              apiRequest: { "RequestInfo": { "apiId": "org.egov.im","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "default","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "default" } ] } } }
-              uriResponseMapping:
-                - inJsonPath: $.ProcessInstances[0]
-                  outJsonPath: $.Data.currentProcessInstance
-                  
-  - topic: im-service-reindex
-    configKey: REINDEX
-    indexes:
-      - name: imreindex-v2
-        type: general
-        id: $.Data.incident.incidentId
-        isBulk: true
-        jsonPath: $.hits
-        timeStampField: $.Data.incident.auditDetails.lastModifiedTime
+    - topic: im-services-inboxIndex
+      configKey: LEGACYINDEX
+      indexes:
+        - name: im-services
+          type: general
+          isBulk: true
+          id: $.incident.incidentId
+          jsonPath: $.IncidentWrappers.*
+          timeStampField: $.incident.auditDetails.createdTime
+          fieldsToBeMasked: []
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "incident": {},
+                    "tenantId": "",
+                    "auditDetails": {},
+                    "currentProcessInstance": {},
+                  },
+              }
+            fieldMapping:
+              - inJsonPath: $.incident
+                outJsonPath: $.Data.incident
+              - inJsonPath: $.incident.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.incident.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.incident.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.incident.phcType
+                outJsonPath: $.Data.phcType
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
+              - inJsonPath: $.incident.auditDetails
+                outJsonPath: $.Data.auditDetails
+            externalUriMapping:
+              - path: http://egov-workflow-v2.core-dev:8080/egov-workflow-v2/egov-wf/process/_search
+                queryParam: businessIds=$.service.serviceRequestId,history=true,tenantId=$.service.tenantId
+                apiRequest:
+                  {
+                    "RequestInfo":
+                      {
+                        "apiId": "org.egov.im",
+                        "ver": "1.0",
+                        "ts": 1502890899493,
+                        "action": "asd",
+                        "did": "4354648646",
+                        "key": "xyz",
+                        "msgId": "654654",
+                        "requesterId": "61",
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8",
+                        "userInfo":
+                          {
+                            "id": 1,
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
+                            "type": "EMPLOYEE",
+                            "tenantId": "default",
+                            "roles":
+                              [
+                                {
+                                  "name": "Employee",
+                                  "code": "EMPLOYEE",
+                                  "tenantId": "default",
+                                },
+                              ],
+                          },
+                      },
+                  }
+                uriResponseMapping:
+                  - inJsonPath: $.ProcessInstances[0]
+                    outJsonPath: $.Data.currentProcessInstance
 
-  - topic: save-im-audit-request-indexer
-    configKey: INDEX
-    indexes:
-      - name: audit-computed-sla-im-services
-        type: general
-        id: $.indexView.uuid
-        jsonPath: $
-        timeStampField: $.incidentRequest.incident.auditDetails.lastModifiedTime
-        fieldsToBeMasked: ["$.incidentRequest.incident.reporter.userName", "$.incidentRequest.incident.reporter.name", "$.incidentRequest.incident.reporter.mobileNumber", "$.incidentRequest.incident.reporter.emailId"]
-        customJsonMapping:
-          indexMapping: {"Data":{"incident":{},"tenantId": "","auditDetails": {},"currentProcessInstance": {}}}
-          fieldMapping:
-            - inJsonPath: $.incidentRequest.incident
-              outJsonPath: $.Data.incident
-            - inJsonPath: $.incidentRequest.incident.tenantId
-              outJsonPath: $.Data.tenantId
-            - inJsonPath: $.incidentRequest.incident.district
-              outJsonPath: $.Data.district
-            - inJsonPath: $.incidentRequest.incident.block
-              outJsonPath: $.Data.block
-            - inJsonPath: $.incidentRequest.incident.phcType
-              outJsonPath: $.Data.phcType
-            - inJsonPath: $.@timestamp
-              outJsonPath: $.Data.@timestamp
-            - inJsonPath: $.incidentRequest.incident.auditDetails
-              outJsonPath: $.Data.auditDetails
-            - inJsonPath: $.updatedProcessInstance
-              outJsonPath: $.Data.currentProcessInstance
-            - inJsonPath: $.incidentRequest.incident.systemFunctional
-              outJsonPath: $.Data.systemFunctional
-            - inJsonPath: $.updatedProcessInstance.state.sla
-              outJsonPath: $.Data.slaRemaining
-            - inJsonPath: $.updatedProcessInstance.state.sla
-              outJsonPath: $.Data.stateSla
-            - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
-              outJsonPath: $.Data.totalSlaRemaining
-            - inJsonPath: $.indexView.state
-              outJsonPath: $.Data.state
-            - inJsonPath: $.indexView.incidentType_localized
-              outJsonPath: $.Data.incident.incidentType_localized
-            - inJsonPath: $.indexView.incidentSubType_localized
-              outJsonPath: $.Data.incident.incidentSubType_localized
-            - inJsonPath: $.indexView.applicationStatus_localized
-              outJsonPath: $.Data.incident.applicationStatus_localized
-            - inJsonPath: $.indexView.phcSubType_localized
-              outJsonPath: $.Data.incident.phcSubType_localized
-            - inJsonPath: $.indexView.tenantId_localized
-              outJsonPath: $.Data.tenantId_localized
-            - inJsonPath: $.indexView.nin_hfr_id
-              outJsonPath: $.Data.nin_hfr_id
-            - inJsonPath: $.indexView.mappedVendorUserName
-              outJsonPath: $.Data.mappedVendorUserName
-            - inJsonPath: $.indexView.mappedVendorName
-              outJsonPath: $.Data.mappedVendorName
-            - inJsonPath: $.indexView.lastActionTakenBy
-              outJsonPath: $.Data.lastActionTakenBy
-            - inJsonPath: $.indexView.startingStatus
-              outJsonPath: $.Data.startingStatus
-            - inJsonPath: $.indexView.endingStatus
-              outJsonPath: $.Data.endingStatus
-            - inJsonPath: $.indexView.startingStatus_localized
-              outJsonPath: $.Data.startingStatus_localized
-            - inJsonPath: $.indexView.endingStatus_localized
-              outJsonPath: $.Data.endingStatus_localized
-            - inJsonPath: $.indexView.comments
-              outJsonPath: $.Data.comments
-            - inJsonPath: $.indexView.sendBackReason
-              outJsonPath: $.Data.sendBackReason
-            - inJsonPath: $.indexView.sendBackSubReason
-              outJsonPath: $.Data.sendBackSubReason
-            - inJsonPath: $.indexView.documentUrls
-              outJsonPath: $.Data.documentUrls
-            - inJsonPath: $.indexView.uuid
-              outJsonPath: $.Data.uuid
+    - topic: im-service-reindex
+      configKey: REINDEX
+      indexes:
+        - name: imreindex-v2
+          type: general
+          id: $.Data.incident.incidentId
+          isBulk: true
+          jsonPath: $.hits
+          timeStampField: $.Data.incident.auditDetails.lastModifiedTime
 
-  - topic: save-user-login-report-indexer
-    configKey: INDEX
-    indexes:
-      - name: login-report
-        type: general
-        id: $.id
-        jsonPath: $
-        timeStampField: $.lastLoginDateTime
-        customJsonMapping:
-          indexMapping: { "Data": { "userLoginReport": { } } }
-          fieldMapping:
-            - inJsonPath: $.id
-              outJsonPath: $.Data.userLoginReport.id
-            - inJsonPath: $.userName
-              outJsonPath: $.Data.userLoginReport.userName
-            - inJsonPath: $.userRole
-              outJsonPath: $.Data.userLoginReport.userRole
-            - inJsonPath: $.currentOwnerName
-              outJsonPath: $.Data.userLoginReport.currentOwnerName
-            - inJsonPath: $.lastLoginDateTime
-              outJsonPath: $.Data.userLoginReport.lastLoginDateTime
-            - inJsonPath: $.healthFacilityName
-              outJsonPath: $.Data.userLoginReport.healthFacilityName
-            - inJsonPath: $.block
-              outJsonPath: $.Data.userLoginReport.block
-            - inJsonPath: $.district
-              outJsonPath: $.Data.userLoginReport.district
-            - inJsonPath: $.state
-              outJsonPath: $.Data.userLoginReport.state
+    - topic: save-im-audit-request-indexer
+      configKey: INDEX
+      indexes:
+        - name: audit-computed-sla-im-services
+          type: general
+          id: $.indexView.uuid
+          jsonPath: $
+          timeStampField: $.incidentRequest.incident.auditDetails.lastModifiedTime
+          fieldsToBeMasked:
+            [
+              "$.incidentRequest.incident.reporter.userName",
+              "$.incidentRequest.incident.reporter.name",
+              "$.incidentRequest.incident.reporter.mobileNumber",
+              "$.incidentRequest.incident.reporter.emailId",
+            ]
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "incident": {},
+                    "tenantId": "",
+                    "auditDetails": {},
+                    "currentProcessInstance": {},
+                  },
+              }
+            fieldMapping:
+              - inJsonPath: $.incidentRequest.incident
+                outJsonPath: $.Data.incident
+              - inJsonPath: $.incidentRequest.incident.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.incidentRequest.incident.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.incidentRequest.incident.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.incidentRequest.incident.phcType
+                outJsonPath: $.Data.phcType
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
+              - inJsonPath: $.incidentRequest.incident.auditDetails
+                outJsonPath: $.Data.auditDetails
+              - inJsonPath: $.updatedProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
+              - inJsonPath: $.incidentRequest.incident.systemFunctional
+                outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.updatedProcessInstance.state.sla
+                outJsonPath: $.Data.slaRemaining
+              - inJsonPath: $.updatedProcessInstance.state.sla
+                outJsonPath: $.Data.stateSla
+              - inJsonPath: $.updatedProcessInstance.state.totalSlaRemaining
+                outJsonPath: $.Data.totalSlaRemaining
+              - inJsonPath: $.indexView.state
+                outJsonPath: $.Data.state
+              - inJsonPath: $.indexView.incidentType_localized
+                outJsonPath: $.Data.incident.incidentType_localized
+              - inJsonPath: $.indexView.incidentSubType_localized
+                outJsonPath: $.Data.incident.incidentSubType_localized
+              - inJsonPath: $.indexView.applicationStatus_localized
+                outJsonPath: $.Data.incident.applicationStatus_localized
+              - inJsonPath: $.indexView.phcSubType_localized
+                outJsonPath: $.Data.incident.phcSubType_localized
+              - inJsonPath: $.indexView.tenantId_localized
+                outJsonPath: $.Data.tenantId_localized
+              - inJsonPath: $.indexView.nin_hfr_id
+                outJsonPath: $.Data.nin_hfr_id
+              - inJsonPath: $.indexView.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
+              - inJsonPath: $.indexView.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
+              - inJsonPath: $.indexView.lastActionTakenBy
+                outJsonPath: $.Data.lastActionTakenBy
+              - inJsonPath: $.indexView.startingStatus
+                outJsonPath: $.Data.startingStatus
+              - inJsonPath: $.indexView.endingStatus
+                outJsonPath: $.Data.endingStatus
+              - inJsonPath: $.indexView.startingStatus_localized
+                outJsonPath: $.Data.startingStatus_localized
+              - inJsonPath: $.indexView.endingStatus_localized
+                outJsonPath: $.Data.endingStatus_localized
+              - inJsonPath: $.indexView.comments
+                outJsonPath: $.Data.comments
+              - inJsonPath: $.indexView.sendBackReason
+                outJsonPath: $.Data.sendBackReason
+              - inJsonPath: $.indexView.sendBackSubReason
+                outJsonPath: $.Data.sendBackSubReason
+              - inJsonPath: $.indexView.documentUrls
+                outJsonPath: $.Data.documentUrls
+              - inJsonPath: $.indexView.uuid
+                outJsonPath: $.Data.uuid
 
-  - topic: save-phc-master-list-indexer
-    configKey: INDEX
-    indexes:
-      - name: phc-master-list-new-2
-        type: general
-        id: $.tenantId
-        jsonPath: $
-        timeStampField: $.lastModifiedTime
-        fieldsToBeMasked: []
-        customJsonMapping:
-          indexMapping: {}
-          fieldMapping:
-            - inJsonPath: $.totalTickets
-              outJsonPath: $.Data.total_tickets
-            - inJsonPath: $.openTickets
-              outJsonPath: $.Data.open_tickets
-            - inJsonPath: $.closedTickets
-              outJsonPath: $.Data.closed_tickets
-            - inJsonPath: $.solarPanelStatus
-              outJsonPath: $.Data.solar_panel_status
+    - topic: save-user-login-report-indexer
+      configKey: INDEX
+      indexes:
+        - name: login-report
+          type: general
+          id: $.id
+          jsonPath: $
+          timeStampField: $.lastLoginDateTime
+          customJsonMapping:
+            indexMapping: { "Data": { "userLoginReport": {} } }
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.userLoginReport.id
+              - inJsonPath: $.userName
+                outJsonPath: $.Data.userLoginReport.userName
+              - inJsonPath: $.userRole
+                outJsonPath: $.Data.userLoginReport.userRole
+              - inJsonPath: $.currentOwnerName
+                outJsonPath: $.Data.userLoginReport.currentOwnerName
+              - inJsonPath: $.lastLoginDateTime
+                outJsonPath: $.Data.userLoginReport.lastLoginDateTime
+              - inJsonPath: $.healthFacilityName
+                outJsonPath: $.Data.userLoginReport.healthFacilityName
+              - inJsonPath: $.block
+                outJsonPath: $.Data.userLoginReport.block
+              - inJsonPath: $.district
+                outJsonPath: $.Data.userLoginReport.district
+              - inJsonPath: $.state
+                outJsonPath: $.Data.userLoginReport.state
+
+    - topic: save-phc-master-list-indexer
+      configKey: INDEX
+      indexes:
+        - name: phc-master-list-new-2
+          type: general
+          id: $.tenantId
+          jsonPath: $
+          timeStampField: $.lastModifiedTime
+          fieldsToBeMasked: []
+          customJsonMapping:
+            indexMapping: {}
+            fieldMapping:
+              - inJsonPath: $.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.code
+                outJsonPath: $.Data.code
+              - inJsonPath: $.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.isLive
+                outJsonPath: $.Data.isLive
+              - inJsonPath: $.name
+                outJsonPath: $.Data.name
+              - inJsonPath: $.phcType
+                outJsonPath: $.Data.phcType
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.type
+                outJsonPath: $.Data.type
+              - inJsonPath: $.totalTickets
+                outJsonPath: $.Data.total_tickets
+              - inJsonPath: $.openTickets
+                outJsonPath: $.Data.open_tickets
+              - inJsonPath: $.closedTickets
+                outJsonPath: $.Data.closed_tickets
+              - inJsonPath: $.solarPanelStatus
+                outJsonPath: $.Data.solar_panel_status
