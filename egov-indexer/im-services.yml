@@ -508,3 +508,5 @@ ServiceMaps:
                 outJsonPath: $.Data.closed_tickets
               - inJsonPath: $.solarPanelStatus
                 outJsonPath: $.Data.solar_panel_status
+              - inJsonPath: $.state
+                outJsonPath: $.Data.state
