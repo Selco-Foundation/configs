@@ -477,7 +477,8 @@ ServiceMaps:
           timeStampField: $.lastModifiedTime
           fieldsToBeMasked: []
           customJsonMapping:
-            indexMapping: {}
+            indexMapping:
+              Data: {}
             fieldMapping:
               - inJsonPath: $.block
                 outJsonPath: $.Data.block
