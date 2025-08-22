@@ -497,9 +497,9 @@ ServiceMaps:
               - inJsonPath: $.type
                 outJsonPath: $.Data.type
               - inJsonPath: $.tenantIdLocalized
-                outJsonPath: $.Data.tenantIdLocalized
+                outJsonPath: $.Data.tenantId_localized
               - inJsonPath: $.geoPoint
-                outJsonPath: $.Data.geoPoint
+                outJsonPath: $.Data.geo-point
               - inJsonPath: $.totalTickets
                 outJsonPath: $.Data.total_tickets
               - inJsonPath: $.openTickets
