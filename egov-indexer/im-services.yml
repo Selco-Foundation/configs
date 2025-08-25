@@ -510,3 +510,7 @@ ServiceMaps:
                 outJsonPath: $.Data.solar_panel_status
               - inJsonPath: $.state
                 outJsonPath: $.Data.state
+              - inJsonPath: $.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
+              - inJsonPath: $.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
