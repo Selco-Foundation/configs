@@ -470,7 +470,7 @@ ServiceMaps:
     - topic: save-phc-master-list-indexer
       configKey: INDEX
       indexes:
-        - name: phc-master-list-new-2
+        - name: health-facility-index
           type: general
           id: $.tenantId
           jsonPath: $
