@@ -136,6 +136,7 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.additionalDetail.rejectReason
                 valueType: STRING
 
+
     - topic: update-im-request-indexer
       configKey: INDEX
       indexes:
@@ -269,6 +270,7 @@ ServiceMaps:
               - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
                 outJsonPath: $.Data.incident.additionalDetail.rejectReason
                 valueType: STRING
+
 
     - topic: im-services-inboxIndex
       configKey: LEGACYINDEX
