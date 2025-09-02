@@ -132,6 +132,9 @@ ServiceMaps:
                 outJsonPath: $.Data.migrationId
               - inJsonPath: $.indexView.comments
                 outJsonPath: $.Data.comments
+              - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
+                outJsonPath: $.Data.incident.additionalDetail.rejectReason
+
 
     - topic: update-im-request-indexer
       configKey: INDEX
@@ -263,6 +266,9 @@ ServiceMaps:
                 outJsonPath: $.Data.migrationId
               - inJsonPath: $.indexView.comments
                 outJsonPath: $.Data.comments
+              - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
+                outJsonPath: $.Data.incident.additionalDetail.rejectReason
+
 
     - topic: im-services-inboxIndex
       configKey: LEGACYINDEX
