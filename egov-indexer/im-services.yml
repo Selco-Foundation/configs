@@ -134,6 +134,7 @@ ServiceMaps:
                 outJsonPath: $.Data.comments
               - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
                 outJsonPath: $.Data.incident.additionalDetail.rejectReason
+                valueType: STRING
 
 
     - topic: update-im-request-indexer
@@ -268,6 +269,7 @@ ServiceMaps:
                 outJsonPath: $.Data.comments
               - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
                 outJsonPath: $.Data.incident.additionalDetail.rejectReason
+                valueType: STRING
 
 
     - topic: im-services-inboxIndex
