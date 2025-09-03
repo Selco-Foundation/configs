@@ -266,8 +266,8 @@ ServiceMaps:
                 outJsonPath: $.Data.migrationId
               - inJsonPath: $.indexView.comments
                 outJsonPath: $.Data.comments
-              - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
-                outJsonPath: $.Data.incident.additionalDetail.rejectReason
+              - inJsonPath: $.indexView.latestRejectReason
+                outJsonPath: $.Data.latestRejectReason
 
 
     - topic: im-services-inboxIndex
@@ -442,6 +442,8 @@ ServiceMaps:
                 outJsonPath: $.Data.documentUrls
               - inJsonPath: $.indexView.uuid
                 outJsonPath: $.Data.uuid
+              - inJsonPath: $.indexView.latestRejectReason
+                outJsonPath: $.Data.latestRejectReason
 
     - topic: save-user-login-report-indexer
       configKey: INDEX
