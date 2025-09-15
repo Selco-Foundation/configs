@@ -54,7 +54,7 @@ ServiceMaps:
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
 
-        - name: computed-sla-im-services
+        - name: computed-sla-im-services-write
           type: general
           id: $.incidentRequest.incident.incidentId
           jsonPath: $
@@ -188,7 +188,7 @@ ServiceMaps:
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
 
-        - name: computed-sla-im-services
+        - name: computed-sla-im-services-write
           type: general
           id: $.incidentRequest.incident.incidentId
           jsonPath: $
@@ -356,7 +356,7 @@ ServiceMaps:
     - topic: save-im-audit-request-indexer
       configKey: INDEX
       indexes:
-        - name: audit-computed-sla-im-services
+        - name: audit-computed-sla-im-services-write
           type: general
           id: $.indexView.uuid
           jsonPath: $
