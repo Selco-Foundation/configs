@@ -134,6 +134,15 @@ ServiceMaps:
                 outJsonPath: $.Data.comments
               - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
                 outJsonPath: $.Data.incident.additionalDetail.rejectReason
+              # Escalation fields for SLA breach detection
+              - inJsonPath: $.incidentRequest.incident.escalations
+                outJsonPath: $.Data.incident.escalations
+              - inJsonPath: $.escalationId
+                outJsonPath: $.Data.escalationId
+              - inJsonPath: $.escalationTime
+                outJsonPath: $.Data.escalationTime
+              - inJsonPath: $.escalationLevel
+                outJsonPath: $.Data.escalationLevel
 
 
     - topic: update-im-request-indexer
@@ -268,6 +277,15 @@ ServiceMaps:
                 outJsonPath: $.Data.comments
               - inJsonPath: $.indexView.latestRejectReason
                 outJsonPath: $.Data.latestRejectReason
+              # Escalation fields for SLA breach detection
+              - inJsonPath: $.incidentRequest.incident.escalations
+                outJsonPath: $.Data.incident.escalations
+              - inJsonPath: $.escalationId
+                outJsonPath: $.Data.escalationId
+              - inJsonPath: $.escalationTime
+                outJsonPath: $.Data.escalationTime
+              - inJsonPath: $.escalationLevel
+                outJsonPath: $.Data.escalationLevel
 
 
     - topic: im-services-inboxIndex
