@@ -685,17 +685,17 @@ serviceMaps:
 
     - version: 1.0
       name: Projects
-      description: Updates project dates only  in project table
+      description: Updates project dates and name in project table
       fromTopic: update-project-date
       isTransaction: true
       queryMaps:
-        - query: UPDATE project SET startDate = ?, endDate = ?, additionalDetails = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
+        - query: UPDATE project SET startDate = ?, endDate = ?, name = ?, additionalDetails = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
           basePath: $.Projects.*
           jsonMaps:
             - jsonPath: $.Projects.*.startDate
 
             - jsonPath: $.Projects.*.endDate
-
+            - jsonPath: $.Projects.*.name
             - jsonPath: $.Projects.*.additionalDetails
               type: JSON
               dbType: JSONB
