@@ -54,7 +54,7 @@ ServiceMaps:
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
 
-        - name: computed-sla-im-services
+        - name: computed-sla-im-services-write
           type: general
           id: $.incidentRequest.incident.incidentId
           jsonPath: $
@@ -132,6 +132,9 @@ ServiceMaps:
                 outJsonPath: $.Data.migrationId
               - inJsonPath: $.indexView.comments
                 outJsonPath: $.Data.comments
+              - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
+                outJsonPath: $.Data.incident.additionalDetail.rejectReason
+
 
     - topic: update-im-request-indexer
       configKey: INDEX
@@ -185,7 +188,7 @@ ServiceMaps:
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
 
-        - name: computed-sla-im-services
+        - name: computed-sla-im-services-write
           type: general
           id: $.incidentRequest.incident.incidentId
           jsonPath: $
@@ -263,6 +266,9 @@ ServiceMaps:
                 outJsonPath: $.Data.migrationId
               - inJsonPath: $.indexView.comments
                 outJsonPath: $.Data.comments
+              - inJsonPath: $.indexView.latestRejectReason
+                outJsonPath: $.Data.latestRejectReason
+
 
     - topic: im-services-inboxIndex
       configKey: LEGACYINDEX
@@ -350,7 +356,7 @@ ServiceMaps:
     - topic: save-im-audit-request-indexer
       configKey: INDEX
       indexes:
-        - name: audit-computed-sla-im-services
+        - name: audit-computed-sla-im-services-write
           type: general
           id: $.indexView.uuid
           jsonPath: $
@@ -436,6 +442,8 @@ ServiceMaps:
                 outJsonPath: $.Data.documentUrls
               - inJsonPath: $.indexView.uuid
                 outJsonPath: $.Data.uuid
+              - inJsonPath: $.indexView.latestRejectReason
+                outJsonPath: $.Data.latestRejectReason
 
     - topic: save-user-login-report-indexer
       configKey: INDEX
