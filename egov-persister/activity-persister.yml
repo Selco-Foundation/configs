@@ -169,6 +169,33 @@ serviceMaps:
 
             - jsonPath: $.bom.*.auditDetails.lastModifiedTime
 
+        - query: INSERT INTO bom_document(id,bomid,documentType,filestoreId,documentUid,additionalDetails,status,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?,?,?,?,?,?,?,?,?,?,?);
+          basePath: $.bom.*.documents.*
+          jsonMaps:
+            - jsonPath: $.bom.*.documents.*.id
+
+            - jsonPath: $.bom[*][?({id} in @.documents[*].id)].id
+
+            - jsonPath: $.bom.*.documents.*.documentType
+
+            - jsonPath: $.bom.*.documents.*.fileStoreId
+
+            - jsonPath: $.bom.*.documents.*.documentUid
+
+            - jsonPath: $.bom.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.bom.*.documents.*.status
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.createdBy
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.createdTime
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedTime
+
     - version: 1.0
       name: Activity
       description: Updates Bill Of Material details details in bom table
@@ -202,3 +229,46 @@ serviceMaps:
             - jsonPath: $.bom.*.auditDetails.lastModifiedTime
 
             - jsonPath: $.bom.*.id
+
+        - query: INSERT INTO bom_document(id,bomid,documentType,filestoreId,documentUid,additionalDetails,status,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET documentType=?, filestoreId=?, documentUid=?, additionalDetails=?, status=?, lastModifiedBy=?, lastModifiedTime=?;
+          basePath: $.bom.*.documents.*
+          jsonMaps:
+            - jsonPath: $.bom.*.documents.*.id
+
+            - jsonPath: $.bom[*][?({id} in @.documents[*].id)].id
+
+            - jsonPath: $.bom.*.documents.*.documentType
+
+            - jsonPath: $.bom.*.documents.*.fileStoreId
+
+            - jsonPath: $.bom.*.documents.*.documentUid
+
+            - jsonPath: $.bom.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.bom.*.documents.*.status
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.createdBy
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.createdTime
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.bom.*.documents.*.documentType
+
+            - jsonPath: $.bom.*.documents.*.fileStoreId
+
+            - jsonPath: $.bom.*.documents.*.documentUid
+
+            - jsonPath: $.bom.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.bom.*.documents.*.status
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedTime
