@@ -117,7 +117,7 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: INSERT INTO field_plan_facilities (id, tenant_id, field_plan_id, facility_id, additional_details, created_by, last_modified_by, created_time, last_modified_time, is_deleted) VALUES (?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO field_plan_facilities (id, tenantid, field_plan_id, facility_id, additional_details, last_modified_by, created_time, lastmodifiedtime, isdeleted) VALUES (?,?,?,?,?,?,?,?,?,?);
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.id
@@ -132,15 +132,13 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-            - jsonPath: $.*.auditDetails.createdBy
-
             - jsonPath: $.*.auditDetails.lastModifiedBy
 
             - jsonPath: $.*.auditDetails.createdTime
 
             - jsonPath: $.*.auditDetails.lastModifiedTime
 
-            - jsonPath: $.*.isDeleted
+            - jsonPath: $.*.isdeleted
 
     - version: 1.0
       description: Deletes FieldPlan Facility
@@ -154,12 +152,12 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: UPDATE field_plan_facilities SET last_modified_by=?, last_modified_time=?, is_deleted=?, additional_details=? WHERE id=?;
+        - query: UPDATE field_plan_facilities SET last_modified_by=?, lastmodifiedtime=?, isdeleted=?, additional_details=? WHERE id=?;
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.auditDetails.lastModifiedBy
             - jsonPath: $.*.auditDetails.lastModifiedTime
-            - jsonPath: $.*.isDeleted
+            - jsonPath: $.*.isdeleted
             - jsonPath: $.*.additionalFields
               type: JSON
               dbType: JSONB
