@@ -117,7 +117,7 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: INSERT INTO field_plan_facilities (id, tenantid, field_plan_id, facility_id, additional_details, last_modified_by, created_time, lastmodifiedtime, isdeleted) VALUES (?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO field_plan_facilities (id, tenantid, field_plan_id, facility_id, additional_details, last_modified_by, created_time, lastmodifiedtime, isdeleted) VALUES (?,?,?,?,?,?,?,?,?);
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.id
