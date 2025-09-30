@@ -1,548 +1,538 @@
 serviceMaps:
- serviceName: organisation
- mappings:
- - version: 1.0
-   name: Organisation
-   description: Persists organisation details
-   fromTopic: save-org
-   isTransaction: true
-   isAuditEnabled: true
-   module: ORG
-   objecIdJsonPath: $.id
-   tenantIdJsonPath: $.tenantId
-   transactionCodeJsonPath: $.applicationNumber
-   auditAttributeBasePath: $.organisations.*
-   queryMaps:
-    - query: INSERT INTO eg_org(id,tenant_id,application_number,name,code,org_number,external_ref_number,date_of_incorporation,application_status,is_active,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+  serviceName: organisation
+  mappings:
+    - version: 1.0
+      name: Organisation
+      description: Persists organisation details
+      fromTopic: save-org
+      isTransaction: true
+      isAuditEnabled: true
+      module: ORG
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.applicationNumber
+      auditAttributeBasePath: $.organisations.*
+      queryMaps:
+        - query: INSERT INTO eg_org(id,tenant_id,application_number,name,code,org_number,external_ref_number,date_of_incorporation,application_status,is_active,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
 
-      basePath: $.organisations.*	
-      jsonMaps:
+          basePath: $.organisations.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.id
 
-       - jsonPath: $.organisations.*.id
+            - jsonPath: $.organisations.*.tenantId
 
-       - jsonPath: $.organisations.*.tenantId
-       
-       - jsonPath: $.organisations.*.applicationNumber
-       
-       - jsonPath: $.organisations.*.name
-       
-       - jsonPath: $.organisations.*.code
+            - jsonPath: $.organisations.*.applicationNumber
 
-       - jsonPath: $.organisations.*.orgNumber
+            - jsonPath: $.organisations.*.name
 
-       - jsonPath: $.organisations.*.externalRefNumber
+            - jsonPath: $.organisations.*.code
 
-       - jsonPath: $.organisations.*.dateOfIncorporation
+            - jsonPath: $.organisations.*.orgNumber
 
-       - jsonPath: $.organisations.*.applicationStatus
+            - jsonPath: $.organisations.*.externalRefNumber
 
-       - jsonPath: $.organisations.*.isActive
+            - jsonPath: $.organisations.*.dateOfIncorporation
 
-       - jsonPath: $.organisations.*.additionalDetails
-         type: JSON
-         dbType: JSONB
+            - jsonPath: $.organisations.*.applicationStatus
 
-       - jsonPath: $.organisations.*.auditDetails.createdBy
+            - jsonPath: $.organisations.*.isActive
 
-       - jsonPath: $.organisations.*.auditDetails.lastModifiedBy
+            - jsonPath: $.organisations.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-       - jsonPath: $.organisations.*.auditDetails.createdTime
+            - jsonPath: $.organisations.*.auditDetails.createdBy
 
-       - jsonPath: $.organisations.*.auditDetails.lastModifiedTime
+            - jsonPath: $.organisations.*.auditDetails.lastModifiedBy
 
+            - jsonPath: $.organisations.*.auditDetails.createdTime
 
-    - query: INSERT INTO eg_org_address(id,tenant_id,org_id,door_no,plot_no,landmark,city,pin_code,district,region,state,country,boundary_code,boundary_type,building_name,street,additional_details,hqAddress) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+            - jsonPath: $.organisations.*.auditDetails.lastModifiedTime
 
-      basePath: $.organisations.*.orgAddress.*
-      jsonMaps:
+        - query: INSERT INTO eg_org_address(id,tenant_id,org_id,door_no,plot_no,landmark,city,pin_code,district,region,state,country,boundary_code,boundary_type,building_name,street,additional_details,hqAddress) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
 
-       - jsonPath: $.organisations.*.orgAddress.*.id
+          basePath: $.organisations.*.orgAddress.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.id
 
-       - jsonPath: $.organisations.*.orgAddress.*.tenantId
+            - jsonPath: $.organisations.*.orgAddress.*.tenantId
 
-       - jsonPath: $.organisations[*][?({id} in @.orgAddress[*].id)].id
+            - jsonPath: $.organisations[*][?({id} in @.orgAddress[*].id)].id
 
-       - jsonPath: $.organisations.*.orgAddress.*.doorNo
-       
-       - jsonPath: $.organisations.*.orgAddress.*.plotNo
+            - jsonPath: $.organisations.*.orgAddress.*.doorNo
 
-       - jsonPath: $.organisations.*.orgAddress.*.landmark
-       
-       - jsonPath: $.organisations.*.orgAddress.*.city
+            - jsonPath: $.organisations.*.orgAddress.*.plotNo
 
-       - jsonPath: $.organisations.*.orgAddress.*.pincode
-       
-       - jsonPath: $.organisations.*.orgAddress.*.district
-       
-       - jsonPath: $.organisations.*.orgAddress.*.region
+            - jsonPath: $.organisations.*.orgAddress.*.landmark
 
-       - jsonPath: $.organisations.*.orgAddress.*.state
-       
-       - jsonPath: $.organisations.*.orgAddress.*.country
-       
-       - jsonPath: $.organisations.*.orgAddress.*.boundaryCode
+            - jsonPath: $.organisations.*.orgAddress.*.city
 
-       - jsonPath: $.organisations.*.orgAddress.*.boundaryType
-       
-       - jsonPath: $.organisations.*.orgAddress.*.buildingName
-       
-       - jsonPath: $.organisations.*.orgAddress.*.street
+            - jsonPath: $.organisations.*.orgAddress.*.pincode
 
-       - jsonPath: $.organisations.*.orgAddress.*.additionDetails
+            - jsonPath: $.organisations.*.orgAddress.*.district
 
-       - jsonPath: $.organisations.*.orgAddress.*.hqAddress
-         type: JSON
-         dbType: JSONB
-         
-         
-    - query: INSERT INTO eg_org_address_geo_location(id,address_id,latitude,longitude,additional_details) VALUES (?,?,?,?,?);
+            - jsonPath: $.organisations.*.orgAddress.*.region
 
-      basePath: $.organisations.*.orgAddress.*.geoLocation
-      jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.state
 
-       - jsonPath: $.organisations.*.orgAddress.*.geoLocation.id
+            - jsonPath: $.organisations.*.orgAddress.*.country
 
-       - jsonPath: $.organisations.*.orgAddress.*.id
+            - jsonPath: $.organisations.*.orgAddress.*.boundaryCode
 
-       - jsonPath: $.organisations.*.orgAddress.*.geoLocation.latitude
-       
-       - jsonPath: $.organisations.*.orgAddress.*.geoLocation.longitude
+            - jsonPath: $.organisations.*.orgAddress.*.boundaryType
 
-       - jsonPath: $.organisations.*.orgAddress.*.geoLocation.additionalDetails
-         type: JSON
-         dbType: JSONB  
+            - jsonPath: $.organisations.*.orgAddress.*.buildingName
 
+            - jsonPath: $.organisations.*.orgAddress.*.street
 
-    - query: INSERT INTO eg_org_contact_detail(id,tenant_id,org_id,contact_name,contact_mobile_number,contact_email, individual_id) VALUES (?,?,?,?,?,?,?);
+            - jsonPath: $.organisations.*.orgAddress.*.additionDetails
 
-      basePath: $.organisations.*.contactDetails.*
-      jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.hqAddress
+              type: JSON
+              dbType: JSONB
 
-       - jsonPath: $.organisations.*.contactDetails.*.id
-       
-       - jsonPath: $.organisations.*.contactDetails.*.tenantId
+        - query: INSERT INTO eg_org_address_geo_location(id,address_id,latitude,longitude,additional_details) VALUES (?,?,?,?,?);
 
-       - jsonPath: $.organisations[*][?({id} in @.contactDetails[*].id)].id
+          basePath: $.organisations.*.orgAddress.*.geoLocation
+          jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.id
 
-       - jsonPath: $.organisations.*.contactDetails.*.contactName
-       
-       - jsonPath: $.organisations.*.contactDetails.*.contactMobileNumber
+            - jsonPath: $.organisations.*.orgAddress.*.id
 
-       - jsonPath: $.organisations.*.contactDetails.*.contactEmail 
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.latitude
 
-       - jsonPath: $.organisations.*.contactDetails.*.individualId
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.longitude
 
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-    - query: INSERT INTO eg_tax_identifier(id,org_id,type,value,is_active,additional_details) VALUES (?,?,?,?,?,?);
+        - query: INSERT INTO eg_org_contact_detail(id,tenant_id,org_id,contact_name,contact_mobile_number,contact_email, individual_id) VALUES (?,?,?,?,?,?,?);
 
-      basePath: $.organisations.*.identifiers.*
-      jsonMaps:
+          basePath: $.organisations.*.contactDetails.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.contactDetails.*.id
 
-       - jsonPath: $.organisations.*.identifiers.*.id
+            - jsonPath: $.organisations.*.contactDetails.*.tenantId
 
-       - jsonPath: $.organisations[*][?({id} in @.identifiers[*].id)].id
+            - jsonPath: $.organisations[*][?({id} in @.contactDetails[*].id)].id
 
-       - jsonPath: $.organisations.*.identifiers.*.type
-       
-       - jsonPath: $.organisations.*.identifiers.*.value
-       
-       - jsonPath: $.organisations.*.identifiers.*.isActive
+            - jsonPath: $.organisations.*.contactDetails.*.contactName
 
-       - jsonPath: $.organisations.*.identifiers.*.additionalDetails
-         type: JSON
-         dbType: JSONB  
+            - jsonPath: $.organisations.*.contactDetails.*.contactMobileNumber
 
+            - jsonPath: $.organisations.*.contactDetails.*.contactEmail
 
-    - query: INSERT INTO eg_org_jurisdiction(id,org_id,code,additional_details) VALUES (?,?,?,?);
+            - jsonPath: $.organisations.*.contactDetails.*.individualId
 
-      basePath: $.organisations.*.jurisdiction.*
-      jsonMaps:
+        - query: INSERT INTO eg_tax_identifier(id,org_id,type,value,is_active,additional_details) VALUES (?,?,?,?,?,?);
 
-       - jsonPath: $.organisations.*.jurisdiction.*.id
-       
-       - jsonPath: $.organisations[*][?({id} in @.jurisdiction[*].id)].id
+          basePath: $.organisations.*.identifiers.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.identifiers.*.id
 
-       - jsonPath: $.organisations.*.jurisdiction.*.code 
-       
-       - jsonPath: $.organisations.*.jurisdiction.*.additionalDetails
-         type: JSON
-         dbType: JSONB
-         
-         
-    - query: INSERT INTO eg_org_function(id,org_id,application_number,type,subType,category,class,valid_from,valid_to,application_status,wf_status,is_active,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+            - jsonPath: $.organisations[*][?({id} in @.identifiers[*].id)].id
 
-      basePath: $.organisations.*.functions.*
-      jsonMaps:
+            - jsonPath: $.organisations.*.identifiers.*.type
 
-       - jsonPath: $.organisations.*.functions.*.id
+            - jsonPath: $.organisations.*.identifiers.*.value
 
-       - jsonPath: $.organisations[*][?({id} in @.functions[*].id)].id
+            - jsonPath: $.organisations.*.identifiers.*.isActive
 
-       - jsonPath: $.organisations.*.functions.*.applicationNumber
-       
-       - jsonPath: $.organisations.*.functions.*.type
-       
-       - jsonPath: $.organisations.*.functions.*.subType
+            - jsonPath: $.organisations.*.identifiers.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-       - jsonPath: $.organisations.*.functions.*.category
-       
-       - jsonPath: $.organisations.*.functions.*.class
+        - query: INSERT INTO eg_org_jurisdiction(id,org_id,code,additional_details) VALUES (?,?,?,?);
 
-       - jsonPath: $.organisations.*.functions.*.validFrom
-       
-       - jsonPath: $.organisations.*.functions.*.validTo
-       
-       - jsonPath: $.organisations.*.functions.*.applicationStatus
+          basePath: $.organisations.*.jurisdiction.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.jurisdiction.*.id
 
-       - jsonPath: $.organisations.*.functions.*.wfStatus
-       
-       - jsonPath: $.organisations.*.functions.*.isActive
-       
-       - jsonPath: $.organisations.*.functions.*.additionalDetails
-         type: JSON
-         dbType: JSONB
+            - jsonPath: $.organisations[*][?({id} in @.jurisdiction[*].id)].id
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.createdBy
+            - jsonPath: $.organisations.*.jurisdiction.*.code
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedBy
+            - jsonPath: $.organisations.*.jurisdiction.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.createdTime
+        - query: INSERT INTO eg_org_function(id,org_id,application_number,type,subType,category,class,valid_from,valid_to,application_status,wf_status,is_active,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedTime
-       
-       
-    - query: INSERT INTO eg_org_document(id,org_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?);
+          basePath: $.organisations.*.functions.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.functions.*.id
 
-      basePath: $.organisations.*.documents.*
-      jsonMaps:
+            - jsonPath: $.organisations[*][?({id} in @.functions[*].id)].id
 
-       - jsonPath: $.organisations.*.documents.*.id
+            - jsonPath: $.organisations.*.functions.*.applicationNumber
 
-       - jsonPath: $.organisations[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.organisations.*.functions.*.type
 
-       - jsonPath: $.organisations.*.documents.*.documentType
-       
-       - jsonPath: $.organisations.*.documents.*.fileStore
-       
-       - jsonPath: $.organisations.*.documents.*.documentUid
-       
-       - jsonPath: $.organisations.*.documents.*.isActive
+            - jsonPath: $.organisations.*.functions.*.subType
 
-       - jsonPath: $.organisations.*.documents.*.additionalDetails
-         type: JSON
-         dbType: JSONB 
-         
-         
-    - query: INSERT INTO eg_org_document(id,org_func_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?);
+            - jsonPath: $.organisations.*.functions.*.category
 
-      basePath: $.organisations.*.functions.*.documents.*
-      jsonMaps:
+            - jsonPath: $.organisations.*.functions.*.class
 
-       - jsonPath: $.organisations.*.functions.*.documents.*.id
+            - jsonPath: $.organisations.*.functions.*.validFrom
 
-       - jsonPath: $.organisations.*.functions[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.organisations.*.functions.*.validTo
 
-       - jsonPath: $.organisations.*.functions.*.documents.*.documentType
-       
-       - jsonPath: $.organisations.*.functions.*.documents.*.fileStore
-       
-       - jsonPath: $.organisations.*.functions.*.documents.*.documentUid
-       
-       - jsonPath: $.organisations.*.functions.*.documents.*.isActive
+            - jsonPath: $.organisations.*.functions.*.applicationStatus
 
-       - jsonPath: $.organisations.*.functions.*.documents.*.additionalDetails
-         type: JSON
-         dbType: JSONB     
-   
-   
- - version: 1.0
-   description: Update organisation details
-   fromTopic: update-org
-   isTransaction: true
-   isAuditEnabled: true
-   module: ORG
-   objecIdJsonPath: $.id
-   tenantIdJsonPath: $.tenantId
-   transactionCodeJsonPath: $.applicationNumber
-   auditAttributeBasePath: $.organisations.*
-   queryMaps:
-   
-     - query: UPDATE eg_org set name=?, code=?, external_ref_number=?, date_of_incorporation=?, application_status=?, is_active=?, additional_details=?,last_modified_by=?, last_modified_time=? where id=?;
-       basePath: $.organisations.*
-       jsonMaps:           
+            - jsonPath: $.organisations.*.functions.*.wfStatus
 
-          - jsonPath: $.organisations.*.name
+            - jsonPath: $.organisations.*.functions.*.isActive
 
-          - jsonPath: $.organisations.*.code
+            - jsonPath: $.organisations.*.functions.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-          - jsonPath: $.organisations.*.externalRefNumber
+            - jsonPath: $.organisations.*.functions.*.auditDetails.createdBy
 
-          - jsonPath: $.organisations.*.dateOfIncorporation
+            - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedBy
 
-          - jsonPath: $.organisations.*.applicationStatus
+            - jsonPath: $.organisations.*.functions.*.auditDetails.createdTime
 
-          - jsonPath: $.organisations.*.isActive
+            - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedTime
 
-          - jsonPath: $.organisations.*.additionalDetails
-            type: JSON
-            dbType: JSONB
+        - query: INSERT INTO eg_org_document(id,org_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?);
 
-          - jsonPath: $.organisations.*.auditDetails.lastModifiedBy
+          basePath: $.organisations.*.documents.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.documents.*.id
 
-          - jsonPath: $.organisations.*.auditDetails.lastModifiedTime
-          
-          - jsonPath: $.organisations.*.id
-          
-          
-     - query: UPDATE eg_org_address set door_no=?, plot_no=?, landmark=?,city=?, pin_code=?,district=?,region=?, state=?, country=?,boundary_code=?, boundary_type=?, building_name=?, street=?,additional_details=?,hqaddress=? where id=?;
+            - jsonPath: $.organisations[*][?({id} in @.documents[*].id)].id
 
-       basePath: $.organisations.*.orgAddress.*
-       jsonMaps:
+            - jsonPath: $.organisations.*.documents.*.documentType
 
-       - jsonPath: $.organisations.*.orgAddress.*.doorNo
-       
-       - jsonPath: $.organisations.*.orgAddress.*.plotNo
+            - jsonPath: $.organisations.*.documents.*.fileStore
 
-       - jsonPath: $.organisations.*.orgAddress.*.landmark
-       
-       - jsonPath: $.organisations.*.orgAddress.*.city
+            - jsonPath: $.organisations.*.documents.*.documentUid
 
-       - jsonPath: $.organisations.*.orgAddress.*.pincode
-       
-       - jsonPath: $.organisations.*.orgAddress.*.district
-       
-       - jsonPath: $.organisations.*.orgAddress.*.region
+            - jsonPath: $.organisations.*.documents.*.isActive
 
-       - jsonPath: $.organisations.*.orgAddress.*.state
-       
-       - jsonPath: $.organisations.*.orgAddress.*.country
-       
-       - jsonPath: $.organisations.*.orgAddress.*.boundaryCode
+            - jsonPath: $.organisations.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-       - jsonPath: $.organisations.*.orgAddress.*.boundaryType
-       
-       - jsonPath: $.organisations.*.orgAddress.*.buildingName
-       
-       - jsonPath: $.organisations.*.orgAddress.*.street
+        - query: INSERT INTO eg_org_document(id,org_func_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?);
 
-       - jsonPath: $.organisations.*.orgAddress.*.additionDetails
+          basePath: $.organisations.*.functions.*.documents.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.functions.*.documents.*.id
 
-       - jsonPath: $.organisations.*.orgAddress.*.hqAddress
-         type: JSON
-         dbType: JSONB
-          
-       - jsonPath: $.organisations.*.orgAddress.*.id
-        
-        
-        
-     - query: UPDATE eg_org_address_geo_location set latitude=?, longitude=?, additional_details=? where id=?;
+            - jsonPath: $.organisations.*.functions[*][?({id} in @.documents[*].id)].id
 
-       basePath: $.organisations.*.orgAddress.*.geoLocation
-       jsonMaps:
+            - jsonPath: $.organisations.*.functions.*.documents.*.documentType
 
-        - jsonPath: $.organisations.*.orgAddress.*.geoLocation.latitude
-       
-        - jsonPath: $.organisations.*.orgAddress.*.geoLocation.longitude
+            - jsonPath: $.organisations.*.functions.*.documents.*.fileStore
 
-        - jsonPath: $.organisations.*.orgAddress.*.geoLocation.additionalDetails
-          type: JSON
-          dbType: JSONB
-          
-        - jsonPath: $.organisations.*.orgAddress.*.geoLocation.id  
+            - jsonPath: $.organisations.*.functions.*.documents.*.documentUid
 
+            - jsonPath: $.organisations.*.functions.*.documents.*.isActive
 
-     - query: UPDATE eg_org_contact_detail set contact_name=?, contact_mobile_number=?,contact_email=?,individual_id=? where id=?;
+            - jsonPath: $.organisations.*.functions.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-       basePath: $.organisations.*.contactDetails.*
-       jsonMaps:
+    - version: 1.0
+      description: Update organisation details
+      fromTopic: update-org
+      isTransaction: true
+      isAuditEnabled: true
+      module: ORG
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.applicationNumber
+      auditAttributeBasePath: $.organisations.*
+      queryMaps:
+        - query: UPDATE eg_org set name=?, code=?, external_ref_number=?, date_of_incorporation=?, application_status=?, is_active=?, additional_details=?,last_modified_by=?, last_modified_time=? where id=?;
+          basePath: $.organisations.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.name
 
-        - jsonPath: $.organisations.*.contactDetails.*.contactName
-       
-        - jsonPath: $.organisations.*.contactDetails.*.contactMobileNumber
+            - jsonPath: $.organisations.*.code
 
-        - jsonPath: $.organisations.*.contactDetails.*.contactEmail 
+            - jsonPath: $.organisations.*.externalRefNumber
 
-        - jsonPath: $.organisations.*.contactDetails.*.individualId 
+            - jsonPath: $.organisations.*.dateOfIncorporation
 
-        - jsonPath: $.organisations.*.contactDetails.*.id 
+            - jsonPath: $.organisations.*.applicationStatus
 
-     - query: INSERT INTO eg_tax_identifier(id,org_id,type,value,is_active,additional_details) VALUES (?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET type=?, value=?, is_active=?, additional_details=?;
+            - jsonPath: $.organisations.*.isActive
 
-       basePath: $.organisations.*.identifiers.*
-       jsonMaps:
-        
-         - jsonPath: $.organisations.*.identifiers.*.id
+            - jsonPath: $.organisations.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-         - jsonPath: $.organisations[*][?({id} in @.identifiers[*].id)].id
+            - jsonPath: $.organisations.*.auditDetails.lastModifiedBy
 
-         - jsonPath: $.organisations.*.identifiers.*.type
-       
-         - jsonPath: $.organisations.*.identifiers.*.value
-         
-         - jsonPath: $.organisations.*.identifiers.*.isActive
+            - jsonPath: $.organisations.*.auditDetails.lastModifiedTime
 
-         - jsonPath: $.organisations.*.identifiers.*.additionalDetails
-           type: JSON
-           dbType: JSONB
+            - jsonPath: $.organisations.*.id
 
-         - jsonPath: $.organisations.*.identifiers.*.type
-       
-         - jsonPath: $.organisations.*.identifiers.*.value
-         
-         - jsonPath: $.organisations.*.identifiers.*.isActive
+        - query: UPDATE eg_org_address set door_no=?, plot_no=?, landmark=?,city=?, pin_code=?,district=?,region=?, state=?, country=?,boundary_code=?, boundary_type=?, building_name=?, street=?,additional_details=?,hqaddress=? where id=?;
 
-         - jsonPath: $.organisations.*.identifiers.*.additionalDetails
-           type: JSON
-           dbType: JSONB
+          basePath: $.organisations.*.orgAddress.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.doorNo
 
+            - jsonPath: $.organisations.*.orgAddress.*.plotNo
 
-     - query: UPDATE eg_org_jurisdiction set code=?,additional_details=? where id=?;
+            - jsonPath: $.organisations.*.orgAddress.*.landmark
 
-       basePath: $.organisations.*.jurisdiction.*
-       jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.city
 
-        - jsonPath: $.organisations.*.jurisdiction.*.code 
-        
-        - jsonPath: $.organisations.*.jurisdiction.*.additionalDetails
-          type: JSON
-          dbType: JSONB
+            - jsonPath: $.organisations.*.orgAddress.*.pincode
 
-        - jsonPath: $.organisations.*.jurisdiction.*.id 
+            - jsonPath: $.organisations.*.orgAddress.*.district
 
+            - jsonPath: $.organisations.*.orgAddress.*.region
 
-     - query: INSERT INTO eg_org_function(id,org_id,application_number,type,subType,category,class,valid_from,valid_to,application_status,wf_status,is_active,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET type=?, subType=?, category=?, class=?,valid_from=?, valid_to=?,application_status=?,wf_status=?, is_active=?,last_modified_by=?, last_modified_time=?,additional_details=?;
+            - jsonPath: $.organisations.*.orgAddress.*.state
 
-       basePath: $.organisations.*.functions.*
-       jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.country
 
-       - jsonPath: $.organisations.*.functions.*.id
+            - jsonPath: $.organisations.*.orgAddress.*.boundaryCode
 
-       - jsonPath: $.organisations[*][?({id} in @.functions[*].id)].id
+            - jsonPath: $.organisations.*.orgAddress.*.boundaryType
 
-       - jsonPath: $.organisations.*.functions.*.applicationNumber
-       
-       - jsonPath: $.organisations.*.functions.*.type
-       
-       - jsonPath: $.organisations.*.functions.*.subType
+            - jsonPath: $.organisations.*.orgAddress.*.buildingName
 
-       - jsonPath: $.organisations.*.functions.*.category
-       
-       - jsonPath: $.organisations.*.functions.*.class
+            - jsonPath: $.organisations.*.orgAddress.*.street
 
-       - jsonPath: $.organisations.*.functions.*.validFrom
-       
-       - jsonPath: $.organisations.*.functions.*.validTo
-       
-       - jsonPath: $.organisations.*.functions.*.applicationStatus
+            - jsonPath: $.organisations.*.orgAddress.*.additionDetails
 
-       - jsonPath: $.organisations.*.functions.*.wfStatus
-       
-       - jsonPath: $.organisations.*.functions.*.isActive
-       
-       - jsonPath: $.organisations.*.functions.*.additionalDetails
-         type: JSON
-         dbType: JSONB
+            - jsonPath: $.organisations.*.orgAddress.*.hqAddress
+              type: JSON
+              dbType: JSONB
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.createdBy
+            - jsonPath: $.organisations.*.orgAddress.*.id
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedBy
+        - query: UPDATE eg_org_address_geo_location set latitude=?, longitude=?, additional_details=? where id=?;
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.createdTime
+          basePath: $.organisations.*.orgAddress.*.geoLocation
+          jsonMaps:
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.latitude
 
-       - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedTime
-       
-       - jsonPath: $.organisations.*.functions.*.type
-       
-       - jsonPath: $.organisations.*.functions.*.subType
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.longitude
 
-       - jsonPath: $.organisations.*.functions.*.category
-       
-       - jsonPath: $.organisations.*.functions.*.class
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-       - jsonPath: $.organisations.*.functions.*.validFrom
-       
-       - jsonPath: $.organisations.*.functions.*.validTo
-       
-       - jsonPath: $.organisations.*.functions.*.applicationStatus
+            - jsonPath: $.organisations.*.orgAddress.*.geoLocation.id
 
-       - jsonPath: $.organisations.*.functions.*.wfStatus
-       
-       - jsonPath: $.organisations.*.functions.*.isActive
-       
-       - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedBy
-       
-       - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedTime
+        - query: UPDATE eg_org_contact_detail set contact_name=?, contact_mobile_number=?,contact_email=?,individual_id=? where id=?;
 
-       - jsonPath: $.organisations.*.functions.*.additionalDetails
-         type: JSON
-         dbType: JSONB
-        
-        
-        
-     - query: INSERT INTO eg_org_document(id,org_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET document_type=?, file_store=?,document_uid=?, is_active=?, additional_details=?;
+          basePath: $.organisations.*.contactDetails.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.contactDetails.*.contactName
 
-       basePath: $.organisations.*.documents.*
-       jsonMaps:
+            - jsonPath: $.organisations.*.contactDetails.*.contactMobileNumber
 
-        - jsonPath: $.organisations.*.documents.*.id
+            - jsonPath: $.organisations.*.contactDetails.*.contactEmail
 
-        - jsonPath: $.organisations[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.organisations.*.contactDetails.*.individualId
 
-        - jsonPath: $.organisations.*.documents.*.documentType
-       
-        - jsonPath: $.organisations.*.documents.*.fileStore
-       
-        - jsonPath: $.organisations.*.documents.*.documentUid
-        
-        - jsonPath: $.organisations.*.documents.*.isActive
+            - jsonPath: $.organisations.*.contactDetails.*.id
 
-        - jsonPath: $.organisations.*.documents.*.additionalDetails
-          type: JSON
-          dbType: JSONB
-        
-        - jsonPath: $.organisations.*.documents.*.documentType
-       
-        - jsonPath: $.organisations.*.documents.*.fileStore
-       
-        - jsonPath: $.organisations.*.documents.*.documentUid
-        
-        - jsonPath: $.organisations.*.documents.*.isActive
+        - query: INSERT INTO eg_tax_identifier(id,org_id,type,value,is_active,additional_details) VALUES (?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET type=?, value=?, is_active=?, additional_details=?;
 
-        - jsonPath: $.organisations.*.documents.*.additionalDetails
-          type: JSON
-          dbType: JSONB       
-        
-        
-        
-     - query: INSERT INTO eg_org_document(id,org_func_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET document_type=?, file_store=?,document_uid=?,is_active=?, additional_details=?;
+          basePath: $.organisations.*.identifiers.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.identifiers.*.id
 
-       basePath: $.organisations.*.functions.*.documents.*
-       jsonMaps:
+            - jsonPath: $.organisations[*][?({id} in @.identifiers[*].id)].id
 
-        - jsonPath: $.organisations.*.functions.*.documents.*.id
+            - jsonPath: $.organisations.*.identifiers.*.type
 
-        - jsonPath: $.organisations.*.functions[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.organisations.*.identifiers.*.value
 
-        - jsonPath: $.organisations.*.functions.*.documents.*.documentType
-       
-        - jsonPath: $.organisations.*.functions.*.documents.*.fileStore
-       
-        - jsonPath: $.organisations.*.functions.*.documents.*.documentUid
-        
-        - jsonPath: $.organisations.*.functions.*.documents.*.isActive
+            - jsonPath: $.organisations.*.identifiers.*.isActive
 
-        - jsonPath: $.organisations.*.functions.*.documents.*.additionalDetails
-          type: JSON
-          dbType: JSONB
-        
-        - jsonPath: $.organisations.*.functions.*.documents.*.documentType
-       
-        - jsonPath: $.organisations.*.functions.*.documents.*.fileStore
-       
-        - jsonPath: $.organisations.*.functions.*.documents.*.documentUid
-        
-        - jsonPath: $.organisations.*.functions.*.documents.*.isActive
+            - jsonPath: $.organisations.*.identifiers.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
-        - jsonPath: $.organisations.*.functions.*.documents.*.additionalDetails
-          type: JSON
-          dbType: JSONB
+            - jsonPath: $.organisations.*.identifiers.*.type
+
+            - jsonPath: $.organisations.*.identifiers.*.value
+
+            - jsonPath: $.organisations.*.identifiers.*.isActive
+
+            - jsonPath: $.organisations.*.identifiers.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+        - query: UPDATE eg_org_jurisdiction set code=?,additional_details=? where id=?;
+
+          basePath: $.organisations.*.jurisdiction.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.jurisdiction.*.code
+
+            - jsonPath: $.organisations.*.jurisdiction.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.organisations.*.jurisdiction.*.id
+
+        - query: INSERT INTO eg_org_function(id,org_id,application_number,type,subType,category,class,valid_from,valid_to,application_status,wf_status,is_active,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET type=?, subType=?, category=?, class=?,valid_from=?, valid_to=?,application_status=?,wf_status=?, is_active=?,last_modified_by=?, last_modified_time=?,additional_details=?;
+
+          basePath: $.organisations.*.functions.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.functions.*.id
+
+            - jsonPath: $.organisations[*][?({id} in @.functions[*].id)].id
+
+            - jsonPath: $.organisations.*.functions.*.applicationNumber
+
+            - jsonPath: $.organisations.*.functions.*.type
+
+            - jsonPath: $.organisations.*.functions.*.subType
+
+            - jsonPath: $.organisations.*.functions.*.category
+
+            - jsonPath: $.organisations.*.functions.*.class
+
+            - jsonPath: $.organisations.*.functions.*.validFrom
+
+            - jsonPath: $.organisations.*.functions.*.validTo
+
+            - jsonPath: $.organisations.*.functions.*.applicationStatus
+
+            - jsonPath: $.organisations.*.functions.*.wfStatus
+
+            - jsonPath: $.organisations.*.functions.*.isActive
+
+            - jsonPath: $.organisations.*.functions.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.organisations.*.functions.*.auditDetails.createdBy
+
+            - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.organisations.*.functions.*.auditDetails.createdTime
+
+            - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.organisations.*.functions.*.type
+
+            - jsonPath: $.organisations.*.functions.*.subType
+
+            - jsonPath: $.organisations.*.functions.*.category
+
+            - jsonPath: $.organisations.*.functions.*.class
+
+            - jsonPath: $.organisations.*.functions.*.validFrom
+
+            - jsonPath: $.organisations.*.functions.*.validTo
+
+            - jsonPath: $.organisations.*.functions.*.applicationStatus
+
+            - jsonPath: $.organisations.*.functions.*.wfStatus
+
+            - jsonPath: $.organisations.*.functions.*.isActive
+
+            - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.organisations.*.functions.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.organisations.*.functions.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+        - query: INSERT INTO eg_org_document(id,org_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET document_type=?, file_store=?,document_uid=?, is_active=?, additional_details=?;
+
+          basePath: $.organisations.*.documents.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.documents.*.id
+
+            - jsonPath: $.organisations[*][?({id} in @.documents[*].id)].id
+
+            - jsonPath: $.organisations.*.documents.*.documentType
+
+            - jsonPath: $.organisations.*.documents.*.fileStore
+
+            - jsonPath: $.organisations.*.documents.*.documentUid
+
+            - jsonPath: $.organisations.*.documents.*.isActive
+
+            - jsonPath: $.organisations.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.organisations.*.documents.*.documentType
+
+            - jsonPath: $.organisations.*.documents.*.fileStore
+
+            - jsonPath: $.organisations.*.documents.*.documentUid
+
+            - jsonPath: $.organisations.*.documents.*.isActive
+
+            - jsonPath: $.organisations.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+        - query: INSERT INTO eg_org_document(id,org_func_id,document_type,file_store,document_uid,is_active,additional_details) VALUES (?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET document_type=?, file_store=?,document_uid=?,is_active=?, additional_details=?;
+
+          basePath: $.organisations.*.functions.*.documents.*
+          jsonMaps:
+            - jsonPath: $.organisations.*.functions.*.documents.*.id
+
+            - jsonPath: $.organisations.*.functions[*][?({id} in @.documents[*].id)].id
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.documentType
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.fileStore
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.documentUid
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.isActive
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.documentType
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.fileStore
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.documentUid
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.isActive
+
+            - jsonPath: $.organisations.*.functions.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+    - version: 1.0
+      description: Saves a organization users
+      fromTopic: save-org-users
+      isTransaction: true
+      isAuditEnabled: true
+      module: VENDOR
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.clientReferenceId
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: INSERT INTO eg_org_user (id, tenantId, organizationId, userId, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime, isDeleted) VALUES (?,?,?,?,?,?,?,?,?,?);
+          basePath: $.OrgUser.*
+          jsonMaps:
+            - jsonPath: $.OrgUser.*.id
+            - jsonPath: $.OrgUser.*.tenantId
+            - jsonPath: $.OrgUser.*.organizationId
+            - jsonPath: $.OrgUser.*.userId
+            - jsonPath: $.OrgUser.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.OrgUser.*.auditDetails.createdBy
+            - jsonPath: $.OrgUser.*.auditDetails.lastModifiedBy
+            - jsonPath: $.OrgUser.*.auditDetails.createdTime
+            - jsonPath: $.OrgUser.*.auditDetails.lastModifiedTime
+            - jsonPath: $.OrgUser.*.isDeleted
