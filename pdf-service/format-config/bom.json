@@ -1,0 +1,69 @@
+{
+  "key": "bom-receipt",
+  "config": {
+    "content": [
+      { "text": "Bill Of Material(For Solar System)", "style": "header" },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [50, "*", 100, 100, 80],
+          "body": [
+            [
+              { "text": "Sl. No.", "style": "tableHeader" },
+              { "text": "Product", "style": "tableHeader" },
+              { "text": "Make", "style": "tableHeader" },
+              { "text": "Capacity", "style": "tableHeader" },
+              { "text": "Quantity", "style": "tableHeader" }
+            ],
+            [
+              "1",
+              "Solar Module",
+              "{{mms_brand}}",
+              "{{mms_capacity}}",
+              "{{mms_qty}}"
+            ],
+            [
+              "2",
+              "Solar Battery",
+              "{{changeover1_brand}}",
+              "{{changeover1_capacity}}",
+              "{{changeover1_qty}}"
+            ],
+            [
+              "3",
+              "Module Mounting structure (MMS)",
+              "{{changeover2_brand}}",
+              "{{changeover2_capacity}}",
+              "{{changeover2_qty}}"
+            ],
+            [
+              "4",
+              "Solar Charge Controller (CCU)",
+              "{{changeover2_brand}}",
+              "{{ajb_inverter_dc_capacity}}",
+              "{{battery_inverter_dc_qty}}"
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines"
+      }
+    ],
+    "styles": {
+      "tl-head": {
+        "fillColor": "#F2F2F2",
+        "margin": [-41, -41, -41, 0]
+      },
+      "pt-reciept-citizen-header": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 8, 0, 0],
+        "color": "#484848"
+      },
+      "header": {
+        "fontSize": 18,
+        "bold": true,
+        "margin": [0, 0, 0, 10]
+      }
+    }
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "key": "bom-receipt",
+  "DataConfigs": {
+    "serviceName": "rainmaker-tl",
+    "version": "1.0.0",
+    "baseKeyPath": "$.bom",
+    "entityIdPath": "$.applicationNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "bom-pdf-generation",
+        "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "mms_qty",
+                "value": {
+                  "path": "$.mms_qty"
+                }
+              },
+              {
+                "variable": "mms_uom",
+                "value": {
+                  "path": "$.mms_uom"
+                }
+              },
+              {
+                "variable": "mms_brand",
+                "value": {
+                  "path": "$.mms_brand"
+                }
+              },
+              {
+                "variable": "mms_capacity",
+                "value": {
+                  "path": "$.mms_capacity"
+                }
+              },
+              {
+                "variable": "changeover1_qty",
+                "value": {
+                  "path": "$.changeover1_qty"
+                }
+              },
+              {
+                "variable": "changeover1_uom",
+                "value": {
+                  "path": "$.changeover1_uom"
+                }
+              },
+              {
+                "variable": "changeover2_qty",
+                "value": {
+                  "path": "$.changeover2_qty"
+                }
+              },
+              {
+                "variable": "changeover1_brand",
+                "value": {
+                  "path": "$.changeover1_brand"
+                }
+              },
+              {
+                "variable": "changeover2_uom",
+                "value": {
+                  "path": "$.changeover2_uom"
+                }
+              },
+              {
+                "variable": "dc_earthing_qty",
+                "value": {
+                  "path": "$.dc_earthing_qty"
+                }
+              },
+              {
+                "variable": "mms_description",
+                "value": {
+                  "path": "$.mms_description"
+                }
+              },
+              {
+                "variable": "earthing_kit_qty",
+                "value": {
+                  "path": "$.earthing_kit_qty"
+                }
+              },
+              {
+                "variable": "earthing_kit_uom",
+                "value": {
+                  "path": "$.earthing_kit_uom"
+                }
+              },
+              {
+                "variable": "mms_capacity_uom",
+                "value": {
+                  "path": "$.mms_capacity_uom"
+                }
+              },
+              {
+                "variable": "changeover1_brand",
+                "value": {
+                  "path": "$.changeover1_brand"
+                }
+              },
+              {
+                "variable": "changeover2_brand",
+                "value": {
+                  "path": "$.changeover2_brand"
+                }
+              },
+              {
+                "variable": "dc_earthing_brand",
+                "value": {
+                  "path": "$.dc_earthing_brand"
+                }
+              },
+              {
+                "variable": "earthing_kit_brand",
+                "value": {
+                  "path": "$.earthing_kit_brand"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_qty",
+                "value": {
+                  "path": "$.ajb_inverter_dc_qty"
+                }
+              },
+              {
+                "variable": "dc_earthing_uom_qty",
+                "value": {
+                  "path": "$.dc_earthing_uom_qty"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_qty",
+                "value": {
+                  "path": "$.module_ajb_pv1f_qty"
+                }
+              },
+              {
+                "variable": "changeover1_capacity",
+                "value": {
+                  "path": "$.changeover1_capacity"
+                }
+              },
+              {
+                "variable": "changeover2_capacity",
+                "value": {
+                  "path": "$.changeover2_capacity"
+                }
+              },
+              {
+                "variable": "dc_earthing_capacity",
+                "value": {
+                  "path": "$.dc_earthing_capacity"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_brand",
+                "value": {
+                  "path": "$.ajb_inverter_dc_brand"
+                }
+              },
+              {
+                "variable": "earthing_kit_capacity",
+                "value": {
+                  "path": "$.earthing_kit_capacity"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_brand",
+                "value": {
+                  "path": "$.module_ajb_pv1f_brand"
+                }
+              },
+              {
+                "variable": "battery_battery_dc_qty",
+                "value": {
+                  "path": "$.battery_battery_dc_qty"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_uom_qty",
+                "value": {
+                  "path": "$.ajb_inverter_dc_uom_qty"
+                }
+              },
+              {
+                "variable": "battery_inverter_dc_qty",
+                "value": {
+                  "path": "$.battery_inverter_dc_qty"
+                }
+              },
+              {
+                "variable": "changeover1_description",
+                "value": {
+                  "path": "$.changeover1_description"
+                }
+              },
+              {
+                "variable": "changeover2_description",
+                "value": {
+                  "path": "$.changeover2_description"
+                }
+              },
+              {
+                "variable": "dc_earthing_description",
+                "value": {
+                  "path": "$.dc_earthing_description"
+                }
+              },
+              {
+                "variable": "earthing_cable_agib_qty",
+                "value": {
+                  "path": "$.earthing_cable_agib_qty"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_uom_qty",
+                "value": {
+                  "path": "$.module_ajb_pv1f_uom_qty"
+                }
+              },
+              {
+                "variable": "voltage_sensing_red_qty",
+                "value": {
+                  "path": "$.voltage_sensing_red_qty"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_capacity",
+                "value": {
+                  "path": "$.ajb_inverter_dc_capacity"
+                }
+              },
+              {
+                "variable": "battery_battery_dc_brand",
+                "value": {
+                  "path": "$.battery_battery_dc_brand"
+                }
+              },
+              {
+                "variable": "changeover1_capacity_uom",
+                "value": {
+                  "path": "$.changeover1_capacity_uom"
+                }
+              },
+              {
+                "variable": "changeover2_capacity_uom",
+                "value": {
+                  "path": "$.changeover2_capacity_uom"
+                }
+              },
+              {
+                "variable": "dc_earthing_capacity_uom",
+                "value": {
+                  "path": "$.dc_earthing_capacity_uom"
+                }
+              },
+              {
+                "variable": "earthing_kit_description",
+                "value": {
+                  "path": "$.earthing_kit_description"
+                }
+              },
+              {
+                "variable": "lightning_protection_qty",
+                "value": {
+                  "path": "$.lightning_protection_qty"
+                }
+              },
+              {
+                "variable": "lightning_protection_uom",
+                "value": {
+                  "path": "$.lightning_protection_uom"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_capacity",
+                "value": {
+                  "path": "$.module_ajb_pv1f_capacity"
+                }
+              },
+              {
+                "variable": "battery_inverter_dc_brand",
+                "value": {
+                  "path": "$.battery_inverter_dc_brand"
+                }
+              },
+              {
+                "variable": "earthing_cable_agib_brand",
+                "value": {
+                  "path": "$.earthing_cable_agib_brand"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_sd_qty",
+                "value": {
+                  "path": "$.earthing_cable_cos_sd_qty"
+                }
+              },
+              {
+                "variable": "earthing_kit_capacity_uom",
+                "value": {
+                  "path": "$.earthing_kit_capacity_uom"
+                }
+              },
+              {
+                "variable": "voltage_sensing_red_brand",
+                "value": {
+                  "path": "$.voltage_sensing_red_brand"
+                }
+              },
+              {
+                "variable": "battery_battery_dc_uom_qty",
+                "value": {
+                  "path": "$.battery_battery_dc_uom_qty"
+                }
+              },
+              {
+                "variable": "lightning_protection_brand",
+                "value": {
+                  "path": "$.lightning_protection_brand"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_description",
+                "value": {
+                  "path": "$.ajb_inverter_dc_description"
+                }
+              },
+              {
+                "variable": "battery_battery_dc_capacity",
+                "value": {
+                  "path": "$.battery_battery_dc_capacity"
+                }
+              },
+              {
+                "variable": "battery_inverter_dc_uom_qty",
+                "value": {
+                  "path": "$.battery_inverter_dc_uom_qty"
+                }
+              },
+              {
+                "variable": "earthing_cable_agib_uom_qty",
+                "value": {
+                  "path": "$.earthing_cable_agib_uom_qty"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_sd_brand",
+                "value": {
+                  "path": "$.earthing_cable_cos_sd_brand"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_description",
+                "value": {
+                  "path": "$.module_ajb_pv1f_description"
+                }
+              },
+              {
+                "variable": "voltage_sensing_red_uom_qty",
+                "value": {
+                  "path": "$.voltage_sensing_red_uom_qty"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_capacity_uom",
+                "value": {
+                  "path": "$.ajb_inverter_dc_capacity_uom"
+                }
+              },
+              {
+                "variable": "battery_inverter_dc_capacity",
+                "value": {
+                  "path": "$.battery_inverter_dc_capacity"
+                }
+              },
+              {
+                "variable": "earthing_cable_agib_capacity",
+                "value": {
+                  "path": "$.earthing_cable_agib_capacity"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_capacity_uom",
+                "value": {
+                  "path": "$.module_ajb_pv1f_capacity_uom"
+                }
+              },
+              {
+                "variable": "voltage_sensing_red_capacity",
+                "value": {
+                  "path": "$.voltage_sensing_red_capacity"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_and_sd_qty",
+                "value": {
+                  "path": "$.earthing_cable_cos_and_sd_qty"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_sd_uom_qty",
+                "value": {
+                  "path": "$.earthing_cable_cos_sd_uom_qty"
+                }
+              },
+              {
+                "variable": "lightning_protection_capacity",
+                "value": {
+                  "path": "$.lightning_protection_capacity"
+                }
+              },
+              {
+                "variable": "battery_battery_dc_description",
+                "value": {
+                  "path": "$.battery_battery_dc_description"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_sd_capacity",
+                "value": {
+                  "path": "$.earthing_cable_cos_sd_capacity"
+                }
+              },
+              {
+                "variable": "battery_battery_dc_capacity_uom",
+                "value": {
+                  "path": "$.battery_battery_dc_capacity_uom"
+                }
+              },
+              {
+                "variable": "battery_inverter_dc_description",
+                "value": {
+                  "path": "$.battery_inverter_dc_description"
+                }
+              },
+              {
+                "variable": "earthing_cable_agib_description",
+                "value": {
+                  "path": "$.earthing_cable_agib_description"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_and_sd_brand",
+                "value": {
+                  "path": "$.earthing_cable_cos_and_sd_brand"
+                }
+              },
+              {
+                "variable": "voltage_sensing_red_description",
+                "value": {
+                  "path": "$.voltage_sensing_red_description"
+                }
+              },
+              {
+                "variable": "battery_inverter_dc_capacity_uom",
+                "value": {
+                  "path": "$.battery_inverter_dc_capacity_uom"
+                }
+              },
+              {
+                "variable": "earthing_cable_agib_capacity_uom",
+                "value": {
+                  "path": "$.earthing_cable_agib_capacity_uom"
+                }
+              },
+              {
+                "variable": "lightning_protection_description",
+                "value": {
+                  "path": "$.lightning_protection_description"
+                }
+              },
+              {
+                "variable": "voltage_sensing_red_capacity_uom",
+                "value": {
+                  "path": "$.voltage_sensing_red_capacity_uom"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_and_sd_uom_qty",
+                "value": {
+                  "path": "$.earthing_cable_cos_and_sd_uom_qty"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_sd_description",
+                "value": {
+                  "path": "$.earthing_cable_cos_sd_description"
+                }
+              },
+              {
+                "variable": "lightning_protection_capacity_uom",
+                "value": {
+                  "path": "$.lightning_protection_capacity_uom"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_and_sd_capacity",
+                "value": {
+                  "path": "$.earthing_cable_cos_and_sd_capacity"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_sd_capacity_uom",
+                "value": {
+                  "path": "$.earthing_cable_cos_sd_capacity_uom"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_and_sd_description",
+                "value": {
+                  "path": "$.earthing_cable_cos_and_sd_description"
+                }
+              },
+              {
+                "variable": "earthing_cable_cos_and_sd_capacity_uom",
+                "value": {
+                  "path": "$.earthing_cable_cos_and_sd_capacity_uom"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
