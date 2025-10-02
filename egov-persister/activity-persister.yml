@@ -50,6 +50,58 @@ serviceMaps:
             - jsonPath: $.ActivityAssignment.*.auditDetails.lastModifiedTime
 
     - version: 1.0
+      name: Projects
+      description: Updates activity assignment table
+      fromTopic: update-activity-assignment
+      isTransaction: true
+      isAuditEnabled: true
+      module: PROJECT
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.id
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: update activity_assignments SET tenant_id=?, field_plan_id=?, activity_id=?, assigned_to=?, assigned_by=?, status=?, created_time=?, last_modified_time=?, additional_details=?, start_date=?, end_date=?, role=?, emailsent=?, isdeleted=?, poc_number=? WHERE id=?;
+          basePath: $.ActivityAssignment.*
+          jsonMaps:
+            - jsonPath: $.ActivityAssignment.*.tenantId
+
+            - jsonPath: $.ActivityAssignment.*.fieldPlanId
+
+            - jsonPath: $.ActivityAssignment.*.activityId
+
+            - jsonPath: $.ActivityAssignment.*.assignedTo
+
+            - jsonPath: $.ActivityAssignment.*.assignedBy
+
+            - jsonPath: $.ActivityAssignment.*.status
+
+            - jsonPath: $.ActivityAssignment.*.auditDetails.createdTime
+
+            - jsonPath: $.ActivityAssignment.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.ActivityAssignment.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.ActivityAssignment.*.startDate
+
+            - jsonPath: $.ActivityAssignment.*.endDate
+
+            - jsonPath: $.ActivityAssignment.*.role
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.ActivityAssignment.*.isEmailSent
+
+            - jsonPath: $.ActivityAssignment.*.isDeleted
+
+            - jsonPath: $.ActivityAssignment.*.pocNumber
+
+            - jsonPath: $.ActivityAssignment.*.id
+
+    - version: 1.0
       description: Deletes fieldplan activity
       fromTopic: unassign-activity-assignment-topic
       isTransaction: true
