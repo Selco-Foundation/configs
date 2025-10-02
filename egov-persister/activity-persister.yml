@@ -14,7 +14,7 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: INSERT INTO activity_assignments (id,tenant_id,field_plan_id,activity_id,start_date,end_date,assigned_to,assigned_by,additional_details,role,status,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO activity_assignments (id,tenant_id,field_plan_id,activity_id,start_date,end_date,poc_number,assigned_to,assigned_by,additional_details,role,status,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);
           basePath: $.ActivityAssignment.*
           jsonMaps:
             - jsonPath: $.ActivityAssignment.*.id
@@ -28,6 +28,8 @@ serviceMaps:
             - jsonPath: $.ActivityAssignment.*.startDate
 
             - jsonPath: $.ActivityAssignment.*.endDate
+
+            - jsonPath: $.ActivityAssignment.*.pocNumber
 
             - jsonPath: $.ActivityAssignment.*.assignedTo
 
@@ -298,3 +300,47 @@ serviceMaps:
             - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedBy
 
             - jsonPath: $.bom.*.documents.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      name: Activity
+      description: Persists Activity Assignment details in Activity Assignment table
+      fromTopic: save-activity-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: Activity
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.id
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: INSERT INTO activities (id,tenant_id,name,code,default_conditions,required_roles,sequence_order,is_active,additional_details,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?);
+          basePath: $.Activities.*
+          jsonMaps:
+            - jsonPath: $.Activities.*.id
+
+            - jsonPath: $.Activities.*.tenantId
+
+            - jsonPath: $.Activities.*.name
+
+            - jsonPath: $.Activities.*.code
+
+            - jsonPath: $.Activities.*.defaultConditions
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.Activities.*.requiredRoles
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.Activities.*.sequenceOrder
+
+            - jsonPath: $.Activities.*.active
+
+            - jsonPath: $.Activities.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.Activities.*.auditDetails.createdTime
+
+            - jsonPath: $.Activities.*.auditDetails.lastModifiedTime
