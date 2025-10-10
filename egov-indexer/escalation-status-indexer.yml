@@ -9,7 +9,7 @@ ServiceMaps:
         type: general
         id: $.escalationId + "_" + $.tenantId + "_" + $.recipientRole + "_" + $.escalationTime
         jsonPath: $
-        timeStampField: $.escalationTime
+        timeStampField: $.Data.escalationStatus.escalationTime
         fieldsToBeMasked: []
         customJsonMapping:
           indexMapping: {"Data":{"escalationStatus":{}}}
