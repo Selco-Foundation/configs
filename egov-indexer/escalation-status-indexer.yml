@@ -7,13 +7,15 @@ ServiceMaps:
     indexes:
       - name: escalation-email-status
         type: general
-        id: $.escalationId + "_" + $.tenantId + "_" + $.recipientRole + "_" + $.escalationTime
+        id: $.id
         jsonPath: $
         timeStampField: $.escalationTime
         fieldsToBeMasked: []
         customJsonMapping:
           indexMapping: {"Data":{"escalationStatus":{}}}
           fieldMapping:
+            - inJsonPath: $.id
+              outJsonPath: $.Data.escalationStatus.id
             - inJsonPath: $.escalationType
               outJsonPath: $.Data.escalationStatus.escalationType
             - inJsonPath: $.escalationId
