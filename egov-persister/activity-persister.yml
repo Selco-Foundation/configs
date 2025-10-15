@@ -210,6 +210,53 @@ serviceMaps:
             - jsonPath: $.ActivitiesFacilities.*.id
 
     - version: 1.0
+      description: Persists facility activity transactions
+      fromTopic: facility-transaction-create
+      isTransaction: true
+      module: PROJECT
+      objecIdJsonPath: $.transactions.*.transactionId
+      auditAttributeBasePath: $.transactions.*.auditDetails
+      queryMaps:
+        - query: >
+            INSERT INTO activity_facility_transaction (
+              id, activity_facility_id, process_instance_id,
+              created_by, last_modified_by, created_time, last_modified_time
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
+          basePath: $.transactions.*
+          jsonMaps:
+            - jsonPath: $.transactions.*.transactionId
+            - jsonPath: $.transactions.*.activityFacilityId
+            - jsonPath: $.transactions.*.processInstanceId
+            - jsonPath: $.transactions.*.auditDetails.createdBy
+            - jsonPath: $.transactions.*.auditDetails.lastModifiedBy
+            - jsonPath: $.transactions.*.auditDetails.createdTime
+            - jsonPath: $.transactions.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Persists facility activity comments
+      fromTopic: facility-comment-create
+      isTransaction: true
+      module: PROJECT
+      objecIdJsonPath: $.comments.*.commentId
+      auditAttributeBasePath: $.comments.*.auditDetails
+      queryMaps:
+        - query: >
+            INSERT INTO activity_facility_transaction_comment (
+              id, transaction_id, comment_message, asset_type,
+              created_by, last_modified_by, created_time, last_modified_time
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+          basePath: $.comments.*
+          jsonMaps:
+            - jsonPath: $.comments.*.commentId
+            - jsonPath: $.comments.*.transactionId
+            - jsonPath: $.comments.*.commentMessage
+            - jsonPath: $.comments.*.assetType
+            - jsonPath: $.comments.*.auditDetails.createdBy
+            - jsonPath: $.comments.*.auditDetails.lastModifiedBy
+            - jsonPath: $.comments.*.auditDetails.createdTime
+            - jsonPath: $.comments.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
       name: Activity
       description: Persists Bill Of Material details in bom table
       fromTopic: save-bom-topic
