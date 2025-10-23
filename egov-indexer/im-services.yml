@@ -47,6 +47,8 @@ ServiceMaps:
                 outJsonPath: $.Data.currentProcessInstance
               - inJsonPath: $.incidentRequest.incident.systemFunctional
                 outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
+                outJsonPath: $.Data.isPotentialDuplicate
               - inJsonPath: $.incidentRequest.incident.filedDate
                 outJsonPath: $.Data.filedDate
               - inJsonPath: $.incidentRequest.incident.legacyId
@@ -96,6 +98,8 @@ ServiceMaps:
                 outJsonPath: $.Data.currentProcessInstance
               - inJsonPath: $.incidentRequest.incident.systemFunctional
                 outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
+                outJsonPath: $.Data.isPotentialDuplicate
               - inJsonPath: $.updatedProcessInstance.state.sla
                 outJsonPath: $.Data.slaRemaining
               - inJsonPath: $.updatedProcessInstance.state.sla
@@ -144,7 +148,6 @@ ServiceMaps:
               - inJsonPath: $.escalationLevel
                 outJsonPath: $.Data.escalationLevel
 
-
     - topic: update-im-request-indexer
       configKey: INDEX
       indexes:
@@ -190,6 +193,8 @@ ServiceMaps:
                 outJsonPath: $.Data.currentProcessInstance
               - inJsonPath: $.incidentRequest.incident.systemFunctional
                 outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
+                outJsonPath: $.Data.isPotentialDuplicate
               - inJsonPath: $.incidentRequest.incident.filedDate
                 outJsonPath: $.Data.filedDate
               - inJsonPath: $.incidentRequest.incident.legacyId
@@ -239,6 +244,8 @@ ServiceMaps:
                 outJsonPath: $.Data.currentProcessInstance
               - inJsonPath: $.incidentRequest.incident.systemFunctional
                 outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
+                outJsonPath: $.Data.isPotentialDuplicate
               - inJsonPath: $.updatedProcessInstance.state.sla
                 outJsonPath: $.Data.slaRemaining
               - inJsonPath: $.updatedProcessInstance.state.sla
@@ -286,7 +293,6 @@ ServiceMaps:
                 outJsonPath: $.Data.escalationTime
               - inJsonPath: $.escalationLevel
                 outJsonPath: $.Data.escalationLevel
-
 
     - topic: im-services-inboxIndex
       configKey: LEGACYINDEX
@@ -416,6 +422,8 @@ ServiceMaps:
                 outJsonPath: $.Data.currentProcessInstance
               - inJsonPath: $.incidentRequest.incident.systemFunctional
                 outJsonPath: $.Data.systemFunctional
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
+                outJsonPath: $.Data.isPotentialDuplicate
               - inJsonPath: $.updatedProcessInstance.state.sla
                 outJsonPath: $.Data.slaRemaining
               - inJsonPath: $.updatedProcessInstance.state.sla
