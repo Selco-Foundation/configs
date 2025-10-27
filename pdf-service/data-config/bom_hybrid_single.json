@@ -2642,273 +2642,351 @@
                 }
               },
               {
-                "variable": "ph1_inverter_output_frequency_mv",
+                "variable": "ph1_grid_frequency_mv",
                 "value": {
-                  "path": "$.ph1_inverter_output_frequency_mv"
+                  "path": "$.ph1_grid_frequency_mv"
                 }
               },
               {
-                "variable": "ph1_inverter_output_frequency_uom",
+                "variable": "ph1_grid_frequency_uom",
                 "value": {
-                  "path": "$.ph1_inverter_output_frequency_uom"
+                  "path": "$.ph1_grid_frequency_uom"
                 }
               },
               {
-                "variable": "ph1_grid_input_current_mv",
+                "variable": "ph1_grid_current_mv",
                 "value": {
-                  "path": "$.ph1_grid_input_current_mv"
+                  "path": "$.ph1_grid_current_mv"
                 }
               },
               {
-                "variable": "ph1_grid_input_current_uom",
+                "variable": "ph1_grid_current_uom",
                 "value": {
-                  "path": "$.ph1_grid_input_current_uom"
+                  "path": "$.ph1_grid_current_uom"
                 }
               },
               {
-                "variable": "ph3_rpn_voltage_mv_off",
+                "variable": "ph3_off_load_inverter_voltage_rn_mv",
                 "value": {
-                  "path": "$.ph3_rpn_voltage_mv_off"
+                  "path": "$.ph3_off_load_inverter_voltage_rn_mv"
                 }
               },
               {
-                "variable": "ph3_rpn_voltage_uom_off",
+                "variable": "ph3_off_load_inverter_voltage_rn_uom",
                 "value": {
-                  "path": "$.ph3_rpn_voltage_uom_off"
+                  "path": "$.ph3_off_load_inverter_voltage_rn_uom"
                 }
               },
               {
-                "variable": "ph3_rpn_freq_mv_off",
+                "variable": "ph3_off_inverter_output_frequency_rn_mv",
                 "value": {
-                  "path": "$.ph3_rpn_freq_mv_off"
+                  "path": "$.ph3_off_inverter_output_frequency_rn_mv"
                 }
               },
               {
-                "variable": "ph3_rpn_freq_uom_off",
+                "variable": "ph3_off_inverter_output_frequency_rn_uom",
                 "value": {
-                  "path": "$.ph3_rpn_freq_uom_off"
+                  "path": "$.ph3_off_inverter_output_frequency_rn_uom"
                 }
               },
               {
-                "variable": "inv_full_i_rn",
+                "variable": "ph3_off_inverter_full_load_current_rn_mv",
                 "value": {
-                  "path": "$.inv_full_i_rn"
+                  "path": "$.ph3_off_inverter_full_load_current_rn_mv"
                 }
               },
               {
-                "variable": "inv_full_i_rn_uom",
+                "variable": "ph3_off_inverter_full_load_current_rn_uom",
                 "value": {
-                  "path": "$.inv_full_i_rn_uom"
+                  "path": "$.ph3_off_inverter_full_load_current_rn_uom"
                 }
               },
               {
-                "variable": "ph3_ypn_voltage_mv_off",
+                "variable": "ph3_off_load_inverter_voltage_yn_mv",
                 "value": {
-                  "path": "$.ph3_ypn_voltage_mv_off"
+                  "path": "$.ph3_off_load_inverter_voltage_yn_mv"
                 }
               },
               {
-                "variable": "ph3_ypn_voltage_uom_off",
+                "variable": "ph3_off_load_inverter_voltage_yn_uom",
                 "value": {
-                  "path": "$.ph3_ypn_voltage_uom_off"
+                  "path": "$.ph3_off_load_inverter_voltage_yn_uom"
                 }
               },
               {
-                "variable": "ph3_ypn_freq_mv_off",
+                "variable": "ph3_off_inverter_output_frequency_yn_mv",
                 "value": {
-                  "path": "$.ph3_ypn_freq_mv_off"
+                  "path": "$.ph3_off_inverter_output_frequency_yn_mv"
                 }
               },
               {
-                "variable": "ph3_ypn_freq_uom_off",
+                "variable": "ph3_off_inverter_output_frequency_yn_uom",
                 "value": {
-                  "path": "$.ph3_ypn_freq_uom_off"
+                  "path": "$.ph3_off_inverter_output_frequency_yn_uom"
                 }
               },
               {
-                "variable": "inv_full_i_yn",
+                "variable": "ph3_off_inverter_full_load_current_yn_mv",
                 "value": {
-                  "path": "$.inv_full_i_yn"
+                  "path": "$.ph3_off_inverter_full_load_current_yn_mv"
                 }
               },
               {
-                "variable": "inv_full_i_yn_uom",
+                "variable": "ph3_off_inverter_full_load_current_yn_uom",
                 "value": {
-                  "path": "$.inv_full_i_yn_uom"
+                  "path": "$.ph3_off_inverter_full_load_current_yn_uom"
                 }
               },
               {
-                "variable": "ph3_bpn_voltage_mv_off",
+                "variable": "ph3_off_load_inverter_voltage_bn_mv",
                 "value": {
-                  "path": "$.ph3_bpn_voltage_mv_off"
+                  "path": "$.ph3_off_load_inverter_voltage_bn_mv"
                 }
               },
               {
-                "variable": "ph3_bpn_voltage_uom_off",
+                "variable": "ph3_off_load_inverter_voltage_bn_uom",
                 "value": {
-                  "path": "$.ph3_bpn_voltage_uom_off"
+                  "path": "$.ph3_off_load_inverter_voltage_bn_uom"
                 }
               },
               {
-                "variable": "ph3_bpn_freq_mv_off",
+                "variable": "ph3_off_inverter_output_frequency_bn_mv",
                 "value": {
-                  "path": "$.ph3_bpn_freq_mv_off"
+                  "path": "$.ph3_off_inverter_output_frequency_bn_mv"
                 }
               },
               {
-                "variable": "ph3_bpn_freq_uom_off",
+                "variable": "ph3_off_inverter_output_frequency_bn_uom",
                 "value": {
-                  "path": "$.ph3_bpn_freq_uom_off"
+                  "path": "$.ph3_off_inverter_output_frequency_bn_uom"
                 }
               },
               {
-                "variable": "inv_full_i_bn",
+                "variable": "ph3_off_inverter_full_load_current_bn_mv",
                 "value": {
-                  "path": "$.inv_full_i_bn"
+                  "path": "$.ph3_off_inverter_full_load_current_bn_mv"
                 }
               },
               {
-                "variable": "ph3_r_y_voltage_mv",
+                "variable": "ph3_off_inverter_full_load_current_bn_uom",
                 "value": {
-                  "path": "$.ph3_r_y_voltage_mv"
+                  "path": "$.ph3_off_inverter_full_load_current_bn_uom"
                 }
               },
               {
-                "variable": "ph3_r_y_voltage_uom",
+                "variable": "ph3_off_inverter_output_voltage_ry_mv",
                 "value": {
-                  "path": "$.ph3_r_y_voltage_uom"
+                  "path": "$.ph3_off_inverter_output_voltage_ry_mv"
                 }
               },
               {
-                "variable": "ph3_r_b_voltage_mv",
+                "variable": "ph3_off_inverter_output_voltage_ry_uom",
                 "value": {
-                  "path": "$.ph3_r_b_voltage_mv"
+                  "path": "$.ph3_off_inverter_output_voltage_ry_uom"
                 }
               },
               {
-                "variable": "ph3_r_b_voltage_uom",
+                "variable": "ph3_off_inverter_output_voltage_rb_mv",
                 "value": {
-                  "path": "$.ph3_r_b_voltage_uom"
+                  "path": "$.ph3_off_inverter_output_voltage_rb_mv"
                 }
               },
               {
-                "variable": "ph3_y_b_voltage_mv",
+                "variable": "ph3_off_inverter_output_voltage_rb_uom",
                 "value": {
-                  "path": "$.ph3_y_b_voltage_mv"
+                  "path": "$.ph3_off_inverter_output_voltage_rb_uom"
                 }
               },
               {
-                "variable": "ph3_y_b_voltage_uom",
+                "variable": "ph3_off_inverter_output_voltage_yb_mv",
                 "value": {
-                  "path": "$.ph3_y_b_voltage_uom"
+                  "path": "$.ph3_off_inverter_output_voltage_yb_mv"
                 }
               },
               {
-                "variable": "ph3_rpn_voltage_mv_on",
+                "variable": "ph3_off_inverter_output_voltage_yb_uom",
                 "value": {
-                  "path": "$.ph3_rpn_voltage_mv_on"
+                  "path": "$.ph3_off_inverter_output_voltage_yb_uom"
                 }
               },
               {
-                "variable": "ph3_rpn_voltage_uom_on",
+                "variable": "ph3_on_grid_voltage_rn_mv",
                 "value": {
-                  "path": "$.ph3_rpn_voltage_uom_on"
+                  "path": "$.ph3_on_grid_voltage_rn_mv"
                 }
               },
               {
-                "variable": "ph3_rpn_freq_mv_on",
+                "variable": "ph3_on_grid_voltage_rn_uom",
                 "value": {
-                  "path": "$.ph3_rpn_freq_mv_on"
+                  "path": "$.ph3_on_grid_voltage_rn_uom"
                 }
               },
               {
-                "variable": "ph3_rpn_freq_uom_on",
+                "variable": "ph3_on_grid_frequency_rn_mv",
                 "value": {
-                  "path": "$.ph3_rpn_freq_uom_on"
+                  "path": "$.ph3_on_grid_frequency_rn_mv"
                 }
               },
               {
-                "variable": "ph3_ypn_voltage_mv_on",
+                "variable": "ph3_on_grid_frequency_rn_uom",
                 "value": {
-                  "path": "$.ph3_ypn_voltage_mv_on"
+                  "path": "$.ph3_on_grid_frequency_rn_uom"
                 }
               },
               {
-                "variable": "ph3_ypn_voltage_uom_on",
+                "variable": "ph3_on_grid_current_rn_mv",
                 "value": {
-                  "path": "$.ph3_ypn_voltage_uom_on"
+                  "path": "$.ph3_on_grid_current_rn_mv"
                 }
               },
               {
-                "variable": "ph3_ypn_freq_mv_on",
+                "variable": "ph3_on_grid_current_rn_uom",
                 "value": {
-                  "path": "$.ph3_ypn_freq_mv_on"
+                  "path": "$.ph3_on_grid_current_rn_uom"
                 }
               },
               {
-                "variable": "ph3_ypn_freq_uom_on",
+                "variable": "ph3_on_grid_voltage_yn_mv",
                 "value": {
-                  "path": "$.ph3_ypn_freq_uom_on"
+                  "path": "$.ph3_on_grid_voltage_yn_mv"
                 }
               },
               {
-                "variable": "ph3_bpn_voltage_mv_on",
+                "variable": "ph3_on_grid_voltage_yn_uom",
                 "value": {
-                  "path": "$.ph3_bpn_voltage_mv_on"
+                  "path": "$.ph3_on_grid_voltage_yn_uom"
                 }
               },
               {
-                "variable": "ph3_bpn_voltage_uom_on",
+                "variable": "ph3_on_grid_frequency_yn_mv",
                 "value": {
-                  "path": "$.ph3_bpn_voltage_uom_on"
+                  "path": "$.ph3_on_grid_frequency_yn_mv"
                 }
               },
               {
-                "variable": "ph3_bpn_freq_mv_on",
+                "variable": "ph3_on_grid_frequency_yn_uom",
                 "value": {
-                  "path": "$.ph3_bpn_freq_mv_on"
+                  "path": "$.ph3_on_grid_frequency_yn_uom"
                 }
               },
               {
-                "variable": "ph3_bpn_freq_uom_on",
+                "variable": "ph3_on_grid_current_yn_mv",
                 "value": {
-                  "path": "$.ph3_bpn_freq_uom_on"
+                  "path": "$.ph3_on_grid_current_yn_mv"
                 }
               },
               {
-                "variable": "grid_on_v_ry",
+                "variable": "ph3_on_grid_current_yn_uom",
                 "value": {
-                  "path": "$.grid_on_v_ry"
+                  "path": "$.ph3_on_grid_current_yn_uom"
                 }
               },
               {
-                "variable": "grid_on_f_ry",
+                "variable": "ph3_on_grid_voltage_bn_mv",
                 "value": {
-                  "path": "$.grid_on_f_ry"
+                  "path": "$.ph3_on_grid_voltage_bn_mv"
                 }
               },
               {
-                "variable": "grid_on_v_rb",
+                "variable": "ph3_on_grid_voltage_bn_uom",
                 "value": {
-                  "path": "$.grid_on_v_rb"
+                  "path": "$.ph3_on_grid_voltage_bn_uom"
                 }
               },
               {
-                "variable": "grid_on_f_rb",
+                "variable": "ph3_on_grid_frequency_bn_mv",
                 "value": {
-                  "path": "$.grid_on_f_rb"
+                  "path": "$.ph3_on_grid_frequency_bn_mv"
                 }
               },
               {
-                "variable": "grid_on_v_by",
+                "variable": "ph3_on_grid_frequency_bn_uom",
                 "value": {
-                  "path": "$.grid_on_v_by"
+                  "path": "$.ph3_on_grid_frequency_bn_uom"
                 }
               },
               {
-                "variable": "grid_on_f_by",
+                "variable": "ph3_on_grid_current_bn_mv",
                 "value": {
-                  "path": "$.grid_on_f_by"
+                  "path": "$.ph3_on_grid_current_bn_mv"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_current_bn_uom",
+                "value": {
+                  "path": "$.ph3_on_grid_current_bn_uom"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_voltage_ry_mv",
+                "value": {
+                  "path": "$.ph3_on_grid_voltage_ry_mv"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_voltage_ry_uom",
+                "value": {
+                  "path": "$.ph3_on_grid_voltage_ry_uom"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_frequency_ry_mv",
+                "value": {
+                  "path": "$.ph3_on_grid_frequency_ry_mv"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_frequency_ry_uom",
+                "value": {
+                  "path": "$.ph3_on_grid_frequency_ry_uom"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_voltage_rb_mv",
+                "value": {
+                  "path": "$.ph3_on_grid_voltage_rb_mv"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_voltage_rb_uom",
+                "value": {
+                  "path": "$.ph3_on_grid_voltage_rb_uom"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_frequency_rb_mv",
+                "value": {
+                  "path": "$.ph3_on_grid_frequency_rb_mv"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_frequency_rb_uom",
+                "value": {
+                  "path": "$.ph3_on_grid_frequency_rb_uom"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_voltage_yb_mv",
+                "value": {
+                  "path": "$.ph3_on_grid_voltage_yb_mv"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_voltage_yb_uom",
+                "value": {
+                  "path": "$.ph3_on_grid_voltage_yb_uom"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_frequency_yb_mv",
+                "value": {
+                  "path": "$.ph3_on_grid_frequency_yb_mv"
+                }
+              },
+              {
+                "variable": "ph3_on_grid_frequency_yb_uom",
+                "value": {
+                  "path": "$.ph3_on_grid_frequency_yb_uom"
                 }
               },
               {
