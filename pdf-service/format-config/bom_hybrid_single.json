@@ -1176,13 +1176,13 @@
             ],
             [
               "Grid frequency",
-              "{{ph1_inverter_output_frequency_mv}}",
-              "{{ph1_inverter_output_frequency_uom}}"
+              "{{ph1_grid_frequency_mv}}",
+              "{{ph1_grid_frequency_uom}}"
             ],
             [
               "Grid Current",
-              "{{ph1_grid_input_current_mv}}",
-              "{{ph1_grid_input_current_uom}}"
+              "{{ph1_grid_current_mv}}",
+              "{{ph1_grid_current_uom}}"
             ]
           ]
         },
@@ -1208,53 +1208,53 @@
             ],
             [
               "Load voltage/Inverter output voltage (R & Neutral)",
-              "{{ph3_rpn_voltage_mv_off}}",
-              "{{ph3_rpn_voltage_uom_off}}"
+              "{{ph3_off_load_inverter_voltage_rn_mv}}",
+              "{{ph3_off_load_inverter_voltage_rn_uom}}"
             ],
             [
               "Inverter output frequency(R & Neutral)",
-              "{{ph3_rpn_freq_mv_off}}",
-              "{{ph3_rpn_freq_uom_off}}"
+              "{{ph3_off_inverter_output_frequency_rn_mv}}",
+              "{{ph3_off_inverter_output_frequency_rn_uom}}"
             ],
             [
               "Inverter output current at full load (R & Neutral)(All solar loads turned on continuously for 10 minutes)",
-              "{{ inv_full_i_rn }}",
-              "{{inv_full_i_rn_uom}}"
+              "{{ph3_off_inverter_full_load_current_rn_mv}}",
+              "{{ph3_off_inverter_full_load_current_rn_uom}}"
             ],
             [
               "Load voltage/Inverter output voltage(Y & Neutral)",
-              "{{ ph3_ypn_voltage_mv_off }}",
-              "{{ ph3_ypn_voltage_uom_off }}"
+              "{{ ph3_off_load_inverter_voltage_yn_mv }}",
+              "{{ ph3_off_load_inverter_voltage_yn_uom }}"
             ],
             [
               "Inverter output frequency(Y & Neutral)",
-              "{{ ph3_ypn_freq_mv_off }}",
-              "{{ ph3_ypn_freq_uom_off }}"
+              "{{ ph3_off_inverter_output_frequency_yn_mv }}",
+              "{{ ph3_off_inverter_output_frequency_yn_uom }}"
             ],
             [
               "Inverter output current at full load (Y & Neutral)(All solar loads turned on continuously for 10 minutes)",
-              "{{ inv_full_i_yn }}",
-              "{{inv_full_i_yn_uom}}"
+              "{{ ph3_off_inverter_full_load_current_yn_mv }}",
+              "{{ph3_off_inverter_full_load_current_yn_uom}}"
             ],
             [
               "Load voltage/Inverter output voltage (B & Neutral)",
-              "{{ ph3_bpn_voltage_mv_off }}",
-              "{{ ph3_bpn_voltage_uom_off }}"
+              "{{ ph3_off_load_inverter_voltage_bn_mv}}",
+              "{{ ph3_off_load_inverter_voltage_bn_uom}}"
             ],
             [
               "Inverter output frequency(B & Neutral)",
-              "{{ ph3_bpn_freq_mv_off }}",
-              "{{ ph3_bpn_freq_uom_off }}"
+              "{{ph3_off_inverter_output_frequency_bn_mv}}",
+              "{{ph3_off_inverter_output_frequency_bn_uom}}"
             ],
             [
               "Inverter output current at full load (B & Neutral) (All solar loads turned on continuously for 10 minutes)",
-              "{{ inv_full_i_bn }}",
-              "A"
+              "{{ ph3_off_inverter_full_load_current_bn_mv }}",
+              "{{ ph3_off_inverter_full_load_current_bn_uom }}"
             ],
             [
               "Inverter output voltage between R & Y",
-              "{{ ph3_r_y_voltage_mv }}",
-              "{{ ph3_r_y_voltage_uom }}"
+              "{{ ph3_off_inverter_output_voltage_ry_mv }}",
+              "{{ ph3_off_inverter_output_voltage_ry_uom }}"
             ],
             [
               "Inverter output frequency between R & Y:",
@@ -1263,8 +1263,8 @@
             ],
             [
               "Inverter output voltage between R & B",
-              "{{ ph3_r_b_voltage_mv }}",
-              "{{ ph3_r_b_voltage_uom }}"
+              "{{ ph3_off_inverter_output_voltage_rb_mv }}",
+              "{{ ph3_off_inverter_output_voltage_rb_uom }}"
             ],
             [
               "Inverter output frequency between R & B:",
@@ -1273,8 +1273,8 @@
             ],
             [
               "Inverter output voltage between Y & B",
-              "{{ ph3_y_b_voltage_mv }}",
-              "{{ ph3_y_b_voltage_uom }}"
+              "{{ ph3_off_inverter_output_voltage_yb_mv }}",
+              "{{ ph3_off_inverter_output_voltage_yb_uom }}"
             ],
             [
               "Inverter output frequency between Y & B:",
@@ -1301,78 +1301,78 @@
             ],
             [
               "Grid voltage(R & Neutral)",
-              "{{ph3_rpn_voltage_mv_on}}",
-              "{{ph3_rpn_voltage_uom_on}}"
+              "{{ph3_on_grid_voltage_rn_mv}}",
+              "{{ph3_on_grid_voltage_rn_uom}}"
             ],
             [
               "Grid frequency(R & Neutral)",
-              "{{ph3_rpn_freq_mv_on}}",
-              "{{ph3_rpn_freq_uom_on}}"
+              "{{ph3_on_grid_frequency_rn_mv}}",
+              "{{ph3_on_grid_frequency_rn_uom}}"
             ],
             [
               "Grid current(R & Neutral)",
-              "{{ph3_rpn_freq_mv_on}}",
-              "{{ph3_rpn_freq_uom_on}}"
+              "{{ph3_on_grid_current_rn_mv}}",
+              "{{ph3_on_grid_current_rn_uom}}"
             ],
             [
               "Grid voltage(Y & Neutral)",
-              "{{ ph3_ypn_voltage_mv_on}}",
-              "{{ ph3_ypn_voltage_uom_on }}"
+              "{{ ph3_on_grid_voltage_yn_mv}}",
+              "{{ ph3_on_grid_voltage_yn_uom }}"
             ],
             [
               "Grid frequency(Y & Neutral)",
-              "{{ ph3_ypn_freq_mv_on }}",
-              "{{ ph3_ypn_freq_uom_on }}"
+              "{{ ph3_on_grid_frequency_yn_mv }}",
+              "{{ ph3_on_grid_frequency_yn_uom }}"
             ],
             [
               "Grid current(Y & Neutral)",
-              "{{ ph3_ypn_freq_mv_on }}",
-              "{{ ph3_ypn_freq_uom_on }}"
+              "{{ ph3_on_grid_current_yn_mv }}",
+              "{{ ph3_on_grid_current_yn_uom }}"
             ],
             [
               "Grid voltage(B & Neutral)",
-              "{{ ph3_bpn_voltage_mv_on }}",
-              "{{ ph3_bpn_voltage_uom_on }}"
+              "{{ ph3_on_grid_voltage_bn_mv }}",
+              "{{ ph3_on_grid_voltage_bn_uom }}"
             ],
             [
               "Grid frequency(B & Neutral)",
-              "{{ ph3_bpn_freq_mv_on }}",
-              "{{ ph3_bpn_freq_uom_on }}"
+              "{{ ph3_on_grid_frequency_bn_mv }}",
+              "{{ ph3_on_grid_frequency_bn_uom }}"
             ],
             [
               "Grid current(B & Neutral)",
-              "{{ ph3_bpn_freq_mv_on }}",
-              "{{ ph3_bpn_freq_uom_on }}"
+              "{{ ph3_on_grid_current_bn_mv }}",
+              "{{ ph3_on_grid_current_bn_uom }}"
             ],
             [
               "Grid voltage(R & Y)",
-              "{{ grid_on_v_ry }}",
-              "{{ ph3_bpn_voltage_uom_on }}"
+              "{{ ph3_on_grid_voltage_ry_mv }}",
+              "{{ ph3_on_grid_voltage_ry_uom }}"
             ],
             [
               "Grid frequency(R & Y)",
-              "{{ grid_on_f_ry }}",
-              "{{ ph3_bpn_freq_uom_on }}"
+              "{{ ph3_on_grid_frequency_ry_mv }}",
+              "{{ ph3_on_grid_frequency_ry_uom }}"
             ],
             [
               "Grid voltage(R & B)",
-              "{{ grid_on_v_rb }}",
-              "{{ ph3_bpn_voltage_uom_on }}"
+              "{{ ph3_on_grid_voltage_rb_mv }}",
+              "{{ ph3_on_grid_voltage_rb_uom }}"
             ],
             [
               "Grid frequency(R & B)",
-              "{{ grid_on_f_rb }}",
-              "{{ ph3_bpn_freq_uom_on }}"
+              "{{ ph3_on_grid_frequency_rb_mv }}",
+              "{{ ph3_on_grid_frequency_rb_uom }}"
             ],
             [
               "Grid voltage(Y & B)",
-              "{{ grid_on_v_by }}",
-              "{{ ph3_bpn_voltage_uom_on }}"
+              "{{ ph3_on_grid_voltage_yb_mv }}",
+              "{{ ph3_on_grid_voltage_yb_uom }}"
             ],
             [
               "Grid input frequency(Y & B)",
-              "{{ grid_on_f_by }}",
-              "{{ ph3_bpn_freq_uom_on }}"
+              "{{ ph3_on_grid_frequency_yb_mv }}",
+              "{{ ph3_on_grid_frequency_yb_uom }}"
             ]
           ]
         },
