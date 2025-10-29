@@ -269,7 +269,7 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: INSERT INTO bom (id,tenant_id,facility_id,name,assign_user,data,is_active,additional_details,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO bom (id,tenant_id,facility_id,activity_facility_id,name,assign_user,data,is_active,additional_details,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?);
           basePath: $.bom.*
           jsonMaps:
             - jsonPath: $.bom.*.id
@@ -277,6 +277,8 @@ serviceMaps:
             - jsonPath: $.bom.*.tenantId
 
             - jsonPath: $.bom.*.facilityId
+
+            - jsonPath: $.bom.*.activityFacilityId
 
             - jsonPath: $.bom.*.name
 
