@@ -210,6 +210,59 @@ serviceMaps:
             - jsonPath: $.ActivitiesFacilities.*.id
 
     - version: 1.0
+      description: Saves facility activity user
+      fromTopic: save-facility-user-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: ACTIVITY
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.clientReferenceId
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: INSERT INTO activity_facility_users (id, tenantId, activityfacilityid, userid, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime, isDeleted) VALUES (?,?,?,?,?,?,?,?,?,?);
+          basePath: $.ActivityFacilityUsers.*
+          jsonMaps:
+            - jsonPath: $.ActivityFacilityUsers.*.id
+            - jsonPath: $.ActivityFacilityUsers.*.tenantId
+            - jsonPath: $.ActivityFacilityUsers.*.activityFacilityId
+            - jsonPath: $.ActivityFacilityUsers.*.userId
+            - jsonPath: $.ActivityFacilityUsers.*.additionalFields
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.ActivityFacilityUsers.*.auditDetails.createdBy
+            - jsonPath: $.ActivityFacilityUsers.*.auditDetails.lastModifiedBy
+            - jsonPath: $.ActivityFacilityUsers.*.auditDetails.createdTime
+            - jsonPath: $.ActivityFacilityUsers.*.auditDetails.lastModifiedTime
+            - jsonPath: $.ActivityFacilityUsers.*.isDeleted
+
+    - version: 1.0
+      description: Update facility activity user
+      fromTopic: update-facility-user-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: PROJECT
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.clientReferenceId
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: UPDATE activity_facility_users SET activityfacilityid=?, userid=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=?, isDeleted=? WHERE id = ?
+          basePath: $.ActivityFacilityUsers.*
+          jsonMaps:
+            - jsonPath: $.ActivityFacilityUsers.*.activityFacilityId
+            - jsonPath: $.ActivityFacilityUsers.*.userId
+            - jsonPath: $.ActivityFacilityUsers.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.ActivityFacilityUsers.*.auditDetails.lastModifiedBy
+            - jsonPath: $.ActivityFacilityUsers.*.auditDetails.lastModifiedTime
+            - jsonPath: $.ActivityFacilityUsers.*.isDeleted
+            - jsonPath: $.ActivityFacilityUsers.*.id
+
+    - version: 1.0
       description: Persists facility activity transactions
       fromTopic: facility-transaction-create
       isTransaction: true
