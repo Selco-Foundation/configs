@@ -210,6 +210,32 @@ serviceMaps:
             - jsonPath: $.ActivitiesFacilities.*.id
 
     - version: 1.0
+      name: Activity
+      description: Delete activity in activity_facilities table
+      fromTopic: delete-activity-facility
+      isTransaction: true
+      isAuditEnabled: true
+      module: ACTIVITY
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.id
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: UPDATE facility_activities SET isdeleted = ?, additional_details = ?, last_modified_time = ? WHERE id = ?;
+          basePath: $.ActivitiesFacilities.*
+          jsonMaps:
+            - jsonPath: $.ActivitiesFacilities.*.isDeleted
+
+            - jsonPath: $.ActivitiesFacilities.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.ActivitiesFacilities.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.ActivitiesFacilities.*.id
+
+    - version: 1.0
       description: Saves facility activity user
       fromTopic: save-facility-user-topic
       isTransaction: true
