@@ -136,7 +136,7 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: INSERT INTO facility_activities (id,tenant_id,field_plan_id,activity_id,facility_id, status, conditions_met, assigned_user, scheduled_at, activated_at, completed_at, additional_details, created_time, last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (tenant_id, facility_id, activity_id, field_plan_id) DO UPDATE SET isdeleted = ?, last_modified_time = ?;
+        - query: INSERT INTO facility_activities (id,tenant_id,field_plan_id,activity_id,facility_id, status, conditions_met, assigned_user, scheduled_at, activated_at, completed_at, additional_details, created_time, last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);
           basePath: $.ActivitiesFacilities.*
           jsonMaps:
             - jsonPath: $.ActivitiesFacilities.*.id
@@ -168,10 +168,6 @@ serviceMaps:
               dbType: JSONB
 
             - jsonPath: $.ActivitiesFacilities.*.auditDetails.createdTime
-
-            - jsonPath: $.ActivitiesFacilities.*.auditDetails.lastModifiedTime
-
-            - jsonPath: $.ActivityAssignment.*.isDeleted
 
             - jsonPath: $.ActivitiesFacilities.*.auditDetails.lastModifiedTime
 
