@@ -53,6 +53,8 @@ ServiceMaps:
                 outJsonPath: $.Data.systemFunctional
               - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
                 outJsonPath: $.Data.isPotentialDuplicate
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicateLocalized
+                outJsonPath: $.Data.isPotentialDuplicateLocalized
               - inJsonPath: $.incidentRequest.incident.filedDate
                 outJsonPath: $.Data.filedDate
               - inJsonPath: $.incidentRequest.incident.legacyId
@@ -108,6 +110,8 @@ ServiceMaps:
                 outJsonPath: $.Data.systemFunctional
               - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
                 outJsonPath: $.Data.isPotentialDuplicate
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicateLocalized
+                outJsonPath: $.Data.isPotentialDuplicateLocalized
               - inJsonPath: $.updatedProcessInstance.state.sla
                 outJsonPath: $.Data.slaRemaining
               - inJsonPath: $.updatedProcessInstance.state.sla
@@ -207,6 +211,8 @@ ServiceMaps:
                 outJsonPath: $.Data.systemFunctional
               - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
                 outJsonPath: $.Data.isPotentialDuplicate
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicateLocalized
+                outJsonPath: $.Data.isPotentialDuplicateLocalized
               - inJsonPath: $.incidentRequest.incident.filedDate
                 outJsonPath: $.Data.filedDate
               - inJsonPath: $.incidentRequest.incident.legacyId
@@ -262,6 +268,8 @@ ServiceMaps:
                 outJsonPath: $.Data.systemFunctional
               - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
                 outJsonPath: $.Data.isPotentialDuplicate
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicateLocalized
+                outJsonPath: $.Data.isPotentialDuplicateLocalized
               - inJsonPath: $.updatedProcessInstance.state.sla
                 outJsonPath: $.Data.slaRemaining
               - inJsonPath: $.updatedProcessInstance.state.sla
@@ -448,6 +456,8 @@ ServiceMaps:
                 outJsonPath: $.Data.systemFunctional
               - inJsonPath: $.incidentRequest.incident.isPotentialDuplicate
                 outJsonPath: $.Data.isPotentialDuplicate
+              - inJsonPath: $.incidentRequest.incident.isPotentialDuplicateLocalized
+                outJsonPath: $.Data.isPotentialDuplicateLocalized
               - inJsonPath: $.updatedProcessInstance.state.sla
                 outJsonPath: $.Data.slaRemaining
               - inJsonPath: $.updatedProcessInstance.state.sla
