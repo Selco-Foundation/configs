@@ -1,0 +1,129 @@
+{
+  "key": "amc-report",
+  "DataConfigs": {
+    "serviceName": "rainmaker-tl",
+    "version": "1.0.0",
+    "baseKeyPath": "$",
+    "entityIdPath": "$.reportId",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "amc-pdf-generation",
+        "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/master/core/egov-pdf-service/config/sample-static-config.yml",
+        "mappings": [
+          {
+            "direct": [
+              { "variable": "servicePersonName", "value": { "path": "$.servicePerson.name" } },
+              { "variable": "servicePersonContact", "value": { "path": "$.servicePerson.contact" } },
+
+              { "variable": "lastMaintenanceDate", "value": { "path": "$.maintenance.lastDate" } },
+              { "variable": "currentVisitDate", "value": { "path": "$.maintenance.currentDate" } },
+
+              { "variable": "healthCentreName", "value": { "path": "$.facility.name" } },
+              { "variable": "healthCentrePOC", "value": { "path": "$.facility.pocName" } },
+              { "variable": "healthCentrePOCContact", "value": { "path": "$.facility.pocContact" } },
+
+              {"variable": "check_solar_panels_cleaned", "value": {"path": "$.checklist.solarPanelsCleaned"}},
+
+              { "variable": "check_mounting_structure", "value": { "path": "$.checklist.mountingStructureSecured" } },
+              { "variable": "check_cables_panels", "value": { "path": "$.checklist.cablesPanelsSecure" } },
+
+              { "variable": "check_inverter_cleaned", "value": { "path": "$.checklist.inverterCleaned" } },
+              { "variable": "check_inverter_cables", "value": { "path": "$.checklist.inverterCablesSecure" } },
+
+              { "variable": "check_battery_connections", "value": { "path": "$.checklist.batteryConnectionsOk" } },
+              { "variable": "check_battery_jelly", "value": { "path": "$.checklist.batteryJellyApplied" } },
+              { "variable": "check_battery_water", "value": { "path": "$.checklist.batteryWaterFilled" } },
+              { "variable": "check_battery_backup", "value": { "path": "$.checklist.batteryBackupNormal" } },
+              { "variable": "check_battery_cleaned", "value": { "path": "$.checklist.batteryCleaned" } },
+              { "variable": "check_battery_corrosion", "value": { "path": "$.checklist.batteryCorrosionObserved" } },
+
+              { "variable": "check_earthing", "value": { "path": "$.checklist.earthingOk" } },
+              { "variable": "check_surge", "value": { "path": "$.checklist.surgeProtectionOk" } },
+
+
+              { "variable": "check_lightning_arrestor", "value": { "path": "$.checklist.lightningArrestorOk" } },
+              { "variable": "check_gipb", "value": { "path": "$.checklist.gipbOk" } },
+              { "variable": "check_ajb", "value": { "path": "$.checklist.ajbOk" } },
+              { "variable": "check_changeover", "value": { "path": "$.checklist.changeoverOk" } },
+
+              { "variable": "check_solar_array", "value": { "path": "$.checklist.solarArrayOk" } },
+              { "variable": "check_general_condition", "value": { "path": "$.checklist.generalCondition" } },
+
+              { "variable": "battery_design_voltage", "value": { "path": "$.performance.battery.designVoltage" } },
+              { "variable": "battery_observed_voltage", "value": { "path": "$.performance.battery.observedVoltage" } },
+              { "variable": "inverter_reading", "value": { "path": "$.performance.inverter.reading" } },
+
+              { "variable": "panel_string_1", "value": { "path": "$.performance.panel.string1" } },
+              { "variable": "panel_string_2", "value": { "path": "$.performance.panel.string2" } },
+              { "variable": "panel_string_3", "value": { "path": "$.performance.panel.string3" } },
+              { "variable": "panel_string_4", "value": { "path": "$.performance.panel.string4" } },
+              { "variable": "panel_string_5", "value": { "path": "$.performance.panel.string5" } },
+
+              { "variable": "faults_observed", "value": { "path": "$.faults.observed" } },
+              { "variable": "immediate_fix_done", "value": { "path": "$.faults.immediateFix" } },
+              { "variable": "parts_repaired", "value": { "path": "$.faults.partsRepaired" } },
+              { "variable": "fault_rectification_status", "value": { "path": "$.faults.rectificationStatus" } },
+              { "variable": "scheduled_plan_date", "value": { "path": "$.faults.scheduledPlanDate" } },
+
+              { "variable": "any_parts_replaced", "value": { "path": "$.partsReplaced.any" } },
+
+              { "variable": "part1_index",     "value": { "path": "$.partsReplaced.items[0].index"} },
+              { "variable": "part1_component", "value": { "path": "$.partsReplaced.items[0].component" } },
+              { "variable": "part1_make",      "value": { "path": "$.partsReplaced.items[0].make" } },
+              { "variable": "part1_serial",    "value": { "path": "$.partsReplaced.items[0].serial" } },
+              { "variable": "part1_qty",       "value": { "path": "$.partsReplaced.items[0].qty" } },
+              { "variable": "part1_remarks",   "value": { "path": "$.partsReplaced.items[0].remarks" } },
+
+              { "variable": "part2_index",     "value": { "path": "$.partsReplaced.items[1].index" } },
+              { "variable": "part2_component", "value": { "path": "$.partsReplaced.items[1].component" } },
+              { "variable": "part2_make",      "value": { "path": "$.partsReplaced.items[1].make" } },
+              { "variable": "part2_serial",    "value": { "path": "$.partsReplaced.items[1].serial" } },
+              { "variable": "part2_qty",       "value": { "path": "$.partsReplaced.items[1].qty" } },
+              { "variable": "part2_remarks",   "value": { "path": "$.partsReplaced.items[1].remarks" } },
+
+              { "variable": "part3_index",     "value": { "path": "$.partsReplaced.items[2].index" } },
+              { "variable": "part3_component", "value": { "path": "$.partsReplaced.items[2].component" } },
+              { "variable": "part3_make",      "value": { "path": "$.partsReplaced.items[2].make" } },
+              { "variable": "part3_serial",    "value": { "path": "$.partsReplaced.items[2].serial" } },
+              { "variable": "part3_qty",       "value": { "path": "$.partsReplaced.items[2].qty" } },
+              { "variable": "part3_remarks",   "value": { "path": "$.partsReplaced.items[2].remarks" } },
+
+              { "variable": "additional_remarks", "value": { "path": "$.remarks.additional" } },
+              { "variable": "service_person_remarks", "value": { "path": "$.remarks.servicePerson" } },
+              { "variable": "end_user_remarks", "value": { "path": "$.remarks.endUser" } },
+
+              { "variable": "img1_taken", "value": { "path": "$.images.image1Taken" } },
+              { "variable": "reportId", "value": { "path": "$.reportId" } },
+              { "variable": "tenantId", "value": { "path": "$.tenantId" } }
+            ],
+            "externalApi": [
+              {
+                "variable": "facility_details_external",
+                "api": {
+                  "url": "http://egov-facility-service/facilities/_search?tenantId={tenantId}&facilityId={facilityId}",
+                  "method": "GET",
+                  "queryParams": {
+                    "tenantId": "$.tenantId",
+                    "facilityId": "$.facility.id"
+                  },
+                  "responsePath": "$.facilities[0]"
+                }
+              }
+            ],
+            "derived": [
+
+            ],
+            "qrcode": [
+              {
+                "variable": "amc_qr",
+                "text": "AMC-{{reportId}}-{{tenantId}}",
+                "localisation": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
