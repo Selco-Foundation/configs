@@ -15,9 +15,9 @@ serviceMaps:
         - query: >-
             INSERT INTO eg_incident_v2(id, tenantid, incidenttype,
             incidentsubtype, incidentid, additionaldetails, applicationstatus,
-            district, block, phctype, phcsubtype, createdby, createdtime,
+            district, block, phctype, phcsubtype, facilityid, boundarycode, createdby, createdtime,
             lastmodifiedby, lastmodifiedtime, comments,accountid, reportertenant,reportertype,systemfunctional, fileddate, legacyid, migrationid, ispotentialduplicate) VALUES (?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?, ?, ?, ?, ?, ?);
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $.incident
           jsonMaps:
             - jsonPath: $.incident.id
@@ -33,6 +33,8 @@ serviceMaps:
             - jsonPath: $.incident.block
             - jsonPath: $.incident.phcType
             - jsonPath: $.incident.phcSubType
+            - jsonPath: $.incident.facilityId
+            - jsonPath: $.incident.boundaryCode
             - jsonPath: $.incident.auditDetails.createdBy
             - jsonPath: $.incident.auditDetails.createdTime
             - jsonPath: $.incident.auditDetails.lastModifiedBy
@@ -61,7 +63,7 @@ serviceMaps:
         - query: >-
             UPDATE eg_incident_v2 SET incidenttype=?, incidentid=?,
             incidentsubtype=?, additionaldetails=?, applicationstatus=?,
-            district=? , block=? , phctype=? , phcsubtype=?, lastmodifiedby=?,
+            district=? , block=? , phctype=? , phcsubtype=?, facilityid=?, boundarycode=?, lastmodifiedby=?,
             lastmodifiedtime=?, comments=?, systemfunctional=?, fileddate=? , legacyid=? , migrationid=?, ispotentialduplicate=? WHERE id=?;
           basePath: $.incident
           jsonMaps:
@@ -76,6 +78,8 @@ serviceMaps:
             - jsonPath: $.incident.block
             - jsonPath: $.incident.phcType
             - jsonPath: $.incident.phcSubType
+            - jsonPath: $.incident.facilityId
+            - jsonPath: $.incident.boundaryCode
             - jsonPath: $.incident.auditDetails.lastModifiedBy
             - jsonPath: $.incident.auditDetails.lastModifiedTime
             - jsonPath: $.incident.comments

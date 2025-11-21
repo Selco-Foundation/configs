@@ -39,6 +39,10 @@ ServiceMaps:
                 outJsonPath: $.Data.block
               - inJsonPath: $.incidentRequest.incident.phcType
                 outJsonPath: $.Data.phcType
+              - inJsonPath: $.incidentRequest.incident.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.boundaryCode
+                outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
               - inJsonPath: $.incidentRequest.incident.auditDetails
@@ -92,6 +96,10 @@ ServiceMaps:
                 outJsonPath: $.Data.block
               - inJsonPath: $.incidentRequest.incident.phcType
                 outJsonPath: $.Data.phcType
+              - inJsonPath: $.incidentRequest.incident.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.boundaryCode
+                outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
               - inJsonPath: $.incidentRequest.incident.auditDetails
@@ -140,6 +148,8 @@ ServiceMaps:
                 outJsonPath: $.Data.migrationId
               - inJsonPath: $.indexView.comments
                 outJsonPath: $.Data.comments
+              - inJsonPath: $.indexView.boundary
+                outJsonPath: $.Data.incident.boundary
               - inJsonPath: $.incidentRequest.incident.additionalDetail.rejectReason
                 outJsonPath: $.Data.incident.additionalDetail.rejectReason
               # Escalation fields for SLA breach detection
@@ -189,6 +199,10 @@ ServiceMaps:
                 outJsonPath: $.Data.block
               - inJsonPath: $.incidentRequest.incident.phcType
                 outJsonPath: $.Data.phcType
+              - inJsonPath: $.incidentRequest.incident.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.boundaryCode
+                outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
               - inJsonPath: $.incidentRequest.incident.auditDetails
@@ -242,6 +256,10 @@ ServiceMaps:
                 outJsonPath: $.Data.block
               - inJsonPath: $.incidentRequest.incident.phcType
                 outJsonPath: $.Data.phcType
+              - inJsonPath: $.incidentRequest.incident.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.boundaryCode
+                outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
               - inJsonPath: $.incidentRequest.incident.auditDetails
@@ -290,6 +308,8 @@ ServiceMaps:
                 outJsonPath: $.Data.migrationId
               - inJsonPath: $.indexView.comments
                 outJsonPath: $.Data.comments
+              - inJsonPath: $.indexView.boundary
+                outJsonPath: $.Data.incident.boundary
               - inJsonPath: $.indexView.latestRejectReason
                 outJsonPath: $.Data.latestRejectReason
               # Escalation fields for SLA breach detection
@@ -334,6 +354,10 @@ ServiceMaps:
                 outJsonPath: $.Data.block
               - inJsonPath: $.incident.phcType
                 outJsonPath: $.Data.phcType
+              - inJsonPath: $.incident.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incident.boundaryCode
+                outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
               - inJsonPath: $.incident.auditDetails
@@ -422,6 +446,10 @@ ServiceMaps:
                 outJsonPath: $.Data.block
               - inJsonPath: $.incidentRequest.incident.phcType
                 outJsonPath: $.Data.phcType
+              - inJsonPath: $.incidentRequest.incident.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.boundaryCode
+                outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
                 outJsonPath: $.Data.@timestamp
               - inJsonPath: $.incidentRequest.incident.auditDetails
@@ -478,6 +506,8 @@ ServiceMaps:
                 outJsonPath: $.Data.documentUrls
               - inJsonPath: $.indexView.uuid
                 outJsonPath: $.Data.uuid
+              - inJsonPath: $.indexView.boundary
+                outJsonPath: $.Data.incident.boundary
               - inJsonPath: $.indexView.latestRejectReason
                 outJsonPath: $.Data.latestRejectReason
 
