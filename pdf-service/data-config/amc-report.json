@@ -33,6 +33,9 @@
 
               { "variable": "check_earthing",           "value": { "path": "$.check_earthing" } },
               { "variable": "check_surge",              "value": { "path": "$.check_surge" } },
+              { "variable": "check_earthing_pits",           "value": { "path": "$.check_earthing_pits" } },
+              { "variable": "check_earthing_cables",              "value": { "path": "$.check_earthing_cables" } },
+
 
               { "variable": "check_lightning_arrestor", "value": { "path": "$.check_lightning_arrestor" } },
               { "variable": "check_gipb",               "value": { "path": "$.check_gipb" } },
