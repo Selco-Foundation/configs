@@ -317,7 +317,7 @@
             ["1", "Any faults in the system observed during the visit?", "{{faults_observed}}"],
             ["2", "If yes, was an immediate fix implemented?", "{{immediate_fix_done}}"],
             ["3", "If yes, were any parts repaired?", "{{parts_repaired}}"],
-            ["4", "If yes, and further rectification is needed, did you inform the health staff or CRM to raise a ticket through Saura-eMitra?", "{{informed_CRM}}"]
+            ["4", "If yes, did you notify health staff or CRM to raise a ticket?", "{{informed_CRM}}"]
           ]
         },
         "layout": "",
