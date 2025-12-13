@@ -73,31 +73,24 @@ serviceMaps:
       queryMaps:
         - query: >
             UPDATE facility SET
-              facility_name = ?, facility_type = ?, facility_category = ?,
-              facility_subtype = ?, facility_ownership = ?, facility_region = ?,
-              addressId = ?, facility_details = ?, wf_status = ?,
-              additional_details = ?, is_active = ?, is_onm_ready = ?
+              facility_name = ?, facility_type = ?, facility_subtype = ?,
+              addressId = ?, facility_details = ?, additional_details = ?, is_onm_ready = ?
             WHERE id = ? AND tenant_id = ?;
           basePath: $.FacilityUpdate
           jsonMaps:
-            - jsonPath: $.facility_name
-            - jsonPath: $.facility_type
-            - jsonPath: $.facility_category
-            - jsonPath: $.facility_subtype
-            - jsonPath: $.facility_ownership
-            - jsonPath: $.facility_region
-            - jsonPath: $.address.addressId
-            - jsonPath: $.facility_details
+            - jsonPath: $.FacilityUpdate.facility_name
+            - jsonPath: $.FacilityUpdate.facility_type
+            - jsonPath: $.FacilityUpdate.facility_subtype
+            - jsonPath: $.FacilityUpdate.address.addressId
+            - jsonPath: $.FacilityUpdate.facility_details
               type: JSON
               dbType: JSONB
-            - jsonPath: $.wf_status
-            - jsonPath: $.additionalDetails
+            - jsonPath: $.FacilityUpdate.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.isActive
-            - jsonPath: $.isOnmReady
-            - jsonPath: $.facilityId
-            - jsonPath: $.tenant_id
+            - jsonPath: $.FacilityUpdate.isOnmReady
+            - jsonPath: $.FacilityUpdate.facilityId
+            - jsonPath: $.FacilityUpdate.tenant_id
 
     - version: 1.0
       description: Updates a single FacilityAddress object
@@ -112,18 +105,18 @@ serviceMaps:
             WHERE id = ? AND tenant_id = ?;
           basePath: $.FacilityUpdate.address
           jsonMaps:
-            - jsonPath: $.doorNo
-            - jsonPath: $.latitude
-            - jsonPath: $.longitude
-            - jsonPath: $.locationAccuracy
-            - jsonPath: $.type
-            - jsonPath: $.addressLine1
-            - jsonPath: $.addressLine2
-            - jsonPath: $.landmark
-            - jsonPath: $.city
-            - jsonPath: $.pincode
-            - jsonPath: $.buildingName
-            - jsonPath: $.street
-            - jsonPath: $.localityCode
-            - jsonPath: $.addressId
-            - jsonPath: $.tenantId
+            - jsonPath: $.FacilityUpdate.address.doorNo
+            - jsonPath: $.FacilityUpdate.address.latitude
+            - jsonPath: $.FacilityUpdate.address.longitude
+            - jsonPath: $.FacilityUpdate.address.locationAccuracy
+            - jsonPath: $.FacilityUpdate.address.type
+            - jsonPath: $.FacilityUpdate.address.addressLine1
+            - jsonPath: $.FacilityUpdate.address.addressLine2
+            - jsonPath: $.FacilityUpdate.address.landmark
+            - jsonPath: $.FacilityUpdate.address.city
+            - jsonPath: $.FacilityUpdate.address.pincode
+            - jsonPath: $.FacilityUpdate.address.buildingName
+            - jsonPath: $.FacilityUpdate.address.street
+            - jsonPath: $.FacilityUpdate.address.localityCode
+            - jsonPath: $.FacilityUpdate.address.addressId
+            - jsonPath: $.FacilityUpdate.address.tenantId
