@@ -78,23 +78,52 @@ serviceMaps:
               addressId = ?, facility_details = ?, wf_status = ?,
               additional_details = ?, is_active = ?, is_onm_ready = ?
             WHERE id = ? AND tenant_id = ?;
-          basePath: $
+          basePath: $.FacilityUpdate
           jsonMaps:
-            - jsonPath: $.facilityName
-            - jsonPath: $.facilityType
-            - jsonPath: $.facilityCategory
-            - jsonPath: $.facilitySubtype
-            - jsonPath: $.facilityOwnership
-            - jsonPath: $.facilityRegion
-            - jsonPath: $.address.id
-            - jsonPath: $.facilityDetails
+            - jsonPath: $.facility_name
+            - jsonPath: $.facility_type
+            - jsonPath: $.facility_category
+            - jsonPath: $.facility_subtype
+            - jsonPath: $.facility_ownership
+            - jsonPath: $.facility_region
+            - jsonPath: $.address.addressId
+            - jsonPath: $.facility_details
               type: JSON
               dbType: JSONB
-            - jsonPath: $.wfStatus
+            - jsonPath: $.wf_status
             - jsonPath: $.additionalDetails
               type: JSON
               dbType: JSONB
             - jsonPath: $.isActive
             - jsonPath: $.isOnmReady
-            - jsonPath: $.id
+            - jsonPath: $.facilityId
+            - jsonPath: $.tenant_id
+
+    - version: 1.0
+      description: Updates a single FacilityAddress object
+      fromTopic: update-facility
+      isTransaction: true
+      queryMaps:
+        - query: >
+            UPDATE facility_address SET
+              doorNo = ?, latitude = ?, longitude = ?, locationAccuracy = ?,
+              type = ?, addressLine1 = ?, addressLine2 = ?, landmark = ?, city = ?,
+              pincode = ?, buildingName = ?, street = ?, localityCode = ?
+            WHERE id = ? AND tenant_id = ?;
+          basePath: $.FacilityUpdate.address
+          jsonMaps:
+            - jsonPath: $.doorNo
+            - jsonPath: $.latitude
+            - jsonPath: $.longitude
+            - jsonPath: $.locationAccuracy
+            - jsonPath: $.type
+            - jsonPath: $.addressLine1
+            - jsonPath: $.addressLine2
+            - jsonPath: $.landmark
+            - jsonPath: $.city
+            - jsonPath: $.pincode
+            - jsonPath: $.buildingName
+            - jsonPath: $.street
+            - jsonPath: $.localityCode
+            - jsonPath: $.addressId
             - jsonPath: $.tenantId
