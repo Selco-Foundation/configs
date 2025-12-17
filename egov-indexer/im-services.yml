@@ -544,9 +544,9 @@ ServiceMaps:
     - topic: save-phc-master-list-indexer
       configKey: INDEX
       indexes:
-        - name: health-facility-index
+        - name: health-facility-index-v0001
           type: general
-          id: $.tenantId
+          id: $.facilityId
           jsonPath: $
           timeStampField: $.lastModifiedTime
           fieldsToBeMasked: []
@@ -554,6 +554,8 @@ ServiceMaps:
             indexMapping:
               Data: {}
             fieldMapping:
+              - inJsonPath: $.facilityId
+                outJsonPath: $.Data.facilityId
               - inJsonPath: $.block
                 outJsonPath: $.Data.block
               - inJsonPath: $.code
