@@ -552,7 +552,7 @@ ServiceMaps:
           fieldsToBeMasked: []
           customJsonMapping:
             indexMapping:
-              Data: {}
+              "Data": { "boundary": {} }
             fieldMapping:
               - inJsonPath: $.facilityId
                 outJsonPath: $.Data.facilityId
