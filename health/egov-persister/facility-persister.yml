@@ -92,14 +92,14 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.FacilityUpdate.isOnmReady
-            - jsonPath: $.FacilityUpdate.pocName
-            - jsonPath: $.FacilityUpdate.pocContact
-            - jsonPath: $.FacilityUpdate.pocEmail
+            - jsonPath: $.FacilityUpdate.facility_poc_name
+            - jsonPath: $.FacilityUpdate.facility_poc_phone
+            - jsonPath: $.FacilityUpdate.facility_poc_email
             - jsonPath: $.FacilityUpdate.hfr_id
             - jsonPath: $.FacilityUpdate.nin_id
-            - jsonPath: $.FacilityUpdate.userId
-            - jsonPath: $.FacilityUpdate.status
-            - jsonPath: $.FacilityUpdate.facilityId
+            - jsonPath: $.FacilityUpdate.user_id
+            - jsonPath: $.FacilityUpdate.facility_status
+            - jsonPath: $.FacilityUpdate.facility_id
             - jsonPath: $.FacilityUpdate.tenant_id
 
     - version: 1.0
