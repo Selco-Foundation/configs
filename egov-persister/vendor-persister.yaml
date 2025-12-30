@@ -13,7 +13,7 @@ serviceMaps:
       transactionCodeJsonPath: $.applicationNumber
       auditAttributeBasePath: $.organisations.*
       queryMaps:
-        - query: INSERT INTO eg_org(id,tenant_id,application_number,name,code,org_number,external_ref_number,date_of_incorporation,application_status,is_active,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO eg_org(id,tenant_id,application_number,name,code,org_number,org_type,org_subtype,org_poc_name,org_poc_phone,org_poc_email,org_poc_username,org_status,external_ref_number,date_of_incorporation,is_active, additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
 
           basePath: $.organisations.*
           jsonMaps:
@@ -29,11 +29,23 @@ serviceMaps:
 
             - jsonPath: $.organisations.*.orgNumber
 
+            - jsonPath: $.organisations.*.orgType
+
+            - jsonPath: $.organisations.*.orgSubType
+
+            - jsonPath: $.organisations.*.orgPocName
+
+            - jsonPath: $.organisations.*.orgPocPhone
+
+            - jsonPath: $.organisations.*.orgPocEmail
+
+            - jsonPath: $.organisations.*.orgPocUsername
+
+            - jsonPath: $.organisations.*.orgStatus
+
             - jsonPath: $.organisations.*.externalRefNumber
 
             - jsonPath: $.organisations.*.dateOfIncorporation
-
-            - jsonPath: $.organisations.*.applicationStatus
 
             - jsonPath: $.organisations.*.isActive
 
@@ -248,18 +260,30 @@ serviceMaps:
       transactionCodeJsonPath: $.applicationNumber
       auditAttributeBasePath: $.organisations.*
       queryMaps:
-        - query: UPDATE eg_org set name=?, code=?, external_ref_number=?, date_of_incorporation=?, application_status=?, is_active=?, additional_details=?,last_modified_by=?, last_modified_time=? where id=?;
+        - query: UPDATE eg_org set name=?, code=?, org_type=?, org_subtype=?, org_poc_name=?, org_poc_phone=?, org_poc_email=?, org_poc_username=?, org_status=?, external_ref_number=?, date_of_incorporation=?, is_active=?, additional_details=?,last_modified_by=?, last_modified_time=? where id=?;
           basePath: $.organisations.*
           jsonMaps:
             - jsonPath: $.organisations.*.name
 
             - jsonPath: $.organisations.*.code
 
+            - jsonPath: $.organisations.*.orgType
+
+            - jsonPath: $.organisations.*.orgSubType
+
+            - jsonPath: $.organisations.*.orgPocName
+
+            - jsonPath: $.organisations.*.orgPocPhone
+
+            - jsonPath: $.organisations.*.orgPocEmail
+
+            - jsonPath: $.organisations.*.orgPocUsername
+
+            - jsonPath: $.organisations.*.orgStatus
+
             - jsonPath: $.organisations.*.externalRefNumber
 
             - jsonPath: $.organisations.*.dateOfIncorporation
-
-            - jsonPath: $.organisations.*.applicationStatus
 
             - jsonPath: $.organisations.*.isActive
 
