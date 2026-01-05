@@ -545,17 +545,68 @@ serviceMaps:
       auditAttributeBasePath: $.*
       queryMaps:
         - query: INSERT INTO eg_org_user (id, tenantId, organizationId, userId, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime, isDeleted) VALUES (?,?,?,?,?,?,?,?,?,?);
-          basePath: $.OrgUser.*
+          basePath: $
           jsonMaps:
-            - jsonPath: $.OrgUser.*.id
-            - jsonPath: $.OrgUser.*.tenantId
-            - jsonPath: $.OrgUser.*.organizationId
-            - jsonPath: $.OrgUser.*.userId
-            - jsonPath: $.OrgUser.*.additionalDetails
+            - jsonPath: $.id
+            - jsonPath: $.user.tenantId
+            - jsonPath: $.organizationId
+            - jsonPath: $.userId
+            - jsonPath: $.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.OrgUser.*.auditDetails.createdBy
-            - jsonPath: $.OrgUser.*.auditDetails.lastModifiedBy
-            - jsonPath: $.OrgUser.*.auditDetails.createdTime
-            - jsonPath: $.OrgUser.*.auditDetails.lastModifiedTime
-            - jsonPath: $.OrgUser.*.isDeleted
+            - jsonPath: $.auditDetails.createdBy
+            - jsonPath: $.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.createdTime
+            - jsonPath: $.auditDetails.lastModifiedTime
+            - jsonPath: $.isDeleted
+
+    - version: 1.0
+      name: Activity
+      description: Delete user in eg_org_user table
+      fromTopic: delete-org-users
+      isTransaction: true
+      isAuditEnabled: true
+      module: Org_User
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.id
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: UPDATE eg_org_user SET isdeleted = ?, additionalDetails = ?, lastModifiedTime = ? WHERE id = ?;
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.isDeleted
+
+            - jsonPath: $.additionalDetails
+              type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.auditDetails.lastModifiedTime
+
+            - jsonPath: $.id
+
+    - version: 1.0
+      name: Activity
+      description: Update user in eg_org_user table
+      fromTopic: update-org-users
+      isTransaction: true
+      isAuditEnabled: true
+      module: Org_User
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.id
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: UPDATE eg_org_user SET userId = ?, organizationId = ?, additionalDetails = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.userId
+            - jsonPath: $.organizationId
+            - jsonPath: $.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.lastModifiedTime
+            - jsonPath: $.id
