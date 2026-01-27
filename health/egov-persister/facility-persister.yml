@@ -80,14 +80,14 @@ serviceMaps:
             WHERE id = ? AND tenant_id = ?;
           basePath: $
           jsonMaps:
-            - jsonPath: $.facilityName
-            - jsonPath: $.facilityType
-            - jsonPath: $.facilityCategory
-            - jsonPath: $.facilitySubtype
-            - jsonPath: $.facilityOwnership
-            - jsonPath: $.facilityRegion
-            - jsonPath: $.address.id
-            - jsonPath: $.facilityDetails
+            - jsonPath: $.facility_name
+            - jsonPath: $.facility_type
+            - jsonPath: $.facility_category
+            - jsonPath: $.facility_subtype
+            - jsonPath: $.facility_ownership
+            - jsonPath: $.facility_region
+            - jsonPath: $.address.addressId
+            - jsonPath: $.facility_details
               type: JSON
               dbType: JSONB
             - jsonPath: $.wfStatus
@@ -96,5 +96,5 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.isActive
             - jsonPath: $.isOnmReady
-            - jsonPath: $.id
+            - jsonPath: $.facilityId
             - jsonPath: $.tenantId
