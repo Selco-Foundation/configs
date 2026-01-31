@@ -5,6 +5,32 @@
       { "text": "Bill Of Material(For Solar System)", "style": "header" },
       {
         "table": {
+          "widths": ["50%", "50%"],
+          "body": [
+            [
+              {
+                "text": "Health Facility Name & Address",
+                "style": "tableHeader"
+              },
+              { "text": "Project Details", "style": "tableHeader" }
+            ],
+            [
+              { "text": "Name: {{health_facility_name}}" },
+              { "text": "Project Number: {{project_number}}" }
+            ],
+            [
+              { "text": "Address: {{health_facility_address}}" },
+              { "text": "Date: {{project_date}}" }
+            ],
+            [{ "text": "" }, { "text": "State: {{project_state}}" }],
+            [{ "text": "" }, { "text": "State: {{project_block}}" }]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "table": {
           "headerRows": 1,
           "widths": [50, "*", 100, 100, 80],
           "body": [
