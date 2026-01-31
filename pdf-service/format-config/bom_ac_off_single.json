@@ -23,7 +23,7 @@
               { "text": "Date: {{project_date}}" }
             ],
             [{ "text": "" }, { "text": "State: {{project_state}}" }],
-            [{ "text": "" }, { "text": "State: {{project_block}}" }]
+            [{ "text": "" }, { "text": "Block: {{project_block}}" }]
           ]
         },
         "layout": "lightHorizontalLines",
