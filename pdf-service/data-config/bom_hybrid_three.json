@@ -14,6 +14,42 @@
           {
             "direct": [
               {
+                "variable": "health_facility_name",
+                "value": {
+                  "path": "$.health_facility_name"
+                }
+              },
+              {
+                "variable": "health_facility_address",
+                "value": {
+                  "path": "$.health_facility_address"
+                }
+              },
+              {
+                "variable": "project_number",
+                "value": {
+                  "path": "$.project_number"
+                }
+              },
+              {
+                "variable": "project_date",
+                "value": {
+                  "path": "$.project_date"
+                }
+              },
+              {
+                "variable": "project_state",
+                "value": {
+                  "path": "$.project_state"
+                }
+              },
+              {
+                "variable": "project_block",
+                "value": {
+                  "path": "$.project_block"
+                }
+              },
+              {
                 "variable": "mms_make",
                 "value": {
                   "path": "$.mms_make"
