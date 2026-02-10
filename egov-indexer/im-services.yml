@@ -604,3 +604,17 @@ ServiceMaps:
                 outJsonPath: $.Data.mappedVendorUserName
               - inJsonPath: $.mappedVendorName
                 outJsonPath: $.Data.mappedVendorName
+
+    - topic: update-im-request-processinstance-indexer
+      configKey: UPDATE
+      indexes:
+        - name: im-services
+          type: general
+          id: $.incidentId
+          jsonPath: $
+          timeStampField: $.updatedProcessInstance.auditDetails.lastModifiedTime
+          customJsonMapping:
+            indexMapping: { "Data": { "currentProcessInstance": {} } }
+            fieldMapping:
+              - inJsonPath: $.updatedProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
