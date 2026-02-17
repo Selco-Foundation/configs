@@ -135,3 +135,16 @@ serviceMaps:
             - jsonPath: $.FacilityUpdate.address.localityCode
             - jsonPath: $.FacilityUpdate.address.addressId
             - jsonPath: $.FacilityUpdate.address.tenantId
+
+    - version: 1.0
+      description: Updates a single Facility object
+      fromTopic: uninstall-facility-installation
+      isTransaction: true
+      queryMaps:
+        - query: >
+            UPDATE facility SET facility_status = ? WHERE id = ? AND tenant_id = ?;
+          basePath: $.FacilityUpdate
+          jsonMaps:
+            - jsonPath: $.FacilityUpdate.facility_status
+            - jsonPath: $.FacilityUpdate.facility_id
+            - jsonPath: $.FacilityUpdate.tenant_id
