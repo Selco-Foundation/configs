@@ -89,3 +89,21 @@ serviceMaps:
             - jsonPath: $.incident.migrationId
             - jsonPath: $.incident.isPotentialDuplicate
             - jsonPath: $.incident.id
+
+    - version: 1
+      description: Updates im service request in tables
+      fromTopic: update-im-request-migration
+      isTransaction: true
+      isAuditEnabled: true
+      module: Incident
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.incidentId
+      auditAttributeBasePath: $.incident
+      queryMaps:
+        - query: >-
+            UPDATE eg_incident_v2 SET applicationstatus=? WHERE id=?;
+          basePath: $.incident
+          jsonMaps:
+            - jsonPath: $.incident.applicationStatus
+            - jsonPath: $.incident.id
