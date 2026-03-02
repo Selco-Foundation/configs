@@ -126,6 +126,8 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.incidentSubType_localized
               - inJsonPath: $.indexView.applicationStatus_localized
                 outJsonPath: $.Data.incident.applicationStatus_localized
+              - inJsonPath: $.indexView.warrantyStatus_localized
+                outJsonPath: $.Data.incident.warrantyStatus_localized
               - inJsonPath: $.indexView.phcSubType_localized
                 outJsonPath: $.Data.incident.phcSubType_localized
               - inJsonPath: $.indexView.tenantId_localized
@@ -286,6 +288,8 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.incidentSubType_localized
               - inJsonPath: $.indexView.applicationStatus_localized
                 outJsonPath: $.Data.incident.applicationStatus_localized
+              - inJsonPath: $.indexView.warrantyStatus_localized
+                outJsonPath: $.Data.incident.warrantyStatus_localized
               - inJsonPath: $.indexView.phcSubType_localized
                 outJsonPath: $.Data.incident.phcSubType_localized
               - inJsonPath: $.indexView.tenantId_localized
@@ -476,6 +480,8 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.incidentSubType_localized
               - inJsonPath: $.indexView.applicationStatus_localized
                 outJsonPath: $.Data.incident.applicationStatus_localized
+              - inJsonPath: $.indexView.warrantyStatus_localized
+                outJsonPath: $.Data.incident.warrantyStatus_localized
               - inJsonPath: $.indexView.phcSubType_localized
                 outJsonPath: $.Data.incident.phcSubType_localized
               - inJsonPath: $.indexView.tenantId_localized
