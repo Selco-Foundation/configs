@@ -128,6 +128,10 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.applicationStatus_localized
               - inJsonPath: $.indexView.warrantyStatus_localized
                 outJsonPath: $.Data.incident.warrantyStatus_localized
+              - inJsonPath: $.indexView.resolvedTimestamp
+                outJsonPath: $.Data.resolvedTimestamp
+              - inJsonPath: $.indexView.declinedTimestamp
+                outJsonPath: $.Data.declinedTimestamp
               - inJsonPath: $.indexView.phcSubType_localized
                 outJsonPath: $.Data.incident.phcSubType_localized
               - inJsonPath: $.indexView.tenantId_localized
@@ -290,6 +294,10 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.applicationStatus_localized
               - inJsonPath: $.indexView.warrantyStatus_localized
                 outJsonPath: $.Data.incident.warrantyStatus_localized
+              - inJsonPath: $.indexView.resolvedTimestamp
+                outJsonPath: $.Data.resolvedTimestamp
+              - inJsonPath: $.indexView.declinedTimestamp
+                outJsonPath: $.Data.declinedTimestamp
               - inJsonPath: $.indexView.phcSubType_localized
                 outJsonPath: $.Data.incident.phcSubType_localized
               - inJsonPath: $.indexView.tenantId_localized
@@ -482,6 +490,10 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.applicationStatus_localized
               - inJsonPath: $.indexView.warrantyStatus_localized
                 outJsonPath: $.Data.incident.warrantyStatus_localized
+              - inJsonPath: $.indexView.resolvedTimestamp
+                outJsonPath: $.Data.resolvedTimestamp
+              - inJsonPath: $.indexView.declinedTimestamp
+                outJsonPath: $.Data.declinedTimestamp
               - inJsonPath: $.indexView.phcSubType_localized
                 outJsonPath: $.Data.incident.phcSubType_localized
               - inJsonPath: $.indexView.tenantId_localized
