@@ -107,3 +107,44 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.incident.applicationStatus
             - jsonPath: $.incident.id
+
+    - version: 1
+      description: Persists rms-inactive-incident in table
+      fromTopic: save-rms-inactive-incident
+      isTransaction: true
+      isAuditEnabled: true
+      module: Incident
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.incidentId
+      auditAttributeBasePath: $.incident
+      queryMaps:
+        - query: >-
+            INSERT INTO public.facility_rms_inactive_incident (id, tenantid, facilityid, incidentid, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES(?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: $.incident
+          jsonMaps:
+            - jsonPath: $.incident.id
+            - jsonPath: $.incident.tenantId
+            - jsonPath: $.incident.facilityId
+            - jsonPath: $.incident.incidentId
+            - jsonPath: $.incident.auditDetails.createdBy
+            - jsonPath: $.incident.auditDetails.createdTime
+            - jsonPath: $.incident.auditDetails.lastModifiedBy
+            - jsonPath: $.incident.auditDetails.lastModifiedTime
+
+    - version: 1
+      description: Delete rms-inactive-incident in table
+      fromTopic: delete-rms-inactive-incident
+      isTransaction: true
+      isAuditEnabled: true
+      module: Incident
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.incidentId
+      auditAttributeBasePath: $.incident
+      queryMaps:
+        - query: >-
+            DELETE FROM public.facility_rms_inactive_incident WHERE id = ?;
+          basePath: $.incident
+          jsonMaps:
+            - jsonPath: $.incident.id
