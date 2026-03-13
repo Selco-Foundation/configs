@@ -569,6 +569,7 @@ serviceMaps:
       module: Org_User
       objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
@@ -594,6 +595,7 @@ serviceMaps:
       module: Org_User
       objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
