@@ -5,6 +5,12 @@ serviceMaps:
       description: Persists workflow processInstanceFromRequest details in eg_workflow_v2  table
       fromTopic: save-wf-transitions
       isTransaction: true
+      isAuditEnabled: true
+      module: WORKFLOW
+      objecIdJsonPath: $.ProcessInstances.*.id
+      tenantIdJsonPath: $.ProcessInstances.*.tenantId
+      transactionCodeJsonPath: $.ProcessInstances.*.businessId
+      auditAttributeBasePath: $.ProcessInstances.*.auditDetails
       queryMaps:
         - query: INSERT INTO eg_wf_processinstance_v2( id,tenantid,businessService,businessId,moduleName,action,status,comment, assigner, stateSla,businessServiceSla, previousStatus, createdby, lastmodifiedby, createdtime, lastmodifiedtime, rating, escalated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: ProcessInstances.*
@@ -91,6 +97,12 @@ serviceMaps:
       description: Persists BusinessService in the table
       fromTopic: save-wf-businessservice
       isTransaction: true
+      isAuditEnabled: true
+      module: WORKFLOW
+      objecIdJsonPath: $.BusinessServices.*.uuid
+      tenantIdJsonPath: $.BusinessServices.*.tenantId
+      transactionCodeJsonPath: $.BusinessServices.*.businessService
+      auditAttributeBasePath: $.BusinessServices.*.auditDetails
       queryMaps:
         - query: INSERT INTO eg_wf_businessservice_v2(businessServiceSla, businessservice, business, tenantid, uuid, geturi, posturi, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: BusinessServices.*
@@ -179,6 +191,12 @@ serviceMaps:
       description: Persists BusinessService in the table
       fromTopic: update-wf-businessservice
       isTransaction: true
+      isAuditEnabled: true
+      module: WORKFLOW
+      objecIdJsonPath: $.BusinessServices.*.uuid
+      tenantIdJsonPath: $.BusinessServices.*.tenantId
+      transactionCodeJsonPath: $.BusinessServices.*.businessService
+      auditAttributeBasePath: $.BusinessServices.*.auditDetails
       queryMaps:
         - query: UPDATE eg_wf_businessservice_v2 SET businessservicesla=?,businessservice=?, business=?, geturi=?, posturi=?, lastmodifiedby=?, lastmodifiedtime=? WHERE uuid=?;
           basePath: BusinessServices.*
@@ -261,6 +279,12 @@ serviceMaps:
       description: Update ProcessInstance table
       fromTopic: update-wf-processinstance
       isTransaction: true
+      isAuditEnabled: true
+      module: WORKFLOW
+      objecIdJsonPath: $.ProcessInstances.*.id
+      tenantIdJsonPath: $.ProcessInstances.*.tenantId
+      transactionCodeJsonPath: $.ProcessInstances.*.businessId
+      auditAttributeBasePath: $.ProcessInstances.*.auditDetails
       queryMaps:
         - query: UPDATE eg_wf_processinstance_v2 SET businessservice=?, status=?, statesla=? WHERE id=?;
           basePath: ProcessInstances.*
@@ -277,6 +301,12 @@ serviceMaps:
       description: Add Assignee table
       fromTopic: add-wf-assignee
       isTransaction: true
+      isAuditEnabled: true
+      module: WORKFLOW
+      objecIdJsonPath: $.ProcessInstances.*.id
+      tenantIdJsonPath: $.ProcessInstances.*.tenantId
+      transactionCodeJsonPath: $.ProcessInstances.*.businessId
+      auditAttributeBasePath: $.ProcessInstances.*.auditDetails
       queryMaps:
         - query: INSERT INTO eg_wf_assignee_v2(processinstanceid, tenantid, assignee, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?);
           basePath: ProcessInstances.*.assignes.*
