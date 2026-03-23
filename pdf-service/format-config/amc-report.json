@@ -78,7 +78,7 @@
 
             [
               "A",
-              "Inverter cleaned during visit",
+              "Inverter or Charge Controller cleaned during visit",
               {
                 "svg": "{{#check_inverter_cleaned}}<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' width='12' height='12'><path d='M2 8 L6 12 L12 2' stroke='#2e7d32' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>{{/check_inverter_cleaned}}{{^check_inverter_cleaned}}<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' width='12' height='12'><path d='M3 3 L11 11 M11 3 L3 11' stroke='#d32f2f' stroke-width='3' stroke-linecap='round'/></svg>{{/check_inverter_cleaned}}",
                 "width": 12,
@@ -282,7 +282,7 @@
               { "text": "2" },
               {
                 "stack": [
-                  { "text": "Inverter display", "bold": true },
+                  { "text": "Inverter or Charge Controller display", "bold": true },
                   { "text": "(Reading after measurement)" }
                 ]
               },
