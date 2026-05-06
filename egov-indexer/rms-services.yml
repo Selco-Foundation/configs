@@ -1,0 +1,62 @@
+ServiceMaps:
+  serviceName: RMS Services - rainmaker
+  version: 1.0.0
+  mappings:
+    - topic: save-rms-ticket-pause-indexer
+      configKey: INDEX
+      indexes:
+        - name: rms-ticket-pause-audit
+          type: general
+          id: $.eventId
+          jsonPath: $
+          timeStampField: $.eventTime
+          fieldsToBeMasked: []
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "ticketPause":
+                      {
+                        "eventId": "",
+                        "eventType": "",
+                        "action": "",
+                        "isPaused": false,
+                        "facilityId": "",
+                        "facilityName": "",
+                        "boundaryCode": "",
+                        "pausedUntil": "",
+                        "reason": "",
+                        "requestedBy": "",
+                        "tenantId": "",
+                        "eventTime": 0,
+                      },
+                  },
+              }
+            fieldMapping:
+              - inJsonPath: $.eventId
+                outJsonPath: $.Data.ticketPause.eventId
+              - inJsonPath: $.eventType
+                outJsonPath: $.Data.ticketPause.eventType
+              - inJsonPath: $.action
+                outJsonPath: $.Data.ticketPause.action
+              - inJsonPath: $.isPaused
+                outJsonPath: $.Data.ticketPause.isPaused
+              - inJsonPath: $.facilityId
+                outJsonPath: $.Data.ticketPause.facilityId
+              - inJsonPath: $.facilityName
+                outJsonPath: $.Data.ticketPause.facilityName
+              - inJsonPath: $.boundaryCode
+                outJsonPath: $.Data.ticketPause.boundaryCode
+              - inJsonPath: $.pausedUntil
+                outJsonPath: $.Data.ticketPause.pausedUntil
+              - inJsonPath: $.reason
+                outJsonPath: $.Data.ticketPause.reason
+              - inJsonPath: $.requestedBy
+                outJsonPath: $.Data.ticketPause.requestedBy
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.ticketPause.tenantId
+              - inJsonPath: $.eventTime
+                outJsonPath: $.Data.ticketPause.eventTime
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
