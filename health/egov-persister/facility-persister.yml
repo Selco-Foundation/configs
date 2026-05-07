@@ -81,12 +81,13 @@ serviceMaps:
       isTransaction: true
       queryMaps:
         - query: >
-            UPDATE facility SET facility_name = ?, facility_type = ?, facility_subtype = ?, addressId = ?, facility_details = ?, additional_details = ?, is_onm_ready = ?,
+            UPDATE facility SET facility_name = ?, facility_category = ?, facility_type = ?, facility_subtype = ?, addressId = ?, facility_details = ?, additional_details = ?, is_onm_ready = ?,
             facility_poc_name = ?, facility_poc_phone = ?, facility_poc_email = ?, hfr_id = ?, nin_id = ?, user_id = ?, facility_status = ?, is_active= ? 
             WHERE id = ? AND tenant_id = ?;
           basePath: $.FacilityUpdate
           jsonMaps:
             - jsonPath: $.FacilityUpdate.facility_name
+            - jsonPath: $.FacilityUpdate.facility_category
             - jsonPath: $.FacilityUpdate.facility_type
             - jsonPath: $.FacilityUpdate.facility_subtype
             - jsonPath: $.FacilityUpdate.address.addressId
