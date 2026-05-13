@@ -38,10 +38,10 @@ serviceMaps:
       queryMaps:
         - query: >
             INSERT INTO facility (id, tenant_id, facility_name, facility_type, facility_category, facility_subtype, facility_ownership, facility_region, addressId, facility_details,
-              wf_status, additional_details, is_active, boundary_code, is_onm_ready, facility_poc_name, facility_poc_phone, facility_poc_email, hfr_id, nin_id, user_id, facility_status,
+              wf_status, additional_details, is_active, boundary_code, is_onm_ready, facility_poc_name, facility_poc_phone, facility_poc_email, facility_poc_username, hfr_id, nin_id, user_id, facility_status,
               created_by, created_at, updated_by, updated_at
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $
           jsonMaps:
             - jsonPath: $.facility_id
@@ -66,6 +66,7 @@ serviceMaps:
             - jsonPath: $.facility_poc_name
             - jsonPath: $.facility_poc_phone
             - jsonPath: $.facility_poc_email
+            - jsonPath: $.facility_poc_username
             - jsonPath: $.hfr_id
             - jsonPath: $.nin_id
             - jsonPath: $.user_id
