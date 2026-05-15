@@ -586,6 +586,8 @@ ServiceMaps:
                 outJsonPath: $.Data.name
               - inJsonPath: $.phcName
                 outJsonPath: $.Data.phcName
+              - inJsonPath: $.facilityCategory
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.phcType
                 outJsonPath: $.Data.phcType
               - inJsonPath: $.tenantId
