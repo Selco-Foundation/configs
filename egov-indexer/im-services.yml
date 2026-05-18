@@ -41,6 +41,8 @@ ServiceMaps:
                 outJsonPath: $.Data.phcType
               - inJsonPath: $.incidentRequest.incident.facilityId
                 outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.facilityCategory
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.incidentRequest.incident.boundaryCode
                 outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
@@ -98,6 +100,8 @@ ServiceMaps:
                 outJsonPath: $.Data.phcType
               - inJsonPath: $.incidentRequest.incident.facilityId
                 outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.facilityCategory
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.incidentRequest.incident.boundaryCode
                 outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
@@ -207,6 +211,8 @@ ServiceMaps:
                 outJsonPath: $.Data.phcType
               - inJsonPath: $.incidentRequest.incident.facilityId
                 outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.facilityCategory
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.incidentRequest.incident.boundaryCode
                 outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
@@ -264,6 +270,8 @@ ServiceMaps:
                 outJsonPath: $.Data.phcType
               - inJsonPath: $.incidentRequest.incident.facilityId
                 outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.facilityCategory
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.incidentRequest.incident.boundaryCode
                 outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
@@ -460,6 +468,8 @@ ServiceMaps:
                 outJsonPath: $.Data.phcType
               - inJsonPath: $.incidentRequest.incident.facilityId
                 outJsonPath: $.Data.facilityId
+              - inJsonPath: $.incidentRequest.incident.facilityCategory
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.incidentRequest.incident.boundaryCode
                 outJsonPath: $.Data.boundaryCode
               - inJsonPath: $.@timestamp
