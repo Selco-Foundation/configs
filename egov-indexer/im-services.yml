@@ -634,3 +634,164 @@ ServiceMaps:
                 outJsonPath: $.Data.mappedVendorUserName
               - inJsonPath: $.mappedVendorName
                 outJsonPath: $.Data.mappedVendorName
+
+
+    - topic: save-co2-monthly-facility-indexer
+      configKey: INDEX
+      indexes:
+        - name: co2-monthly-facility-index-write
+          type: general
+          id: $.uuid
+          jsonPath: $
+          timeStampField: $.solarInstallationDate
+          fieldsToBeMasked: []
+
+          customJsonMapping:
+            indexMapping:
+              "boundary": {}
+
+            fieldMapping:
+              - inJsonPath: $.state
+                outJsonPath: $.state
+
+              - inJsonPath: $.district
+                outJsonPath: $.district
+
+              - inJsonPath: $.block
+                outJsonPath: $.block
+
+              - inJsonPath: $.facilityId
+                outJsonPath: $.facilityId
+
+              - inJsonPath: $.hfrId
+                outJsonPath: $.hfrId
+
+              - inJsonPath: $.ninId
+                outJsonPath: $.ninId
+
+              - inJsonPath: $.facilityType
+                outJsonPath: $.facilityType
+
+              - inJsonPath: $.facilityName
+                outJsonPath: $.facilityName
+
+              - inJsonPath: $.projectName
+                outJsonPath: $.projectName
+
+              - inJsonPath: $.tenantId
+                outJsonPath: $.tenantId
+
+              - inJsonPath: $.geoPoint
+                outJsonPath: $.geo-point
+
+              - inJsonPath: $.isLive
+                outJsonPath: $.isLive
+
+              - inJsonPath: $.solarInstallationDate
+                outJsonPath: $.solarInstallationDate
+
+              - inJsonPath: $.rmsInstallationDate
+                outJsonPath: $.rmsInstallationDate
+
+              - inJsonPath: $.co2EmissionsAvoidedInTonnes
+                outJsonPath: $.co2EmissionsAvoidedInTonnes
+
+              - inJsonPath: $.month
+                outJsonPath: $.month
+
+              - inJsonPath: $.year
+                outJsonPath: $.year
+
+              - inJsonPath: $.boundary.countryCode
+                outJsonPath: $.boundary.countryCode
+
+              - inJsonPath: $.boundary.stateCode
+                outJsonPath: $.boundary.stateCode
+
+              - inJsonPath: $.boundary.districtCode
+                outJsonPath: $.boundary.districtCode
+
+              - inJsonPath: $.boundary.blockCode
+                outJsonPath: $.boundary.blockCode
+
+              - inJsonPath: $.boundary.facilityCode
+                outJsonPath: $.boundary.facilityCode
+
+
+    - topic: save-co2-monthly-projection-facility-indexer
+      configKey: INDEX
+      indexes:
+        - name: co2-monthly-projection-facility-index-write
+          type: general
+          id: $.uuid
+          jsonPath: $
+          timeStampField: $.solarInstallationDate
+          fieldsToBeMasked: [ ]
+
+          customJsonMapping:
+            indexMapping:
+              "boundary": { }
+
+            fieldMapping:
+              - inJsonPath: $.state
+                outJsonPath: $.state
+
+              - inJsonPath: $.district
+                outJsonPath: $.district
+
+              - inJsonPath: $.block
+                outJsonPath: $.block
+
+              - inJsonPath: $.facilityId
+                outJsonPath: $.facilityId
+
+              - inJsonPath: $.hfrId
+                outJsonPath: $.hfrId
+
+              - inJsonPath: $.ninId
+                outJsonPath: $.ninId
+
+              - inJsonPath: $.facilityType
+                outJsonPath: $.facilityType
+
+              - inJsonPath: $.facilityName
+                outJsonPath: $.facilityName
+
+              - inJsonPath: $.tenantId
+                outJsonPath: $.tenantId
+
+              - inJsonPath: $.geoPoint
+                outJsonPath: $.geo-point
+
+              - inJsonPath: $.isLive
+                outJsonPath: $.isLive
+
+              - inJsonPath: $.solarInstallationDate
+                outJsonPath: $.solarInstallationDate
+
+              - inJsonPath: $.rmsInstallationDate
+                outJsonPath: $.rmsInstallationDate
+
+              - inJsonPath: $.projectedCo2EmissionsAvoidedInTonnes
+                outJsonPath: $.projectedCo2EmissionsAvoidedInTonnes
+
+              - inJsonPath: $.month
+                outJsonPath: $.month
+
+              - inJsonPath: $.year
+                outJsonPath: $.year
+
+              - inJsonPath: $.boundary.countryCode
+                outJsonPath: $.boundary.countryCode
+
+              - inJsonPath: $.boundary.stateCode
+                outJsonPath: $.boundary.stateCode
+
+              - inJsonPath: $.boundary.districtCode
+                outJsonPath: $.boundary.districtCode
+
+              - inJsonPath: $.boundary.blockCode
+                outJsonPath: $.boundary.blockCode
+
+              - inJsonPath: $.boundary.facilityCode
+                outJsonPath: $.boundary.facilityCode
