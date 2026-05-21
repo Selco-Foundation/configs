@@ -717,6 +717,10 @@ ServiceMaps:
               - inJsonPath: $.boundary.facilityCode
                 outJsonPath: $.boundary.facilityCode
 
+              - inJsonPath: $.solarSystemCapacity
+                outJsonPath: $.solarSystemCapacity
+
+
 
     - topic: save-co2-monthly-projection-facility-indexer
       configKey: INDEX
@@ -795,3 +799,6 @@ ServiceMaps:
 
               - inJsonPath: $.boundary.facilityCode
                 outJsonPath: $.boundary.facilityCode
+
+              - inJsonPath: $.solarSystemCapacity
+                outJsonPath: $.solarSystemCapacity
