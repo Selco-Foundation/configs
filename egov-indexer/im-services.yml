@@ -720,6 +720,9 @@ ServiceMaps:
               - inJsonPath: $.solarSystemCapacity
                 outJsonPath: $.solarSystemCapacity
 
+              - inJsonPath: $.solarInstallationDate
+                outJsonPath: $.@timestamp
+
 
 
     - topic: save-co2-monthly-projection-facility-indexer
@@ -805,3 +808,6 @@ ServiceMaps:
 
               - inJsonPath: $.projectName
                 outJsonPath: $.projectName
+                
+              - inJsonPath: $.solarInstallationDate
+                outJsonPath: $.@timestamp
