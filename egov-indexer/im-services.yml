@@ -802,3 +802,6 @@ ServiceMaps:
 
               - inJsonPath: $.solarSystemCapacity
                 outJsonPath: $.solarSystemCapacity
+
+              - inJsonPath: $.projectName
+                outJsonPath: $.projectName
