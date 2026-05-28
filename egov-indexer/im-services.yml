@@ -702,6 +702,12 @@ ServiceMaps:
               - inJsonPath: $.year
                 outJsonPath: $.year
 
+              - inJsonPath: $.financialYear
+                outJsonPath: $.financialYear
+
+              - inJsonPath: $.financialMonth
+                outJsonPath: $.financialMonth
+
               - inJsonPath: $.boundary.countryCode
                 outJsonPath: $.boundary.countryCode
 
@@ -787,6 +793,12 @@ ServiceMaps:
 
               - inJsonPath: $.year
                 outJsonPath: $.year
+
+              - inJsonPath: $.financialYear
+                outJsonPath: $.financialYear
+
+              - inJsonPath: $.financialMonth
+                outJsonPath: $.financialMonth
 
               - inJsonPath: $.boundary.countryCode
                 outJsonPath: $.boundary.countryCode
