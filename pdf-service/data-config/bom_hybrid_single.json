@@ -14,6 +14,60 @@
           {
             "direct": [
               {
+                "variable": "solar_module_make",
+                "value": {
+                  "path": "$.solar_module_make"
+                }
+              },
+              {
+                "variable": "solar_module_capacity",
+                "value": {
+                  "path": "$.solar_module_capacity"
+                }
+              },
+              {
+                "variable": "solar_module_qty",
+                "value": {
+                  "path": "$.solar_module_qty"
+                }
+              },
+              {
+                "variable": "solar_battery_make",
+                "value": {
+                  "path": "$.solar_battery_make"
+                }
+              },
+              {
+                "variable": "solar_battery_capacity",
+                "value": {
+                  "path": "$.solar_battery_capacity"
+                }
+              },
+              {
+                "variable": "solar_battery_qty",
+                "value": {
+                  "path": "$.solar_battery_qty"
+                }
+              },
+              {
+                "variable": "disp_battery_type",
+                "value": {
+                  "path": "$.disp_battery_type"
+                }
+              },
+              {
+                "variable": "vendor_name",
+                "value": {
+                  "path": "$.vendor_name"
+                }
+              },
+              {
+                "variable": "po_wo_number",
+                "value": {
+                  "path": "$.po_wo_number"
+                }
+              },
+              {
                 "variable": "health_facility_name",
                 "value": {
                   "path": "$.health_facility_name"
