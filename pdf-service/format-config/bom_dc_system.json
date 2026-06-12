@@ -671,7 +671,7 @@
       },
 
       {
-        "text": "CCU display & setting",
+        "text": "CCU Display & Settings",
         "style": "header"
       },
       {
@@ -694,7 +694,8 @@
               "{{dc_ccu_lrv_set_value}}",
               "{{dc_ccu_lrv_uom}}"
             ],
-            ["Battery Settings", "{{dc_battery_type}}", "{{  }}"]
+            ["Battery Settings", "{{dc_battery_type}}", "{{  }}"],
+            ["Battery Type", "{{disp_battery_type}}", "{{  }}"]
           ]
         },
         "layout": ""
