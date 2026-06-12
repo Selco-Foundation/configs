@@ -1442,6 +1442,12 @@
               { "text": "{{ disp_battery_settings_ah }}" },
               { "text": "The load is running on:", "style": "tableHeader" },
               { "text": "{{ disp_load_running_on }}" }
+            ],
+            [
+              { "text": "Battery Type:", "style": "tableHeader" },
+              { "text": "{{ disp_battery_type }}" },
+              { "text": "", "style": "tableHeader" },
+              { "text": "{{ }}" }
             ]
           ]
         },
