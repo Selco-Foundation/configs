@@ -910,7 +910,7 @@
             [
               { "text": "Test Condition", "style": "tableHeader" },
               { "text": "Voltage", "style": "tableHeader" },
-              { "text": " Measured Value", "style": "tableHeader" },
+              { "text": "Measured Value", "style": "tableHeader" },
               { "text": "Current", "style": "tableHeader" },
               { "text": "Measured Value", "style": "tableHeader" }
             ],
@@ -1000,43 +1000,43 @@
             ],
             [
               "Measurement with Grid OFF + AJB MCB ON",
-              "Pmp(in Volts)",
-              "String 1: {{}}",
+              "Pmp(in Watts)",
+              "String 1: {{ ajb_on_pmp_string_1 }}",
+              "NA",
+              "NA"
+            ],
+            [
+              "Measurement with Grid OFF + AJB MCB ON",
+              "Pmp(in Watts)",
+              "String 2: {{ ajb_on_pmp_string_2 }}",
+              "NA",
+              "NA"
+            ],
+            [
+              "Measurement with Grid OFF + AJB MCB ON",
+              "Pmp(in Watts)",
+              "String 3: {{ ajb_on_pmp_string_3 }}",
+              "NA",
+              "NA"
+            ],
+            [
+              "Measurement with Grid OFF + AJB MCB ON",
+              "Pmp(in Watts)",
+              "String 4: {{ ajb_on_pmp_string_4 }}",
+              "NA",
+              "NA"
+            ],
+            [
+              "Measurement with Grid OFF + AJB MCB ON",
+              "Pmp(in Watts)",
+              "String 5: {{ ajb_on_pmp_string_5 }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with Grid OFF + AJB MCB ON",
               "Pmp(in Volts)",
-              "String 2: {{}}",
-              "NA",
-              "NA"
-            ],
-            [
-              "Measurement with Grid OFF + AJB MCB ON",
-              "Pmp(in Volts)",
-              "String 3: {{}}",
-              "NA",
-              "NA"
-            ],
-            [
-              "Measurement with Grid OFF + AJB MCB ON",
-              "Pmp(in Volts)",
-              "String 4: {{}}",
-              "NA",
-              "NA"
-            ],
-            [
-              "Measurement with Grid OFF + AJB MCB ON",
-              "Pmp(in Volts)",
-              "String 5: {{}}",
-              "NA",
-              "NA"
-            ],
-            [
-              "Measurement with Grid OFF + AJB MCB ON",
-              "Pmp(in Volts)",
-              "Array: {{}}",
+              "Array: {{ ajb_on_pmp_array }}",
               "NA",
               "NA"
             ]

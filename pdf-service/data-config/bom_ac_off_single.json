@@ -3150,6 +3150,42 @@
                 "value": {
                   "path": "$.inv_full_i_rn"
                 }
+              },
+              {
+                "variable": "ajb_on_pmp_string_1",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_1"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_2",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_2"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_3",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_3"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_4",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_4"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_5",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_5"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_array",
+                "value": {
+                  "path": "$.ajb_on_pmp_array"
+                }
               }
             ]
           }
