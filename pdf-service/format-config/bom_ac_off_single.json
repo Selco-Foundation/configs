@@ -952,7 +952,7 @@
             [
               "Measurement with Grid OFF + AJB MCB OFF",
               "Voc(in Volts)",
-              "Array: {{}}",
+              "Array: {{ajb_off_voc_mv_anchor}}",
               "NA",
               "NA"
             ],
@@ -994,9 +994,9 @@
             [
               "Measurement with Grid OFF + AJB MCB ON",
               "Vmp(in Volts)",
-              "Array: {{}}",
+              "Array: {{ajb_on_vmp_mv_anchor}}",
               "Imp(in Amperes)",
-              "Array: {{}}"
+              "Array: {{ajb_on_imp_mv_anchor}}"
             ],
             [
               "Measurement with Grid OFF + AJB MCB ON",

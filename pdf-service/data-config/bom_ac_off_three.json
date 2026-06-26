@@ -3186,6 +3186,24 @@
                 "value": {
                   "path": "$.ajb_on_pmp_array"
                 }
+              },
+              {
+                "variable": "ajb_off_voc_mv_anchor",
+                "value": {
+                  "path": "$.ajb_off_voc_mv_anchor"
+                }
+              },
+              {
+                "variable": "ajb_on_vmp_mv_anchor",
+                "value": {
+                  "path": "$.ajb_on_vmp_mv_anchor"
+                }
+              },
+              {
+                "variable": "ajb_on_imp_mv_anchor",
+                "value": {
+                  "path": "$.ajb_on_imp_mv_anchor"
+                }
               }
             ]
           }
