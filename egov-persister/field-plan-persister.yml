@@ -168,3 +168,26 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.*.id
+
+    - version: 1.0
+      description: Saves a icc template
+      fromTopic: save-icc-template
+      isTransaction: true
+      isAuditEnabled: true
+      module: PROJECT
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.createdBy
+      transactionCodeJsonPath: $.id
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: INSERT INTO public.icc_templates(id, system_type, total_system_capacity, filestoreid) VALUES(?, ?, ?, ?);
+          basePath: $.*
+          jsonMaps:
+            - jsonPath: $.*.id
+
+            - jsonPath: $.*.systemType
+
+            - jsonPath: $.*.totalSystemCapacity
+
+            - jsonPath: $.*.fileStoreId
