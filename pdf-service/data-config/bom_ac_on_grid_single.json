@@ -1,0 +1,1510 @@
+{
+  "key": "ac_on_grid_single_phase",
+  "DataConfigs": {
+    "serviceName": "rainmaker-tl",
+    "version": "1.0.0",
+    "baseKeyPath": "$.bom",
+    "entityIdPath": "$.applicationNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "bom-pdf-generation",
+        "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "health_facility_name",
+                "value": {
+                  "path": "$.health_facility_name"
+                }
+              },
+              {
+                "variable": "project_number",
+                "value": {
+                  "path": "$.project_number"
+                }
+              },
+              {
+                "variable": "health_facility_address",
+                "value": {
+                  "path": "$.health_facility_address"
+                }
+              },
+              {
+                "variable": "project_date",
+                "value": {
+                  "path": "$.project_date"
+                }
+              },
+              {
+                "variable": "vendor_name",
+                "value": {
+                  "path": "$.vendor_name"
+                }
+              },
+              {
+                "variable": "project_state",
+                "value": {
+                  "path": "$.project_state"
+                }
+              },
+              {
+                "variable": "po_wo_number",
+                "value": {
+                  "path": "$.po_wo_number"
+                }
+              },
+              {
+                "variable": "project_block",
+                "value": {
+                  "path": "$.project_block"
+                }
+              },
+              {
+                "variable": "solar_module_make",
+                "value": {
+                  "path": "$.solar_module_make"
+                }
+              },
+              {
+                "variable": "solar_module_capacity",
+                "value": {
+                  "path": "$.solar_module_capacity"
+                }
+              },
+              {
+                "variable": "solar_module_qty",
+                "value": {
+                  "path": "$.solar_module_qty"
+                }
+              },
+              {
+                "variable": "mms_make",
+                "value": {
+                  "path": "$.mms_make"
+                }
+              },
+              {
+                "variable": "mms_capacity",
+                "value": {
+                  "path": "$.mms_capacity"
+                }
+              },
+              {
+                "variable": "mms_qty",
+                "value": {
+                  "path": "$.mms_qty"
+                }
+              },
+              {
+                "variable": "inverter_make",
+                "value": {
+                  "path": "$.inverter_make"
+                }
+              },
+              {
+                "variable": "inverter_capacity",
+                "value": {
+                  "path": "$.inverter_capacity"
+                }
+              },
+              {
+                "variable": "inverter_qty",
+                "value": {
+                  "path": "$.inverter_qty"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_make",
+                "value": {
+                  "path": "$.module_ajb_pv1f_make"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_capacity",
+                "value": {
+                  "path": "$.module_ajb_pv1f_capacity"
+                }
+              },
+              {
+                "variable": "module_ajb_pv1f_qty",
+                "value": {
+                  "path": "$.module_ajb_pv1f_qty"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_make",
+                "value": {
+                  "path": "$.ajb_inverter_dc_make"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_capacity",
+                "value": {
+                  "path": "$.ajb_inverter_dc_capacity"
+                }
+              },
+              {
+                "variable": "ajb_inverter_dc_qty",
+                "value": {
+                  "path": "$.ajb_inverter_dc_qty"
+                }
+              },
+              {
+                "variable": "pcu_acdb_cable1_make",
+                "value": {
+                  "path": "$.pcu_acdb_cable1_make"
+                }
+              },
+              {
+                "variable": "pcu_acdb_cable1_capacity",
+                "value": {
+                  "path": "$.pcu_acdb_cable1_capacity"
+                }
+              },
+              {
+                "variable": "pcu_acdb_cable1_qty",
+                "value": {
+                  "path": "$.pcu_acdb_cable1_qty"
+                }
+              },
+              {
+                "variable": "acdb_meter_ltpanel_cable2_make",
+                "value": {
+                  "path": "$.acdb_meter_ltpanel_cable2_make"
+                }
+              },
+              {
+                "variable": "acdb_meter_ltpanel_cable2_capacity",
+                "value": {
+                  "path": "$.acdb_meter_ltpanel_cable2_capacity"
+                }
+              },
+              {
+                "variable": "acdb_meter_ltpanel_cable2_qty",
+                "value": {
+                  "path": "$.acdb_meter_ltpanel_cable2_qty"
+                }
+              },
+              {
+                "variable": "dc_earthing_cable1_make",
+                "value": {
+                  "path": "$.dc_earthing_cable1_make"
+                }
+              },
+              {
+                "variable": "dc_earthing_cable1_capacity",
+                "value": {
+                  "path": "$.dc_earthing_cable1_capacity"
+                }
+              },
+              {
+                "variable": "dc_earthing_cable1_qty",
+                "value": {
+                  "path": "$.dc_earthing_cable1_qty"
+                }
+              },
+              {
+                "variable": "dc_earthing_cable2_make",
+                "value": {
+                  "path": "$.dc_earthing_cable2_make"
+                }
+              },
+              {
+                "variable": "dc_earthing_cable2_capacity",
+                "value": {
+                  "path": "$.dc_earthing_cable2_capacity"
+                }
+              },
+              {
+                "variable": "dc_earthing_cable2_qty",
+                "value": {
+                  "path": "$.dc_earthing_cable2_qty"
+                }
+              },
+              {
+                "variable": "lightning_down_conductor_make",
+                "value": {
+                  "path": "$.lightning_down_conductor_make"
+                }
+              },
+              {
+                "variable": "lightning_down_conductor_capacity",
+                "value": {
+                  "path": "$.lightning_down_conductor_capacity"
+                }
+              },
+              {
+                "variable": "lightning_down_conductor_qty",
+                "value": {
+                  "path": "$.lightning_down_conductor_qty"
+                }
+              },
+              {
+                "variable": "earthing_kit_make",
+                "value": {
+                  "path": "$.earthing_kit_make"
+                }
+              },
+              {
+                "variable": "earthing_kit_capacity",
+                "value": {
+                  "path": "$.earthing_kit_capacity"
+                }
+              },
+              {
+                "variable": "earthing_kit_qty",
+                "value": {
+                  "path": "$.earthing_kit_qty"
+                }
+              },
+              {
+                "variable": "lightning_protection_make",
+                "value": {
+                  "path": "$.lightning_protection_make"
+                }
+              },
+              {
+                "variable": "lightning_protection_capacity",
+                "value": {
+                  "path": "$.lightning_protection_capacity"
+                }
+              },
+              {
+                "variable": "lightning_protection_qty",
+                "value": {
+                  "path": "$.lightning_protection_qty"
+                }
+              },
+              {
+                "variable": "acdb_relay_spd_mcb_meter_make",
+                "value": {
+                  "path": "$.acdb_relay_spd_mcb_meter_make"
+                }
+              },
+              {
+                "variable": "acdb_relay_spd_mcb_meter_capacity",
+                "value": {
+                  "path": "$.acdb_relay_spd_mcb_meter_capacity"
+                }
+              },
+              {
+                "variable": "acdb_relay_spd_mcb_meter_qty",
+                "value": {
+                  "path": "$.acdb_relay_spd_mcb_meter_qty"
+                }
+              },
+              {
+                "variable": "solar_array_junction_box_make",
+                "value": {
+                  "path": "$.solar_array_junction_box_make"
+                }
+              },
+              {
+                "variable": "solar_array_junction_box_capacity",
+                "value": {
+                  "path": "$.solar_array_junction_box_capacity"
+                }
+              },
+              {
+                "variable": "solar_array_junction_box_qty",
+                "value": {
+                  "path": "$.solar_array_junction_box_qty"
+                }
+              },
+              {
+                "variable": "lt_panel_net_meter_make",
+                "value": {
+                  "path": "$.lt_panel_net_meter_make"
+                }
+              },
+              {
+                "variable": "lt_panel_net_meter_capacity",
+                "value": {
+                  "path": "$.lt_panel_net_meter_capacity"
+                }
+              },
+              {
+                "variable": "lt_panel_net_meter_qty",
+                "value": {
+                  "path": "$.lt_panel_net_meter_qty"
+                }
+              },
+              {
+                "variable": "marking_ac_earthing_make",
+                "value": {
+                  "path": "$.marking_ac_earthing_make"
+                }
+              },
+              {
+                "variable": "marking_ac_earthing_capacity",
+                "value": {
+                  "path": "$.marking_ac_earthing_capacity"
+                }
+              },
+              {
+                "variable": "marking_ac_earthing_qty",
+                "value": {
+                  "path": "$.marking_ac_earthing_qty"
+                }
+              },
+              {
+                "variable": "marking_dc_earthing_make",
+                "value": {
+                  "path": "$.marking_dc_earthing_make"
+                }
+              },
+              {
+                "variable": "marking_dc_earthing_capacity",
+                "value": {
+                  "path": "$.marking_dc_earthing_capacity"
+                }
+              },
+              {
+                "variable": "marking_dc_earthing_qty",
+                "value": {
+                  "path": "$.marking_dc_earthing_qty"
+                }
+              },
+              {
+                "variable": "marking_lightning_arrester_make",
+                "value": {
+                  "path": "$.marking_lightning_arrester_make"
+                }
+              },
+              {
+                "variable": "marking_lightning_arrester_capacity",
+                "value": {
+                  "path": "$.marking_lightning_arrester_capacity"
+                }
+              },
+              {
+                "variable": "marking_lightning_arrester_qty",
+                "value": {
+                  "path": "$.marking_lightning_arrester_qty"
+                }
+              },
+              {
+                "variable": "sld_make",
+                "value": {
+                  "path": "$.sld_make"
+                }
+              },
+              {
+                "variable": "sld_capacity",
+                "value": {
+                  "path": "$.sld_capacity"
+                }
+              },
+              {
+                "variable": "sld_qty",
+                "value": {
+                  "path": "$.sld_qty"
+                }
+              },
+              {
+                "variable": "dos_donts_poster_make",
+                "value": {
+                  "path": "$.dos_donts_poster_make"
+                }
+              },
+              {
+                "variable": "dos_donts_poster_capacity",
+                "value": {
+                  "path": "$.dos_donts_poster_capacity"
+                }
+              },
+              {
+                "variable": "dos_donts_poster_qty",
+                "value": {
+                  "path": "$.dos_donts_poster_qty"
+                }
+              },
+              {
+                "variable": "signboard_danger_make",
+                "value": {
+                  "path": "$.signboard_danger_make"
+                }
+              },
+              {
+                "variable": "signboard_danger_capacity",
+                "value": {
+                  "path": "$.signboard_danger_capacity"
+                }
+              },
+              {
+                "variable": "signboard_danger_qty",
+                "value": {
+                  "path": "$.signboard_danger_qty"
+                }
+              },
+              {
+                "variable": "fire_extinguisher_make",
+                "value": {
+                  "path": "$.fire_extinguisher_make"
+                }
+              },
+              {
+                "variable": "fire_extinguisher_capacity",
+                "value": {
+                  "path": "$.fire_extinguisher_capacity"
+                }
+              },
+              {
+                "variable": "fire_extinguisher_qty",
+                "value": {
+                  "path": "$.fire_extinguisher_qty"
+                }
+              },
+              {
+                "variable": "isolator_mcbs_pvc_case_make",
+                "value": {
+                  "path": "$.isolator_mcbs_pvc_case_make"
+                }
+              },
+              {
+                "variable": "isolator_mcbs_pvc_case_capacity",
+                "value": {
+                  "path": "$.isolator_mcbs_pvc_case_capacity"
+                }
+              },
+              {
+                "variable": "isolator_mcbs_pvc_case_qty",
+                "value": {
+                  "path": "$.isolator_mcbs_pvc_case_qty"
+                }
+              },
+              {
+                "variable": "consumables_make",
+                "value": {
+                  "path": "$.consumables_make"
+                }
+              },
+              {
+                "variable": "consumables_capacity",
+                "value": {
+                  "path": "$.consumables_capacity"
+                }
+              },
+              {
+                "variable": "consumables_qty",
+                "value": {
+                  "path": "$.consumables_qty"
+                }
+              },
+              {
+                "variable": "sfp_date",
+                "value": {
+                  "path": "$.sfp_date"
+                }
+              },
+              {
+                "variable": "sfp_time",
+                "value": {
+                  "path": "$.sfp_time"
+                }
+              },
+              {
+                "variable": "sfp_weather",
+                "value": {
+                  "path": "$.sfp_weather"
+                }
+              },
+              {
+                "variable": "array_size_kwp",
+                "value": {
+                  "path": "$.array_size_kwp"
+                }
+              },
+              {
+                "variable": "array_no_modules",
+                "value": {
+                  "path": "$.array_no_modules"
+                }
+              },
+              {
+                "variable": "array_no_strings",
+                "value": {
+                  "path": "$.array_no_strings"
+                }
+              },
+              {
+                "variable": "array_no_modules_per_string",
+                "value": {
+                  "path": "$.array_no_modules_per_string"
+                }
+              },
+              {
+                "variable": "array_each_module_wp",
+                "value": {
+                  "path": "$.array_each_module_wp"
+                }
+              },
+              {
+                "variable": "ajb_off_voc_string_1",
+                "value": {
+                  "path": "$.ajb_off_voc_string_1"
+                }
+              },
+              {
+                "variable": "ajb_off_voc_string_2",
+                "value": {
+                  "path": "$.ajb_off_voc_string_2"
+                }
+              },
+              {
+                "variable": "ajb_off_voc_string_3",
+                "value": {
+                  "path": "$.ajb_off_voc_string_3"
+                }
+              },
+              {
+                "variable": "ajb_off_voc_string_4",
+                "value": {
+                  "path": "$.ajb_off_voc_string_4"
+                }
+              },
+              {
+                "variable": "ajb_off_voc_string_5",
+                "value": {
+                  "path": "$.ajb_off_voc_string_5"
+                }
+              },
+              {
+                "variable": "ajb_off_voc_mv_anchor",
+                "value": {
+                  "path": "$.ajb_off_voc_mv_anchor"
+                }
+              },
+              {
+                "variable": "ajb_on_vmp_string_1",
+                "value": {
+                  "path": "$.ajb_on_vmp_string_1"
+                }
+              },
+              {
+                "variable": "ajb_on_imp_string_1",
+                "value": {
+                  "path": "$.ajb_on_imp_string_1"
+                }
+              },
+              {
+                "variable": "ajb_on_vmp_string_2",
+                "value": {
+                  "path": "$.ajb_on_vmp_string_2"
+                }
+              },
+              {
+                "variable": "ajb_on_imp_string_2",
+                "value": {
+                  "path": "$.ajb_on_imp_string_2"
+                }
+              },
+              {
+                "variable": "ajb_on_vmp_string_3",
+                "value": {
+                  "path": "$.ajb_on_vmp_string_3"
+                }
+              },
+              {
+                "variable": "ajb_on_imp_string_3",
+                "value": {
+                  "path": "$.ajb_on_imp_string_3"
+                }
+              },
+              {
+                "variable": "ajb_on_vmp_string_4",
+                "value": {
+                  "path": "$.ajb_on_vmp_string_4"
+                }
+              },
+              {
+                "variable": "ajb_on_imp_string_4",
+                "value": {
+                  "path": "$.ajb_on_imp_string_4"
+                }
+              },
+              {
+                "variable": "ajb_on_vmp_string_5",
+                "value": {
+                  "path": "$.ajb_on_vmp_string_5"
+                }
+              },
+              {
+                "variable": "ajb_on_imp_string_5",
+                "value": {
+                  "path": "$.ajb_on_imp_string_5"
+                }
+              },
+              {
+                "variable": "ajb_on_vmp_mv_anchor",
+                "value": {
+                  "path": "$.ajb_on_vmp_mv_anchor"
+                }
+              },
+              {
+                "variable": "ajb_on_imp_mv_anchor",
+                "value": {
+                  "path": "$.ajb_on_imp_mv_anchor"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_1",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_1"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_2",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_2"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_3",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_3"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_4",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_4"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_5",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_5"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_array",
+                "value": {
+                  "path": "$.ajb_on_pmp_array"
+                }
+              },
+              {
+                "variable": "pcu_inverter_count",
+                "value": {
+                  "path": "$.pcu_inverter_count"
+                }
+              },
+              {
+                "variable": "pcu_inverter_rating_kva",
+                "value": {
+                  "path": "$.pcu_inverter_rating_kva"
+                }
+              },
+              {
+                "variable": "pcu_inverter_rating_phase",
+                "value": {
+                  "path": "$.pcu_inverter_rating_phase"
+                }
+              },
+              {
+                "variable": "pcu_inverter_total_capacity_kva",
+                "value": {
+                  "path": "$.pcu_inverter_total_capacity_kva"
+                }
+              },
+              {
+                "variable": "pcu_inverter_total_capacity_phase",
+                "value": {
+                  "path": "$.pcu_inverter_total_capacity_phase"
+                }
+              },
+              {
+                "variable": "pcu_inverter_mppt_count",
+                "value": {
+                  "path": "$.pcu_inverter_mppt_count"
+                }
+              },
+              {
+                "variable": "charge_controller_count",
+                "value": {
+                  "path": "$.charge_controller_count"
+                }
+              },
+              {
+                "variable": "charge_controller_ratings",
+                "value": {
+                  "path": "$.charge_controller_ratings"
+                }
+              },
+              {
+                "variable": "ph1_load_voltage_mv",
+                "value": {
+                  "path": "$.ph1_load_voltage_mv"
+                }
+              },
+              {
+                "variable": "ph1_load_voltage_uom",
+                "value": {
+                  "path": "$.ph1_load_voltage_uom"
+                }
+              },
+              {
+                "variable": "ph1_output_freq_mv",
+                "value": {
+                  "path": "$.ph1_output_freq_mv"
+                }
+              },
+              {
+                "variable": "ph1_output_freq_uom",
+                "value": {
+                  "path": "$.ph1_output_freq_uom"
+                }
+              },
+              {
+                "variable": "ph1_output_power_mv",
+                "value": {
+                  "path": "$.ph1_output_power_mv"
+                }
+              },
+              {
+                "variable": "ph1_output_power_uom",
+                "value": {
+                  "path": "$.ph1_output_power_uom"
+                }
+              },
+              {
+                "variable": "ph3_rpn_voltage_mv",
+                "value": {
+                  "path": "$.ph3_rpn_voltage_mv"
+                }
+              },
+              {
+                "variable": "ph3_rpn_voltage_uom",
+                "value": {
+                  "path": "$.ph3_rpn_voltage_uom"
+                }
+              },
+              {
+                "variable": "ph3_rpn_freq_mv",
+                "value": {
+                  "path": "$.ph3_rpn_freq_mv"
+                }
+              },
+              {
+                "variable": "ph3_rpn_freq_uom",
+                "value": {
+                  "path": "$.ph3_rpn_freq_uom"
+                }
+              },
+              {
+                "variable": "ph3_rpn_current_mv",
+                "value": {
+                  "path": "$.ph3_rpn_current_mv"
+                }
+              },
+              {
+                "variable": "ph3_rpn_current_uom",
+                "value": {
+                  "path": "$.ph3_rpn_current_uom"
+                }
+              },
+              {
+                "variable": "ph3_ypn_voltage_mv",
+                "value": {
+                  "path": "$.ph3_ypn_voltage_mv"
+                }
+              },
+              {
+                "variable": "ph3_ypn_voltage_uom",
+                "value": {
+                  "path": "$.ph3_ypn_voltage_uom"
+                }
+              },
+              {
+                "variable": "ph3_ypn_freq_mv",
+                "value": {
+                  "path": "$.ph3_ypn_freq_mv"
+                }
+              },
+              {
+                "variable": "ph3_ypn_freq_uom",
+                "value": {
+                  "path": "$.ph3_ypn_freq_uom"
+                }
+              },
+              {
+                "variable": "ph3_ypn_current_mv",
+                "value": {
+                  "path": "$.ph3_ypn_current_mv"
+                }
+              },
+              {
+                "variable": "ph3_ypn_current_uom",
+                "value": {
+                  "path": "$.ph3_ypn_current_uom"
+                }
+              },
+              {
+                "variable": "ph3_bpn_voltage_mv",
+                "value": {
+                  "path": "$.ph3_bpn_voltage_mv"
+                }
+              },
+              {
+                "variable": "ph3_bpn_voltage_uom",
+                "value": {
+                  "path": "$.ph3_bpn_voltage_uom"
+                }
+              },
+              {
+                "variable": "ph3_bpn_freq_mv",
+                "value": {
+                  "path": "$.ph3_bpn_freq_mv"
+                }
+              },
+              {
+                "variable": "ph3_bpn_freq_uom",
+                "value": {
+                  "path": "$.ph3_bpn_freq_uom"
+                }
+              },
+              {
+                "variable": "ph3_bpn_current_mv",
+                "value": {
+                  "path": "$.ph3_bpn_current_mv"
+                }
+              },
+              {
+                "variable": "ph3_bpn_current_uom",
+                "value": {
+                  "path": "$.ph3_bpn_current_uom"
+                }
+              },
+              {
+                "variable": "ph3_r_y_voltage_mv",
+                "value": {
+                  "path": "$.ph3_r_y_voltage_mv"
+                }
+              },
+              {
+                "variable": "ph3_r_y_voltage_uom",
+                "value": {
+                  "path": "$.ph3_r_y_voltage_uom"
+                }
+              },
+              {
+                "variable": "ph3_r_y_freq_mv",
+                "value": {
+                  "path": "$.ph3_r_y_freq_mv"
+                }
+              },
+              {
+                "variable": "ph3_r_y_freq_uom",
+                "value": {
+                  "path": "$.ph3_r_y_freq_uom"
+                }
+              },
+              {
+                "variable": "ph3_r_b_voltage_mv",
+                "value": {
+                  "path": "$.ph3_r_b_voltage_mv"
+                }
+              },
+              {
+                "variable": "ph3_r_b_voltage_uom",
+                "value": {
+                  "path": "$.ph3_r_b_voltage_uom"
+                }
+              },
+              {
+                "variable": "ph3_r_b_freq_mv",
+                "value": {
+                  "path": "$.ph3_r_b_freq_mv"
+                }
+              },
+              {
+                "variable": "ph3_r_b_freq_uom",
+                "value": {
+                  "path": "$.ph3_r_b_freq_uom"
+                }
+              },
+              {
+                "variable": "ph3_y_b_voltage_mv",
+                "value": {
+                  "path": "$.ph3_y_b_voltage_mv"
+                }
+              },
+              {
+                "variable": "ph3_y_b_voltage_uom",
+                "value": {
+                  "path": "$.ph3_y_b_voltage_uom"
+                }
+              },
+              {
+                "variable": "ph3_y_b_freq_mv",
+                "value": {
+                  "path": "$.ph3_y_b_freq_mv"
+                }
+              },
+              {
+                "variable": "ph3_y_b_freq_uom",
+                "value": {
+                  "path": "$.ph3_y_b_freq_uom"
+                }
+              },
+              {
+                "variable": "pcu_display_status",
+                "value": {
+                  "path": "$.pcu_display_status"
+                }
+              },
+              {
+                "variable": "pcu_display_parameters",
+                "value": {
+                  "path": "$.pcu_display_parameters"
+                }
+              },
+              {
+                "variable": "pv_line1_pcu_mcb_isolator_on_v",
+                "value": {
+                  "path": "$.pv_line1_pcu_mcb_isolator_on_v"
+                }
+              },
+              {
+                "variable": "pv_line1_pcu_mcb_isolator_off_v",
+                "value": {
+                  "path": "$.pv_line1_pcu_mcb_isolator_off_v"
+                }
+              },
+              {
+                "variable": "pv_line2_pcu_mcb_isolator_on_v",
+                "value": {
+                  "path": "$.pv_line2_pcu_mcb_isolator_on_v"
+                }
+              },
+              {
+                "variable": "pv_line2_pcu_mcb_isolator_off_v",
+                "value": {
+                  "path": "$.pv_line2_pcu_mcb_isolator_off_v"
+                }
+              },
+              {
+                "variable": "pv_line3_pcu_mcb_isolator_on_v",
+                "value": {
+                  "path": "$.pv_line3_pcu_mcb_isolator_on_v"
+                }
+              },
+              {
+                "variable": "pv_line3_pcu_mcb_isolator_off_v",
+                "value": {
+                  "path": "$.pv_line3_pcu_mcb_isolator_off_v"
+                }
+              },
+              {
+                "variable": "pv_line4_pcu_mcb_isolator_on_v",
+                "value": {
+                  "path": "$.pv_line4_pcu_mcb_isolator_on_v"
+                }
+              },
+              {
+                "variable": "pv_line4_pcu_mcb_isolator_off_v",
+                "value": {
+                  "path": "$.pv_line4_pcu_mcb_isolator_off_v"
+                }
+              },
+              {
+                "variable": "pv_line5_pcu_mcb_isolator_on_v",
+                "value": {
+                  "path": "$.pv_line5_pcu_mcb_isolator_on_v"
+                }
+              },
+              {
+                "variable": "pv_line5_pcu_mcb_isolator_off_v",
+                "value": {
+                  "path": "$.pv_line5_pcu_mcb_isolator_off_v"
+                }
+              },
+              {
+                "variable": "acdb_contactor_ry_on_v",
+                "value": {
+                  "path": "$.acdb_contactor_ry_on_v"
+                }
+              },
+              {
+                "variable": "acdb_contactor_ry_off_v",
+                "value": {
+                  "path": "$.acdb_contactor_ry_off_v"
+                }
+              },
+              {
+                "variable": "acdb_contactor_yb_on_v",
+                "value": {
+                  "path": "$.acdb_contactor_yb_on_v"
+                }
+              },
+              {
+                "variable": "acdb_contactor_yb_off_v",
+                "value": {
+                  "path": "$.acdb_contactor_yb_off_v"
+                }
+              },
+              {
+                "variable": "acdb_contactor_rb_on_v",
+                "value": {
+                  "path": "$.acdb_contactor_rb_on_v"
+                }
+              },
+              {
+                "variable": "acdb_contactor_rb_off_v",
+                "value": {
+                  "path": "$.acdb_contactor_rb_off_v"
+                }
+              },
+              {
+                "variable": "acdb_mcb_ry_on_v",
+                "value": {
+                  "path": "$.acdb_mcb_ry_on_v"
+                }
+              },
+              {
+                "variable": "acdb_mcb_ry_off_v",
+                "value": {
+                  "path": "$.acdb_mcb_ry_off_v"
+                }
+              },
+              {
+                "variable": "acdb_mcb_yb_on_v",
+                "value": {
+                  "path": "$.acdb_mcb_yb_on_v"
+                }
+              },
+              {
+                "variable": "acdb_mcb_yb_off_v",
+                "value": {
+                  "path": "$.acdb_mcb_yb_off_v"
+                }
+              },
+              {
+                "variable": "acdb_mcb_rb_on_v",
+                "value": {
+                  "path": "$.acdb_mcb_rb_on_v"
+                }
+              },
+              {
+                "variable": "acdb_mcb_rb_off_v",
+                "value": {
+                  "path": "$.acdb_mcb_rb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_main_mcb_ry_on_v",
+                "value": {
+                  "path": "$.lt_panel_main_mcb_ry_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_main_mcb_ry_off_v",
+                "value": {
+                  "path": "$.lt_panel_main_mcb_ry_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_main_mcb_yb_on_v",
+                "value": {
+                  "path": "$.lt_panel_main_mcb_yb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_main_mcb_yb_off_v",
+                "value": {
+                  "path": "$.lt_panel_main_mcb_yb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_main_mcb_rb_on_v",
+                "value": {
+                  "path": "$.lt_panel_main_mcb_rb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_main_mcb_rb_off_v",
+                "value": {
+                  "path": "$.lt_panel_main_mcb_rb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb1_ry_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb1_ry_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb1_ry_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb1_ry_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb1_yb_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb1_yb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb1_yb_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb1_yb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb1_rb_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb1_rb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb1_rb_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb1_rb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb2_ry_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb2_ry_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb2_ry_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb2_ry_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb2_yb_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb2_yb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb2_yb_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb2_yb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb2_rb_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb2_rb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb2_rb_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb2_rb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb3_ry_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb3_ry_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb3_ry_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb3_ry_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb3_yb_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb3_yb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb3_yb_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb3_yb_off_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb3_rb_on_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb3_rb_on_v"
+                }
+              },
+              {
+                "variable": "lt_panel_phase_mcb3_rb_off_v",
+                "value": {
+                  "path": "$.lt_panel_phase_mcb3_rb_off_v"
+                }
+              },
+              {
+                "variable": "ept_dc_earthing_mv",
+                "value": {
+                  "path": "$.ept_dc_earthing_mv"
+                }
+              },
+              {
+                "variable": "ept_dc_earthing_uom",
+                "value": {
+                  "path": "$.ept_dc_earthing_uom"
+                }
+              },
+              {
+                "variable": "ept_ac_earthing_mv",
+                "value": {
+                  "path": "$.ept_ac_earthing_mv"
+                }
+              },
+              {
+                "variable": "ept_ac_earthing_uom",
+                "value": {
+                  "path": "$.ept_ac_earthing_uom"
+                }
+              },
+              {
+                "variable": "ept_lightning_arrester1_mv",
+                "value": {
+                  "path": "$.ept_lightning_arrester1_mv"
+                }
+              },
+              {
+                "variable": "ept_lightning_arrester1_uom",
+                "value": {
+                  "path": "$.ept_lightning_arrester1_uom"
+                }
+              },
+              {
+                "variable": "ept_lightning_arrester2_mv",
+                "value": {
+                  "path": "$.ept_lightning_arrester2_mv"
+                }
+              },
+              {
+                "variable": "ept_lightning_arrester2_uom",
+                "value": {
+                  "path": "$.ept_lightning_arrester2_uom"
+                }
+              },
+              {
+                "variable": "dc_panel_panel_res",
+                "value": {
+                  "path": "$.dc_panel_panel_res"
+                }
+              },
+              {
+                "variable": "dc_panel_mms_res",
+                "value": {
+                  "path": "$.dc_panel_mms_res"
+                }
+              },
+              {
+                "variable": "dc_mms_ajb_res",
+                "value": {
+                  "path": "$.dc_mms_ajb_res"
+                }
+              },
+              {
+                "variable": "dc_ajb_busbar_res",
+                "value": {
+                  "path": "$.dc_ajb_busbar_res"
+                }
+              },
+              {
+                "variable": "dc_busbar_earth_pit_res",
+                "value": {
+                  "path": "$.dc_busbar_earth_pit_res"
+                }
+              },
+              {
+                "variable": "ac_inverter_busbar_res",
+                "value": {
+                  "path": "$.ac_inverter_busbar_res"
+                }
+              },
+              {
+                "variable": "ac_acdb_busbar_res",
+                "value": {
+                  "path": "$.ac_acdb_busbar_res"
+                }
+              },
+              {
+                "variable": "ac_ltpanel_busbar_res",
+                "value": {
+                  "path": "$.ac_ltpanel_busbar_res"
+                }
+              },
+              {
+                "variable": "ac_loads_busbar_res",
+                "value": {
+                  "path": "$.ac_loads_busbar_res"
+                }
+              },
+              {
+                "variable": "ac_coswitch_busbar_res",
+                "value": {
+                  "path": "$.ac_coswitch_busbar_res"
+                }
+              },
+              {
+                "variable": "ac_busbar_earth_pit_res",
+                "value": {
+                  "path": "$.ac_busbar_earth_pit_res"
+                }
+              },
+              {
+                "variable": "la1_la_aluminium_cable_res",
+                "value": {
+                  "path": "$.la1_la_aluminium_cable_res"
+                }
+              },
+              {
+                "variable": "la1_aluminium_gi_strip_res",
+                "value": {
+                  "path": "$.la1_aluminium_gi_strip_res"
+                }
+              },
+              {
+                "variable": "la1_gi_strip_earth_pit_res",
+                "value": {
+                  "path": "$.la1_gi_strip_earth_pit_res"
+                }
+              },
+              {
+                "variable": "la2_la_aluminium_cable_res",
+                "value": {
+                  "path": "$.la2_la_aluminium_cable_res"
+                }
+              },
+              {
+                "variable": "la2_aluminium_gi_strip_res",
+                "value": {
+                  "path": "$.la2_aluminium_gi_strip_res"
+                }
+              },
+              {
+                "variable": "la2_gi_strip_earth_pit_res",
+                "value": {
+                  "path": "$.la2_gi_strip_earth_pit_res"
+                }
+              },
+              {
+                "variable": "earthpit_ac_dc_interconnection_res",
+                "value": {
+                  "path": "$.earthpit_ac_dc_interconnection_res"
+                }
+              },
+              {
+                "variable": "earthpit_la1_la2_interconnection_res",
+                "value": {
+                  "path": "$.earthpit_la1_la2_interconnection_res"
+                }
+              },
+              {
+                "variable": "orientation_operational_instructions_status",
+                "value": {
+                  "path": "$.orientation_operational_instructions_status"
+                }
+              },
+              {
+                "variable": "orientation_operational_instructions_remarks",
+                "value": {
+                  "path": "$.orientation_operational_instructions_remarks"
+                }
+              },
+              {
+                "variable": "orientation_routine_maintenance_status",
+                "value": {
+                  "path": "$.orientation_routine_maintenance_status"
+                }
+              },
+              {
+                "variable": "orientation_routine_maintenance_remarks",
+                "value": {
+                  "path": "$.orientation_routine_maintenance_remarks"
+                }
+              },
+              {
+                "variable": "stickers_pasted_status",
+                "value": {
+                  "path": "$.stickers_pasted_status"
+                }
+              },
+              {
+                "variable": "stickers_pasted_remarks",
+                "value": {
+                  "path": "$.stickers_pasted_remarks"
+                }
+              },
+              {
+                "variable": "posters_pasted_status",
+                "value": {
+                  "path": "$.posters_pasted_status"
+                }
+              },
+              {
+                "variable": "posters_pasted_remarks",
+                "value": {
+                  "path": "$.posters_pasted_remarks"
+                }
+              },
+              {
+                "variable": "orientation_warranty_solar_panel_status",
+                "value": {
+                  "path": "$.orientation_warranty_solar_panel_status"
+                }
+              },
+              {
+                "variable": "orientation_warranty_solar_panel_remarks",
+                "value": {
+                  "path": "$.orientation_warranty_solar_panel_remarks"
+                }
+              },
+              {
+                "variable": "orientation_warranty_pcu_inverter_ccu_status",
+                "value": {
+                  "path": "$.orientation_warranty_pcu_inverter_ccu_status"
+                }
+              },
+              {
+                "variable": "orientation_warranty_pcu_inverter_ccu_remarks",
+                "value": {
+                  "path": "$.orientation_warranty_pcu_inverter_ccu_remarks"
+                }
+              },
+              {
+                "variable": "orientation_warranty_bidirectional_meter_status",
+                "value": {
+                  "path": "$.orientation_warranty_bidirectional_meter_status"
+                }
+              },
+              {
+                "variable": "orientation_warranty_bidirectional_meter_remarks",
+                "value": {
+                  "path": "$.orientation_warranty_bidirectional_meter_remarks"
+                }
+              },
+              {
+                "variable": "orientation_warranty_check_meter_status",
+                "value": {
+                  "path": "$.orientation_warranty_check_meter_status"
+                }
+              },
+              {
+                "variable": "orientation_warranty_check_meter_remarks",
+                "value": {
+                  "path": "$.orientation_warranty_check_meter_remarks"
+                }
+              },
+              {
+                "variable": "orientation_additional_remarks",
+                "value": {
+                  "path": "$.orientation_additional_remarks"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
