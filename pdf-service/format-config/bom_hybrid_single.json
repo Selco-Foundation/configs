@@ -893,26 +893,27 @@
       { "text": "Array Details", "style": "header" },
       {
         "table": {
+          "widths": ["50%", "50%"],
           "body": [
             [
               { "text": "Array Size:(kWp)", "style": "tableHeader" },
-              { "text": "{{array_size_kwp}}" },
-              { "text": "No. of modules: ", "style": "tableHeader" },
-              { "text": "{{ array_no_modules }}" },
-              { "text": "No. of strings: ", "style": "tableHeader" },
-              { "text": "{{ array_no_strings }}" },
-              { "text": "No. of modules per string: ", "style": "tableHeader" },
+              { "text": "{{array_size_kwp}}" }
+            ],
+            [
+              { "text": "No. of modules:", "style": "tableHeader" },
+              { "text": "{{ array_no_modules }}" }
+            ],
+            [
+              { "text": "No. of strings:", "style": "tableHeader" },
+              { "text": "{{ array_no_strings }}" }
+            ],
+            [
+              { "text": "No. of modules per string:", "style": "tableHeader" },
               { "text": "{{ array_no_modules_per_string }}" }
             ],
             [
-              { "text": "Each module capacity(Wp): ", "style": "tableHeader" },
-              { "text": "{{ array_each_module_wp }}" },
-              { "text": "" },
-              { "text": "" },
-              { "text": "" },
-              { "text": "" },
-              { "text": "" },
-              { "text": "" }
+              { "text": "Each module capacity(Wp):", "style": "tableHeader" },
+              { "text": "{{ array_each_module_wp }}" }
             ]
           ]
         },
@@ -1176,6 +1177,7 @@
       {
         "table": {
           "headerRows": 1,
+          "widths": ["*", 150, 80],
           "body": [
             [
               { "text": "Particulars", "style": "tableHeader" },
@@ -1209,7 +1211,7 @@
       {
         "table": {
           "headerRows": 1,
-          "widths": [100, 100, 50],
+          "widths": ["*", 150, 80],
           "body": [
             [
               { "text": "Particulars", "style": "tableHeader" },
@@ -1247,6 +1249,7 @@
       {
         "table": {
           "headerRows": 1,
+          "widths": ["*", 150, 80],
           "body": [
             [
               { "text": "Particulars", "style": "tableHeader" },
@@ -1340,6 +1343,7 @@
       {
         "table": {
           "headerRows": 1,
+          "widths": ["*", 150, 80],
           "body": [
             [
               { "text": "Particulars", "style": "tableHeader" },
