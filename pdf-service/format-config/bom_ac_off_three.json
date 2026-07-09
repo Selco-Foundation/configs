@@ -31,7 +31,8 @@
               { "text": "Block: {{project_block}}" }
             ],
             [
-              { "text": "Health Facility Type: {{health_facility_type}}" }
+              { "text": "Health Facility Type: {{health_facility_type}}" },
+              { "text": "" }
             ]
           ]
         },
