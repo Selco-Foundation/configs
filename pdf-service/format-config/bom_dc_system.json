@@ -749,6 +749,7 @@
         "layout": ""
       },
       {
+        "pageBreak": "before",
         "stack": [
           { "text": "{{installation_image_1_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
