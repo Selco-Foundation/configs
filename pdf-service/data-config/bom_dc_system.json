@@ -14,6 +14,12 @@
           {
             "direct": [
               {
+                "variable": "health_facility_type",
+                "value": {
+                  "path": "$.health_facility_type"
+                }
+              },
+              {
                 "variable": "solar_module_make",
                 "value": {
                   "path": "$.solar_module_make"
