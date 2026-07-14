@@ -55,6 +55,12 @@ ServiceMaps:
                 outJsonPath: $.Data.lastVisitDate
               - inJsonPath: $.status
                 outJsonPath: $.Data.status
+              - inJsonPath: $.state
+                outJsonPath: $.Data.state
+              - inJsonPath: $.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.block
+                outJsonPath: $.Data.block
               - inJsonPath: $.visitReport
                 outJsonPath: $.Data.visitReport
               - inJsonPath: $.workflow
@@ -121,6 +127,12 @@ ServiceMaps:
                 outJsonPath: $.Data.lastVisitDate
               - inJsonPath: $.status
                 outJsonPath: $.Data.status
+              - inJsonPath: $.state
+                outJsonPath: $.Data.state
+              - inJsonPath: $.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.block
+                outJsonPath: $.Data.block
               - inJsonPath: $.visitReport
                 outJsonPath: $.Data.visitReport
               - inJsonPath: $.workflow
