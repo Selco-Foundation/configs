@@ -1656,6 +1656,60 @@
                 "value": {
                   "path": "$.orientation_additional_remarks"
                 }
+              },
+              {
+                "variable": "panel_serial_rows",
+                "value": {
+                  "path": "$.panel_serial_number.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "key": "srNo"
+                    },
+                    {
+                      "key": "serialNumber"
+                    }
+                  ]
+                }
+              },
+              {
+                "variable": "battery_serial_rows",
+                "value": {
+                  "path": "$.battery_serial_number.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "key": "srNo"
+                    },
+                    {
+                      "key": "serialNumber"
+                    }
+                  ]
+                }
+              },
+              {
+                "variable": "inverter_serial_rows",
+                "value": {
+                  "path": "$.inverter_serial_number.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "key": "srNo"
+                    },
+                    {
+                      "key": "serialNumber"
+                    }
+                  ]
+                }
               }
             ]
           },

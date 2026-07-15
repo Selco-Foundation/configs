@@ -748,6 +748,52 @@
         },
         "layout": ""
       },
+      { "text": "Asset Serial Number", "style": "header", "pageBreak": "before" },
+      { "text": "Panel", "style": "tableHeader" },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [100, "*"],
+          "body": [
+            [
+              { "text": "Serial No.", "style": "tableHeader" },
+              { "text": "Asset Serial Number", "style": "tableHeader" }
+            ],
+            "{{#panel_serial_rows}}[\"{{srNo}}\",\"{{serialNumber}}\"]{{/panel_serial_rows}}"
+          ]
+        },
+        "layout": ""
+      },
+      { "text": "Battery", "style": "tableHeader" },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [100, "*"],
+          "body": [
+            [
+              { "text": "Serial No.", "style": "tableHeader" },
+              { "text": "Asset Serial Number", "style": "tableHeader" }
+            ],
+            "{{#battery_serial_rows}}[\"{{srNo}}\",\"{{serialNumber}}\"]{{/battery_serial_rows}}"
+          ]
+        },
+        "layout": ""
+      },
+      { "text": "Inverter", "style": "tableHeader" },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [100, "*"],
+          "body": [
+            [
+              { "text": "Serial No.", "style": "tableHeader" },
+              { "text": "Asset Serial Number", "style": "tableHeader" }
+            ],
+            "{{#inverter_serial_rows}}[\"{{srNo}}\",\"{{serialNumber}}\"]{{/inverter_serial_rows}}"
+          ]
+        },
+        "layout": ""
+      },
       {
         "pageBreak": "before",
         "stack": [
