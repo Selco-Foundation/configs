@@ -1,5 +1,5 @@
 {
-  "key": "ac_on_grid_three_phase",
+  "key": "ac_on_grid_rms_three_phase",
   "DataConfigs": {
     "serviceName": "rainmaker-tl",
     "version": "1.0.0",
