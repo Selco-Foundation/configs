@@ -1,0 +1,151 @@
+# Indexes non-DRAFT AMC scheduled visits (amc-scheduler-service) into the scheduled-visit-index
+# ES/OpenSearch index. Only visits whose status is not DRAFT are ever published onto these two
+# topics (see ScheduledVisitService#pushNonDraftVisitsToIndex in amc-scheduler-service) - so no
+# status filtering is required here, every message on these topics is safe to index as-is.
+ServiceMaps:
+  serviceName: AMC Scheduler - Scheduled Visit Indexer
+  version: 1.0.0
+  mappings:
+    - topic: save-scheduled-visit-index
+      configKey: INDEX
+      indexes:
+        - name: scheduled-visit-index
+          type: general
+          id: $.id
+          isBulk: true
+          jsonPath: $.ScheduledVisit.*
+          timeStampField: $.auditDetails.createdTime
+          fieldsToBeMasked: []
+          customJsonMapping:
+            indexMapping:
+              Data:
+                amcConfiguration: {}
+                facility: {}
+                visitReport: {}
+                workflow: {}
+                processInstances: {}
+                transactions: {}
+                assignments: {}
+                additionalDetails: {}
+                auditDetails: {}
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.projectId
+                outJsonPath: $.Data.projectId
+              - inJsonPath: $.amcConfigurationId
+                outJsonPath: $.Data.amcConfigurationId
+              - inJsonPath: $.amcConfiguration
+                outJsonPath: $.Data.amcConfiguration
+              - inJsonPath: $.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.facilityName
+                outJsonPath: $.Data.facilityName
+              - inJsonPath: $.facility
+                outJsonPath: $.Data.facility
+              - inJsonPath: $.visitNumber
+                outJsonPath: $.Data.visitNumber
+              - inJsonPath: $.scheduledDate
+                outJsonPath: $.Data.scheduledDate
+              - inJsonPath: $.actualVisitDate
+                outJsonPath: $.Data.actualVisitDate
+              - inJsonPath: $.lastVisitDate
+                outJsonPath: $.Data.lastVisitDate
+              - inJsonPath: $.status
+                outJsonPath: $.Data.status
+              - inJsonPath: $.state
+                outJsonPath: $.Data.state
+              - inJsonPath: $.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.visitReport
+                outJsonPath: $.Data.visitReport
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.workflow
+              - inJsonPath: $.processInstances
+                outJsonPath: $.Data.processInstances
+              - inJsonPath: $.transactions
+                outJsonPath: $.Data.transactions
+              - inJsonPath: $.assignments
+                outJsonPath: $.Data.assignments
+              - inJsonPath: $.additionalDetails
+                outJsonPath: $.Data.additionalDetails
+              - inJsonPath: $.auditDetails
+                outJsonPath: $.Data.auditDetails
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
+
+    - topic: update-scheduled-visit-index
+      configKey: INDEX
+      indexes:
+        - name: scheduled-visit-index
+          type: general
+          id: $.id
+          isBulk: true
+          jsonPath: $.ScheduledVisit.*
+          timeStampField: $.auditDetails.createdTime
+          fieldsToBeMasked: []
+          customJsonMapping:
+            indexMapping:
+              Data:
+                amcConfiguration: {}
+                facility: {}
+                visitReport: {}
+                workflow: {}
+                processInstances: {}
+                transactions: {}
+                assignments: {}
+                additionalDetails: {}
+                auditDetails: {}
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.tenantId
+              - inJsonPath: $.projectId
+                outJsonPath: $.Data.projectId
+              - inJsonPath: $.amcConfigurationId
+                outJsonPath: $.Data.amcConfigurationId
+              - inJsonPath: $.amcConfiguration
+                outJsonPath: $.Data.amcConfiguration
+              - inJsonPath: $.facilityId
+                outJsonPath: $.Data.facilityId
+              - inJsonPath: $.facilityName
+                outJsonPath: $.Data.facilityName
+              - inJsonPath: $.facility
+                outJsonPath: $.Data.facility
+              - inJsonPath: $.visitNumber
+                outJsonPath: $.Data.visitNumber
+              - inJsonPath: $.scheduledDate
+                outJsonPath: $.Data.scheduledDate
+              - inJsonPath: $.actualVisitDate
+                outJsonPath: $.Data.actualVisitDate
+              - inJsonPath: $.lastVisitDate
+                outJsonPath: $.Data.lastVisitDate
+              - inJsonPath: $.status
+                outJsonPath: $.Data.status
+              - inJsonPath: $.state
+                outJsonPath: $.Data.state
+              - inJsonPath: $.district
+                outJsonPath: $.Data.district
+              - inJsonPath: $.block
+                outJsonPath: $.Data.block
+              - inJsonPath: $.visitReport
+                outJsonPath: $.Data.visitReport
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.workflow
+              - inJsonPath: $.processInstances
+                outJsonPath: $.Data.processInstances
+              - inJsonPath: $.transactions
+                outJsonPath: $.Data.transactions
+              - inJsonPath: $.assignments
+                outJsonPath: $.Data.assignments
+              - inJsonPath: $.additionalDetails
+                outJsonPath: $.Data.additionalDetails
+              - inJsonPath: $.auditDetails
+                outJsonPath: $.Data.auditDetails
+              - inJsonPath: $.@timestamp
+                outJsonPath: $.Data.@timestamp
