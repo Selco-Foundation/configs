@@ -80,6 +80,24 @@
                 }
               },
               {
+                "variable": "solar_battery_make",
+                "value": {
+                  "path": "$.solar_battery_make"
+                }
+              },
+              {
+                "variable": "solar_battery_capacity",
+                "value": {
+                  "path": "$.solar_battery_capacity"
+                }
+              },
+              {
+                "variable": "solar_battery_qty",
+                "value": {
+                  "path": "$.solar_battery_qty"
+                }
+              },
+              {
                 "variable": "mms_make",
                 "value": {
                   "path": "$.mms_make"
