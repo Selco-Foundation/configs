@@ -1525,9 +1525,15 @@
           { "text": "{{installation_image_1_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_1_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_1_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_1_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_1_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_1_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_1_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1539,9 +1545,15 @@
           { "text": "{{installation_image_2_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_2_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_2_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_2_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_2_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_2_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_2_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1554,9 +1566,15 @@
           { "text": "{{installation_image_3_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_3_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_3_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_3_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_3_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_3_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_3_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1568,9 +1586,15 @@
           { "text": "{{installation_image_4_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_4_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_4_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_4_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_4_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_4_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_4_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1583,9 +1607,15 @@
           { "text": "{{installation_image_5_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_5_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_5_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_5_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_5_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_5_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_5_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1597,9 +1627,15 @@
           { "text": "{{installation_image_6_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_6_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_6_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_6_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_6_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_6_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_6_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1612,9 +1648,15 @@
           { "text": "{{installation_image_7_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_7_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_7_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_7_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_7_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_7_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_7_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1626,9 +1668,15 @@
           { "text": "{{installation_image_8_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_8_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_8_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_8_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_8_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_8_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_8_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1641,9 +1689,15 @@
           { "text": "{{installation_image_9_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_9_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_9_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_9_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_9_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_9_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_9_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1655,9 +1709,15 @@
           { "text": "{{installation_image_10_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_10_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_10_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_10_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_10_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_10_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_10_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1670,9 +1730,15 @@
           { "text": "{{installation_image_11_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_11_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_11_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_11_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_11_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_11_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_11_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1684,9 +1750,15 @@
           { "text": "{{installation_image_12_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_12_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_12_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_12_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_12_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_12_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_12_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1699,9 +1771,15 @@
           { "text": "{{installation_image_13_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_13_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_13_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_13_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_13_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_13_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_13_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1713,9 +1791,15 @@
           { "text": "{{installation_image_14_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_14_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_14_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_14_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_14_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_14_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_14_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1728,9 +1812,15 @@
           { "text": "{{installation_image_15_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_15_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_15_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_15_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_15_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_15_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_15_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1742,9 +1832,15 @@
           { "text": "{{installation_image_16_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_16_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_16_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_16_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_16_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_16_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_16_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
@@ -1757,9 +1853,15 @@
           { "text": "{{installation_image_17_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
+<<<<<<< HEAD
               { "image": "{{INSTALLATION_IMAGE_17_1}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_17_2}}", "width": 155 },
               { "image": "{{INSTALLATION_IMAGE_17_3}}", "width": 155 }
+=======
+              { "image": "{{INSTALLATION_IMAGE_17_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_17_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_17_3}}", "width": "*" }
+>>>>>>> 55cd2a16b6588a345e981c4660964ff5f9b20860
             ],
             "columnGap": 5
           }
