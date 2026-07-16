@@ -8,10 +8,7 @@
       },
       {
         "table": {
-          "widths": [
-            "50%",
-            "50%"
-          ],
+          "widths": ["50%", "50%"],
           "body": [
             [
               {
@@ -58,23 +55,12 @@
           ]
         },
         "layout": "lightHorizontalLines",
-        "margin": [
-          0,
-          0,
-          0,
-          15
-        ]
+        "margin": [0, 0, 0, 15]
       },
       {
         "table": {
           "headerRows": 1,
-          "widths": [
-            50,
-            "*",
-            100,
-            100,
-            80
-          ],
+          "widths": [50, "*", 100, 100, 80],
           "body": [
             [
               {
@@ -394,13 +380,7 @@
       {
         "table": {
           "headerRows": 1,
-          "widths": [
-            100,
-            50,
-            70,
-            80,
-            100
-          ],
+          "widths": [100, 50, 70, 80, 100],
           "body": [
             [
               {
@@ -560,11 +540,7 @@
       },
       {
         "table": {
-          "widths": [
-            100,
-            100,
-            50
-          ],
+          "widths": [100, 100, 50],
           "body": [
             [
               {
@@ -620,10 +596,7 @@
                 "text": "{{ charge_controller_count }}"
               }
             ],
-            [
-              "Charge Controller ratings:",
-              "{{ charge_controller_ratings }}"
-            ]
+            ["Charge Controller ratings:", "{{ charge_controller_ratings }}"]
           ]
         },
         "layout": ""
@@ -811,10 +784,7 @@
       },
       {
         "table": {
-          "widths": [
-            "70%",
-            "30%"
-          ],
+          "widths": ["70%", "30%"],
           "body": [
             [
               {
@@ -1195,102 +1165,30 @@
       {
         "table": {
           "body": [
-            [
-              "Array Junction Box String 1 – Input Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 2 - Input Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 3 - Input Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 4 - Input Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 5 - Input Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 1 - Output Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 2 - Output Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 3 - Output Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 4 - Output Lines",
-              "NA"
-            ],
-            [
-              "Array Junction Box String 5 - Output Lines",
-              "NA"
-            ],
-            [
-              "PCU/Inverter PV Input Line 1",
-              "NA"
-            ],
-            [
-              "PCU/Inverter PV Input Line 2",
-              "NA"
-            ],
-            [
-              "PCU/Inverter PV Input Line 3",
-              "NA"
-            ],
-            [
-              "PCU/Inverter PV Input Line 4",
-              "NA"
-            ],
-            [
-              "PCU/Inverter PV Input Line 5",
-              "NA"
-            ],
-            [
-              "PCU/Inverter PCU Output (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "ACDB-1 PCU (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "ACDB-1 ACDB-1 (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "Solar Check Meter ACDB-1 (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "Solar Check Meter Solar Check Meter (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "LT Panel Solar Check Meter (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "LT Panel Bi-Directional Meter (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "Bi-Directional Meter ACDB-2 (R-Y-B-N)",
-              "NA"
-            ],
-            [
-              "Bi-Directional Meter Grid (R-Y-B-N)",
-              "NA"
-            ]
+            ["Array Junction Box String 1 – Input Lines", "NA"],
+            ["Array Junction Box String 2 - Input Lines", "NA"],
+            ["Array Junction Box String 3 - Input Lines", "NA"],
+            ["Array Junction Box String 4 - Input Lines", "NA"],
+            ["Array Junction Box String 5 - Input Lines", "NA"],
+            ["Array Junction Box String 1 - Output Lines", "NA"],
+            ["Array Junction Box String 2 - Output Lines", "NA"],
+            ["Array Junction Box String 3 - Output Lines", "NA"],
+            ["Array Junction Box String 4 - Output Lines", "NA"],
+            ["Array Junction Box String 5 - Output Lines", "NA"],
+            ["PCU/Inverter PV Input Line 1", "NA"],
+            ["PCU/Inverter PV Input Line 2", "NA"],
+            ["PCU/Inverter PV Input Line 3", "NA"],
+            ["PCU/Inverter PV Input Line 4", "NA"],
+            ["PCU/Inverter PV Input Line 5", "NA"],
+            ["PCU/Inverter PCU Output (R-Y-B-N)", "NA"],
+            ["ACDB-1 PCU (R-Y-B-N)", "NA"],
+            ["ACDB-1 ACDB-1 (R-Y-B-N)", "NA"],
+            ["Solar Check Meter ACDB-1 (R-Y-B-N)", "NA"],
+            ["Solar Check Meter Solar Check Meter (R-Y-B-N)", "NA"],
+            ["LT Panel Solar Check Meter (R-Y-B-N)", "NA"],
+            ["LT Panel Bi-Directional Meter (R-Y-B-N)", "NA"],
+            ["Bi-Directional Meter ACDB-2 (R-Y-B-N)", "NA"],
+            ["Bi-Directional Meter Grid (R-Y-B-N)", "NA"]
           ]
         },
         "layout": ""
@@ -1363,51 +1261,19 @@
                 "style": "tableHeader"
               }
             ],
-            [
-              "DC side Panel - Panel:",
-              "{{ dc_panel_panel_res }}",
-              "Ω"
-            ],
-            [
-              "DC side Panel - MMS:",
-              "{{ dc_panel_mms_res }}",
-              "Ω"
-            ],
-            [
-              "DC side MMS - AJB:",
-              "{{ dc_mms_ajb_res }}",
-              "Ω"
-            ],
-            [
-              "DC side AJB - Busbar:",
-              "{{ dc_ajb_busbar_res }}",
-              "Ω"
-            ],
+            ["DC side Panel - Panel:", "{{ dc_panel_panel_res }}", "Ω"],
+            ["DC side Panel - MMS:", "{{ dc_panel_mms_res }}", "Ω"],
+            ["DC side MMS - AJB:", "{{ dc_mms_ajb_res }}", "Ω"],
+            ["DC side AJB - Busbar:", "{{ dc_ajb_busbar_res }}", "Ω"],
             [
               "DC side Busbar - Earth pit:",
               "{{ dc_busbar_earth_pit_res }}",
               "Ω"
             ],
-            [
-              "AC side Inverter - Busbar:",
-              "{{ ac_inverter_busbar_res }}",
-              "Ω"
-            ],
-            [
-              "AC side ACDB - Busbar:",
-              "{{ ac_acdb_busbar_res }}",
-              "Ω"
-            ],
-            [
-              "AC side LT Panel - Busbar:",
-              "{{ ac_ltpanel_busbar_res }}",
-              "Ω"
-            ],
-            [
-              "AC side Loads - Busbar:",
-              "{{ ac_loads_busbar_res }}",
-              "Ω"
-            ],
+            ["AC side Inverter - Busbar:", "{{ ac_inverter_busbar_res }}", "Ω"],
+            ["AC side ACDB - Busbar:", "{{ ac_acdb_busbar_res }}", "Ω"],
+            ["AC side LT Panel - Busbar:", "{{ ac_ltpanel_busbar_res }}", "Ω"],
+            ["AC side Loads - Busbar:", "{{ ac_loads_busbar_res }}", "Ω"],
             [
               "AC side CO Switch - Busbar:",
               "{{ ac_coswitch_busbar_res }}",
@@ -1541,14 +1407,68 @@
         "layout": ""
       },
       {
+        "text": "Asset Serial Number",
+        "style": "header",
+        "pageBreak": "before"
+      },
+      { "text": "Panel", "style": "tableHeader" },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [100, "*"],
+          "body": [
+            [
+              { "text": "Serial No.", "style": "tableHeader" },
+              { "text": "Asset Serial Number", "style": "tableHeader" }
+            ],
+            "{{#panel_serial_rows}}[\"{{srNo}}\",\"{{serialNumber}}\"]{{/panel_serial_rows}}"
+          ]
+        },
+        "layout": ""
+      },
+      { "text": "Battery", "style": "tableHeader" },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [100, "*"],
+          "body": [
+            [
+              { "text": "Serial No.", "style": "tableHeader" },
+              { "text": "Asset Serial Number", "style": "tableHeader" }
+            ],
+            "{{#battery_serial_rows}}[\"{{srNo}}\",\"{{serialNumber}}\"]{{/battery_serial_rows}}"
+          ]
+        },
+        "layout": ""
+      },
+      { "text": "Inverter", "style": "tableHeader" },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [100, "*"],
+          "body": [
+            [
+              { "text": "Serial No.", "style": "tableHeader" },
+              { "text": "Asset Serial Number", "style": "tableHeader" }
+            ],
+            "{{#inverter_serial_rows}}[\"{{srNo}}\",\"{{serialNumber}}\"]{{/inverter_serial_rows}}"
+          ]
+        },
+        "layout": ""
+      },
+      {
         "pageBreak": "before",
         "stack": [
-          { "text": "{{installation_image_1_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_1_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_1_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_1_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_1_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_1_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_1_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_1_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1557,12 +1477,35 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_2_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_2_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_2_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_2_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_2_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_2_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_2_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_2_3}}", "width": "*" }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          {
+            "text": "{{installation_image_3_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_3_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_3_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_3_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1571,12 +1514,35 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_3_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_4_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_3_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_3_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_3_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_4_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_4_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_4_3}}", "width": "*" }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          {
+            "text": "{{installation_image_5_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_5_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_5_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_5_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1585,12 +1551,35 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_4_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_6_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_4_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_4_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_4_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_6_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_6_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_6_3}}", "width": "*" }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          {
+            "text": "{{installation_image_7_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_7_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_7_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_7_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1599,12 +1588,35 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_5_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_8_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_5_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_5_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_5_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_8_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_8_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_8_3}}", "width": "*" }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          {
+            "text": "{{installation_image_9_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_9_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_9_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_9_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1613,12 +1625,35 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_6_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_10_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_6_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_6_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_6_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_10_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_10_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_10_3}}", "width": "*" }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          {
+            "text": "{{installation_image_11_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_11_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_11_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_11_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1627,12 +1662,35 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_7_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_12_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_7_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_7_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_7_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_12_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_12_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_12_3}}", "width": "*" }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          {
+            "text": "{{installation_image_13_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_13_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_13_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_13_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1641,12 +1699,35 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_8_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_14_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_8_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_8_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_8_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_14_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_14_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_14_3}}", "width": "*" }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          {
+            "text": "{{installation_image_15_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_15_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_15_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_15_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1655,12 +1736,16 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_9_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_16_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_9_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_9_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_9_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_16_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_16_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_16_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1668,111 +1753,18 @@
         "unbreakable": true
       },
       {
+        "pageBreak": "before",
         "stack": [
-          { "text": "{{installation_image_10_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "text": "{{installation_image_17_title}}",
+            "style": "tableHeader",
+            "margin": [0, 10, 0, 2]
+          },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_10_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_10_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_10_3}}", "width": 120 }
-            ],
-            "columnGap": 5
-          }
-        ],
-        "unbreakable": true
-      },
-      {
-        "stack": [
-          { "text": "{{installation_image_11_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
-          {
-            "columns": [
-              { "image": "{{INSTALLATION_IMAGE_11_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_11_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_11_3}}", "width": 120 }
-            ],
-            "columnGap": 5
-          }
-        ],
-        "unbreakable": true
-      },
-      {
-        "stack": [
-          { "text": "{{installation_image_12_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
-          {
-            "columns": [
-              { "image": "{{INSTALLATION_IMAGE_12_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_12_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_12_3}}", "width": 120 }
-            ],
-            "columnGap": 5
-          }
-        ],
-        "unbreakable": true
-      },
-      {
-        "stack": [
-          { "text": "{{installation_image_13_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
-          {
-            "columns": [
-              { "image": "{{INSTALLATION_IMAGE_13_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_13_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_13_3}}", "width": 120 }
-            ],
-            "columnGap": 5
-          }
-        ],
-        "unbreakable": true
-      },
-      {
-        "stack": [
-          { "text": "{{installation_image_14_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
-          {
-            "columns": [
-              { "image": "{{INSTALLATION_IMAGE_14_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_14_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_14_3}}", "width": 120 }
-            ],
-            "columnGap": 5
-          }
-        ],
-        "unbreakable": true
-      },
-      {
-        "stack": [
-          { "text": "{{installation_image_15_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
-          {
-            "columns": [
-              { "image": "{{INSTALLATION_IMAGE_15_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_15_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_15_3}}", "width": 120 }
-            ],
-            "columnGap": 5
-          }
-        ],
-        "unbreakable": true
-      },
-      {
-        "stack": [
-          { "text": "{{installation_image_16_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
-          {
-            "columns": [
-              { "image": "{{INSTALLATION_IMAGE_16_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_16_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_16_3}}", "width": 120 }
-            ],
-            "columnGap": 5
-          }
-        ],
-        "unbreakable": true
-      },
-      {
-        "stack": [
-          { "text": "{{installation_image_17_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
-          {
-            "columns": [
-              { "image": "{{INSTALLATION_IMAGE_17_1}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_17_2}}", "width": 120 },
-              { "image": "{{INSTALLATION_IMAGE_17_3}}", "width": 120 }
+              { "image": "{{INSTALLATION_IMAGE_17_1}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_17_2}}", "width": "*" },
+              { "image": "{{INSTALLATION_IMAGE_17_3}}", "width": "*" }
             ],
             "columnGap": 5
           }
@@ -1782,44 +1774,24 @@
     ],
     "styles": {
       "tl-head": {
-        "margin": [
-          -41,
-          -41,
-          -41,
-          0
-        ]
+        "margin": [-41, -41, -41, 0]
       },
       "pt-reciept-citizen-header": {
         "fontSize": 12,
         "bold": true,
-        "margin": [
-          0,
-          8,
-          0,
-          0
-        ],
+        "margin": [0, 8, 0, 0],
         "color": "#484848"
       },
       "header": {
         "fontSize": 18,
         "bold": true,
-        "margin": [
-          0,
-          10,
-          0,
-          5
-        ],
+        "margin": [0, 10, 0, 5],
         "text-align": "center"
       },
       "tableHeader": {
         "fontSize": 14,
         "bold": true,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       }
     }
   }
