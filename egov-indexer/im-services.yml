@@ -729,6 +729,8 @@ ServiceMaps:
               - inJsonPath: $.solarInstallationDate
                 outJsonPath: $.@timestamp
 
+              - inJsonPath: $.totalSolarEnergyGeneratedInKwh
+                outJsonPath: $.totalSolarEnergyGeneratedInKwh
 
 
     - topic: save-co2-monthly-projection-facility-indexer
@@ -823,3 +825,6 @@ ServiceMaps:
                 
               - inJsonPath: $.solarInstallationDate
                 outJsonPath: $.@timestamp
+
+              - inJsonPath: $.totalSolarEnergyGeneratedInKwh
+                outJsonPath: $.totalSolarEnergyGeneratedInKwh
