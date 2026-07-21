@@ -3803,10 +3803,12 @@
                   "type": "string",
                   "scema": [
                     {
-                      "key": "srNo"
+                      "value": "srNo",
+                      "variable": "srNo"
                     },
                     {
-                      "key": "serialNumber"
+                      "value": "serialNumber",
+                      "variable": "serialNumber"
                     }
                   ]
                 }
@@ -3821,10 +3823,12 @@
                   "type": "string",
                   "scema": [
                     {
-                      "key": "srNo"
+                      "value": "srNo",
+                      "variable": "srNo"
                     },
                     {
-                      "key": "serialNumber"
+                      "value": "serialNumber",
+                      "variable": "serialNumber"
                     }
                   ]
                 }
@@ -3839,10 +3843,12 @@
                   "type": "string",
                   "scema": [
                     {
-                      "key": "srNo"
+                      "value": "srNo",
+                      "variable": "srNo"
                     },
                     {
-                      "key": "serialNumber"
+                      "value": "serialNumber",
+                      "variable": "serialNumber"
                     }
                   ]
                 }
