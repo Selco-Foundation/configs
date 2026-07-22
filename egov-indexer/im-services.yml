@@ -648,20 +648,21 @@ ServiceMaps:
 
           customJsonMapping:
             indexMapping:
+              "Data": {}
               "boundary": {}
 
             fieldMapping:
               - inJsonPath: $.state
-                outJsonPath: $.state
+                outJsonPath: $.Data.state
 
               - inJsonPath: $.district
-                outJsonPath: $.district
+                outJsonPath: $.Data.district
 
               - inJsonPath: $.block
-                outJsonPath: $.block
+                outJsonPath: $.Data.block
 
               - inJsonPath: $.facilityId
-                outJsonPath: $.facilityId
+                outJsonPath: $.Data.facilityId
 
               - inJsonPath: $.hfrId
                 outJsonPath: $.hfrId
@@ -670,13 +671,16 @@ ServiceMaps:
                 outJsonPath: $.ninId
 
               - inJsonPath: $.facilityType
-                outJsonPath: $.facilityType
+                outJsonPath: $.Data.type
 
               - inJsonPath: $.facilityName
-                outJsonPath: $.facilityName
+                outJsonPath: $.Data.tenantId_localized
 
               - inJsonPath: $.projectName
-                outJsonPath: $.projectName
+                outJsonPath: $.Data.projectName
+
+              - inJsonPath: $.facilityCategory
+                outJsonPath: $.Data.facilityCategory
 
               - inJsonPath: $.tenantId
                 outJsonPath: $.tenantId
@@ -729,6 +733,14 @@ ServiceMaps:
               - inJsonPath: $.solarInstallationDate
                 outJsonPath: $.@timestamp
 
+              - inJsonPath: $.totalSolarEnergyGeneratedInKwh
+                outJsonPath: $.totalSolarEnergyGeneratedInKwh
+
+              - inJsonPath: $.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
+
+              - inJsonPath: $.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
 
 
     - topic: save-co2-monthly-projection-facility-indexer
@@ -743,20 +755,21 @@ ServiceMaps:
 
           customJsonMapping:
             indexMapping:
+              "Data": { }
               "boundary": { }
 
             fieldMapping:
               - inJsonPath: $.state
-                outJsonPath: $.state
+                outJsonPath: $.Data.state
 
               - inJsonPath: $.district
-                outJsonPath: $.district
+                outJsonPath: $.Data.district
 
               - inJsonPath: $.block
-                outJsonPath: $.block
+                outJsonPath: $.Data.block
 
               - inJsonPath: $.facilityId
-                outJsonPath: $.facilityId
+                outJsonPath: $.Data.facilityId
 
               - inJsonPath: $.hfrId
                 outJsonPath: $.hfrId
@@ -765,10 +778,10 @@ ServiceMaps:
                 outJsonPath: $.ninId
 
               - inJsonPath: $.facilityType
-                outJsonPath: $.facilityType
+                outJsonPath: $.Data.type
 
               - inJsonPath: $.facilityName
-                outJsonPath: $.facilityName
+                outJsonPath: $.Data.tenantId_localized
 
               - inJsonPath: $.tenantId
                 outJsonPath: $.tenantId
@@ -819,7 +832,19 @@ ServiceMaps:
                 outJsonPath: $.solarSystemCapacity
 
               - inJsonPath: $.projectName
-                outJsonPath: $.projectName
+                outJsonPath: $.Data.projectName
+
+              - inJsonPath: $.facilityCategory
+                outJsonPath: $.Data.facilityCategory
                 
               - inJsonPath: $.solarInstallationDate
                 outJsonPath: $.@timestamp
+
+              - inJsonPath: $.totalSolarEnergyGeneratedInKwh
+                outJsonPath: $.totalSolarEnergyGeneratedInKwh
+
+              - inJsonPath: $.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
+
+              - inJsonPath: $.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
