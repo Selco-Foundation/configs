@@ -735,6 +735,12 @@ ServiceMaps:
               - inJsonPath: $.totalSolarEnergyGeneratedInKwh
                 outJsonPath: $.totalSolarEnergyGeneratedInKwh
 
+              - inJsonPath: $.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
+
+              - inJsonPath: $.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
+
 
     - topic: save-co2-monthly-projection-facility-indexer
       configKey: INDEX
@@ -834,3 +840,9 @@ ServiceMaps:
 
               - inJsonPath: $.totalSolarEnergyGeneratedInKwh
                 outJsonPath: $.totalSolarEnergyGeneratedInKwh
+
+              - inJsonPath: $.mappedVendorName
+                outJsonPath: $.Data.mappedVendorName
+
+              - inJsonPath: $.mappedVendorUserName
+                outJsonPath: $.Data.mappedVendorUserName
