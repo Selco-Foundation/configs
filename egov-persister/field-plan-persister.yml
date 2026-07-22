@@ -170,6 +170,28 @@ serviceMaps:
             - jsonPath: $.*.id
 
     - version: 1.0
+      description: Updates editable fields (systemType, solarSolutionDesignType, totalSystemCapacity, customSolarSolutionDesignType, customTotalSystemCapacity) of an already-linked FieldPlan Facility
+      fromTopic: update-fieldplan-facility-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: FIELDPLAN
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      userUuidJsonPath: $.[0].auditDetails.lastModifiedBy
+      transactionCodeJsonPath: $.id
+      auditAttributeBasePath: $.*
+      queryMaps:
+        - query: UPDATE field_plan_facilities SET last_modified_by=?, lastmodifiedtime=?, additional_details=? WHERE id=?;
+          basePath: $.*
+          jsonMaps:
+            - jsonPath: $.*.auditDetails.lastModifiedBy
+            - jsonPath: $.*.auditDetails.lastModifiedTime
+            - jsonPath: $.*.additionalFields
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.*.id
+
+    - version: 1.0
       description: Saves a icc template
       fromTopic: save-icc-template
       isTransaction: true
