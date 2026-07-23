@@ -634,6 +634,8 @@ ServiceMaps:
                 outJsonPath: $.Data.mappedVendorUserName
               - inJsonPath: $.mappedVendorName
                 outJsonPath: $.Data.mappedVendorName
+              - inJsonPath: $.projectName
+                outJsonPath: $.Data.projectName
 
 
     - topic: save-co2-monthly-facility-indexer
