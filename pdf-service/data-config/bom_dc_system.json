@@ -1454,6 +1454,42 @@
                 }
               },
               {
+                "variable": "dc_off_vmp_rn_string1_mv",
+                "value": {
+                  "path": "$.dc_off_vmp_rn_string1_mv"
+                }
+              },
+              {
+                "variable": "dc_off_vmp_rn_string1_uom",
+                "value": {
+                  "path": "$.dc_off_vmp_rn_string1_uom"
+                }
+              },
+              {
+                "variable": "dc_off_vmp_rn_string2_mv",
+                "value": {
+                  "path": "$.dc_off_vmp_rn_string2_mv"
+                }
+              },
+              {
+                "variable": "dc_off_vmp_rn_string2_uom",
+                "value": {
+                  "path": "$.dc_off_vmp_rn_string2_uom"
+                }
+              },
+              {
+                "variable": "dc_off_vmp_rn_array_mv",
+                "value": {
+                  "path": "$.dc_off_vmp_rn_array_mv"
+                }
+              },
+              {
+                "variable": "dc_off_vmp_rn_array_uom",
+                "value": {
+                  "path": "$.dc_off_vmp_rn_array_uom"
+                }
+              },
+              {
                 "variable": "dc_on_vmp_rn_string1_mv",
                 "value": {
                   "path": "$.dc_on_vmp_rn_string1_mv"
@@ -1547,6 +1583,24 @@
                 "variable": "bb_current_uom",
                 "value": {
                   "path": "$.bb_current_uom"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_1",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_1"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_string_2",
+                "value": {
+                  "path": "$.ajb_on_pmp_string_2"
+                }
+              },
+              {
+                "variable": "ajb_on_pmp_array",
+                "value": {
+                  "path": "$.ajb_on_pmp_array"
                 }
               },
               {
