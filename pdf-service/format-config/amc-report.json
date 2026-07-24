@@ -9,6 +9,33 @@
           "widths": ["40%", "60%"],
           "body": [
             [
+              {
+                "text": "Health Facility Name & Address",
+                "style": "tableHeader"
+              },
+              { "text": "Project Details", "style": "tableHeader" }
+            ],
+            [
+              { "text": "Name: {{health_facility_name}}" },
+              { "text": "Project Number: {{project_number}}" }
+            ],
+            [
+              { "text": "Address: {{health_facility_address}}" },
+              { "text": "Date: {{project_date}}" }
+            ],
+            [
+              { "text": "Vendor Name: {{vendor_name}}" },
+              { "text": "State: {{project_state}}" }
+            ],
+            [
+              { "text": "PO/WO Number: {{po_wo_number}}" },
+              { "text": "Block: {{project_block}}" }
+            ],
+            [
+              { "text": "Health Facility Type: {{health_facility_type}}" },
+              { "text": "" }
+            ],
+            [
               { "text": "Service Person Name:", "style": "label" },
               { "text": "{{servicePersonName}}", "style": "value" }
             ],
@@ -21,7 +48,10 @@
         "layout": ""
       },
 
-      { "text": "Checklist during scheduled service visit", "style": "sectionHeader" },
+      {
+        "text": "Checklist during scheduled service visit",
+        "style": "sectionHeader"
+      },
 
       {
         "table": {
@@ -72,7 +102,11 @@
 
             [
               { "text": "2", "bold": true, "fillColor": "#FCE9A8" },
-              { "text": "Inverter / Charge Controller", "bold": true, "fillColor": "#FCE9A8" },
+              {
+                "text": "Inverter / Charge Controller",
+                "bold": true,
+                "fillColor": "#FCE9A8"
+              },
               { "text": "", "fillColor": "#FCE9A8" }
             ],
 
@@ -164,7 +198,11 @@
 
             [
               { "text": "4", "bold": true, "fillColor": "#FCE9A8" },
-              { "text": "Earthing and Surge Protection", "bold": true, "fillColor": "#FCE9A8" },
+              {
+                "text": "Earthing and Surge Protection",
+                "bold": true,
+                "fillColor": "#FCE9A8"
+              },
               { "text": "", "fillColor": "#FCE9A8" }
             ],
 
@@ -264,9 +302,10 @@
         "layout": ""
       },
 
-
-
-      { "text": "Performance and Preventive Maintenance", "style": "sectionHeader" },
+      {
+        "text": "Performance and Preventive Maintenance",
+        "style": "sectionHeader"
+      },
 
       {
         "table": {
@@ -282,7 +321,10 @@
               { "text": "2" },
               {
                 "stack": [
-                  { "text": "Inverter or Charge Controller display", "bold": true },
+                  {
+                    "text": "Inverter or Charge Controller display",
+                    "bold": true
+                  },
                   { "text": "(Reading after measurement)" }
                 ]
               },
@@ -307,23 +349,33 @@
         "layout": ""
       },
 
-
       { "text": "Faults & Corrective Actions", "style": "sectionHeader" },
 
       {
         "table": {
           "widths": [30, "*", 120],
           "body": [
-            ["1", "Any faults in the system observed during the visit?", "{{faults_observed}}"],
-            ["2", "If yes, was an immediate fix implemented?", "{{immediate_fix_done}}"],
+            [
+              "1",
+              "Any faults in the system observed during the visit?",
+              "{{faults_observed}}"
+            ],
+            [
+              "2",
+              "If yes, was an immediate fix implemented?",
+              "{{immediate_fix_done}}"
+            ],
             ["3", "If yes, were any parts repaired?", "{{parts_repaired}}"],
-            ["4", "If yes, did you notify health staff or CRM to raise a ticket?", "{{informed_CRM}}"]
+            [
+              "4",
+              "If yes, did you notify health staff or CRM to raise a ticket?",
+              "{{informed_CRM}}"
+            ]
           ]
         },
         "layout": "",
         "margin": [0, 6, 0, 6]
       },
-
 
       { "text": "", "style": "sectionHeader", "margin": [0, 6, 0, 4] },
       {
@@ -359,9 +411,10 @@
         "layout": ""
       },
 
-
-
-      { "text": "Images to be captured during the scheduled maintenance visit:", "style": "sectionHeader" },
+      {
+        "text": "Images to be captured during the scheduled maintenance visit:",
+        "style": "sectionHeader"
+      },
 
       {
         "table": {
@@ -375,7 +428,9 @@
               { "text": "Tick if taken", "style": "tableHeader" }
             ],
             [
-              "1", "Please take a selfie in front of the name board of the health center", "1",
+              "1",
+              "Please take a selfie in front of the name board of the health center",
+              "1",
               {
                 "svg": "{{#img1_taken}}<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' width='12' height='12'><path d='M2 8 L6 12 L12 2' stroke='#2e7d32' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>{{/img1_taken}}{{^img1_taken}}<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' width='12' height='12'><path d='M3 3 L11 11 M11 3 L3 11' stroke='#d32f2f' stroke-width='3' stroke-linecap='round'/></svg>{{/img1_taken}}",
                 "width": 12,
@@ -386,12 +441,14 @@
         },
         "layout": ""
       }
-
-
-
     ],
     "styles": {
-      "title": { "fontSize": 16, "bold": true, "alignment": "center", "margin": [0, 0, 0, 10] },
+      "title": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 10]
+      },
       "sectionHeader": { "fontSize": 12, "bold": true, "margin": [0, 8, 0, 4] },
       "label": { "fontSize": 10, "bold": true },
       "value": { "fontSize": 10 },

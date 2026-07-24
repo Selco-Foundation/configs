@@ -13,6 +13,16 @@
         "mappings": [
           {
             "direct": [
+              { "variable": "health_facility_name",      "value": { "path": "$.health_facility_name" } },
+              { "variable": "health_facility_address",   "value": { "path": "$.health_facility_address" } },
+              { "variable": "health_facility_type",      "value": { "path": "$.health_facility_type" } },
+              { "variable": "vendor_name",               "value": { "path": "$.vendor_name" } },
+              { "variable": "project_number",            "value": { "path": "$.project_number" } },
+              { "variable": "project_date",               "value": { "path": "$.project_date" } },
+              { "variable": "project_state",             "value": { "path": "$.project_state" } },
+              { "variable": "project_block",             "value": { "path": "$.project_block" } },
+              { "variable": "po_wo_number",               "value": { "path": "$.po_wo_number" } },
+
               { "variable": "servicePersonName",        "value": { "path": "$.service_person_name" } },
               { "variable": "servicePersonContact",     "value": { "path": "$.service_person_contact" } },
 

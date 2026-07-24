@@ -1640,6 +1640,12 @@
                 }
               },
               {
+                "variable": "power_cable_1_red_make",
+                "value": {
+                  "path": "$.power_cable_1_red_make"
+                }
+              },
+              {
                 "variable": "power_cable_1_red_capacity",
                 "value": {
                   "path": "$.power_cable_1_red_capacity"
