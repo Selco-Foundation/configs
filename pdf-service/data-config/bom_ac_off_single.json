@@ -662,6 +662,24 @@
                 }
               },
               {
+                "variable": "load_side_mcb_conduit_box_make",
+                "value": {
+                  "path": "$.load_side_mcb_conduit_box_make"
+                }
+              },
+              {
+                "variable": "load_side_mcb_conduit_box_capacity",
+                "value": {
+                  "path": "$.load_side_mcb_conduit_box_capacity"
+                }
+              },
+              {
+                "variable": "load_side_mcb_conduit_box_qty",
+                "value": {
+                  "path": "$.load_side_mcb_conduit_box_qty"
+                }
+              },
+              {
                 "variable": "marking_ac_earthing_make",
                 "value": {
                   "path": "$.marking_ac_earthing_make"

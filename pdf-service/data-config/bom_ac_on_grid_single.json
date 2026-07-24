@@ -116,21 +116,21 @@
                 }
               },
               {
-                "variable": "inverter_make",
+                "variable": "solar_on_grid_pcu_inverter_make",
                 "value": {
-                  "path": "$.inverter_make"
+                  "path": "$.solar_on_grid_pcu_inverter_make"
                 }
               },
               {
-                "variable": "inverter_capacity",
+                "variable": "solar_on_grid_pcu_inverter_capacity",
                 "value": {
-                  "path": "$.inverter_capacity"
+                  "path": "$.solar_on_grid_pcu_inverter_capacity"
                 }
               },
               {
-                "variable": "inverter_qty",
+                "variable": "solar_on_grid_pcu_inverter_qty",
                 "value": {
-                  "path": "$.inverter_qty"
+                  "path": "$.solar_on_grid_pcu_inverter_qty"
                 }
               },
               {
@@ -170,93 +170,93 @@
                 }
               },
               {
-                "variable": "pcu_acdb_cable1_make",
+                "variable": "pcu_inverter_acdb_copper_cable_1_make",
                 "value": {
-                  "path": "$.pcu_acdb_cable1_make"
+                  "path": "$.pcu_inverter_acdb_copper_cable_1_make"
                 }
               },
               {
-                "variable": "pcu_acdb_cable1_capacity",
+                "variable": "pcu_inverter_acdb_copper_cable_1_capacity",
                 "value": {
-                  "path": "$.pcu_acdb_cable1_capacity"
+                  "path": "$.pcu_inverter_acdb_copper_cable_1_capacity"
                 }
               },
               {
-                "variable": "pcu_acdb_cable1_qty",
+                "variable": "pcu_inverter_acdb_copper_cable_1_qty",
                 "value": {
-                  "path": "$.pcu_acdb_cable1_qty"
+                  "path": "$.pcu_inverter_acdb_copper_cable_1_qty"
                 }
               },
               {
-                "variable": "acdb_meter_ltpanel_cable2_make",
+                "variable": "acdb_solar_meter_lt_panel_net_meter_grid_copper_cable_2_make",
                 "value": {
-                  "path": "$.acdb_meter_ltpanel_cable2_make"
+                  "path": "$.acdb_solar_meter_lt_panel_net_meter_grid_copper_cable_2_make"
                 }
               },
               {
-                "variable": "acdb_meter_ltpanel_cable2_capacity",
+                "variable": "acdb_solar_meter_lt_panel_net_meter_grid_copper_cable_2_capacity",
                 "value": {
-                  "path": "$.acdb_meter_ltpanel_cable2_capacity"
+                  "path": "$.acdb_solar_meter_lt_panel_net_meter_grid_copper_cable_2_capacity"
                 }
               },
               {
-                "variable": "acdb_meter_ltpanel_cable2_qty",
+                "variable": "acdb_solar_meter_lt_panel_net_meter_grid_copper_cable_2_qty",
                 "value": {
-                  "path": "$.acdb_meter_ltpanel_cable2_qty"
+                  "path": "$.acdb_solar_meter_lt_panel_net_meter_grid_copper_cable_2_qty"
                 }
               },
               {
-                "variable": "dc_earthing_cable1_make",
+                "variable": "dc_earthing_cable_1_make",
                 "value": {
-                  "path": "$.dc_earthing_cable1_make"
+                  "path": "$.dc_earthing_cable_1_make"
                 }
               },
               {
-                "variable": "dc_earthing_cable1_capacity",
+                "variable": "dc_earthing_cable_1_capacity",
                 "value": {
-                  "path": "$.dc_earthing_cable1_capacity"
+                  "path": "$.dc_earthing_cable_1_capacity"
                 }
               },
               {
-                "variable": "dc_earthing_cable1_qty",
+                "variable": "dc_earthing_cable_1_qty",
                 "value": {
-                  "path": "$.dc_earthing_cable1_qty"
+                  "path": "$.dc_earthing_cable_1_qty"
                 }
               },
               {
-                "variable": "dc_earthing_cable2_make",
+                "variable": "dc_earthing_cable_2_make",
                 "value": {
-                  "path": "$.dc_earthing_cable2_make"
+                  "path": "$.dc_earthing_cable_2_make"
                 }
               },
               {
-                "variable": "dc_earthing_cable2_capacity",
+                "variable": "dc_earthing_cable_2_capacity",
                 "value": {
-                  "path": "$.dc_earthing_cable2_capacity"
+                  "path": "$.dc_earthing_cable_2_capacity"
                 }
               },
               {
-                "variable": "dc_earthing_cable2_qty",
+                "variable": "dc_earthing_cable_2_qty",
                 "value": {
-                  "path": "$.dc_earthing_cable2_qty"
+                  "path": "$.dc_earthing_cable_2_qty"
                 }
               },
               {
-                "variable": "lightning_down_conductor_make",
+                "variable": "earthing_down_conductor_lightning_arrestor_make",
                 "value": {
-                  "path": "$.lightning_down_conductor_make"
+                  "path": "$.earthing_down_conductor_lightning_arrestor_make"
                 }
               },
               {
-                "variable": "lightning_down_conductor_capacity",
+                "variable": "earthing_down_conductor_lightning_arrestor_capacity",
                 "value": {
-                  "path": "$.lightning_down_conductor_capacity"
+                  "path": "$.earthing_down_conductor_lightning_arrestor_capacity"
                 }
               },
               {
-                "variable": "lightning_down_conductor_qty",
+                "variable": "earthing_down_conductor_lightning_arrestor_qty",
                 "value": {
-                  "path": "$.lightning_down_conductor_qty"
+                  "path": "$.earthing_down_conductor_lightning_arrestor_qty"
                 }
               },
               {
@@ -296,21 +296,21 @@
                 }
               },
               {
-                "variable": "acdb_relay_spd_mcb_meter_make",
+                "variable": "acdb_relay_spd_mcb_solar_meter_make",
                 "value": {
-                  "path": "$.acdb_relay_spd_mcb_meter_make"
+                  "path": "$.acdb_relay_spd_mcb_solar_meter_make"
                 }
               },
               {
-                "variable": "acdb_relay_spd_mcb_meter_capacity",
+                "variable": "acdb_relay_spd_mcb_solar_meter_capacity",
                 "value": {
-                  "path": "$.acdb_relay_spd_mcb_meter_capacity"
+                  "path": "$.acdb_relay_spd_mcb_solar_meter_capacity"
                 }
               },
               {
-                "variable": "acdb_relay_spd_mcb_meter_qty",
+                "variable": "acdb_relay_spd_mcb_solar_meter_qty",
                 "value": {
-                  "path": "$.acdb_relay_spd_mcb_meter_qty"
+                  "path": "$.acdb_relay_spd_mcb_solar_meter_qty"
                 }
               },
               {

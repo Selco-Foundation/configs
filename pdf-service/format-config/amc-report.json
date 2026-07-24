@@ -6,34 +6,19 @@
 
       {
         "table": {
-          "widths": ["40%", "60%"],
+          "widths": ["50%", "50%"],
           "body": [
             [
-              {
-                "text": "Health Facility Name & Address",
-                "style": "tableHeader"
-              },
-              { "text": "Project Details", "style": "tableHeader" }
-            ],
-            [
               { "text": "Name: {{health_facility_name}}" },
-              { "text": "Project Number: {{project_number}}" }
-            ],
-            [
-              { "text": "Address: {{health_facility_address}}" },
-              { "text": "Date: {{project_date}}" }
+              { "text": "Address: {{health_facility_address}}" }
             ],
             [
               { "text": "Vendor Name: {{vendor_name}}" },
               { "text": "State: {{project_state}}" }
             ],
             [
-              { "text": "PO/WO Number: {{po_wo_number}}" },
-              { "text": "Block: {{project_block}}" }
-            ],
-            [
               { "text": "Health Facility Type: {{health_facility_type}}" },
-              { "text": "" }
+              { "text": "Block: {{project_block}}" }
             ],
             [
               { "text": "Service Person Name:", "style": "label" },
@@ -42,6 +27,10 @@
             [
               { "text": "Service Person Contact no:", "style": "label" },
               { "text": "{{servicePersonContact}}", "style": "value" }
+            ],
+            [
+              { "text": "AMC Number:", "style": "label" },
+              { "text": "{{amc_number}}", "style": "value" }
             ]
           ]
         },
