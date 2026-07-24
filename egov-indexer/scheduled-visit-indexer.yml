@@ -45,6 +45,10 @@ ServiceMaps:
                 outJsonPath: $.Data.facilityName
               - inJsonPath: $.facility
                 outJsonPath: $.Data.facility
+              - inJsonPath: $.facility.facility_type
+                outJsonPath: $.Data.type
+              - inJsonPath: $.facility.facility_category
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.visitNumber
                 outJsonPath: $.Data.visitNumber
               - inJsonPath: $.scheduledDate
@@ -117,6 +121,10 @@ ServiceMaps:
                 outJsonPath: $.Data.facilityName
               - inJsonPath: $.facility
                 outJsonPath: $.Data.facility
+              - inJsonPath: $.facility.facility_type
+                outJsonPath: $.Data.type
+              - inJsonPath: $.facility.facility_category
+                outJsonPath: $.Data.facilityCategory
               - inJsonPath: $.visitNumber
                 outJsonPath: $.Data.visitNumber
               - inJsonPath: $.scheduledDate
