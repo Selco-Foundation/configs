@@ -6,7 +6,7 @@
 
       {
         "table": {
-          "widths": ["40%", "60%"],
+          "widths": ["50%", "50%"],
           "body": [
             [
               { "text": "Name: {{health_facility_name}}" },
@@ -27,6 +27,10 @@
             [
               { "text": "Service Person Contact no:", "style": "label" },
               { "text": "{{servicePersonContact}}", "style": "value" }
+            ],
+            [
+              { "text": "AMC Number:", "style": "label" },
+              { "text": "{{amc_number}}", "style": "value" }
             ]
           ]
         },
