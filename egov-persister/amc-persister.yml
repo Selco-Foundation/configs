@@ -136,7 +136,7 @@ serviceMaps:
 
             - jsonPath: $.AmcConfigurations.*.id
 
-        - query: INSERT INTO amc_configuration_assignments (id, tenant_id, amc_configuration_id, assigned_user, role, additional_details, poc_number, created_by, created_time, last_modified_by, last_modified_time) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET assigned_user=?, role=?, additional_details=?, poc_number=?, lastModifiedBy=?, lastModifiedTime=?;
+        - query: INSERT INTO amc_configuration_assignments (id, tenant_id, amc_configuration_id, assigned_user, role, additional_details, poc_number, created_by, created_time, last_modified_by, last_modified_time) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET assigned_user=?, role=?, additional_details=?, poc_number=?, last_modified_by=?, last_modified_time=?;
           basePath: $.AmcConfigurations.*.assignments.*
           jsonMaps:
             - jsonPath: $.AmcConfigurations.*.assignments.*.id
