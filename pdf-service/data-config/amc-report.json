@@ -15,6 +15,10 @@
             "direct": [
               { "variable": "amc_number", "value": { "path": "$.amc_number" } },
               {
+                "variable": "location_captured",
+                "value": { "path": "$.location_captured" }
+              },
+              {
                 "variable": "actual_scheduled_amc_date",
                 "value": { "path": "$.actual_scheduled_amc_date" }
               },
@@ -217,9 +221,56 @@
                 "value": { "path": "$.health_staff_remarks" }
               },
 
-              { "variable": "img1_taken", "value": { "path": "$.img1_taken" } }
+              { "variable": "img1_taken", "value": { "path": "$.img1_taken" } },
+
+              {
+                "variable": "installation_image_1_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-1')].documentName"
+                }
+              }
             ],
-            "externalApi": [],
+            "externalAPI": [
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-1')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_1_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-1')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_1_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-1')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_1_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              }
+            ],
             "derived": [],
             "qrcode": [
               {

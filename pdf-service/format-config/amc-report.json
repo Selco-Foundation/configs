@@ -14,23 +14,15 @@
             ],
             [
               { "text": "Vendor Name: {{vendor_name}}" },
-              { "text": "State: {{project_state}}" }
+              { "text": "NIN ID/HFR ID: {{nin_id}}" }
             ],
             [
               { "text": "Health Facility Type: {{health_facility_type}}" },
+              { "text": "State: {{project_state}}" }
+            ],
+            [
+              { "text": "District: {{project_district}}" },
               { "text": "Block: {{project_block}}" }
-            ],
-            [
-              { "text": "NIN ID/HFR ID: {{nin_id}}" },
-              { "text": "District: {{project_district}}" }
-            ],
-            [
-              { "text": "Service Person Name:", "style": "label" },
-              { "text": "{{servicePersonName}}", "style": "value" }
-            ],
-            [
-              { "text": "Service Person Contact no:", "style": "label" },
-              { "text": "{{servicePersonContact}}", "style": "value" }
             ],
             [
               { "text": "AMC Number:", "style": "label" },
@@ -43,6 +35,21 @@
               {
                 "text": "Actual AMC Submission Date: {{actual_submission_amc_date}}"
               }
+            ],
+            [
+              { "text": "Service Person Name:", "style": "label" },
+              { "text": "{{servicePersonName}}", "style": "value" }
+            ],
+            [
+              { "text": "Service Person Contact no:", "style": "label" },
+              { "text": "{{servicePersonContact}}", "style": "value" }
+            ],
+            [
+              {
+                "text": "Health facility location captured:",
+                "style": "label"
+              },
+              { "text": "{{location_captured}}", "style": "value" }
             ]
           ]
         },
@@ -441,6 +448,21 @@
           ]
         },
         "layout": ""
+      },
+      {
+        "pageBreak": "before",
+        "stack": [
+          { "text": "{{installation_image_1_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_1_1}}", "width": 155, "fit": [155, 180] },
+              { "image": "{{INSTALLATION_IMAGE_1_2}}", "width": 155, "fit": [155, 180] },
+              { "image": "{{INSTALLATION_IMAGE_1_3}}", "width": 155, "fit": [155, 180] }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
       }
     ],
     "styles": {
