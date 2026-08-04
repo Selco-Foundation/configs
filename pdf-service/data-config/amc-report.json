@@ -15,6 +15,14 @@
             "direct": [
               { "variable": "amc_number", "value": { "path": "$.amc_number" } },
               {
+                "variable": "actual_scheduled_amc_date",
+                "value": { "path": "$.actual_scheduled_amc_date" }
+              },
+              {
+                "variable": "actual_submission_amc_date",
+                "value": { "path": "$.actual_submission_amc_date" }
+              },
+              {
                 "variable": "health_facility_name",
                 "value": { "path": "$.health_facility_name" }
               },
@@ -45,6 +53,14 @@
               {
                 "variable": "project_block",
                 "value": { "path": "$.project_block" }
+              },
+              {
+                "variable": "project_district",
+                "value": { "path": "$.project_district" }
+              },
+              {
+                "variable": "nin_id",
+                "value": { "path": "$.nin_id" }
               },
               {
                 "variable": "po_wo_number",

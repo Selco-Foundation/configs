@@ -21,6 +21,10 @@
               { "text": "Block: {{project_block}}" }
             ],
             [
+              { "text": "NIN ID/HFR ID: {{nin_id}}" },
+              { "text": "District: {{project_district}}" }
+            ],
+            [
               { "text": "Service Person Name:", "style": "label" },
               { "text": "{{servicePersonName}}", "style": "value" }
             ],
@@ -31,6 +35,14 @@
             [
               { "text": "AMC Number:", "style": "label" },
               { "text": "{{amc_number}}", "style": "value" }
+            ],
+            [
+              {
+                "text": "Actual Scheduled AMC Date: {{actual_scheduled_amc_date}}"
+              },
+              {
+                "text": "Actual AMC Submission Date: {{actual_submission_amc_date}}"
+              }
             ]
           ]
         },
