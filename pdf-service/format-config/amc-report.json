@@ -6,34 +6,35 @@
 
       {
         "table": {
-          "widths": ["40%", "60%"],
+          "widths": ["50%", "50%"],
           "body": [
             [
-              {
-                "text": "Health Facility Name & Address",
-                "style": "tableHeader"
-              },
-              { "text": "Project Details", "style": "tableHeader" }
-            ],
-            [
               { "text": "Name: {{health_facility_name}}" },
-              { "text": "Project Number: {{project_number}}" }
-            ],
-            [
-              { "text": "Address: {{health_facility_address}}" },
-              { "text": "Date: {{project_date}}" }
+              { "text": "Address: {{health_facility_address}}" }
             ],
             [
               { "text": "Vendor Name: {{vendor_name}}" },
-              { "text": "State: {{project_state}}" }
-            ],
-            [
-              { "text": "PO/WO Number: {{po_wo_number}}" },
-              { "text": "Block: {{project_block}}" }
+              { "text": "NIN ID/HFR ID: {{nin_id}}" }
             ],
             [
               { "text": "Health Facility Type: {{health_facility_type}}" },
-              { "text": "" }
+              { "text": "State: {{project_state}}" }
+            ],
+            [
+              { "text": "District: {{project_district}}" },
+              { "text": "Block: {{project_block}}" }
+            ],
+            [
+              { "text": "AMC Number:", "style": "label" },
+              { "text": "{{amc_number}}", "style": "value" }
+            ],
+            [
+              {
+                "text": "Actual Scheduled AMC Date: {{actual_scheduled_amc_date}}"
+              },
+              {
+                "text": "Actual AMC Submission Date: {{actual_submission_amc_date}}"
+              }
             ],
             [
               { "text": "Service Person Name:", "style": "label" },
@@ -42,6 +43,13 @@
             [
               { "text": "Service Person Contact no:", "style": "label" },
               { "text": "{{servicePersonContact}}", "style": "value" }
+            ],
+            [
+              {
+                "text": "Health facility location captured:",
+                "style": "label"
+              },
+              { "text": "{{location_captured}}", "style": "value" }
             ]
           ]
         },
@@ -440,6 +448,20 @@
           ]
         },
         "layout": ""
+      },
+      {
+        "stack": [
+          { "text": "{{installation_image_1_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
+          {
+            "columns": [
+              { "image": "{{INSTALLATION_IMAGE_1_1}}", "width": 155, "fit": [155, 180] },
+              { "image": "{{INSTALLATION_IMAGE_1_2}}", "width": 155, "fit": [155, 180] },
+              { "image": "{{INSTALLATION_IMAGE_1_3}}", "width": 155, "fit": [155, 180] }
+            ],
+            "columnGap": 5
+          }
+        ],
+        "unbreakable": true
       }
     ],
     "styles": {
