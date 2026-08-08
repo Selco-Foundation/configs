@@ -451,12 +451,23 @@
       },
       {
         "stack": [
-          { "text": "{{installation_image_1_title}}", "style": "tableHeader", "margin": [0, 10, 0, 2] },
           {
             "columns": [
-              { "image": "{{INSTALLATION_IMAGE_1_1}}", "width": 155, "fit": [155, 180] },
-              { "image": "{{INSTALLATION_IMAGE_1_2}}", "width": 155, "fit": [155, 180] },
-              { "image": "{{INSTALLATION_IMAGE_1_3}}", "width": 155, "fit": [155, 180] }
+              {
+                "image": "{{INSTALLATION_IMAGE_1_1}}",
+                "width": 155,
+                "fit": [155, 180]
+              },
+              {
+                "image": "{{INSTALLATION_IMAGE_1_2}}",
+                "width": 155,
+                "fit": [155, 180]
+              },
+              {
+                "image": "{{INSTALLATION_IMAGE_1_3}}",
+                "width": 155,
+                "fit": [155, 180]
+              }
             ],
             "columnGap": 5
           }
