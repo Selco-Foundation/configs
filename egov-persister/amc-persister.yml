@@ -418,7 +418,7 @@ serviceMaps:
             - jsonPath: $.transactions.*.auditDetails.createdTime
             - jsonPath: $.transactions.*.auditDetails.lastModifiedTime
 
-        - version: 1.0
+    - version: 1.0
       description: Soft-deletes scheduled visits by clearing is_active. Used when a configuration's
         durationMonths or visitFrequencyMonths changes and the not-yet-due visits have to be
         regenerated on the new cadence. Nothing is physically removed, so what had been planned - and
@@ -444,7 +444,7 @@ serviceMaps:
             - jsonPath: $.ScheduledVisit.*.id
 
 
-        - version: 1.0
+    - version: 1.0
       name: AMC Configuration
       description: Soft-deletes an amc configuration by clearing is_active. Nothing is physically
         removed - scheduled visits, asset links and assignments all stay on disk, so an APPROVED visit
@@ -462,9 +462,11 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: UPDATE amc_configuration SET is_active = false, last_modified_by = ?, last_modified_time = ? WHERE id = ?;
+        - query: UPDATE amc_configuration SET is_active = false, status = ?, last_modified_by = ?, last_modified_time = ? WHERE id = ?;
           basePath: $.AmcConfigurations.*
           jsonMaps:
+            - jsonPath: $.AmcConfigurations.*.status
+
             - jsonPath: $.AmcConfigurations.*.auditDetails.lastModifiedBy
 
             - jsonPath: $.AmcConfigurations.*.auditDetails.lastModifiedTime
