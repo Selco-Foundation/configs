@@ -77,6 +77,11 @@ ServiceMaps:
                 outJsonPath: $.Data.assignments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.additionalDetails
+              # Running count of all tickets raised for this visit's facility. Maintained by
+              # amc-scheduler-service's facility-ticket-count consumer, which stamps it onto the
+              # facility's latest non-DRAFT visit only - other visits carry no totalTickets.
+              - inJsonPath: $.additionalDetails.totalTickets
+                outJsonPath: $.Data.totalTickets
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
               - inJsonPath: $.@timestamp
@@ -153,6 +158,11 @@ ServiceMaps:
                 outJsonPath: $.Data.assignments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.additionalDetails
+              # Running count of all tickets raised for this visit's facility. Maintained by
+              # amc-scheduler-service's facility-ticket-count consumer, which stamps it onto the
+              # facility's latest non-DRAFT visit only - other visits carry no totalTickets.
+              - inJsonPath: $.additionalDetails.totalTickets
+                outJsonPath: $.Data.totalTickets
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
               - inJsonPath: $.@timestamp
