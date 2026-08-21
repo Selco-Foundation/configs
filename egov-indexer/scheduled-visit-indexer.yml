@@ -84,7 +84,7 @@ ServiceMaps:
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
               - inJsonPath: $.@timestamp
-                outJsonPath: $.Data.@timestamp
+                outJsonPath: $.@timestamp
 
     - topic: update-scheduled-visit-index
       configKey: INDEX
@@ -164,4 +164,4 @@ ServiceMaps:
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
               - inJsonPath: $.@timestamp
-                outJsonPath: $.Data.@timestamp
+                outJsonPath: $.@timestamp
