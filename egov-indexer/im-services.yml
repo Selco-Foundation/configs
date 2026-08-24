@@ -636,6 +636,62 @@ ServiceMaps:
                 outJsonPath: $.Data.mappedVendorName
               - inJsonPath: $.projectName
                 outJsonPath: $.Data.projectName
+              - inJsonPath: $.solutionDesignType
+                outJsonPath: $.Data.solutionDesignType
+              - inJsonPath: $.amcInstallationDate
+                outJsonPath: $.Data.amcInstallationDate
+              - inJsonPath: $.amcApplicable
+                outJsonPath: $.Data.amcApplicable
+              - inJsonPath: $.amcApplicableYears
+                outJsonPath: $.Data.amcApplicableYears
+              - inJsonPath: $.amcFrequencyMonths
+                outJsonPath: $.Data.amcFrequencyMonths
+              - inJsonPath: $.amcValidTill
+                outJsonPath: $.Data.amcValidTill
+              - inJsonPath: $.amcMappedVendorName
+                outJsonPath: $.Data.amcMappedVendorName
+              - inJsonPath: $.amcMappedVendorUserName
+                outJsonPath: $.Data.amcMappedVendorUserName
+              - inJsonPath: $.amcDueDate1
+                outJsonPath: $.Data.amcDueDate1
+              - inJsonPath: $.amcDueDate2
+                outJsonPath: $.Data.amcDueDate2
+              - inJsonPath: $.amcDueDate3
+                outJsonPath: $.Data.amcDueDate3
+              - inJsonPath: $.amcDueDate4
+                outJsonPath: $.Data.amcDueDate4
+              - inJsonPath: $.amcDueDate5
+                outJsonPath: $.Data.amcDueDate5
+              - inJsonPath: $.amcDueDate6
+                outJsonPath: $.Data.amcDueDate6
+              - inJsonPath: $.amcDueDate7
+                outJsonPath: $.Data.amcDueDate7
+              - inJsonPath: $.amcDueDate8
+                outJsonPath: $.Data.amcDueDate8
+              - inJsonPath: $.amcDueDate9
+                outJsonPath: $.Data.amcDueDate9
+              - inJsonPath: $.amcDueDate10
+                outJsonPath: $.Data.amcDueDate10
+              - inJsonPath: $.amcVisitDate1
+                outJsonPath: $.Data.amcVisitDate1
+              - inJsonPath: $.amcVisitDate2
+                outJsonPath: $.Data.amcVisitDate2
+              - inJsonPath: $.amcVisitDate3
+                outJsonPath: $.Data.amcVisitDate3
+              - inJsonPath: $.amcVisitDate4
+                outJsonPath: $.Data.amcVisitDate4
+              - inJsonPath: $.amcVisitDate5
+                outJsonPath: $.Data.amcVisitDate5
+              - inJsonPath: $.amcVisitDate6
+                outJsonPath: $.Data.amcVisitDate6
+              - inJsonPath: $.amcVisitDate7
+                outJsonPath: $.Data.amcVisitDate7
+              - inJsonPath: $.amcVisitDate8
+                outJsonPath: $.Data.amcVisitDate8
+              - inJsonPath: $.amcVisitDate9
+                outJsonPath: $.Data.amcVisitDate9
+              - inJsonPath: $.amcVisitDate10
+                outJsonPath: $.Data.amcVisitDate10
 
 
     - topic: save-co2-monthly-facility-indexer
