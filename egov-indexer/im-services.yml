@@ -616,6 +616,8 @@ ServiceMaps:
                 outJsonPath: $.Data.closed_tickets
               - inJsonPath: $.solarPanelStatus
                 outJsonPath: $.Data.solar_panel_status
+              - inJsonPath: $.nonFunctionalTimestamp
+                outJsonPath: $.Data.nonFunctionalTimestamp
               - inJsonPath: $.state
                 outJsonPath: $.Data.state
               - inJsonPath: $.synced
