@@ -63,6 +63,11 @@ ServiceMaps:
                 outJsonPath: $.Data.legacyId
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
+              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
+              - inJsonPath: $.indexView.currentOwner
+                outJsonPath: $.Data.currentOwner
+              - inJsonPath: $.indexView.currentOwnerSystemRole
+                outJsonPath: $.Data.currentOwnerSystemRole
 
         - name: computed-sla-im-services-write
           type: general
@@ -171,6 +176,11 @@ ServiceMaps:
                 outJsonPath: $.Data.escalationTime
               - inJsonPath: $.escalationLevel
                 outJsonPath: $.Data.escalationLevel
+              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
+              - inJsonPath: $.indexView.currentOwner
+                outJsonPath: $.Data.currentOwner
+              - inJsonPath: $.indexView.currentOwnerSystemRole
+                outJsonPath: $.Data.currentOwnerSystemRole
 
     - topic: update-im-request-indexer
       configKey: INDEX
@@ -233,6 +243,11 @@ ServiceMaps:
                 outJsonPath: $.Data.legacyId
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
+              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
+              - inJsonPath: $.indexView.currentOwner
+                outJsonPath: $.Data.currentOwner
+              - inJsonPath: $.indexView.currentOwnerSystemRole
+                outJsonPath: $.Data.currentOwnerSystemRole
 
         - name: computed-sla-im-services-write
           type: general
@@ -341,6 +356,11 @@ ServiceMaps:
                 outJsonPath: $.Data.escalationTime
               - inJsonPath: $.escalationLevel
                 outJsonPath: $.Data.escalationLevel
+              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
+              - inJsonPath: $.indexView.currentOwner
+                outJsonPath: $.Data.currentOwner
+              - inJsonPath: $.indexView.currentOwnerSystemRole
+                outJsonPath: $.Data.currentOwnerSystemRole
 
     - topic: im-services-inboxIndex
       configKey: LEGACYINDEX
@@ -538,6 +558,11 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.boundary
               - inJsonPath: $.indexView.latestRejectReason
                 outJsonPath: $.Data.latestRejectReason
+              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
+              - inJsonPath: $.indexView.currentOwner
+                outJsonPath: $.Data.currentOwner
+              - inJsonPath: $.indexView.currentOwnerSystemRole
+                outJsonPath: $.Data.currentOwnerSystemRole
 
     - topic: save-user-login-report-indexer
       configKey: INDEX
