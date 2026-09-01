@@ -63,11 +63,6 @@ ServiceMaps:
                 outJsonPath: $.Data.legacyId
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
-              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
-              - inJsonPath: $.indexView.currentOwner
-                outJsonPath: $.Data.currentOwner
-              - inJsonPath: $.indexView.currentOwnerSystemRole
-                outJsonPath: $.Data.currentOwnerSystemRole
 
         - name: computed-sla-im-services-write
           type: general
@@ -176,11 +171,6 @@ ServiceMaps:
                 outJsonPath: $.Data.escalationTime
               - inJsonPath: $.escalationLevel
                 outJsonPath: $.Data.escalationLevel
-              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
-              - inJsonPath: $.indexView.currentOwner
-                outJsonPath: $.Data.currentOwner
-              - inJsonPath: $.indexView.currentOwnerSystemRole
-                outJsonPath: $.Data.currentOwnerSystemRole
 
     - topic: update-im-request-indexer
       configKey: INDEX
@@ -243,11 +233,6 @@ ServiceMaps:
                 outJsonPath: $.Data.legacyId
               - inJsonPath: $.incidentRequest.incident.migrationId
                 outJsonPath: $.Data.migrationId
-              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
-              - inJsonPath: $.indexView.currentOwner
-                outJsonPath: $.Data.currentOwner
-              - inJsonPath: $.indexView.currentOwnerSystemRole
-                outJsonPath: $.Data.currentOwnerSystemRole
 
         - name: computed-sla-im-services-write
           type: general
@@ -356,11 +341,6 @@ ServiceMaps:
                 outJsonPath: $.Data.escalationTime
               - inJsonPath: $.escalationLevel
                 outJsonPath: $.Data.escalationLevel
-              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
-              - inJsonPath: $.indexView.currentOwner
-                outJsonPath: $.Data.currentOwner
-              - inJsonPath: $.indexView.currentOwnerSystemRole
-                outJsonPath: $.Data.currentOwnerSystemRole
 
     - topic: im-services-inboxIndex
       configKey: LEGACYINDEX
@@ -558,11 +538,6 @@ ServiceMaps:
                 outJsonPath: $.Data.incident.boundary
               - inJsonPath: $.indexView.latestRejectReason
                 outJsonPath: $.Data.latestRejectReason
-              # Program role the ticket is currently waiting on (empty once it reaches a terminal state)
-              - inJsonPath: $.indexView.currentOwner
-                outJsonPath: $.Data.currentOwner
-              - inJsonPath: $.indexView.currentOwnerSystemRole
-                outJsonPath: $.Data.currentOwnerSystemRole
 
     - topic: save-user-login-report-indexer
       configKey: INDEX
@@ -641,8 +616,6 @@ ServiceMaps:
                 outJsonPath: $.Data.closed_tickets
               - inJsonPath: $.solarPanelStatus
                 outJsonPath: $.Data.solar_panel_status
-              - inJsonPath: $.nonFunctionalTimestamp
-                outJsonPath: $.Data.nonFunctionalTimestamp
               - inJsonPath: $.state
                 outJsonPath: $.Data.state
               - inJsonPath: $.synced
@@ -663,64 +636,6 @@ ServiceMaps:
                 outJsonPath: $.Data.mappedVendorName
               - inJsonPath: $.projectName
                 outJsonPath: $.Data.projectName
-              - inJsonPath: $.solutionDesignType
-                outJsonPath: $.Data.solutionDesignType
-              - inJsonPath: $.systemType
-                outJsonPath: $.Data.systemType
-              - inJsonPath: $.amcInstallationDate
-                outJsonPath: $.Data.amcInstallationDate
-              - inJsonPath: $.amcApplicable
-                outJsonPath: $.Data.amcApplicable
-              - inJsonPath: $.amcApplicableYears
-                outJsonPath: $.Data.amcApplicableYears
-              - inJsonPath: $.amcFrequencyMonths
-                outJsonPath: $.Data.amcFrequencyMonths
-              - inJsonPath: $.amcValidTill
-                outJsonPath: $.Data.amcValidTill
-              - inJsonPath: $.amcMappedVendorName
-                outJsonPath: $.Data.amcMappedVendorName
-              - inJsonPath: $.amcMappedVendorUserName
-                outJsonPath: $.Data.amcMappedVendorUserName
-              - inJsonPath: $.amcDueDate1
-                outJsonPath: $.Data.amcDueDate1
-              - inJsonPath: $.amcDueDate2
-                outJsonPath: $.Data.amcDueDate2
-              - inJsonPath: $.amcDueDate3
-                outJsonPath: $.Data.amcDueDate3
-              - inJsonPath: $.amcDueDate4
-                outJsonPath: $.Data.amcDueDate4
-              - inJsonPath: $.amcDueDate5
-                outJsonPath: $.Data.amcDueDate5
-              - inJsonPath: $.amcDueDate6
-                outJsonPath: $.Data.amcDueDate6
-              - inJsonPath: $.amcDueDate7
-                outJsonPath: $.Data.amcDueDate7
-              - inJsonPath: $.amcDueDate8
-                outJsonPath: $.Data.amcDueDate8
-              - inJsonPath: $.amcDueDate9
-                outJsonPath: $.Data.amcDueDate9
-              - inJsonPath: $.amcDueDate10
-                outJsonPath: $.Data.amcDueDate10
-              - inJsonPath: $.amcVisitDate1
-                outJsonPath: $.Data.amcVisitDate1
-              - inJsonPath: $.amcVisitDate2
-                outJsonPath: $.Data.amcVisitDate2
-              - inJsonPath: $.amcVisitDate3
-                outJsonPath: $.Data.amcVisitDate3
-              - inJsonPath: $.amcVisitDate4
-                outJsonPath: $.Data.amcVisitDate4
-              - inJsonPath: $.amcVisitDate5
-                outJsonPath: $.Data.amcVisitDate5
-              - inJsonPath: $.amcVisitDate6
-                outJsonPath: $.Data.amcVisitDate6
-              - inJsonPath: $.amcVisitDate7
-                outJsonPath: $.Data.amcVisitDate7
-              - inJsonPath: $.amcVisitDate8
-                outJsonPath: $.Data.amcVisitDate8
-              - inJsonPath: $.amcVisitDate9
-                outJsonPath: $.Data.amcVisitDate9
-              - inJsonPath: $.amcVisitDate10
-                outJsonPath: $.Data.amcVisitDate10
 
 
     - topic: save-co2-monthly-facility-indexer
