@@ -665,6 +665,8 @@ ServiceMaps:
                 outJsonPath: $.Data.projectName
               - inJsonPath: $.solutionDesignType
                 outJsonPath: $.Data.solutionDesignType
+              - inJsonPath: $.systemType
+                outJsonPath: $.Data.systemType
               - inJsonPath: $.amcInstallationDate
                 outJsonPath: $.Data.amcInstallationDate
               - inJsonPath: $.amcApplicable
