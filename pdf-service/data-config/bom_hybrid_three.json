@@ -3964,6 +3964,78 @@
                 "value": {
                   "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-17')].documentName"
                 }
+              },
+              {
+                "variable": "installation_image_18_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-18')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_19_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-19')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_20_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-20')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_21_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-21')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_22_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-22')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_23_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-23')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_24_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-24')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_25_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-25')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_26_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-26')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_27_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-27')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_28_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-28')].documentName"
+                }
+              },
+              {
+                "variable": "installation_image_29_title",
+                "value": {
+                  "path": "$.documents[?(@.documentType=='INSTALLATION_IMAGE-29')].documentName"
+                }
               }
             ]
           },
@@ -4627,6 +4699,474 @@
                 "responseMapping": [
                   {
                     "variable": "INSTALLATION_IMAGE_17_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-18')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_18_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-18')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_18_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-18')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_18_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-19')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_19_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-19')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_19_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-19')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_19_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-20')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_20_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-20')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_20_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-20')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_20_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-21')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_21_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-21')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_21_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-21')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_21_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-22')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_22_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-22')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_22_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-22')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_22_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-23')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_23_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-23')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_23_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-23')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_23_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-24')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_24_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-24')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_24_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-24')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_24_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-25')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_25_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-25')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_25_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-25')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_25_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-26')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_26_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-26')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_26_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-26')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_26_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-27')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_27_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-27')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_27_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-27')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_27_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-28')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_28_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-28')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_28_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-28')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_28_3",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-29')].fileStoreIds[0]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_29_1",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-29')].fileStoreIds[1]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_29_2",
+                    "value": "$.fileStoreIds[0].url",
+                    "type": "image"
+                  }
+                ]
+              },
+              {
+                "path": "http://egov-filestore.core-dev:8080/filestore/v1/files/actualurl",
+                "queryParam": "tenantId=$.tenantId,fileStoreId=$.documents[?(@.documentType=='INSTALLATION_IMAGE-29')].fileStoreIds[2]",
+                "apiRequest": null,
+                "requesttype": "GET",
+                "responseMapping": [
+                  {
+                    "variable": "INSTALLATION_IMAGE_29_3",
                     "value": "$.fileStoreIds[0].url",
                     "type": "image"
                   }
