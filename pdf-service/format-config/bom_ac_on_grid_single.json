@@ -2,6 +2,7 @@
   "key": "ac_on_grid_rms_single_phase",
   "config": {
     "content": [
+      { "text": "{{report_title}}", "style": "reportTitle" },
       {
         "text": "Bill Of Material(For Solar System)",
         "style": "header"
@@ -2366,6 +2367,12 @@
       }
     ],
     "styles": {
+      "reportTitle": {
+        "fontSize": 18,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 12]
+      },
       "tl-head": {
         "margin": [-41, -41, -41, 0]
       },
