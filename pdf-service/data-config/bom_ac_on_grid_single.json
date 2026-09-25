@@ -14,6 +14,12 @@
           {
             "direct": [
               {
+                "variable": "report_title",
+                "value": {
+                  "path": "$.report_title"
+                }
+              },
+              {
                 "variable": "health_facility_name",
                 "value": {
                   "path": "$.health_facility_name"
