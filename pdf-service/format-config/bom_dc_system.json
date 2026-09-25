@@ -2,6 +2,7 @@
   "key": "dc_system_2_0",
   "config": {
     "content": [
+      { "text": "{{report_title}}", "style": "reportTitle" },
       { "text": "Bill Of Material(For Solar System)", "style": "header" },
       {
         "table": {
@@ -1135,6 +1136,12 @@
 
     ],
     "styles": {
+      "reportTitle": {
+        "fontSize": 18,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 12]
+      },
       "tl-head": {
         "margin": [-41, -41, -41, 0]
       },
