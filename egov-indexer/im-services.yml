@@ -155,6 +155,16 @@ ServiceMaps:
                 outJsonPath: $.Data.lastActionTakenBy
               - inJsonPath: $.indexView.definedTotalSla
                 outJsonPath: $.Data.definedTotalSla
+              - inJsonPath: $.indexView.stateEnteredTime
+                outJsonPath: $.Data.stateEnteredTime
+              - inJsonPath: $.indexView.totalSlaBase
+                outJsonPath: $.Data.totalSlaBase
+              - inJsonPath: $.indexView.stateSlaDueAt
+                outJsonPath: $.Data.stateSlaDueAt
+              - inJsonPath: $.indexView.stateSlaWarnAt
+                outJsonPath: $.Data.stateSlaWarnAt
+              - inJsonPath: $.indexView.totalSlaDueAt
+                outJsonPath: $.Data.totalSlaDueAt
               - inJsonPath: $.incidentRequest.incident.filedDate
                 outJsonPath: $.Data.filedDate
               - inJsonPath: $.incidentRequest.incident.legacyId
@@ -335,6 +345,16 @@ ServiceMaps:
                 outJsonPath: $.Data.lastActionTakenBy
               - inJsonPath: $.indexView.definedTotalSla
                 outJsonPath: $.Data.definedTotalSla
+              - inJsonPath: $.indexView.stateEnteredTime
+                outJsonPath: $.Data.stateEnteredTime
+              - inJsonPath: $.indexView.totalSlaBase
+                outJsonPath: $.Data.totalSlaBase
+              - inJsonPath: $.indexView.stateSlaDueAt
+                outJsonPath: $.Data.stateSlaDueAt
+              - inJsonPath: $.indexView.stateSlaWarnAt
+                outJsonPath: $.Data.stateSlaWarnAt
+              - inJsonPath: $.indexView.totalSlaDueAt
+                outJsonPath: $.Data.totalSlaDueAt
               - inJsonPath: $.incidentRequest.incident.filedDate
                 outJsonPath: $.Data.filedDate
               - inJsonPath: $.incidentRequest.incident.legacyId
