@@ -492,42 +492,42 @@
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 1: {{ ajb_on_pmp_string_1 }}",
+              "String 1: {{ ongrid_ajb_on_pmp_string1_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 2: {{ ajb_on_pmp_string_2 }}",
+              "String 2: {{ ongrid_ajb_on_pmp_string2_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 3: {{ ajb_on_pmp_string_3 }}",
+              "String 3: {{ ongrid_ajb_on_pmp_string3_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 4: {{ ajb_on_pmp_string_4 }}",
+              "String 4: {{ ongrid_ajb_on_pmp_string4_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 5: {{ ajb_on_pmp_string_5 }}",
+              "String 5: {{ ongrid_ajb_on_pmp_string5_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "Array: {{ ajb_on_pmp_array }}",
+              "Array: {{ ongrid_ajb_on_pmp_array_mv }}",
               "NA",
               "NA"
             ]
@@ -670,78 +670,78 @@
             ],
             [
               "Load voltage/Inverter output voltage(R phase & Neutral)",
-              "{{ ph3_rpn_voltage_mv }}",
-              "{{ ph3_rpn_voltage_uom }}"
+              "{{ ongrid_3ph_r_phase_neutral_mv }}",
+              "{{ ongrid_3ph_r_phase_neutral_uom }}"
             ],
             [
               "Inverter output frequency(R phase & Neutral)",
-              "{{ ph3_rpn_freq_mv }}",
-              "{{ ph3_rpn_freq_uom }}"
+              "{{ ongrid_3ph_r_phase_neutral_freq_mv }}",
+              "{{ ongrid_3ph_r_phase_neutral_freq_uom }}"
             ],
             [
               "Inverter output current at full load(R phase & Neutral)",
-              "{{ ph3_rpn_current_mv }}",
-              "{{ ph3_rpn_current_uom }}"
+              "{{ ongrid_3ph_r_phase_neutral_current_mv }}",
+              "{{ ongrid_3ph_r_phase_neutral_current_uom }}"
             ],
             [
               "Load voltage/Inverter output voltage(Y phase & Neutral)",
-              "{{ ph3_ypn_voltage_mv }}",
-              "{{ ph3_ypn_voltage_uom }}"
+              "{{ ongrid_3ph_y_phase_neutral_mv }}",
+              "{{ ongrid_3ph_y_phase_neutral_uom }}"
             ],
             [
               "Inverter output frequency(Y phase & Neutral)",
-              "{{ ph3_ypn_freq_mv }}",
-              "{{ ph3_ypn_freq_uom }}"
+              "{{ ongrid_3ph_y_phase_neutral_freq_mv }}",
+              "{{ ongrid_3ph_y_phase_neutral_freq_uom }}"
             ],
             [
               "Inverter output current at full load(Y phase & Neutral)",
-              "{{ ph3_ypn_current_mv }}",
-              "{{ ph3_ypn_current_uom }}"
+              "{{ ongrid_3ph_y_phase_neutral_current_mv }}",
+              "{{ ongrid_3ph_y_phase_neutral_current_uom }}"
             ],
             [
               "Load voltage/Inverter output voltage(B phase & Neutral)",
-              "{{ ph3_bpn_voltage_mv }}",
-              "{{ ph3_bpn_voltage_uom }}"
+              "{{ ongrid_3ph_b_phase_neutral_mv }}",
+              "{{ ongrid_3ph_b_phase_neutral_uom }}"
             ],
             [
               "Inverter output frequency(B phase & Neutral)",
-              "{{ ph3_bpn_freq_mv }}",
-              "{{ ph3_bpn_freq_uom }}"
+              "{{ ongrid_3ph_b_phase_neutral_freq_mv }}",
+              "{{ ongrid_3ph_b_phase_neutral_freq_uom }}"
             ],
             [
               "Inverter output current at full load(B phase & Neutral)",
-              "{{ ph3_bpn_current_mv }}",
-              "{{ ph3_bpn_current_uom }}"
+              "{{ ongrid_3ph_b_phase_neutral_current_mv }}",
+              "{{ ongrid_3ph_b_phase_neutral_current_uom }}"
             ],
             [
               "Inverter output voltage(R & Y phase)",
-              "{{ ph3_r_y_voltage_mv }}",
-              "{{ ph3_r_y_voltage_uom }}"
+              "{{ ongrid_3ph_r_y_phase_voltage_mv }}",
+              "{{ ongrid_3ph_r_y_phase_voltage_uom }}"
             ],
             [
               "Inverter output frequency(R & Y phase)",
-              "{{ ph3_r_y_freq_mv }}",
-              "{{ ph3_r_y_freq_uom }}"
+              "{{ ongrid_3ph_r_y_phase_freq_mv }}",
+              "{{ ongrid_3ph_r_y_phase_freq_uom }}"
             ],
             [
               "Inverter output voltage(R & B phase)",
-              "{{ ph3_r_b_voltage_mv }}",
-              "{{ ph3_r_b_voltage_uom }}"
+              "{{ ongrid_3ph_r_b_phase_voltage_mv }}",
+              "{{ ongrid_3ph_r_b_phase_voltage_uom }}"
             ],
             [
               "Inverter output frequency(R & B phase)",
-              "{{ ph3_r_b_freq_mv }}",
-              "{{ ph3_r_b_freq_uom }}"
+              "{{ ongrid_3ph_r_b_phase_freq_mv }}",
+              "{{ ongrid_3ph_r_b_phase_freq_uom }}"
             ],
             [
               "Inverter output voltage(Y & B phase)",
-              "{{ ph3_y_b_voltage_mv }}",
-              "{{ ph3_y_b_voltage_uom }}"
+              "{{ ongrid_3ph_y_b_phase_voltage_mv }}",
+              "{{ ongrid_3ph_y_b_phase_voltage_uom }}"
             ],
             [
               "Inverter output frequency(Y & B phase)",
-              "{{ ph3_y_b_freq_mv }}",
-              "{{ ph3_y_b_freq_uom }}"
+              "{{ ongrid_3ph_y_b_phase_freq_mv }}",
+              "{{ ongrid_3ph_y_b_phase_freq_uom }}"
             ]
           ]
         },
