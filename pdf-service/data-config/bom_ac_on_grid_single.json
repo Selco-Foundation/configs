@@ -554,9 +554,33 @@
                 }
               },
               {
-                "variable": "array_no_modules_per_string",
+                "variable": "ongrid_array_modules_string1",
                 "value": {
-                  "path": "$.array_no_modules_per_string"
+                  "path": "$.ongrid_array_modules_string1"
+                }
+              },
+              {
+                "variable": "ongrid_array_modules_string2",
+                "value": {
+                  "path": "$.ongrid_array_modules_string2"
+                }
+              },
+              {
+                "variable": "ongrid_array_modules_string3",
+                "value": {
+                  "path": "$.ongrid_array_modules_string3"
+                }
+              },
+              {
+                "variable": "ongrid_array_modules_string4",
+                "value": {
+                  "path": "$.ongrid_array_modules_string4"
+                }
+              },
+              {
+                "variable": "ongrid_array_modules_string5",
+                "value": {
+                  "path": "$.ongrid_array_modules_string5"
                 }
               },
               {
