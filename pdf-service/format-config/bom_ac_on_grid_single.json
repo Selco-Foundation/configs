@@ -336,20 +336,50 @@
                 "text": "{{ongrid_array_no_strings}}"
               },
               {
-                "text": "No. of modules per string: ",
-                "style": "tableHeader"
-              },
-              {
-                "text": "{{ array_no_modules_per_string }}"
-              }
-            ],
-            [
-              {
                 "text": "Each module capacity(Wp): ",
                 "style": "tableHeader"
               },
               {
                 "text": "{{ongrid_array_each_module_capacity_wp}}"
+              }
+            ],
+            [
+              {
+                "text": "No. of modules String 1: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string1}}"
+              },
+              {
+                "text": "No. of modules String 2: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string2}}"
+              },
+              {
+                "text": "No. of modules String 3: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string3}}"
+              },
+              {
+                "text": "No. of modules String 4: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string4}}"
+              }
+            ],
+            [
+              {
+                "text": "No. of modules String 5: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string5}}"
               },
               {
                 "text": ""
