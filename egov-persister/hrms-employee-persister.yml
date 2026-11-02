@@ -234,6 +234,28 @@ serviceMaps:
       - jsonPath: $.Employees.*.jurisdictions.*.auditDetails.lastModifiedDate
 
 
+    - query: INSERT INTO eg_hrms_jurisdiction_role (uuid, jurisdictionid, rolecode, tenantid, createdby, createddate, lastmodifiedby, lastmodifieddate) VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+      basePath: Employees.*.jurisdictions.*.roles.*
+      jsonMaps:
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.id
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.jurisdictionId
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.code
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.tenantId
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.createdBy
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.createdDate
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.lastModifiedBy
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.lastModifiedDate
+
+
 
 
   - version: 1.0
@@ -474,6 +496,28 @@ serviceMaps:
       - jsonPath: $.Employees.*.jurisdictions.*.auditDetails.lastModifiedBy
 
       - jsonPath: $.Employees.*.jurisdictions.*.auditDetails.lastModifiedDate
+
+
+    - query: INSERT INTO eg_hrms_jurisdiction_role (uuid, jurisdictionid, rolecode, tenantid, createdby, createddate, lastmodifiedby, lastmodifieddate) VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+      basePath: Employees.*.jurisdictions.*.roles.*
+      jsonMaps:
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.id
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.jurisdictionId
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.code
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.tenantId
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.createdBy
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.createdDate
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.lastModifiedBy
+
+      - jsonPath: $.Employees.*.jurisdictions.*.roles.*.auditDetails.lastModifiedDate
 
 
 
