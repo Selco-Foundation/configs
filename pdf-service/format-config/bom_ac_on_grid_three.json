@@ -2,6 +2,7 @@
   "key": "ac_on_grid_rms_three_phase",
   "config": {
     "content": [
+      { "text": "{{report_title}}", "style": "reportTitle" },
       {
         "text": "Bill Of Material(For Solar System)",
         "style": "header"
@@ -335,20 +336,50 @@
                 "text": "{{ongrid_array_no_strings}}"
               },
               {
-                "text": "No. of modules per string: ",
-                "style": "tableHeader"
-              },
-              {
-                "text": "{{ array_no_modules_per_string }}"
-              }
-            ],
-            [
-              {
                 "text": "Each module capacity(Wp): ",
                 "style": "tableHeader"
               },
               {
                 "text": "{{ongrid_array_each_module_capacity_wp}}"
+              }
+            ],
+            [
+              {
+                "text": "No. of modules String 1: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string1}}"
+              },
+              {
+                "text": "No. of modules String 2: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string2}}"
+              },
+              {
+                "text": "No. of modules String 3: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string3}}"
+              },
+              {
+                "text": "No. of modules String 4: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string4}}"
+              }
+            ],
+            [
+              {
+                "text": "No. of modules String 5: ",
+                "style": "tableHeader"
+              },
+              {
+                "text": "{{ongrid_array_modules_string5}}"
               },
               {
                 "text": ""
@@ -491,42 +522,42 @@
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 1: {{ ajb_on_pmp_string_1 }}",
+              "String 1: {{ ongrid_ajb_on_pmp_string1_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 2: {{ ajb_on_pmp_string_2 }}",
+              "String 2: {{ ongrid_ajb_on_pmp_string2_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 3: {{ ajb_on_pmp_string_3 }}",
+              "String 3: {{ ongrid_ajb_on_pmp_string3_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 4: {{ ajb_on_pmp_string_4 }}",
+              "String 4: {{ ongrid_ajb_on_pmp_string4_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "String 5: {{ ajb_on_pmp_string_5 }}",
+              "String 5: {{ ongrid_ajb_on_pmp_string5_mv }}",
               "NA",
               "NA"
             ],
             [
               "Measurement with AJB MCB ON",
               "Pmp(in Watts)",
-              "Array: {{ ajb_on_pmp_array }}",
+              "Array: {{ ongrid_ajb_on_pmp_array_mv }}",
               "NA",
               "NA"
             ]
@@ -604,18 +635,18 @@
             ],
             [
               "Load voltage/Inverter output voltage",
-              "{{ph1_load_voltage_mv}}",
-              "{{ph1_load_voltage_uom}}"
+              "{{ongrid_1ph_load_voltage_mv}}",
+              "{{ongrid_1ph_load_voltage_uom}}"
             ],
             [
               "Inverter output frequency",
-              "{{ph1_output_freq_mv}}",
-              "{{ph1_output_freq_uom}}"
+              "{{ongrid_1ph_output_frequency_mv}}",
+              "{{ongrid_1ph_output_frequency_uom}}"
             ],
             [
               "Inverter output power",
-              "{{ph1_output_power_mv}}",
-              "{{ph1_output_power_uom}}"
+              "{{ongrid_1ph_output_power_mv}}",
+              "{{ongrid_1ph_output_power_uom}}"
             ]
           ]
         },
@@ -2366,6 +2397,12 @@
       }
     ],
     "styles": {
+      "reportTitle": {
+        "fontSize": 18,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 12]
+      },
       "tl-head": {
         "margin": [-41, -41, -41, 0]
       },
