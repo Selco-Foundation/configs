@@ -265,14 +265,14 @@
             [
               { "text": "Sl. No.", "style": "tableHeader" },
               { "text": "Items", "style": "tableHeader" },
-              { "text": "Description & Make", "style": "tableHeader" },
+              { "text": "Make & Description", "style": "tableHeader" },
               { "text": "Capacity", "style": "tableHeader" },
               { "text": "Quantity", "style": "tableHeader" }
             ],
             [
               "1",
               "Switch (Modular)",
-              "{{switch_modular_description}} : {{switch_modular_make}}",
+              "{{switch_modular_make}} : {{switch_modular_description}}",
               "{{switch_modular_capacity}}",
               "{{switch_modular_qty}}"
             ],
@@ -1133,7 +1133,6 @@
         ],
         "unbreakable": true
       }
-
     ],
     "styles": {
       "reportTitle": {
