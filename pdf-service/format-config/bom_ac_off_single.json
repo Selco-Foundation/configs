@@ -467,14 +467,14 @@
             [
               { "text": "Sl. No.", "style": "tableHeader" },
               { "text": "Items", "style": "tableHeader" },
-              { "text": "Description & Make", "style": "tableHeader" },
+              { "text": "Make & Description", "style": "tableHeader" },
               { "text": "Capacity", "style": "tableHeader" },
               { "text": "Quantity", "style": "tableHeader" }
             ],
             [
               "1",
               "AC Distribution Box",
-              "{{ac_distribution_box_description}} : {{ac_distribution_box_make}}",
+              "{{ac_distribution_box_make}} : {{ac_distribution_box_description}}",
               "{{ac_distribution_box_capacity}}",
               "{{ac_distribution_box_qty}}"
             ],
