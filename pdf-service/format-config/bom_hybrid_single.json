@@ -932,7 +932,7 @@
               { "text": "Date of recording", "style": "tableHeader" },
               { "text": "{{sfp_date}}" },
               { "text": "Time of recording", "style": "tableHeader" },
-              { "text": "{{ sfp_date }}" }
+              { "text": "{{ sfp_time }}" }
             ],
             [
               {
