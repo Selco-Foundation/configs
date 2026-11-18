@@ -2396,6 +2396,12 @@
                 }
               },
               {
+                "variable": "sfp_time",
+                "value": {
+                  "path": "$.sfp_time"
+                }
+              },
+              {
                 "variable": "sfp_weather",
                 "value": {
                   "path": "$.sfp_weather"
