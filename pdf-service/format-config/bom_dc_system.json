@@ -194,6 +194,7 @@
       {
         "table": {
           "headerRows": 1,
+          "widths": [35, "*", 60, 60, 70, 130],
           "body": [
             [
               { "text": "Sl. No.", "style": "tableHeader" },
@@ -746,6 +747,7 @@
       {
         "table": {
           "headerRows": 1,
+          "widths": ["*", 70, 150],
           "body": [
             [
               { "text": "Checklist", "style": "tableHeader" },
