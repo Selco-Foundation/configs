@@ -3086,6 +3086,12 @@
                 }
               },
               {
+                "variable": "rms_installation_time",
+                "value": {
+                  "path": "$.rms_installation_time"
+                }
+              },
+              {
                 "variable": "rms_installer_name",
                 "value": {
                   "path": "$.rms_installer_name"
