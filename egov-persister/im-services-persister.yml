@@ -16,7 +16,8 @@ serviceMaps:
             INSERT INTO eg_incident_v2(id, tenantid, incidenttype,
             incidentsubtype, incidentid, additionaldetails, applicationstatus,
             district, block, phctype, phcsubtype, facilityid, boundarycode, createdby, createdtime,
-            lastmodifiedby, lastmodifiedtime, comments,accountid, reportertenant,reportertype,systemfunctional, fileddate, legacyid, migrationid, ispotentialduplicate, warranty_status, mapped_vendor_uuid) VALUES (?, ?, ?, ?, ?,
+            lastmodifiedby, lastmodifiedtime, comments,accountid, reportertenant,reportertype,systemfunctional, fileddate, legacyid, migrationid, 
+            ispotentialduplicate, warranty_status, mapped_vendor_uuid, component, observations) VALUES (?, ?, ?, ?, ?, ?, ?,
             ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $.incident
           jsonMaps:
@@ -50,6 +51,10 @@ serviceMaps:
             - jsonPath: $.incident.isPotentialDuplicate
             - jsonPath: $.incident.warrantyStatus
             - jsonPath: $.incident.mappedVendorUuid
+            - jsonPath: $.incident.component
+            - jsonPath: $.incident.observations
+              type: JSON
+              dbType: JSONB
 
     - version: 1
       description: Updates im service request in tables
