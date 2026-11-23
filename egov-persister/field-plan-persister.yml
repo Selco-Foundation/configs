@@ -158,15 +158,12 @@ serviceMaps:
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.*
       queryMaps:
-        - query: UPDATE field_plan_facilities SET last_modified_by=?, lastmodifiedtime=?, isdeleted=?, additional_details=? WHERE id=?;
+        - query: UPDATE field_plan_facilities SET last_modified_by=?, lastmodifiedtime=?, isdeleted=? WHERE id=?;
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.auditDetails.lastModifiedBy
             - jsonPath: $.*.auditDetails.lastModifiedTime
             - jsonPath: $.*.isdeleted
-            - jsonPath: $.*.additionalFields
-              type: JSON
-              dbType: JSONB
             - jsonPath: $.*.id
 
     - version: 1.0
