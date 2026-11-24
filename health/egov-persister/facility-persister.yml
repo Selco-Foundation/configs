@@ -83,7 +83,8 @@ serviceMaps:
       queryMaps:
         - query: >
             UPDATE facility SET facility_name = ?, facility_type = ?, facility_subtype = ?, addressId = ?, facility_details = ?, additional_details = ?, is_onm_ready = ?,
-            facility_poc_name = ?, facility_poc_phone = ?, facility_poc_email = ?, facility_poc_username = ?, hfr_id = ?, nin_id = ?, user_id = ?, facility_status = ?, is_active= ?
+            facility_poc_name = ?, facility_poc_phone = ?, facility_poc_email = ?, facility_poc_username = ?, hfr_id = ?, nin_id = ?, user_id = ?, facility_status = ?, is_active= ?,
+            updated_by = COALESCE(?, updated_by), updated_at = COALESCE(?, updated_at)
             WHERE id = ? AND tenant_id = ?;
           basePath: $.FacilityUpdate
           jsonMaps:
@@ -107,6 +108,8 @@ serviceMaps:
             - jsonPath: $.FacilityUpdate.user_id
             - jsonPath: $.FacilityUpdate.facility_status
             - jsonPath: $.FacilityUpdate.isActive
+            - jsonPath: $.FacilityUpdate.updated_by
+            - jsonPath: $.FacilityUpdate.updated_at
             - jsonPath: $.FacilityUpdate.facility_id
             - jsonPath: $.FacilityUpdate.tenant_id
 
