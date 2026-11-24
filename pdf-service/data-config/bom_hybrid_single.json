@@ -1262,12 +1262,6 @@
                 }
               },
               {
-                "variable": "ac_distribution_box_description",
-                "value": {
-                  "path": "$.ac_distribution_box_description"
-                }
-              },
-              {
                 "variable": "rccb_1_make",
                 "value": {
                   "path": "$.rccb_1_make"
@@ -1283,12 +1277,6 @@
                 "variable": "rccb_1_qty",
                 "value": {
                   "path": "$.rccb_1_qty"
-                }
-              },
-              {
-                "variable": "rccb_1_description",
-                "value": {
-                  "path": "$.rccb_1_description"
                 }
               },
               {
@@ -1310,12 +1298,6 @@
                 }
               },
               {
-                "variable": "rccb_2_description",
-                "value": {
-                  "path": "$.rccb_2_description"
-                }
-              },
-              {
                 "variable": "rccb_3_make",
                 "value": {
                   "path": "$.rccb_3_make"
@@ -1331,12 +1313,6 @@
                 "variable": "rccb_3_qty",
                 "value": {
                   "path": "$.rccb_3_qty"
-                }
-              },
-              {
-                "variable": "rccb_3_description",
-                "value": {
-                  "path": "$.rccb_3_description"
                 }
               },
               {
@@ -1358,12 +1334,6 @@
                 }
               },
               {
-                "variable": "isolator_1_description",
-                "value": {
-                  "path": "$.isolator_1_description"
-                }
-              },
-              {
                 "variable": "isolator_2_make",
                 "value": {
                   "path": "$.isolator_2_make"
@@ -1379,12 +1349,6 @@
                 "variable": "isolator_2_qty",
                 "value": {
                   "path": "$.isolator_2_qty"
-                }
-              },
-              {
-                "variable": "isolator_2_description",
-                "value": {
-                  "path": "$.isolator_2_description"
                 }
               },
               {
@@ -1406,12 +1370,6 @@
                 }
               },
               {
-                "variable": "isolator_3_description",
-                "value": {
-                  "path": "$.isolator_3_description"
-                }
-              },
-              {
                 "variable": "main_mcb_make",
                 "value": {
                   "path": "$.main_mcb_make"
@@ -1427,12 +1385,6 @@
                 "variable": "main_mcb_qty",
                 "value": {
                   "path": "$.main_mcb_qty"
-                }
-              },
-              {
-                "variable": "main_mcb_description",
-                "value": {
-                  "path": "$.main_mcb_description"
                 }
               },
               {
@@ -1454,12 +1406,6 @@
                 }
               },
               {
-                "variable": "mcb_circuit_1_description",
-                "value": {
-                  "path": "$.mcb_circuit_1_description"
-                }
-              },
-              {
                 "variable": "mcb_circuit_2_make",
                 "value": {
                   "path": "$.mcb_circuit_2_make"
@@ -1475,12 +1421,6 @@
                 "variable": "mcb_circuit_2_qty",
                 "value": {
                   "path": "$.mcb_circuit_2_qty"
-                }
-              },
-              {
-                "variable": "mcb_circuit_2_description",
-                "value": {
-                  "path": "$.mcb_circuit_2_description"
                 }
               },
               {
@@ -1502,12 +1442,6 @@
                 }
               },
               {
-                "variable": "mcb_circuit_3_description",
-                "value": {
-                  "path": "$.mcb_circuit_3_description"
-                }
-              },
-              {
                 "variable": "mcb_circuit_4_make",
                 "value": {
                   "path": "$.mcb_circuit_4_make"
@@ -1523,12 +1457,6 @@
                 "variable": "mcb_circuit_4_qty",
                 "value": {
                   "path": "$.mcb_circuit_4_qty"
-                }
-              },
-              {
-                "variable": "mcb_circuit_4_description",
-                "value": {
-                  "path": "$.mcb_circuit_4_description"
                 }
               },
               {
@@ -1550,12 +1478,6 @@
                 }
               },
               {
-                "variable": "mcb_circuit_5_description",
-                "value": {
-                  "path": "$.mcb_circuit_5_description"
-                }
-              },
-              {
                 "variable": "fan_regulator_make",
                 "value": {
                   "path": "$.fan_regulator_make"
@@ -1571,12 +1493,6 @@
                 "variable": "fan_regulator_qty",
                 "value": {
                   "path": "$.fan_regulator_qty"
-                }
-              },
-              {
-                "variable": "fan_regulator_description",
-                "value": {
-                  "path": "$.fan_regulator_description"
                 }
               },
               {
@@ -1598,12 +1514,6 @@
                 }
               },
               {
-                "variable": "socket_modular_description",
-                "value": {
-                  "path": "$.socket_modular_description"
-                }
-              },
-              {
                 "variable": "switch_modular_make",
                 "value": {
                   "path": "$.switch_modular_make"
@@ -1619,12 +1529,6 @@
                 "variable": "switch_modular_qty",
                 "value": {
                   "path": "$.switch_modular_qty"
-                }
-              },
-              {
-                "variable": "switch_modular_description",
-                "value": {
-                  "path": "$.switch_modular_description"
                 }
               },
               {
@@ -1646,12 +1550,6 @@
                 }
               },
               {
-                "variable": "16_a_combo_socket_with_indicators_description",
-                "value": {
-                  "path": "$['16_a_combo_socket_with_indicators_description']"
-                }
-              },
-              {
                 "variable": "power_cable_1_red_make",
                 "value": {
                   "path": "$.power_cable_1_red_make"
@@ -1667,12 +1565,6 @@
                 "variable": "power_cable_1_red_qty",
                 "value": {
                   "path": "$.power_cable_1_red_qty"
-                }
-              },
-              {
-                "variable": "power_cable_1_red_description",
-                "value": {
-                  "path": "$.power_cable_1_red_description"
                 }
               },
               {
@@ -1694,12 +1586,6 @@
                 }
               },
               {
-                "variable": "power_cable_1_black_description",
-                "value": {
-                  "path": "$.power_cable_1_black_description"
-                }
-              },
-              {
                 "variable": "power_cable_2_red_make",
                 "value": {
                   "path": "$.power_cable_2_red_make"
@@ -1715,12 +1601,6 @@
                 "variable": "power_cable_2_red_qty",
                 "value": {
                   "path": "$.power_cable_2_red_qty"
-                }
-              },
-              {
-                "variable": "power_cable_2_red_description",
-                "value": {
-                  "path": "$.power_cable_2_red_description"
                 }
               },
               {
@@ -1742,12 +1622,6 @@
                 }
               },
               {
-                "variable": "power_cable_2_black_description",
-                "value": {
-                  "path": "$.power_cable_2_black_description"
-                }
-              },
-              {
                 "variable": "power_cable_3_red_make",
                 "value": {
                   "path": "$.power_cable_3_red_make"
@@ -1763,12 +1637,6 @@
                 "variable": "power_cable_3_red_qty",
                 "value": {
                   "path": "$.power_cable_3_red_qty"
-                }
-              },
-              {
-                "variable": "power_cable_3_red_description",
-                "value": {
-                  "path": "$.power_cable_3_red_description"
                 }
               },
               {
@@ -1790,12 +1658,6 @@
                 }
               },
               {
-                "variable": "power_cable_3_black_description",
-                "value": {
-                  "path": "$.power_cable_3_black_description"
-                }
-              },
-              {
                 "variable": "earthing_cable_1_green_make",
                 "value": {
                   "path": "$.earthing_cable_1_green_make"
@@ -1811,12 +1673,6 @@
                 "variable": "earthing_cable_1_green_qty",
                 "value": {
                   "path": "$.earthing_cable_1_green_qty"
-                }
-              },
-              {
-                "variable": "earthing_cable_1_green_description",
-                "value": {
-                  "path": "$.earthing_cable_1_green_description"
                 }
               },
               {
@@ -1838,12 +1694,6 @@
                 }
               },
               {
-                "variable": "earthing_cable_2_green_description",
-                "value": {
-                  "path": "$.earthing_cable_2_green_description"
-                }
-              },
-              {
                 "variable": "ceiling_rose_make",
                 "value": {
                   "path": "$.ceiling_rose_make"
@@ -1859,12 +1709,6 @@
                 "variable": "ceiling_rose_qty",
                 "value": {
                   "path": "$.ceiling_rose_qty"
-                }
-              },
-              {
-                "variable": "ceiling_rose_description",
-                "value": {
-                  "path": "$.ceiling_rose_description"
                 }
               },
               {
@@ -1886,12 +1730,6 @@
                 }
               },
               {
-                "variable": "angle_holder_description",
-                "value": {
-                  "path": "$.angle_holder_description"
-                }
-              },
-              {
                 "variable": "1_modular_switch_box_with_plate_make",
                 "value": {
                   "path": "$['1_modular_switch_box_with_plate_make']"
@@ -1907,12 +1745,6 @@
                 "variable": "1_modular_switch_box_with_plate_qty",
                 "value": {
                   "path": "$['1_modular_switch_box_with_plate_qty']"
-                }
-              },
-              {
-                "variable": "1_modular_switch_box_with_plate_description",
-                "value": {
-                  "path": "$['1_modular_switch_box_with_plate_description']"
                 }
               },
               {
@@ -1934,12 +1766,6 @@
                 }
               },
               {
-                "variable": "2_modular_switch_box_with_plate_description",
-                "value": {
-                  "path": "$['2_modular_switch_box_with_plate_description']"
-                }
-              },
-              {
                 "variable": "3_modular_switch_box_with_plate_make",
                 "value": {
                   "path": "$['3_modular_switch_box_with_plate_make']"
@@ -1955,12 +1781,6 @@
                 "variable": "3_modular_switch_box_with_plate_qty",
                 "value": {
                   "path": "$['3_modular_switch_box_with_plate_qty']"
-                }
-              },
-              {
-                "variable": "3_modular_switch_box_with_plate_description",
-                "value": {
-                  "path": "$['3_modular_switch_box_with_plate_description']"
                 }
               },
               {
@@ -1982,12 +1802,6 @@
                 }
               },
               {
-                "variable": "4_modular_switch_box_with_plate_description",
-                "value": {
-                  "path": "$['4_modular_switch_box_with_plate_description']"
-                }
-              },
-              {
                 "variable": "6_modular_switch_box_with_plate_make",
                 "value": {
                   "path": "$['6_modular_switch_box_with_plate_make']"
@@ -2003,12 +1817,6 @@
                 "variable": "6_modular_switch_box_with_plate_qty",
                 "value": {
                   "path": "$['6_modular_switch_box_with_plate_qty']"
-                }
-              },
-              {
-                "variable": "6_modular_switch_box_with_plate_description",
-                "value": {
-                  "path": "$['6_modular_switch_box_with_plate_description']"
                 }
               },
               {
@@ -2030,12 +1838,6 @@
                 }
               },
               {
-                "variable": "8_modular_switch_box_with_plate_description",
-                "value": {
-                  "path": "$['8_modular_switch_box_with_plate_description']"
-                }
-              },
-              {
                 "variable": "modular_box_blank_plate_dummy_make",
                 "value": {
                   "path": "$.modular_box_blank_plate_dummy_make"
@@ -2051,12 +1853,6 @@
                 "variable": "modular_box_blank_plate_dummy_qty",
                 "value": {
                   "path": "$.modular_box_blank_plate_dummy_qty"
-                }
-              },
-              {
-                "variable": "modular_box_blank_plate_dummy_description",
-                "value": {
-                  "path": "$.modular_box_blank_plate_dummy_description"
                 }
               },
               {
@@ -2078,12 +1874,6 @@
                 }
               },
               {
-                "variable": "upvc_conduit_pipe_white_description",
-                "value": {
-                  "path": "$.upvc_conduit_pipe_white_description"
-                }
-              },
-              {
                 "variable": "upvc_coupler_white_make",
                 "value": {
                   "path": "$.upvc_coupler_white_make"
@@ -2099,12 +1889,6 @@
                 "variable": "upvc_coupler_white_qty",
                 "value": {
                   "path": "$.upvc_coupler_white_qty"
-                }
-              },
-              {
-                "variable": "upvc_coupler_white_description",
-                "value": {
-                  "path": "$.upvc_coupler_white_description"
                 }
               },
               {
@@ -2126,12 +1910,6 @@
                 }
               },
               {
-                "variable": "upvc_conduit_tee_joint_description",
-                "value": {
-                  "path": "$.upvc_conduit_tee_joint_description"
-                }
-              },
-              {
                 "variable": "upvc_short_long_elbow_white_make",
                 "value": {
                   "path": "$.upvc_short_long_elbow_white_make"
@@ -2147,12 +1925,6 @@
                 "variable": "upvc_short_long_elbow_white_qty",
                 "value": {
                   "path": "$.upvc_short_long_elbow_white_qty"
-                }
-              },
-              {
-                "variable": "upvc_short_long_elbow_white_description",
-                "value": {
-                  "path": "$.upvc_short_long_elbow_white_description"
                 }
               },
               {
@@ -2174,12 +1946,6 @@
                 }
               },
               {
-                "variable": "2_way_junction_box_description",
-                "value": {
-                  "path": "$['2_way_junction_box_description']"
-                }
-              },
-              {
                 "variable": "3_way_junction_box_make",
                 "value": {
                   "path": "$['3_way_junction_box_make']"
@@ -2195,12 +1961,6 @@
                 "variable": "3_way_junction_box_qty",
                 "value": {
                   "path": "$['3_way_junction_box_qty']"
-                }
-              },
-              {
-                "variable": "3_way_junction_box_description",
-                "value": {
-                  "path": "$['3_way_junction_box_description']"
                 }
               },
               {
@@ -2222,12 +1982,6 @@
                 }
               },
               {
-                "variable": "4_way_junction_box_description",
-                "value": {
-                  "path": "$['4_way_junction_box_description']"
-                }
-              },
-              {
                 "variable": "square_box_make",
                 "value": {
                   "path": "$.square_box_make"
@@ -2243,12 +1997,6 @@
                 "variable": "square_box_qty",
                 "value": {
                   "path": "$.square_box_qty"
-                }
-              },
-              {
-                "variable": "square_box_description",
-                "value": {
-                  "path": "$.square_box_description"
                 }
               },
               {
@@ -2270,12 +2018,6 @@
                 }
               },
               {
-                "variable": "plastic_wall_lug_description",
-                "value": {
-                  "path": "$.plastic_wall_lug_description"
-                }
-              },
-              {
                 "variable": "screw_make",
                 "value": {
                   "path": "$.screw_make"
@@ -2291,12 +2033,6 @@
                 "variable": "screw_qty",
                 "value": {
                   "path": "$.screw_qty"
-                }
-              },
-              {
-                "variable": "screw_description",
-                "value": {
-                  "path": "$.screw_description"
                 }
               },
               {
@@ -2318,12 +2054,6 @@
                 }
               },
               {
-                "variable": "electrical_insulating_tape_description",
-                "value": {
-                  "path": "$.electrical_insulating_tape_description"
-                }
-              },
-              {
                 "variable": "pipe_saddle_clamps_make",
                 "value": {
                   "path": "$.pipe_saddle_clamps_make"
@@ -2339,12 +2069,6 @@
                 "variable": "pipe_saddle_clamps_qty",
                 "value": {
                   "path": "$.pipe_saddle_clamps_qty"
-                }
-              },
-              {
-                "variable": "pipe_saddle_clamps_description",
-                "value": {
-                  "path": "$.pipe_saddle_clamps_description"
                 }
               },
               {
@@ -2366,12 +2090,6 @@
                 }
               },
               {
-                "variable": "saddle_nail_description",
-                "value": {
-                  "path": "$.saddle_nail_description"
-                }
-              },
-              {
                 "variable": "cable_tie_make",
                 "value": {
                   "path": "$.cable_tie_make"
@@ -2387,12 +2105,6 @@
                 "variable": "cable_tie_qty",
                 "value": {
                   "path": "$.cable_tie_qty"
-                }
-              },
-              {
-                "variable": "cable_tie_description",
-                "value": {
-                  "path": "$.cable_tie_description"
                 }
               },
               {
@@ -2414,12 +2126,6 @@
                 }
               },
               {
-                "variable": "cable_lugs_1_description",
-                "value": {
-                  "path": "$.cable_lugs_1_description"
-                }
-              },
-              {
                 "variable": "cable_lugs_2_make",
                 "value": {
                   "path": "$.cable_lugs_2_make"
@@ -2435,12 +2141,6 @@
                 "variable": "cable_lugs_2_qty",
                 "value": {
                   "path": "$.cable_lugs_2_qty"
-                }
-              },
-              {
-                "variable": "cable_lugs_2_description",
-                "value": {
-                  "path": "$.cable_lugs_2_description"
                 }
               },
               {
@@ -2462,12 +2162,6 @@
                 }
               },
               {
-                "variable": "flexible_pipe_description",
-                "value": {
-                  "path": "$.flexible_pipe_description"
-                }
-              },
-              {
                 "variable": "labelling_tags_load_identification_tags_make",
                 "value": {
                   "path": "$.labelling_tags_load_identification_tags_make"
@@ -2486,12 +2180,6 @@
                 }
               },
               {
-                "variable": "labelling_tags_load_identification_tags_description",
-                "value": {
-                  "path": "$.labelling_tags_load_identification_tags_description"
-                }
-              },
-              {
                 "variable": "labelling_tags_cable_identification_tags_make",
                 "value": {
                   "path": "$.labelling_tags_cable_identification_tags_make"
@@ -2507,12 +2195,6 @@
                 "variable": "labelling_tags_cable_identification_tags_qty",
                 "value": {
                   "path": "$.labelling_tags_cable_identification_tags_qty"
-                }
-              },
-              {
-                "variable": "labelling_tags_cable_identification_tags_description",
-                "value": {
-                  "path": "$.labelling_tags_cable_identification_tags_description"
                 }
               },
               {
