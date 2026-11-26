@@ -32,9 +32,21 @@
                 }
               },
               {
-                "variable": "health_facility_address",
+                "variable": "project_district",
                 "value": {
-                  "path": "$.health_facility_address"
+                  "path": "$.project_district"
+                }
+              },
+              {
+                "variable": "facility_section_title",
+                "value": {
+                  "path": "$.facility_section_title"
+                }
+              },
+              {
+                "variable": "facility_type",
+                "value": {
+                  "path": "$.facility_type"
                 }
               },
               {
