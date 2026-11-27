@@ -608,3 +608,28 @@ serviceMaps:
             - jsonPath: $.auditDetails.lastModifiedBy
             - jsonPath: $.auditDetails.lastModifiedTime
             - jsonPath: $.id
+
+    - version: 1.0
+      name: OrgPocChangeAudit
+      description: Records a change of an organisation's PoC (MH2-03)
+      fromTopic: save-org-poc-change-audit
+      isTransaction: true
+      queryMaps:
+        - query: INSERT INTO eg_org_poc_change_audit(id, tenant_id, organisation_id, old_poc_name, old_poc_phone, old_poc_email, old_poc_username, new_poc_name, new_poc_phone, new_poc_email, new_poc_username, previous_user_id, new_user_id, changed_by, changed_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.id
+            - jsonPath: $.tenantId
+            - jsonPath: $.organisationId
+            - jsonPath: $.oldPocName
+            - jsonPath: $.oldPocPhone
+            - jsonPath: $.oldPocEmail
+            - jsonPath: $.oldPocUsername
+            - jsonPath: $.newPocName
+            - jsonPath: $.newPocPhone
+            - jsonPath: $.newPocEmail
+            - jsonPath: $.newPocUsername
+            - jsonPath: $.previousUserId
+            - jsonPath: $.newUserId
+            - jsonPath: $.changedBy
+            - jsonPath: $.changedTime
